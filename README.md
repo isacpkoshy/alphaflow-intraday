@@ -8,7 +8,7 @@ AlphaFlow is a multi-engine quantitative trading, screening, backtesting, and pa
 
 | Engine | Strategy | Asset Class | Audited Backtest Performance |
 | :--- | :--- | :--- | :--- |
-| **Engine 1** | **Alpha-Surge 2.0 Intraday MIS** (`50/50 Tranche +1.25R/+3.50R`, `RVOL ≥ 2.2x`, `1.75% SL`, Multi-SMA Filter) | NSE Cash / MIS Equities | **163.36% CAGR · 53.8% Win Rate** (10-Year Audited · 21.09% MaxDD) |
+| **Engine 1** | **Alpha-Surge 2.0 Intraday MIS** (`50/50 Tranche +1.25R/+3.50R`, `RVOL ≥ 2.2x`, `1.75% SL`, Multi-SMA Filter) | NSE Cash / MIS Equities | **163.36% CAGR · 53.8% Win Rate** (10-Year Audited · 18.94% MaxDD) |
 | **Engine 2** | **10-Year Options Meta-Ensemble & Asymmetric Convexity Master** (Morning Theta Harvest + 0DTE Gamma Sniper + Directional Sprint) | Nifty 50 Index F&O | **91.31% 10Y CAGR** / **150.46% 5Y CAGR** (15.99% MaxDD) |
 | **Engine 3** | **Next-Gen Adaptive Swing 2.0** (3-State Traffic Light Breadth Regime + Afzal Strike-4 + Minervini Stage 2 VCP) | NSE/BSE Swing Equities (6,110 Universe) | **76.99% 5Y CAGR** (+26.7% in FY 2026 Chop) |
 

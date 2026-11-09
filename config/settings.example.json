@@ -9,7 +9,7 @@
   "engines": {
     "engine_stocks_mis": {
       "id": "engine_stocks_mis",
-      "name": "Engine 1: Alpha-Surge 2.0 Intraday (10-Year Audited \u00b7 163.36% CAGR \u00b7 53.8% Win Rate)",
+      "name": "Alpha-Surge 2.0 Intraday (150.75% 10Y CAGR \u00b7 56.42% WR \u00b7 Strict Liquid)",
       "short_name": "ALPHA-SURGE 2.0 MIS",
       "enabled": true,
       "mode": "PAPER_SIM",
@@ -26,8 +26,12 @@
         "target_rr": 3.5,
         "trail_to_cost_at_1r": true,
         "vwap_cross_exit_after_1r": true,
-        "tranche1_rr": 1.25
-      }
+        "tranche1_rr": 1.25,
+        "min_daily_turnover_inr": 200000000.0,
+        "min_avg_volume_shares": 100000,
+        "max_order_pct_of_adt": 2.5
+      },
+      "description": "50/50 Two-Tranche Scale-Out (+1.25R Lock + Breakeven Ratchet + +3.5R Runner), Strict Liquidity Guardrails (ADT >= \u20b920 Cr, Order <= 2.5% ADT), 18.94% MaxDD, 2.18 PF across 10 years."
     },
     "engine_fo_hybrid": {
       "id": "engine_fo_hybrid",

@@ -1,1171 +1,2043 @@
 {
-  "title": "Engine 1: Alpha-Surge 2.0 Intraday (10-Year Audited \u00b7 163.36% CAGR \u00b7 53.8% Win Rate)",
-  "subtitle": "50/50 Two-Tranche Scale-Out (+1.25R Lock & +3.50R Runner) \u00b7 Multi-SMA Stage-2 Filter \u00b7 RVOL >= 2.2x \u00b7 1.75% Stop \u00b7 -1.5% RMS Circuit",
-  "initial_capital": 300000.0,
-  "final_equity": 2989996558.51,
-  "total_gain": 2989696558.51,
-  "total_return_pct": 996565.52,
-  "cagr_pct": 163.36,
-  "max_drawdown_pct": 21.09,
-  "total_trades": 2561,
-  "win_rate_pct": 53.81,
-  "profit_factor": 2.33,
-  "avg_win_pct": 3.6,
-  "avg_loss_pct": -1.77,
-  "avg_holding_days": 1.0,
-  "yearly": {
+  "strategy_name": "Alpha-Surge 2.0 Intraday (50/50 Scale-Out + Strict Institutional Liquidity Guardrails)",
+  "period": "2017-03-01 to 2026-10-01",
+  "sessions_simulated": 2377,
+  "years_simulated": 9.51,
+  "starting_capital": 300000.0,
+  "final_equity": 1875548439.7,
+  "cagr_pct": 150.75,
+  "max_drawdown_pct": 18.94,
+  "win_rate_pct": 56.42,
+  "profit_factor": 2.18,
+  "total_trades": 6946,
+  "liquidity_audit": {
+    "status": "100% INSTITUTIONAL LIQUIDITY VERIFIED",
+    "min_allowed_adt_cr": 20.0,
+    "min_observed_adt_cr": 20.0,
+    "median_observed_adt_cr": 69.91,
+    "min_allowed_avg_vol_shares": 100000,
+    "max_allowed_order_pct_of_adt": 2.5,
+    "max_observed_order_pct_of_adt": 2.5,
+    "median_observed_order_pct_of_adt": 2.5,
+    "illiquid_trades_count": 0,
+    "excessive_participation_trades_count": 0
+  },
+  "yearly_summary": {
     "2017": {
-      "trades": 267,
-      "wins": 154,
-      "win_rate": 57.7,
-      "net_pnl": 153926963.95,
-      "start_eq": 300000.0,
-      "end_eq": 154226963.95,
-      "gain_pct": 51308.99
+      "trades": 327,
+      "wins": 201,
+      "losses": 126,
+      "win_rate_pct": 61.47,
+      "net_pnl": 31795271.04
     },
     "2018": {
-      "trades": 203,
-      "wins": 97,
-      "win_rate": 47.8,
-      "net_pnl": 133939859.62,
-      "start_eq": 154226963.95,
-      "end_eq": 288166823.57,
-      "gain_pct": 86.85
+      "trades": 338,
+      "wins": 186,
+      "losses": 152,
+      "win_rate_pct": 55.03,
+      "net_pnl": 62078896.2
     },
     "2019": {
-      "trades": 206,
-      "wins": 105,
-      "win_rate": 51.0,
-      "net_pnl": 193910748.54,
-      "start_eq": 288166823.57,
-      "end_eq": 482077572.11,
-      "gain_pct": 67.29
+      "trades": 295,
+      "wins": 155,
+      "losses": 140,
+      "win_rate_pct": 52.54,
+      "net_pnl": 6699607.52
     },
     "2020": {
-      "trades": 250,
-      "wins": 135,
-      "win_rate": 54.0,
-      "net_pnl": 303395857.6,
-      "start_eq": 482077572.11,
-      "end_eq": 785473429.72,
-      "gain_pct": 62.94
+      "trades": 497,
+      "wins": 279,
+      "losses": 218,
+      "win_rate_pct": 56.14,
+      "net_pnl": 142916846.86
     },
     "2021": {
-      "trades": 293,
-      "wins": 165,
-      "win_rate": 56.3,
-      "net_pnl": 456745448.07,
-      "start_eq": 785473429.72,
-      "end_eq": 1242218877.79,
-      "gain_pct": 58.15
+      "trades": 844,
+      "wins": 463,
+      "losses": 381,
+      "win_rate_pct": 54.86,
+      "net_pnl": 280849840.46
     },
     "2022": {
-      "trades": 257,
-      "wins": 144,
-      "win_rate": 56.0,
-      "net_pnl": 345073764.9,
-      "start_eq": 1242218877.79,
-      "end_eq": 1587292642.69,
-      "gain_pct": 27.78
+      "trades": 673,
+      "wins": 363,
+      "losses": 310,
+      "win_rate_pct": 53.94,
+      "net_pnl": 120599851.57
     },
     "2023": {
-      "trades": 325,
-      "wins": 178,
-      "win_rate": 54.8,
-      "net_pnl": 480791624.04,
-      "start_eq": 1587292642.69,
-      "end_eq": 2068084266.73,
-      "gain_pct": 30.29
+      "trades": 1010,
+      "wins": 608,
+      "losses": 402,
+      "win_rate_pct": 60.2,
+      "net_pnl": 311895592.41
     },
     "2024": {
-      "trades": 318,
-      "wins": 189,
-      "win_rate": 59.4,
-      "net_pnl": 539114433.86,
-      "start_eq": 2068084266.73,
-      "end_eq": 2607198700.58,
-      "gain_pct": 26.07
+      "trades": 1185,
+      "wins": 676,
+      "losses": 509,
+      "win_rate_pct": 57.05,
+      "net_pnl": 445231983.38
     },
     "2025": {
-      "trades": 242,
-      "wins": 107,
-      "win_rate": 44.2,
-      "net_pnl": 142972359.18,
-      "start_eq": 2607198700.58,
-      "end_eq": 2750171059.77,
-      "gain_pct": 5.48
+      "trades": 908,
+      "wins": 503,
+      "losses": 405,
+      "win_rate_pct": 55.4,
+      "net_pnl": 233649769.8
     },
     "2026": {
-      "trades": 200,
-      "wins": 104,
-      "win_rate": 52.0,
-      "net_pnl": 239825498.74,
-      "start_eq": 2750171059.77,
-      "end_eq": 2989996558.51,
-      "gain_pct": 8.72
+      "trades": 869,
+      "wins": 485,
+      "losses": 384,
+      "win_rate_pct": 55.81,
+      "net_pnl": 239530780.47
     }
   },
-  "equity_curve": [
+  "monthly_reports": {
+    "2017-03": {
+      "trades": 28,
+      "win_rate": 64.3,
+      "net_pnl": 266855.32
+    },
+    "2017-04": {
+      "trades": 25,
+      "win_rate": 60.0,
+      "net_pnl": 619573.37
+    },
+    "2017-05": {
+      "trades": 27,
+      "win_rate": 77.8,
+      "net_pnl": 2083238.03
+    },
+    "2017-06": {
+      "trades": 27,
+      "win_rate": 77.8,
+      "net_pnl": 3395557.31
+    },
+    "2017-07": {
+      "trades": 30,
+      "win_rate": 56.7,
+      "net_pnl": 1071645.53
+    },
+    "2017-08": {
+      "trades": 26,
+      "win_rate": 53.8,
+      "net_pnl": 2615195.41
+    },
+    "2017-09": {
+      "trades": 36,
+      "win_rate": 58.3,
+      "net_pnl": 7004038.4
+    },
+    "2017-10": {
+      "trades": 51,
+      "win_rate": 64.7,
+      "net_pnl": 8709637.23
+    },
+    "2017-11": {
+      "trades": 36,
+      "win_rate": 30.6,
+      "net_pnl": -2858564.82
+    },
+    "2017-12": {
+      "trades": 41,
+      "win_rate": 73.2,
+      "net_pnl": 8888095.26
+    },
+    "2018-01": {
+      "trades": 49,
+      "win_rate": 51.0,
+      "net_pnl": 4430827.33
+    },
+    "2018-02": {
+      "trades": 20,
+      "win_rate": 40.0,
+      "net_pnl": 762464.45
+    },
+    "2018-03": {
+      "trades": 26,
+      "win_rate": 57.7,
+      "net_pnl": 4942760.64
+    },
+    "2018-04": {
+      "trades": 34,
+      "win_rate": 61.8,
+      "net_pnl": 11666126.87
+    },
+    "2018-05": {
+      "trades": 36,
+      "win_rate": 58.3,
+      "net_pnl": 4806771.62
+    },
+    "2018-06": {
+      "trades": 21,
+      "win_rate": 42.9,
+      "net_pnl": -560443.7
+    },
+    "2018-07": {
+      "trades": 16,
+      "win_rate": 31.2,
+      "net_pnl": -231544.92
+    },
+    "2018-08": {
+      "trades": 42,
+      "win_rate": 76.2,
+      "net_pnl": 12649697.23
+    },
+    "2018-09": {
+      "trades": 31,
+      "win_rate": 67.7,
+      "net_pnl": 19544490.01
+    },
+    "2018-10": {
+      "trades": 22,
+      "win_rate": 36.4,
+      "net_pnl": -1113000.32
+    },
+    "2018-11": {
+      "trades": 12,
+      "win_rate": 66.7,
+      "net_pnl": 5629617.73
+    },
+    "2018-12": {
+      "trades": 29,
+      "win_rate": 44.8,
+      "net_pnl": -448870.73
+    },
+    "2019-01": {
+      "trades": 37,
+      "win_rate": 56.8,
+      "net_pnl": 3684556.7
+    },
+    "2019-02": {
+      "trades": 24,
+      "win_rate": 33.3,
+      "net_pnl": -4278292.91
+    },
+    "2019-03": {
+      "trades": 32,
+      "win_rate": 65.6,
+      "net_pnl": 7204547.62
+    },
+    "2019-04": {
+      "trades": 31,
+      "win_rate": 41.9,
+      "net_pnl": 983527.6
+    },
+    "2019-05": {
+      "trades": 23,
+      "win_rate": 43.5,
+      "net_pnl": -6943555.22
+    },
+    "2019-06": {
+      "trades": 7,
+      "win_rate": 57.1,
+      "net_pnl": -2739732.76
+    },
+    "2019-07": {
+      "trades": 24,
+      "win_rate": 33.3,
+      "net_pnl": -2630284.28
+    },
+    "2019-08": {
+      "trades": 16,
+      "win_rate": 37.5,
+      "net_pnl": -3770285.66
+    },
+    "2019-09": {
+      "trades": 21,
+      "win_rate": 81.0,
+      "net_pnl": 10570129.32
+    },
+    "2019-10": {
+      "trades": 31,
+      "win_rate": 54.8,
+      "net_pnl": -286571.83
+    },
+    "2019-11": {
+      "trades": 36,
+      "win_rate": 58.3,
+      "net_pnl": 3391341.24
+    },
+    "2019-12": {
+      "trades": 13,
+      "win_rate": 69.2,
+      "net_pnl": 1514227.68
+    },
+    "2020-01": {
+      "trades": 57,
+      "win_rate": 68.4,
+      "net_pnl": 16034203.69
+    },
+    "2020-02": {
+      "trades": 55,
+      "win_rate": 63.6,
+      "net_pnl": 22809443.23
+    },
+    "2020-03": {
+      "trades": 16,
+      "win_rate": 43.8,
+      "net_pnl": -3733141.17
+    },
+    "2020-04": {
+      "trades": 5,
+      "win_rate": 40.0,
+      "net_pnl": 2422834.61
+    },
+    "2020-05": {
+      "trades": 14,
+      "win_rate": 64.3,
+      "net_pnl": 11760257.98
+    },
+    "2020-06": {
+      "trades": 39,
+      "win_rate": 48.7,
+      "net_pnl": 5290312.48
+    },
+    "2020-07": {
+      "trades": 55,
+      "win_rate": 36.4,
+      "net_pnl": 9438083.27
+    },
+    "2020-08": {
+      "trades": 59,
+      "win_rate": 54.2,
+      "net_pnl": 11735898.2
+    },
+    "2020-09": {
+      "trades": 48,
+      "win_rate": 58.3,
+      "net_pnl": 8955525.57
+    },
+    "2020-10": {
+      "trades": 31,
+      "win_rate": 58.1,
+      "net_pnl": 8938661.93
+    },
+    "2020-11": {
+      "trades": 52,
+      "win_rate": 63.5,
+      "net_pnl": 24490893.55
+    },
+    "2020-12": {
+      "trades": 66,
+      "win_rate": 56.1,
+      "net_pnl": 24773873.52
+    },
+    "2021-01": {
+      "trades": 66,
+      "win_rate": 47.0,
+      "net_pnl": 28582773.07
+    },
+    "2021-02": {
+      "trades": 86,
+      "win_rate": 59.3,
+      "net_pnl": 53333573.03
+    },
+    "2021-03": {
+      "trades": 39,
+      "win_rate": 59.0,
+      "net_pnl": 11644105.68
+    },
+    "2021-04": {
+      "trades": 46,
+      "win_rate": 63.0,
+      "net_pnl": 22601008.84
+    },
+    "2021-05": {
+      "trades": 87,
+      "win_rate": 52.9,
+      "net_pnl": 21165619.4
+    },
+    "2021-06": {
+      "trades": 82,
+      "win_rate": 48.8,
+      "net_pnl": 15449250.29
+    },
+    "2021-07": {
+      "trades": 114,
+      "win_rate": 50.0,
+      "net_pnl": 16632073.74
+    },
+    "2021-08": {
+      "trades": 63,
+      "win_rate": 54.0,
+      "net_pnl": 24283802.74
+    },
+    "2021-09": {
+      "trades": 94,
+      "win_rate": 55.3,
+      "net_pnl": 13719020.58
+    },
+    "2021-10": {
+      "trades": 70,
+      "win_rate": 65.7,
+      "net_pnl": 54910397.8
+    },
+    "2021-11": {
+      "trades": 64,
+      "win_rate": 54.7,
+      "net_pnl": 8458062.38
+    },
+    "2021-12": {
+      "trades": 33,
+      "win_rate": 57.6,
+      "net_pnl": 10070152.91
+    },
+    "2022-01": {
+      "trades": 70,
+      "win_rate": 45.7,
+      "net_pnl": 2527841.84
+    },
+    "2022-02": {
+      "trades": 46,
+      "win_rate": 56.5,
+      "net_pnl": 10889542.85
+    },
+    "2022-03": {
+      "trades": 32,
+      "win_rate": 31.2,
+      "net_pnl": -2913668.45
+    },
+    "2022-04": {
+      "trades": 72,
+      "win_rate": 61.1,
+      "net_pnl": 19197532.19
+    },
+    "2022-05": {
+      "trades": 26,
+      "win_rate": 30.8,
+      "net_pnl": -2255844.93
+    },
+    "2022-06": {
+      "trades": 34,
+      "win_rate": 50.0,
+      "net_pnl": 4237042.51
+    },
+    "2022-07": {
+      "trades": 50,
+      "win_rate": 58.0,
+      "net_pnl": 10524421.79
+    },
+    "2022-08": {
+      "trades": 96,
+      "win_rate": 56.2,
+      "net_pnl": 29187945.01
+    },
+    "2022-09": {
+      "trades": 85,
+      "win_rate": 43.5,
+      "net_pnl": -2491455.22
+    },
+    "2022-10": {
+      "trades": 30,
+      "win_rate": 63.3,
+      "net_pnl": 6456139.26
+    },
+    "2022-11": {
+      "trades": 70,
+      "win_rate": 64.3,
+      "net_pnl": 22431581.4
+    },
+    "2022-12": {
+      "trades": 62,
+      "win_rate": 67.7,
+      "net_pnl": 22808773.32
+    },
+    "2023-01": {
+      "trades": 33,
+      "win_rate": 63.6,
+      "net_pnl": 5779334.68
+    },
+    "2023-02": {
+      "trades": 35,
+      "win_rate": 34.3,
+      "net_pnl": -3194293.47
+    },
+    "2023-03": {
+      "trades": 24,
+      "win_rate": 29.2,
+      "net_pnl": -1374102.64
+    },
+    "2023-04": {
+      "trades": 55,
+      "win_rate": 63.6,
+      "net_pnl": 7682123.07
+    },
+    "2023-05": {
+      "trades": 108,
+      "win_rate": 67.6,
+      "net_pnl": 29723002.28
+    },
+    "2023-06": {
+      "trades": 120,
+      "win_rate": 65.8,
+      "net_pnl": 39167247.22
+    },
+    "2023-07": {
+      "trades": 126,
+      "win_rate": 63.5,
+      "net_pnl": 41081052.65
+    },
+    "2023-08": {
+      "trades": 113,
+      "win_rate": 58.4,
+      "net_pnl": 33068066.87
+    },
+    "2023-09": {
+      "trades": 101,
+      "win_rate": 54.5,
+      "net_pnl": 32866798.95
+    },
+    "2023-10": {
+      "trades": 73,
+      "win_rate": 74.0,
+      "net_pnl": 27927209.85
+    },
+    "2023-11": {
+      "trades": 100,
+      "win_rate": 56.0,
+      "net_pnl": 27314880.55
+    },
+    "2023-12": {
+      "trades": 122,
+      "win_rate": 57.4,
+      "net_pnl": 71854272.4
+    },
+    "2024-01": {
+      "trades": 139,
+      "win_rate": 61.9,
+      "net_pnl": 86134997.13
+    },
+    "2024-02": {
+      "trades": 106,
+      "win_rate": 49.1,
+      "net_pnl": 40943591.83
+    },
+    "2024-03": {
+      "trades": 64,
+      "win_rate": 54.7,
+      "net_pnl": 9263629.86
+    },
+    "2024-04": {
+      "trades": 85,
+      "win_rate": 57.6,
+      "net_pnl": 41478644.55
+    },
+    "2024-05": {
+      "trades": 107,
+      "win_rate": 53.3,
+      "net_pnl": 39294199.43
+    },
+    "2024-06": {
+      "trades": 107,
+      "win_rate": 58.9,
+      "net_pnl": 64071066.93
+    },
+    "2024-07": {
+      "trades": 134,
+      "win_rate": 51.5,
+      "net_pnl": 45123756.26
+    },
+    "2024-08": {
+      "trades": 119,
+      "win_rate": 57.1,
+      "net_pnl": 27272199.36
+    },
+    "2024-09": {
+      "trades": 126,
+      "win_rate": 60.3,
+      "net_pnl": 29711183.46
+    },
+    "2024-10": {
+      "trades": 57,
+      "win_rate": 64.9,
+      "net_pnl": 25571276.86
+    },
+    "2024-11": {
+      "trades": 51,
+      "win_rate": 39.2,
+      "net_pnl": -4735953.24
+    },
+    "2024-12": {
+      "trades": 90,
+      "win_rate": 71.1,
+      "net_pnl": 41103390.96
+    },
+    "2025-01": {
+      "trades": 92,
+      "win_rate": 56.5,
+      "net_pnl": 21467738.74
+    },
+    "2025-02": {
+      "trades": 62,
+      "win_rate": 48.4,
+      "net_pnl": 16976160.73
+    },
+    "2025-03": {
+      "trades": 51,
+      "win_rate": 21.6,
+      "net_pnl": -16306564.14
+    },
+    "2025-04": {
+      "trades": 70,
+      "win_rate": 50.0,
+      "net_pnl": 13785954.12
+    },
+    "2025-05": {
+      "trades": 114,
+      "win_rate": 67.5,
+      "net_pnl": 71053834.92
+    },
+    "2025-06": {
+      "trades": 105,
+      "win_rate": 68.6,
+      "net_pnl": 57213471.57
+    },
+    "2025-07": {
+      "trades": 114,
+      "win_rate": 58.8,
+      "net_pnl": 14364675.27
+    },
+    "2025-08": {
+      "trades": 57,
+      "win_rate": 54.4,
+      "net_pnl": 5414855.85
+    },
+    "2025-09": {
+      "trades": 71,
+      "win_rate": 62.0,
+      "net_pnl": 19962912.2
+    },
+    "2025-10": {
+      "trades": 37,
+      "win_rate": 56.8,
+      "net_pnl": 7890643.37
+    },
+    "2025-11": {
+      "trades": 67,
+      "win_rate": 50.7,
+      "net_pnl": 12149025.73
+    },
+    "2025-12": {
+      "trades": 68,
+      "win_rate": 42.6,
+      "net_pnl": 9677061.44
+    },
+    "2026-01": {
+      "trades": 72,
+      "win_rate": 56.9,
+      "net_pnl": 13135147.62
+    },
+    "2026-02": {
+      "trades": 72,
+      "win_rate": 47.2,
+      "net_pnl": 5155828.84
+    },
+    "2026-03": {
+      "trades": 72,
+      "win_rate": 54.2,
+      "net_pnl": 8533068.12
+    },
+    "2026-04": {
+      "trades": 88,
+      "win_rate": 61.4,
+      "net_pnl": 47945974.48
+    },
+    "2026-05": {
+      "trades": 119,
+      "win_rate": 60.5,
+      "net_pnl": 49373382.8
+    },
+    "2026-06": {
+      "trades": 124,
+      "win_rate": 61.3,
+      "net_pnl": 41803833.92
+    },
+    "2026-07": {
+      "trades": 121,
+      "win_rate": 57.9,
+      "net_pnl": 36495371.91
+    },
+    "2026-08": {
+      "trades": 127,
+      "win_rate": 49.6,
+      "net_pnl": 21569467.79
+    },
+    "2026-09": {
+      "trades": 67,
+      "win_rate": 50.7,
+      "net_pnl": 11254720.28
+    },
+    "2026-10": {
+      "trades": 7,
+      "win_rate": 28.6,
+      "net_pnl": 4263984.72
+    }
+  },
+  "top_30_winners": [
     {
-      "date": "2017-03-28",
-      "equity": 632093.63,
-      "net_pnl": 332093.63,
-      "stocks_pnl": 332093.63,
-      "fo_pnl": 0.0
+      "date": "2025-05-16",
+      "symbol": "MAZDOCK",
+      "side": "LONG",
+      "shares": 31250,
+      "entry_price": 3200.0,
+      "exit_price": 3333.0,
+      "notional": 100000000.0,
+      "stock_adt_cr": 1952.89,
+      "order_pct_of_adt": 0.512,
+      "return_pct": 4.12,
+      "net_pnl": 4116250.0,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.7,
+      "rs_pct": 95.8,
+      "equity_after": 1460459396.23
     },
     {
-      "date": "2017-04-28",
-      "equity": 988008.9,
-      "net_pnl": 355915.26,
-      "stocks_pnl": 355915.26,
-      "fo_pnl": 0.0
+      "date": "2024-09-13",
+      "symbol": "KALYANKJIL",
+      "side": "LONG",
+      "shares": 143287,
+      "entry_price": 697.9,
+      "exit_price": 726.91,
+      "notional": 99999997.3,
+      "stock_adt_cr": 588.77,
+      "order_pct_of_adt": 1.698,
+      "return_pct": 4.12,
+      "net_pnl": 4116249.89,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 3.77,
+      "rs_pct": 96.9,
+      "equity_after": 1328872409.4
     },
     {
-      "date": "2017-05-28",
-      "equity": 1977985.71,
-      "net_pnl": 989976.81,
-      "stocks_pnl": 989976.81,
-      "fo_pnl": 0.0
+      "date": "2024-01-15",
+      "symbol": "IRFC",
+      "side": "LONG",
+      "shares": 856898,
+      "entry_price": 116.7,
+      "exit_price": 121.55,
+      "notional": 99999996.6,
+      "stock_adt_cr": 1582.65,
+      "order_pct_of_adt": 0.632,
+      "return_pct": 4.12,
+      "net_pnl": 4116249.86,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 3.21,
+      "rs_pct": 88.0,
+      "equity_after": 985030797.89
     },
     {
-      "date": "2017-06-28",
-      "equity": 7321759.59,
-      "net_pnl": 5343773.88,
-      "stocks_pnl": 5343773.88,
-      "fo_pnl": 0.0
+      "date": "2020-02-19",
+      "symbol": "IRCTC",
+      "side": "LONG",
+      "shares": 300075,
+      "entry_price": 333.25,
+      "exit_price": 347.1,
+      "notional": 99999993.75,
+      "stock_adt_cr": 719.36,
+      "order_pct_of_adt": 1.39,
+      "return_pct": 4.12,
+      "net_pnl": 4116249.74,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 3.03,
+      "rs_pct": 100.0,
+      "equity_after": 135773194.74
     },
     {
-      "date": "2017-07-28",
-      "equity": 18110195.06,
-      "net_pnl": 10788435.47,
-      "stocks_pnl": 10788435.47,
-      "fo_pnl": 0.0
+      "date": "2021-02-02",
+      "symbol": "ASHOKLEY",
+      "side": "LONG",
+      "shares": 1679261,
+      "entry_price": 59.55,
+      "exit_price": 62.03,
+      "notional": 99999992.55,
+      "stock_adt_cr": 494.56,
+      "order_pct_of_adt": 2.022,
+      "return_pct": 4.12,
+      "net_pnl": 4116249.69,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 1.82,
+      "rs_pct": 80.0,
+      "equity_after": 284251183.46
     },
     {
-      "date": "2017-08-28",
-      "equity": 25781696.23,
-      "net_pnl": 7671501.17,
-      "stocks_pnl": 7671501.17,
-      "fo_pnl": 0.0
+      "date": "2026-05-08",
+      "symbol": "SCI",
+      "side": "LONG",
+      "shares": 312989,
+      "entry_price": 319.5,
+      "exit_price": 332.78,
+      "notional": 99999985.5,
+      "stock_adt_cr": 531.87,
+      "order_pct_of_adt": 1.88,
+      "return_pct": 4.12,
+      "net_pnl": 4116249.4,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.01,
+      "rs_pct": 96.3,
+      "equity_after": 1732190350.89
     },
     {
-      "date": "2017-09-28",
-      "equity": 61939187.32,
-      "net_pnl": 36157491.09,
-      "stocks_pnl": 36157491.09,
-      "fo_pnl": 0.0
+      "date": "2020-11-10",
+      "symbol": "INDUSINDBK",
+      "side": "LONG",
+      "shares": 127551,
+      "entry_price": 784.0,
+      "exit_price": 816.59,
+      "notional": 99999984.0,
+      "stock_adt_cr": 1473.68,
+      "order_pct_of_adt": 0.679,
+      "return_pct": 4.12,
+      "net_pnl": 4116249.34,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 3.14,
+      "rs_pct": 96.3,
+      "equity_after": 203446740.23
     },
     {
-      "date": "2017-10-28",
-      "equity": 102060544.7,
-      "net_pnl": 40121357.38,
-      "stocks_pnl": 40121357.38,
-      "fo_pnl": 0.0
+      "date": "2021-01-15",
+      "symbol": "TMPV",
+      "side": "LONG",
+      "shares": 406504,
+      "entry_price": 246.0,
+      "exit_price": 256.22,
+      "notional": 99999984.0,
+      "stock_adt_cr": 2255.71,
+      "order_pct_of_adt": 0.443,
+      "return_pct": 4.12,
+      "net_pnl": 4116249.34,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.72,
+      "rs_pct": 100.0,
+      "equity_after": 271694052.78
     },
     {
-      "date": "2017-11-28",
-      "equity": 107351765.65,
-      "net_pnl": 5291220.95,
-      "stocks_pnl": 5291220.95,
-      "fo_pnl": 0.0
+      "date": "2023-09-01",
+      "symbol": "BHEL",
+      "side": "LONG",
+      "shares": 819672,
+      "entry_price": 122.0,
+      "exit_price": 127.07,
+      "notional": 99999984.0,
+      "stock_adt_cr": 445.25,
+      "order_pct_of_adt": 2.246,
+      "return_pct": 4.12,
+      "net_pnl": 4116249.34,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 5.24,
+      "rs_pct": 90.5,
+      "equity_after": 801288993.64
     },
     {
-      "date": "2017-12-28",
-      "equity": 154226963.95,
-      "net_pnl": 46875198.3,
-      "stocks_pnl": 46875198.3,
-      "fo_pnl": 0.0
+      "date": "2024-04-10",
+      "symbol": "VEDL",
+      "side": "LONG",
+      "shares": 297619,
+      "entry_price": 336.0,
+      "exit_price": 349.97,
+      "notional": 99999984.0,
+      "stock_adt_cr": 446.76,
+      "order_pct_of_adt": 2.238,
+      "return_pct": 4.12,
+      "net_pnl": 4116249.34,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 5.55,
+      "rs_pct": 91.9,
+      "equity_after": 1117428962.3
     },
     {
-      "date": "2018-01-28",
-      "equity": 187569631.1,
-      "net_pnl": 33342667.14,
-      "stocks_pnl": 33342667.14,
-      "fo_pnl": 0.0
+      "date": "2023-12-06",
+      "symbol": "ADANIPOWER",
+      "side": "LONG",
+      "shares": 917431,
+      "entry_price": 109.0,
+      "exit_price": 113.53,
+      "notional": 99999979.0,
+      "stock_adt_cr": 1067.94,
+      "order_pct_of_adt": 0.936,
+      "return_pct": 4.12,
+      "net_pnl": 4116249.14,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.34,
+      "rs_pct": 97.4,
+      "equity_after": 900641409.03
     },
     {
-      "date": "2018-02-28",
-      "equity": 179896224.96,
-      "net_pnl": -7673406.13,
-      "stocks_pnl": -7673406.13,
-      "fo_pnl": 0.0
+      "date": "2024-01-29",
+      "symbol": "NBCC",
+      "side": "LONG",
+      "shares": 1282051,
+      "entry_price": 78.0,
+      "exit_price": 81.24,
+      "notional": 99999978.0,
+      "stock_adt_cr": 711.15,
+      "order_pct_of_adt": 1.406,
+      "return_pct": 4.12,
+      "net_pnl": 4116249.09,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.06,
+      "rs_pct": 96.5,
+      "equity_after": 1029139210.65
     },
     {
-      "date": "2018-03-28",
-      "equity": 182442023.62,
-      "net_pnl": 2545798.65,
-      "stocks_pnl": 2545798.65,
-      "fo_pnl": 0.0
+      "date": "2026-02-09",
+      "symbol": "IFCI",
+      "side": "LONG",
+      "shares": 1622586,
+      "entry_price": 61.63,
+      "exit_price": 64.19,
+      "notional": 99999975.18,
+      "stock_adt_cr": 404.53,
+      "order_pct_of_adt": 2.472,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.98,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 3.14,
+      "rs_pct": 85.7,
+      "equity_after": 1652256949.84
     },
     {
-      "date": "2018-04-28",
-      "equity": 210346799.95,
-      "net_pnl": 27904776.33,
-      "stocks_pnl": 27904776.33,
-      "fo_pnl": 0.0
+      "date": "2024-06-25",
+      "symbol": "EXIDEIND",
+      "side": "LONG",
+      "shares": 173913,
+      "entry_price": 575.0,
+      "exit_price": 598.9,
+      "notional": 99999975.0,
+      "stock_adt_cr": 528.44,
+      "order_pct_of_adt": 1.892,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.97,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 4.48,
+      "rs_pct": 98.4,
+      "equity_after": 1229557958.69
     },
     {
-      "date": "2018-05-28",
-      "equity": 229652580.04,
-      "net_pnl": 19305780.09,
-      "stocks_pnl": 19305780.09,
-      "fo_pnl": 0.0
+      "date": "2024-01-25",
+      "symbol": "RAILTEL",
+      "side": "LONG",
+      "shares": 245670,
+      "entry_price": 407.05,
+      "exit_price": 423.97,
+      "notional": 99999973.5,
+      "stock_adt_cr": 553.66,
+      "order_pct_of_adt": 1.806,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.91,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 4.26,
+      "rs_pct": 93.8,
+      "equity_after": 1012648993.3
     },
     {
-      "date": "2018-06-28",
-      "equity": 231997146.32,
-      "net_pnl": 2344566.29,
-      "stocks_pnl": 2344566.29,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2018-07-28",
-      "equity": 233163903.71,
-      "net_pnl": 1166757.39,
-      "stocks_pnl": 1166757.39,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2018-08-28",
-      "equity": 243699871.32,
-      "net_pnl": 10535967.61,
-      "stocks_pnl": 10535967.61,
-      "fo_pnl": 0.0
+      "date": "2024-01-25",
+      "symbol": "NBCC",
+      "side": "LONG",
+      "shares": 1412429,
+      "entry_price": 70.8,
+      "exit_price": 73.74,
+      "notional": 99999973.2,
+      "stock_adt_cr": 566.49,
+      "order_pct_of_adt": 1.765,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.9,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 4.28,
+      "rs_pct": 90.7,
+      "equity_after": 1016765242.2
     },
     {
       "date": "2018-09-28",
-      "equity": 280720860.52,
-      "net_pnl": 37020989.2,
-      "stocks_pnl": 37020989.2,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2018-10-28",
-      "equity": 280061745.55,
-      "net_pnl": -659114.97,
-      "stocks_pnl": -659114.97,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2018-11-28",
-      "equity": 278047995.6,
-      "net_pnl": -2013749.95,
-      "stocks_pnl": -2013749.95,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2018-12-28",
-      "equity": 288166823.57,
-      "net_pnl": 10118827.97,
-      "stocks_pnl": 10118827.97,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2019-01-28",
-      "equity": 316302092.88,
-      "net_pnl": 28135269.3,
-      "stocks_pnl": 28135269.3,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2019-02-28",
-      "equity": 311163807.46,
-      "net_pnl": -5138285.41,
-      "stocks_pnl": -5138285.41,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2019-03-28",
-      "equity": 346553018.15,
-      "net_pnl": 35389210.69,
-      "stocks_pnl": 35389210.69,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2019-04-28",
-      "equity": 371557947.04,
-      "net_pnl": 25004928.89,
-      "stocks_pnl": 25004928.89,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2019-05-28",
-      "equity": 389420925.41,
-      "net_pnl": 17862978.37,
-      "stocks_pnl": 17862978.37,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2019-06-28",
-      "equity": 387442088.09,
-      "net_pnl": -1978837.32,
-      "stocks_pnl": -1978837.32,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2019-07-28",
-      "equity": 388126790.09,
-      "net_pnl": 684702.0,
-      "stocks_pnl": 684702.0,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2019-08-28",
-      "equity": 382021718.32,
-      "net_pnl": -6105071.76,
-      "stocks_pnl": -6105071.76,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2019-09-28",
-      "equity": 405222010.61,
-      "net_pnl": 23200292.29,
-      "stocks_pnl": 23200292.29,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2019-10-28",
-      "equity": 425154973.97,
-      "net_pnl": 19932963.36,
-      "stocks_pnl": 19932963.36,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2019-11-28",
-      "equity": 468123164.88,
-      "net_pnl": 42968190.9,
-      "stocks_pnl": 42968190.9,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2019-12-28",
-      "equity": 482077572.11,
-      "net_pnl": 13954407.24,
-      "stocks_pnl": 13954407.24,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2020-01-28",
-      "equity": 520138594.78,
-      "net_pnl": 38061022.66,
-      "stocks_pnl": 38061022.66,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2020-02-28",
-      "equity": 537625217.44,
-      "net_pnl": 17486622.67,
-      "stocks_pnl": 17486622.67,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2020-03-28",
-      "equity": 530173500.27,
-      "net_pnl": -7451717.17,
-      "stocks_pnl": -7451717.17,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2020-04-28",
-      "equity": 524132253.33,
-      "net_pnl": -6041246.95,
-      "stocks_pnl": -6041246.95,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2020-05-28",
-      "equity": 534600287.88,
-      "net_pnl": 10468034.56,
-      "stocks_pnl": 10468034.56,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2020-06-28",
-      "equity": 570453702.3,
-      "net_pnl": 35853414.41,
-      "stocks_pnl": 35853414.41,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2020-07-28",
-      "equity": 577633589.53,
-      "net_pnl": 7179887.23,
-      "stocks_pnl": 7179887.23,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2020-08-28",
-      "equity": 628649657.09,
-      "net_pnl": 51016067.56,
-      "stocks_pnl": 51016067.56,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2020-09-28",
-      "equity": 666518941.33,
-      "net_pnl": 37869284.24,
-      "stocks_pnl": 37869284.24,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2020-10-28",
-      "equity": 682221105.01,
-      "net_pnl": 15702163.69,
-      "stocks_pnl": 15702163.69,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2020-11-28",
-      "equity": 706153447.5,
-      "net_pnl": 23932342.49,
-      "stocks_pnl": 23932342.49,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2020-12-28",
-      "equity": 785473429.72,
-      "net_pnl": 79319982.22,
-      "stocks_pnl": 79319982.22,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2021-01-28",
-      "equity": 814937507.96,
-      "net_pnl": 29464078.25,
-      "stocks_pnl": 29464078.25,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2021-02-28",
-      "equity": 856206648.4,
-      "net_pnl": 41269140.44,
-      "stocks_pnl": 41269140.44,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2021-03-28",
-      "equity": 906169191.75,
-      "net_pnl": 49962543.35,
-      "stocks_pnl": 49962543.35,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2021-04-28",
-      "equity": 945831916.67,
-      "net_pnl": 39662724.93,
-      "stocks_pnl": 39662724.93,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2021-05-28",
-      "equity": 982648272.32,
-      "net_pnl": 36816355.65,
-      "stocks_pnl": 36816355.65,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2021-06-28",
-      "equity": 1029539507.46,
-      "net_pnl": 46891235.13,
-      "stocks_pnl": 46891235.13,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2021-07-28",
-      "equity": 1076450185.19,
-      "net_pnl": 46910677.73,
-      "stocks_pnl": 46910677.73,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2021-08-28",
-      "equity": 1099791364.47,
-      "net_pnl": 23341179.28,
-      "stocks_pnl": 23341179.28,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2021-09-28",
-      "equity": 1185469378.42,
-      "net_pnl": 85678013.95,
-      "stocks_pnl": 85678013.95,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2021-10-28",
-      "equity": 1232967269.64,
-      "net_pnl": 47497891.22,
-      "stocks_pnl": 47497891.22,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2021-11-28",
-      "equity": 1241971636.0,
-      "net_pnl": 9004366.36,
-      "stocks_pnl": 9004366.36,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2021-12-28",
-      "equity": 1242218877.79,
-      "net_pnl": 247241.79,
-      "stocks_pnl": 247241.79,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2022-01-28",
-      "equity": 1279523032.88,
-      "net_pnl": 37304155.09,
-      "stocks_pnl": 37304155.09,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2022-02-28",
-      "equity": 1305935784.68,
-      "net_pnl": 26412751.81,
-      "stocks_pnl": 26412751.81,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2022-03-28",
-      "equity": 1305526629.45,
-      "net_pnl": -409155.24,
-      "stocks_pnl": -409155.24,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2022-04-28",
-      "equity": 1343654179.98,
-      "net_pnl": 38127550.53,
-      "stocks_pnl": 38127550.53,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2022-05-28",
-      "equity": 1333381548.15,
-      "net_pnl": -10272631.83,
-      "stocks_pnl": -10272631.83,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2022-06-28",
-      "equity": 1345865342.53,
-      "net_pnl": 12483794.38,
-      "stocks_pnl": 12483794.38,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2022-07-28",
-      "equity": 1361734199.13,
-      "net_pnl": 15868856.61,
-      "stocks_pnl": 15868856.61,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2022-08-28",
-      "equity": 1433086622.8,
-      "net_pnl": 71352423.67,
-      "stocks_pnl": 71352423.67,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2022-09-28",
-      "equity": 1489034210.0,
-      "net_pnl": 55947587.2,
-      "stocks_pnl": 55947587.2,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2022-10-28",
-      "equity": 1505258339.7,
-      "net_pnl": 16224129.69,
-      "stocks_pnl": 16224129.69,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2022-11-28",
-      "equity": 1528812574.85,
-      "net_pnl": 23554235.15,
-      "stocks_pnl": 23554235.15,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2022-12-28",
-      "equity": 1587292642.69,
-      "net_pnl": 58480067.84,
-      "stocks_pnl": 58480067.84,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2023-01-28",
-      "equity": 1595143725.36,
-      "net_pnl": 7851082.68,
-      "stocks_pnl": 7851082.68,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2023-02-28",
-      "equity": 1562319073.4,
-      "net_pnl": -32824651.96,
-      "stocks_pnl": -32824651.96,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2023-03-28",
-      "equity": 1561102237.97,
-      "net_pnl": -1216835.43,
-      "stocks_pnl": -1216835.43,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2023-04-28",
-      "equity": 1577355298.04,
-      "net_pnl": 16253060.07,
-      "stocks_pnl": 16253060.07,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2023-05-28",
-      "equity": 1602162812.58,
-      "net_pnl": 24807514.54,
-      "stocks_pnl": 24807514.54,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2023-06-28",
-      "equity": 1682820556.36,
-      "net_pnl": 80657743.79,
-      "stocks_pnl": 80657743.79,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2023-07-28",
-      "equity": 1781945405.27,
-      "net_pnl": 99124848.91,
-      "stocks_pnl": 99124848.91,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2023-08-28",
-      "equity": 1859812406.03,
-      "net_pnl": 77867000.75,
-      "stocks_pnl": 77867000.75,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2023-09-28",
-      "equity": 1902878170.05,
-      "net_pnl": 43065764.03,
-      "stocks_pnl": 43065764.03,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2023-10-28",
-      "equity": 1921695091.79,
-      "net_pnl": 18816921.74,
-      "stocks_pnl": 18816921.74,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2023-11-28",
-      "equity": 1983727726.62,
-      "net_pnl": 62032634.83,
-      "stocks_pnl": 62032634.83,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2023-12-28",
-      "equity": 2068084266.73,
-      "net_pnl": 84356540.1,
-      "stocks_pnl": 84356540.1,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2024-01-28",
-      "equity": 2136394693.07,
-      "net_pnl": 68310426.35,
-      "stocks_pnl": 68310426.35,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2024-02-28",
-      "equity": 2183553516.45,
-      "net_pnl": 47158823.38,
-      "stocks_pnl": 47158823.38,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2024-03-28",
-      "equity": 2197989398.9,
-      "net_pnl": 14435882.45,
-      "stocks_pnl": 14435882.45,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2024-04-28",
-      "equity": 2268192654.09,
-      "net_pnl": 70203255.19,
-      "stocks_pnl": 70203255.19,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2024-05-28",
-      "equity": 2298776375.96,
-      "net_pnl": 30583721.87,
-      "stocks_pnl": 30583721.87,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2024-06-28",
-      "equity": 2348724657.81,
-      "net_pnl": 49948281.85,
-      "stocks_pnl": 49948281.85,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2024-07-28",
-      "equity": 2436978265.65,
-      "net_pnl": 88253607.84,
-      "stocks_pnl": 88253607.84,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2024-08-28",
-      "equity": 2484723045.37,
-      "net_pnl": 47744779.72,
-      "stocks_pnl": 47744779.72,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2024-09-28",
-      "equity": 2562435038.84,
-      "net_pnl": 77711993.47,
-      "stocks_pnl": 77711993.47,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2024-10-28",
-      "equity": 2576806654.75,
-      "net_pnl": 14371615.9,
-      "stocks_pnl": 14371615.9,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2024-11-28",
-      "equity": 2582724239.25,
-      "net_pnl": 5917584.5,
-      "stocks_pnl": 5917584.5,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2024-12-28",
-      "equity": 2607198700.58,
-      "net_pnl": 24474461.34,
-      "stocks_pnl": 24474461.34,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2025-01-28",
-      "equity": 2611532571.67,
-      "net_pnl": 4333871.09,
-      "stocks_pnl": 4333871.09,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2025-02-28",
-      "equity": 2588405459.75,
-      "net_pnl": -23127111.93,
-      "stocks_pnl": -23127111.93,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2025-03-28",
-      "equity": 2573941481.06,
-      "net_pnl": -14463978.69,
-      "stocks_pnl": -14463978.69,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2025-04-28",
-      "equity": 2580194175.59,
-      "net_pnl": 6252694.54,
-      "stocks_pnl": 6252694.54,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2025-05-28",
-      "equity": 2632883935.93,
-      "net_pnl": 52689760.34,
-      "stocks_pnl": 52689760.34,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2025-06-28",
-      "equity": 2694775237.3,
-      "net_pnl": 61891301.37,
-      "stocks_pnl": 61891301.37,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2025-07-28",
-      "equity": 2753820364.84,
-      "net_pnl": 59045127.54,
-      "stocks_pnl": 59045127.54,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2025-08-28",
-      "equity": 2765424276.86,
-      "net_pnl": 11603912.02,
-      "stocks_pnl": 11603912.02,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2025-09-28",
-      "equity": 2773492094.91,
-      "net_pnl": 8067818.05,
-      "stocks_pnl": 8067818.05,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2025-10-28",
-      "equity": 2773545823.19,
-      "net_pnl": 53728.28,
-      "stocks_pnl": 53728.28,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2025-11-28",
-      "equity": 2775288806.06,
-      "net_pnl": 1742982.87,
-      "stocks_pnl": 1742982.87,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2025-12-28",
-      "equity": 2750171059.77,
-      "net_pnl": -25117746.29,
-      "stocks_pnl": -25117746.29,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2026-01-28",
-      "equity": 2744907472.08,
-      "net_pnl": -5263587.69,
-      "stocks_pnl": -5263587.69,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2026-02-28",
-      "equity": 2764206051.78,
-      "net_pnl": 19298579.7,
-      "stocks_pnl": 19298579.7,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2026-03-28",
-      "equity": 2759891146.56,
-      "net_pnl": -4314905.22,
-      "stocks_pnl": -4314905.22,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2026-04-28",
-      "equity": 2818824785.62,
-      "net_pnl": 58933639.06,
-      "stocks_pnl": 58933639.06,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2026-05-28",
-      "equity": 2862875652.12,
-      "net_pnl": 44050866.5,
-      "stocks_pnl": 44050866.5,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2026-06-28",
-      "equity": 2919248113.56,
-      "net_pnl": 56372461.44,
-      "stocks_pnl": 56372461.44,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2026-07-28",
-      "equity": 2942428659.76,
-      "net_pnl": 23180546.2,
-      "stocks_pnl": 23180546.2,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2026-08-28",
-      "equity": 2988790129.36,
-      "net_pnl": 46361469.6,
-      "stocks_pnl": 46361469.6,
-      "fo_pnl": 0.0
+      "symbol": "YESBANK",
+      "side": "SHORT",
+      "shares": 491159,
+      "entry_price": 203.6,
+      "exit_price": 195.14,
+      "notional": 99999972.4,
+      "stock_adt_cr": 1163.75,
+      "order_pct_of_adt": 0.859,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.86,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.6,
+      "rs_pct": 2.3,
+      "equity_after": 83357546.2
+    },
+    {
+      "date": "2022-11-25",
+      "symbol": "PNB",
+      "side": "LONG",
+      "shares": 1941747,
+      "entry_price": 51.5,
+      "exit_price": 53.64,
+      "notional": 99999970.5,
+      "stock_adt_cr": 582.59,
+      "order_pct_of_adt": 1.716,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.79,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 3.27,
+      "rs_pct": 97.6,
+      "equity_after": 620931149.32
+    },
+    {
+      "date": "2021-10-08",
+      "symbol": "IEX",
+      "side": "LONG",
+      "shares": 465008,
+      "entry_price": 215.05,
+      "exit_price": 223.99,
+      "notional": 99999970.4,
+      "stock_adt_cr": 481.4,
+      "order_pct_of_adt": 2.077,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.78,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 3.2,
+      "rs_pct": 95.9,
+      "equity_after": 468637637.55
+    },
+    {
+      "date": "2025-06-02",
+      "symbol": "RPOWER",
+      "side": "LONG",
+      "shares": 1705320,
+      "entry_price": 58.64,
+      "exit_price": 61.08,
+      "notional": 99999964.8,
+      "stock_adt_cr": 696.72,
+      "order_pct_of_adt": 1.435,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.55,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 3.87,
+      "rs_pct": 90.1,
+      "equity_after": 1513461262.36
+    },
+    {
+      "date": "2023-07-26",
+      "symbol": "RBLBANK",
+      "side": "LONG",
+      "shares": 443951,
+      "entry_price": 225.25,
+      "exit_price": 234.61,
+      "notional": 99999962.75,
+      "stock_adt_cr": 443.83,
+      "order_pct_of_adt": 2.253,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.47,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.29,
+      "rs_pct": 83.1,
+      "equity_after": 753909309.15
+    },
+    {
+      "date": "2023-09-08",
+      "symbol": "RECLTD",
+      "side": "LONG",
+      "shares": 405844,
+      "entry_price": 246.4,
+      "exit_price": 256.64,
+      "notional": 99999961.6,
+      "stock_adt_cr": 659.3,
+      "order_pct_of_adt": 1.517,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.42,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.38,
+      "rs_pct": 92.5,
+      "equity_after": 815472122.56
+    },
+    {
+      "date": "2023-09-07",
+      "symbol": "COCHINSHIP",
+      "side": "LONG",
+      "shares": 209424,
+      "entry_price": 477.5,
+      "exit_price": 497.35,
+      "notional": 99999960.0,
+      "stock_adt_cr": 608.2,
+      "order_pct_of_adt": 1.644,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.35,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.5,
+      "rs_pct": 94.2,
+      "equity_after": 811377549.29
+    },
+    {
+      "date": "2024-01-29",
+      "symbol": "SJVN",
+      "side": "LONG",
+      "shares": 833333,
+      "entry_price": 120.0,
+      "exit_price": 124.99,
+      "notional": 99999960.0,
+      "stock_adt_cr": 532.31,
+      "order_pct_of_adt": 1.879,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.35,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.97,
+      "rs_pct": 93.9,
+      "equity_after": 1025022961.56
+    },
+    {
+      "date": "2024-02-16",
+      "symbol": "NATIONALUM",
+      "side": "LONG",
+      "shares": 629921,
+      "entry_price": 158.75,
+      "exit_price": 165.35,
+      "notional": 99999958.75,
+      "stock_adt_cr": 654.12,
+      "order_pct_of_adt": 1.529,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.3,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.01,
+      "rs_pct": 94.9,
+      "equity_after": 1078667712.48
+    },
+    {
+      "date": "2024-02-08",
+      "symbol": "LICI",
+      "side": "LONG",
+      "shares": 186237,
+      "entry_price": 536.95,
+      "exit_price": 559.27,
+      "notional": 99999957.15,
+      "stock_adt_cr": 626.48,
+      "order_pct_of_adt": 1.596,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.24,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 3.81,
+      "rs_pct": 89.3,
+      "equity_after": 1078121180.51
+    },
+    {
+      "date": "2024-12-09",
+      "symbol": "ANGELONE",
+      "side": "LONG",
+      "shares": 303490,
+      "entry_price": 329.5,
+      "exit_price": 343.19,
+      "notional": 99999955.0,
+      "stock_adt_cr": 485.92,
+      "order_pct_of_adt": 2.058,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.15,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.88,
+      "rs_pct": 97.6,
+      "equity_after": 1387140592.59
+    },
+    {
+      "date": "2025-06-10",
+      "symbol": "RPOWER",
+      "side": "LONG",
+      "shares": 1522301,
+      "entry_price": 65.69,
+      "exit_price": 68.42,
+      "notional": 99999952.69,
+      "stock_adt_cr": 1099.11,
+      "order_pct_of_adt": 0.91,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.05,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.92,
+      "rs_pct": 97.5,
+      "equity_after": 1543294491.95
+    },
+    {
+      "date": "2024-02-07",
+      "symbol": "IOB",
+      "side": "LONG",
+      "shares": 1469507,
+      "entry_price": 68.05,
+      "exit_price": 70.88,
+      "notional": 99999951.35,
+      "stock_adt_cr": 442.75,
+      "order_pct_of_adt": 2.259,
+      "return_pct": 4.12,
+      "net_pnl": 4116248.0,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 5.79,
+      "rs_pct": 89.8,
+      "equity_after": 1072136091.85
+    },
+    {
+      "date": "2023-09-18",
+      "symbol": "PNB",
+      "side": "LONG",
+      "shares": 1348617,
+      "entry_price": 74.15,
+      "exit_price": 77.23,
+      "notional": 99999950.55,
+      "stock_adt_cr": 488.89,
+      "order_pct_of_adt": 2.045,
+      "return_pct": 4.12,
+      "net_pnl": 4116247.96,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.98,
+      "rs_pct": 90.4,
+      "equity_after": 829879305.84
+    }
+  ],
+  "recent_50_trades": [
+    {
+      "date": "2026-09-08",
+      "symbol": "GMMPFAUDLR",
+      "side": "LONG",
+      "shares": 6563,
+      "entry_price": 1262.8,
+      "exit_price": 1240.7,
+      "notional": 8287756.4,
+      "stock_adt_cr": 33.15,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -148350.84,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 4.3,
+      "rs_pct": 98.6,
+      "equity_after": 1865110516.37
+    },
+    {
+      "date": "2026-09-08",
+      "symbol": "EBGNG",
+      "side": "LONG",
+      "shares": 16685,
+      "entry_price": 626.0,
+      "exit_price": 652.02,
+      "notional": 10444810.0,
+      "stock_adt_cr": 41.78,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 4.12,
+      "net_pnl": 429934.49,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.5,
+      "rs_pct": 95.9,
+      "equity_after": 1865540450.86
+    },
+    {
+      "date": "2026-09-08",
+      "symbol": "ASIANENE",
+      "side": "LONG",
+      "shares": 19313,
+      "entry_price": 519.0,
+      "exit_price": 509.92,
+      "notional": 10023447.0,
+      "stock_adt_cr": 40.1,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -179419.7,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 2.19,
+      "rs_pct": 82.4,
+      "equity_after": 1865361031.16
+    },
+    {
+      "date": "2026-09-09",
+      "symbol": "WHEELS",
+      "side": "LONG",
+      "shares": 8343,
+      "entry_price": 2110.0,
+      "exit_price": 2197.7,
+      "notional": 17603730.0,
+      "stock_adt_cr": 70.42,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 4.12,
+      "net_pnl": 724613.54,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 19.77,
+      "rs_pct": 80.4,
+      "equity_after": 1866085644.7
+    },
+    {
+      "date": "2026-09-09",
+      "symbol": "PAYTM",
+      "side": "LONG",
+      "shares": 59630,
+      "entry_price": 1677.0,
+      "exit_price": 1732.59,
+      "notional": 99999510.0,
+      "stock_adt_cr": 610.91,
+      "order_pct_of_adt": 1.637,
+      "return_pct": 3.27,
+      "net_pnl": 3274962.34,
+      "reason": "SCALE_OUT_1.25R_PLUS_EOD_TRAIL",
+      "vol_ratio": 2.25,
+      "rs_pct": 98.9,
+      "equity_after": 1869360607.04
+    },
+    {
+      "date": "2026-09-09",
+      "symbol": "SAILIFE",
+      "side": "LONG",
+      "shares": 17911,
+      "entry_price": 1647.3,
+      "exit_price": 1679.37,
+      "notional": 29504790.3,
+      "stock_adt_cr": 118.02,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 1.91,
+      "net_pnl": 562556.28,
+      "reason": "SCALE_OUT_1.25R_PLUS_EOD_TRAIL",
+      "vol_ratio": 1.86,
+      "rs_pct": 89.1,
+      "equity_after": 1869923163.31
+    },
+    {
+      "date": "2026-09-09",
+      "symbol": "GMMPFAUDLR",
+      "side": "LONG",
+      "shares": 7819,
+      "entry_price": 1305.0,
+      "exit_price": 1319.93,
+      "notional": 10203795.0,
+      "stock_adt_cr": 40.82,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 1.1,
+      "net_pnl": 112624.39,
+      "reason": "SCALE_OUT_1.25R_PLUS_EOD_TRAIL",
+      "vol_ratio": 2.76,
+      "rs_pct": 100.0,
+      "equity_after": 1870035787.7
+    },
+    {
+      "date": "2026-09-09",
+      "symbol": "UNIMECH",
+      "side": "LONG",
+      "shares": 5601,
+      "entry_price": 1649.0,
+      "exit_price": 1620.14,
+      "notional": 9236049.0,
+      "stock_adt_cr": 36.95,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -165325.28,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 1.76,
+      "rs_pct": 94.6,
+      "equity_after": 1869870462.42
+    },
+    {
+      "date": "2026-09-10",
+      "symbol": "WHEELS",
+      "side": "LONG",
+      "shares": 16043,
+      "entry_price": 2470.0,
+      "exit_price": 2426.78,
+      "notional": 39626210.0,
+      "stock_adt_cr": 158.51,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -709309.16,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 4.01,
+      "rs_pct": 92.5,
+      "equity_after": 1869161153.26
+    },
+    {
+      "date": "2026-09-11",
+      "symbol": "RAYMOND",
+      "side": "LONG",
+      "shares": 65298,
+      "entry_price": 853.85,
+      "exit_price": 838.91,
+      "notional": 55754697.3,
+      "stock_adt_cr": 223.02,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -998009.08,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 6.22,
+      "rs_pct": 91.6,
+      "equity_after": 1868163144.18
+    },
+    {
+      "date": "2026-09-16",
+      "symbol": "PATANJALI",
+      "side": "SHORT",
+      "shares": 48739,
+      "entry_price": 339.05,
+      "exit_price": 344.98,
+      "notional": 16524957.95,
+      "stock_adt_cr": 66.1,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -295796.75,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 14.77,
+      "rs_pct": 8.5,
+      "equity_after": 1867867347.44
+    },
+    {
+      "date": "2026-09-16",
+      "symbol": "PREMIERENE",
+      "side": "SHORT",
+      "shares": 26742,
+      "entry_price": 940.4,
+      "exit_price": 909.41,
+      "notional": 25148176.8,
+      "stock_adt_cr": 100.6,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 3.25,
+      "net_pnl": 818558.31,
+      "reason": "SCALE_OUT_1.25R_PLUS_EOD_TRAIL",
+      "vol_ratio": 3.57,
+      "rs_pct": 19.7,
+      "equity_after": 1868685905.75
+    },
+    {
+      "date": "2026-09-16",
+      "symbol": "APOLLO",
+      "side": "SHORT",
+      "shares": 153324,
+      "entry_price": 386.6,
+      "exit_price": 370.53,
+      "notional": 59275058.4,
+      "stock_adt_cr": 237.1,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 4.12,
+      "net_pnl": 2439909.59,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 1.97,
+      "rs_pct": 14.1,
+      "equity_after": 1871125815.34
+    },
+    {
+      "date": "2026-09-16",
+      "symbol": "AFCONS",
+      "side": "SHORT",
+      "shares": 56356,
+      "entry_price": 262.25,
+      "exit_price": 251.35,
+      "notional": 14779361.0,
+      "stock_adt_cr": 59.12,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 4.12,
+      "net_pnl": 608355.45,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 1.97,
+      "rs_pct": 9.9,
+      "equity_after": 1871734170.79
+    },
+    {
+      "date": "2026-09-16",
+      "symbol": "MFSL",
+      "side": "SHORT",
+      "shares": 12871,
+      "entry_price": 1425.9,
+      "exit_price": 1450.85,
+      "notional": 18352758.9,
+      "stock_adt_cr": 73.42,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -328514.38,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 1.81,
+      "rs_pct": 12.7,
+      "equity_after": 1871405656.4
+    },
+    {
+      "date": "2026-09-16",
+      "symbol": "THERMAX",
+      "side": "SHORT",
+      "shares": 2884,
+      "entry_price": 3559.4,
+      "exit_price": 3536.8,
+      "notional": 10265309.6,
+      "stock_adt_cr": 41.07,
+      "order_pct_of_adt": 2.499,
+      "return_pct": 0.59,
+      "net_pnl": 61072.28,
+      "reason": "EOD_SQUARE_OFF_1515",
+      "vol_ratio": 2.13,
+      "rs_pct": 4.2,
+      "equity_after": 1871466728.68
+    },
+    {
+      "date": "2026-09-16",
+      "symbol": "NLCINDIA",
+      "side": "SHORT",
+      "shares": 35664,
+      "entry_price": 261.25,
+      "exit_price": 255.44,
+      "notional": 9317220.0,
+      "stock_adt_cr": 37.27,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 2.18,
+      "net_pnl": 203389.01,
+      "reason": "SCALE_OUT_1.25R_PLUS_EOD_TRAIL",
+      "vol_ratio": 2.18,
+      "rs_pct": 11.3,
+      "equity_after": 1871670117.68
+    },
+    {
+      "date": "2026-09-17",
+      "symbol": "DRREDDY",
+      "side": "SHORT",
+      "shares": 29343,
+      "entry_price": 1140.0,
+      "exit_price": 1159.95,
+      "notional": 33451020.0,
+      "stock_adt_cr": 133.81,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -598773.26,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 1.97,
+      "rs_pct": 15.9,
+      "equity_after": 1871071344.43
+    },
+    {
+      "date": "2026-09-18",
+      "symbol": "EMIL",
+      "side": "LONG",
+      "shares": 49384,
+      "entry_price": 186.85,
+      "exit_price": 194.62,
+      "notional": 9227400.4,
+      "stock_adt_cr": 36.91,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 4.12,
+      "net_pnl": 379822.87,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 7.9,
+      "rs_pct": 98.4,
+      "equity_after": 1871451167.3
+    },
+    {
+      "date": "2026-09-18",
+      "symbol": "SHAREINDIA",
+      "side": "LONG",
+      "shares": 174131,
+      "entry_price": 221.0,
+      "exit_price": 217.13,
+      "notional": 38482951.0,
+      "stock_adt_cr": 153.93,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -688844.82,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 3.54,
+      "rs_pct": 99.0,
+      "equity_after": 1870762322.47
+    },
+    {
+      "date": "2026-09-21",
+      "symbol": "PFOCUS",
+      "side": "LONG",
+      "shares": 41849,
+      "entry_price": 347.9,
+      "exit_price": 341.81,
+      "notional": 14559267.1,
+      "stock_adt_cr": 58.24,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -260610.88,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 2.71,
+      "rs_pct": 95.5,
+      "equity_after": 1870501711.59
+    },
+    {
+      "date": "2026-09-21",
+      "symbol": "FILATEX",
+      "side": "LONG",
+      "shares": 125278,
+      "entry_price": 94.7,
+      "exit_price": 93.04,
+      "notional": 11863826.6,
+      "stock_adt_cr": 47.46,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -212362.5,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 2.75,
+      "rs_pct": 98.5,
+      "equity_after": 1870289349.1
+    },
+    {
+      "date": "2026-09-22",
+      "symbol": "UNIMECH",
+      "side": "LONG",
+      "shares": 6707,
+      "entry_price": 1719.9,
+      "exit_price": 1791.38,
+      "notional": 11535369.3,
+      "stock_adt_cr": 46.15,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 4.12,
+      "net_pnl": 474824.64,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 3.73,
+      "rs_pct": 93.8,
+      "equity_after": 1870764173.73
+    },
+    {
+      "date": "2026-09-22",
+      "symbol": "PFOCUS",
+      "side": "LONG",
+      "shares": 42590,
+      "entry_price": 352.6,
+      "exit_price": 346.43,
+      "notional": 15017234.0,
+      "stock_adt_cr": 60.07,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -268808.49,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 2.5,
+      "rs_pct": 97.5,
+      "equity_after": 1870495365.25
+    },
+    {
+      "date": "2026-09-23",
+      "symbol": "BLUESTONE",
+      "side": "LONG",
+      "shares": 21595,
+      "entry_price": 941.95,
+      "exit_price": 925.47,
+      "notional": 20341410.25,
+      "stock_adt_cr": 81.37,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -364111.24,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 10.54,
+      "rs_pct": 98.7,
+      "equity_after": 1870131254.0
+    },
+    {
+      "date": "2026-09-23",
+      "symbol": "PFOCUS",
+      "side": "LONG",
+      "shares": 45100,
+      "entry_price": 362.55,
+      "exit_price": 356.21,
+      "notional": 16351005.0,
+      "stock_adt_cr": 65.41,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -292682.99,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 3.76,
+      "rs_pct": 97.5,
+      "equity_after": 1869838571.01
+    },
+    {
+      "date": "2026-09-24",
+      "symbol": "GNA",
+      "side": "LONG",
+      "shares": 12122,
+      "entry_price": 601.5,
+      "exit_price": 590.97,
+      "notional": 7291383.0,
+      "stock_adt_cr": 29.17,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -130515.76,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 14.97,
+      "rs_pct": 94.3,
+      "equity_after": 1869708055.26
     },
     {
       "date": "2026-09-28",
-      "equity": 2992010304.43,
-      "net_pnl": 3220175.07,
-      "stocks_pnl": 3220175.07,
-      "fo_pnl": 0.0
-    },
-    {
-      "date": "2026-10-28",
-      "equity": 2989996558.51,
-      "net_pnl": -2013745.92,
-      "stocks_pnl": -2013745.92,
-      "fo_pnl": 0.0
-    }
-  ],
-  "top_winners": [
-    {
-      "symbol": "MAWANASUG",
-      "entry_date": "2018-09-17",
-      "exit_date": "2018-09-17",
-      "side": "LONG",
-      "entry": 60.0,
-      "exit": 62.49,
-      "shares": 1875000,
-      "pnl": 4630781.25,
-      "pnl_pct": 4.12,
-      "r_mult": 2.35,
-      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
-      "bars_held": 1,
-      "year": 2018,
-      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 15.4x \u00b7 RS 100)"
-    },
-    {
-      "symbol": "RAIN",
-      "entry_date": "2019-02-14",
-      "exit_date": "2019-02-14",
+      "symbol": "FORTIS",
       "side": "SHORT",
-      "entry": 100.0,
-      "exit": 95.84,
-      "shares": 1125000,
-      "pnl": 4630781.25,
-      "pnl_pct": 4.12,
-      "r_mult": 2.35,
-      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
-      "bars_held": 1,
-      "year": 2019,
-      "setup_name": "Alpha-Surge 2.0 (SHORT \u00b7 RVOL 2.6x \u00b7 RS 3)"
+      "shares": 28414,
+      "entry_price": 831.0,
+      "exit_price": 830.75,
+      "notional": 23612034.0,
+      "stock_adt_cr": 94.45,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -0.01,
+      "net_pnl": -2341.31,
+      "reason": "EOD_SQUARE_OFF_1515",
+      "vol_ratio": 2.31,
+      "rs_pct": 12.3,
+      "equity_after": 1869705713.94
     },
     {
-      "symbol": "CARERATING",
-      "entry_date": "2019-08-02",
-      "exit_date": "2019-08-02",
+      "date": "2026-09-28",
+      "symbol": "INDIAGLYCO",
       "side": "SHORT",
-      "entry": 600.0,
-      "exit": 575.06,
-      "shares": 187500,
-      "pnl": 4630781.25,
-      "pnl_pct": 4.12,
-      "r_mult": 2.35,
-      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
-      "bars_held": 1,
-      "year": 2019,
-      "setup_name": "Alpha-Surge 2.0 (SHORT \u00b7 RVOL 30.1x \u00b7 RS 9)"
+      "shares": 17331,
+      "entry_price": 309.0,
+      "exit_price": 314.41,
+      "notional": 5355279.0,
+      "stock_adt_cr": 21.42,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -95859.49,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 1.67,
+      "rs_pct": 1.8,
+      "equity_after": 1869609854.45
     },
     {
-      "symbol": "KITEX",
-      "entry_date": "2020-02-12",
-      "exit_date": "2020-02-12",
-      "side": "LONG",
-      "entry": 50.0,
-      "exit": 52.08,
-      "shares": 2250000,
-      "pnl": 4630781.25,
-      "pnl_pct": 4.12,
-      "r_mult": 2.35,
-      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
-      "bars_held": 1,
-      "year": 2020,
-      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 7.4x \u00b7 RS 94)"
-    },
-    {
-      "symbol": "ROSSARI",
-      "entry_date": "2021-05-10",
-      "exit_date": "2021-05-10",
-      "side": "LONG",
-      "entry": 1250.0,
-      "exit": 1301.95,
-      "shares": 90000,
-      "pnl": 4630781.25,
-      "pnl_pct": 4.12,
-      "r_mult": 2.35,
-      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
-      "bars_held": 1,
-      "year": 2021,
-      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 6.7x \u00b7 RS 89)"
-    },
-    {
-      "symbol": "IEX",
-      "entry_date": "2021-10-11",
-      "exit_date": "2021-10-11",
-      "side": "LONG",
-      "entry": 240.0,
-      "exit": 249.97,
-      "shares": 468750,
-      "pnl": 4630781.25,
-      "pnl_pct": 4.12,
-      "r_mult": 2.35,
-      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
-      "bars_held": 1,
-      "year": 2021,
-      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 5.2x \u00b7 RS 97)"
-    },
-    {
-      "symbol": "ARIHANTCAP",
-      "entry_date": "2022-01-03",
-      "exit_date": "2022-01-03",
-      "side": "LONG",
-      "entry": 40.0,
-      "exit": 41.66,
-      "shares": 2812500,
-      "pnl": 4630781.25,
-      "pnl_pct": 4.12,
-      "r_mult": 2.35,
-      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
-      "bars_held": 1,
-      "year": 2022,
-      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 4.5x \u00b7 RS 92)"
-    },
-    {
-      "symbol": "MANINFRA",
-      "entry_date": "2022-01-10",
-      "exit_date": "2022-01-10",
-      "side": "LONG",
-      "entry": 120.0,
-      "exit": 124.99,
-      "shares": 937500,
-      "pnl": 4630781.25,
-      "pnl_pct": 4.12,
-      "r_mult": 2.35,
-      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
-      "bars_held": 1,
-      "year": 2022,
-      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 4.7x \u00b7 RS 96)"
-    },
-    {
-      "symbol": "SHARDACROP",
-      "entry_date": "2022-01-25",
-      "exit_date": "2022-01-25",
-      "side": "LONG",
-      "entry": 450.0,
-      "exit": 468.7,
-      "shares": 250000,
-      "pnl": 4630781.25,
-      "pnl_pct": 4.12,
-      "r_mult": 2.35,
-      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
-      "bars_held": 1,
-      "year": 2022,
-      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 10.4x \u00b7 RS 95)"
-    },
-    {
-      "symbol": "EMBDL",
-      "entry_date": "2022-02-21",
-      "exit_date": "2022-02-21",
-      "side": "SHORT",
-      "entry": 120.0,
-      "exit": 115.01,
-      "shares": 937500,
-      "pnl": 4630781.25,
-      "pnl_pct": 4.12,
-      "r_mult": 2.35,
-      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
-      "bars_held": 1,
-      "year": 2022,
-      "setup_name": "Alpha-Surge 2.0 (SHORT \u00b7 RVOL 4.6x \u00b7 RS 5)"
-    },
-    {
-      "symbol": "NUVOCO",
-      "entry_date": "2022-02-21",
-      "exit_date": "2022-02-21",
-      "side": "SHORT",
-      "entry": 375.0,
-      "exit": 359.41,
-      "shares": 300000,
-      "pnl": 4630781.25,
-      "pnl_pct": 4.12,
-      "r_mult": 2.35,
-      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
-      "bars_held": 1,
-      "year": 2022,
-      "setup_name": "Alpha-Surge 2.0 (SHORT \u00b7 RVOL 3.1x \u00b7 RS 8)"
-    },
-    {
-      "symbol": "INDOAMIN",
-      "entry_date": "2022-08-23",
-      "exit_date": "2022-08-23",
-      "side": "LONG",
-      "entry": 160.0,
-      "exit": 166.65,
-      "shares": 703125,
-      "pnl": 4630781.25,
-      "pnl_pct": 4.12,
-      "r_mult": 2.35,
-      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
-      "bars_held": 1,
-      "year": 2022,
-      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 4.7x \u00b7 RS 96)"
-    },
-    {
-      "symbol": "SKMEGGPROD",
-      "entry_date": "2022-09-05",
-      "exit_date": "2022-09-05",
-      "side": "LONG",
-      "entry": 45.0,
-      "exit": 46.87,
-      "shares": 2500000,
-      "pnl": 4630781.25,
-      "pnl_pct": 4.12,
-      "r_mult": 2.35,
-      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
-      "bars_held": 1,
-      "year": 2022,
-      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 15.5x \u00b7 RS 89)"
-    },
-    {
+      "date": "2026-09-28",
       "symbol": "GODFRYPHLP",
-      "entry_date": "2022-12-08",
-      "exit_date": "2022-12-08",
-      "side": "LONG",
-      "entry": 600.0,
-      "exit": 624.94,
-      "shares": 187500,
-      "pnl": 4630781.25,
-      "pnl_pct": 4.12,
-      "r_mult": 2.35,
-      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
-      "bars_held": 1,
-      "year": 2022,
-      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 5.6x \u00b7 RS 94)"
+      "side": "SHORT",
+      "shares": 3890,
+      "entry_price": 1961.7,
+      "exit_price": 1931.5,
+      "notional": 7631013.0,
+      "stock_adt_cr": 30.53,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 1.5,
+      "net_pnl": 114425.59,
+      "reason": "EOD_SQUARE_OFF_1515",
+      "vol_ratio": 1.68,
+      "rs_pct": 19.3,
+      "equity_after": 1869724280.04
     },
     {
-      "symbol": "GICRE",
-      "entry_date": "2022-12-15",
-      "exit_date": "2022-12-15",
-      "side": "LONG",
-      "entry": 160.0,
-      "exit": 166.65,
-      "shares": 703125,
-      "pnl": 4630781.25,
-      "pnl_pct": 4.12,
-      "r_mult": 2.35,
-      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
-      "bars_held": 1,
-      "year": 2022,
-      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 11.9x \u00b7 RS 88)"
+      "date": "2026-09-29",
+      "symbol": "BSE",
+      "side": "SHORT",
+      "shares": 32258,
+      "entry_price": 3100.0,
+      "exit_price": 3154.25,
+      "notional": 99999800.0,
+      "stock_adt_cr": 1331.02,
+      "order_pct_of_adt": 0.751,
+      "return_pct": -1.79,
+      "net_pnl": -1789996.42,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 7.0,
+      "rs_pct": 2.3,
+      "equity_after": 1867934283.62
+    },
+    {
+      "date": "2026-09-29",
+      "symbol": "RECLTD",
+      "side": "SHORT",
+      "shares": 120328,
+      "entry_price": 302.2,
+      "exit_price": 294.02,
+      "notional": 36363121.6,
+      "stock_adt_cr": 145.45,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 2.67,
+      "net_pnl": 969775.39,
+      "reason": "SCALE_OUT_1.25R_PLUS_EOD_TRAIL",
+      "vol_ratio": 8.29,
+      "rs_pct": 8.7,
+      "equity_after": 1868904059.02
+    },
+    {
+      "date": "2026-09-29",
+      "symbol": "POLYCAB",
+      "side": "SHORT",
+      "shares": 9962,
+      "entry_price": 8195.0,
+      "exit_price": 8102.5,
+      "notional": 81638590.0,
+      "stock_adt_cr": 326.59,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 1.09,
+      "net_pnl": 888829.56,
+      "reason": "EOD_SQUARE_OFF_1515",
+      "vol_ratio": 4.13,
+      "rs_pct": 12.1,
+      "equity_after": 1869792888.58
+    },
+    {
+      "date": "2026-09-29",
+      "symbol": "TMPV",
+      "side": "SHORT",
+      "shares": 249352,
+      "entry_price": 279.0,
+      "exit_price": 275.81,
+      "notional": 69569208.0,
+      "stock_adt_cr": 278.28,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 1.1,
+      "net_pnl": 767870.13,
+      "reason": "SCALE_OUT_1.25R_PLUS_EOD_TRAIL",
+      "vol_ratio": 1.91,
+      "rs_pct": 6.4,
+      "equity_after": 1870560758.72
+    },
+    {
+      "date": "2026-09-29",
+      "symbol": "TRENT",
+      "side": "SHORT",
+      "shares": 17425,
+      "entry_price": 2626.0,
+      "exit_price": 2635.0,
+      "notional": 45758050.0,
+      "stock_adt_cr": 183.04,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -0.38,
+      "net_pnl": -175128.22,
+      "reason": "EOD_SQUARE_OFF_1515",
+      "vol_ratio": 2.22,
+      "rs_pct": 3.5,
+      "equity_after": 1870385630.5
+    },
+    {
+      "date": "2026-09-29",
+      "symbol": "ADANIPOWER",
+      "side": "SHORT",
+      "shares": 478002,
+      "entry_price": 196.3,
+      "exit_price": 199.74,
+      "notional": 93831792.6,
+      "stock_adt_cr": 375.33,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -1679589.09,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 1.77,
+      "rs_pct": 17.3,
+      "equity_after": 1868706041.41
+    },
+    {
+      "date": "2026-09-29",
+      "symbol": "CUMMINSIND",
+      "side": "SHORT",
+      "shares": 9279,
+      "entry_price": 4850.0,
+      "exit_price": 4800.0,
+      "notional": 45003150.0,
+      "stock_adt_cr": 180.03,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 0.99,
+      "net_pnl": 445948.74,
+      "reason": "EOD_SQUARE_OFF_1515",
+      "vol_ratio": 2.15,
+      "rs_pct": 15.0,
+      "equity_after": 1869151990.15
+    },
+    {
+      "date": "2026-09-30",
+      "symbol": "MAXHEALTH",
+      "side": "SHORT",
+      "shares": 50812,
+      "entry_price": 963.0,
+      "exit_price": 935.87,
+      "notional": 48931956.0,
+      "stock_adt_cr": 195.73,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 2.78,
+      "net_pnl": 1359099.69,
+      "reason": "SCALE_OUT_1.25R_PLUS_EOD_TRAIL",
+      "vol_ratio": 6.93,
+      "rs_pct": 19.6,
+      "equity_after": 1870511089.83
+    },
+    {
+      "date": "2026-09-30",
+      "symbol": "FORTIS",
+      "side": "SHORT",
+      "shares": 30217,
+      "entry_price": 817.0,
+      "exit_price": 783.04,
+      "notional": 24687289.0,
+      "stock_adt_cr": 98.75,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 4.12,
+      "net_pnl": 1016190.53,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 4.84,
+      "rs_pct": 12.4,
+      "equity_after": 1871527280.37
+    },
+    {
+      "date": "2026-09-30",
+      "symbol": "TIINDIA",
+      "side": "SHORT",
+      "shares": 4886,
+      "entry_price": 2419.4,
+      "exit_price": 2375.0,
+      "notional": 11821188.4,
+      "stock_adt_cr": 47.29,
+      "order_pct_of_adt": 2.5,
+      "return_pct": 1.8,
+      "net_pnl": 212209.92,
+      "reason": "EOD_SQUARE_OFF_1515",
+      "vol_ratio": 3.52,
+      "rs_pct": 2.1,
+      "equity_after": 1871739490.29
+    },
+    {
+      "date": "2026-09-30",
+      "symbol": "THERMAX",
+      "side": "SHORT",
+      "shares": 3687,
+      "entry_price": 3280.0,
+      "exit_price": 3337.4,
+      "notional": 12093360.0,
+      "stock_adt_cr": 48.38,
+      "order_pct_of_adt": 2.499,
+      "return_pct": -1.79,
+      "net_pnl": -216471.14,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 2.76,
+      "rs_pct": 1.0,
+      "equity_after": 1871523019.15
+    },
+    {
+      "date": "2026-09-30",
+      "symbol": "DEEPAKFERT",
+      "side": "SHORT",
+      "shares": 5727,
+      "entry_price": 1305.1,
+      "exit_price": 1327.94,
+      "notional": 7474307.7,
+      "stock_adt_cr": 29.9,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -133790.11,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 2.28,
+      "rs_pct": 3.1,
+      "equity_after": 1871389229.04
+    },
+    {
+      "date": "2026-09-30",
+      "symbol": "CREDITACC",
+      "side": "SHORT",
+      "shares": 4797,
+      "entry_price": 1220.2,
+      "exit_price": 1241.55,
+      "notional": 5853299.4,
+      "stock_adt_cr": 23.42,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -104774.06,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 1.89,
+      "rs_pct": 4.1,
+      "equity_after": 1871284454.98
+    },
+    {
+      "date": "2026-10-01",
+      "symbol": "POLICYBZR",
+      "side": "SHORT",
+      "shares": 95238,
+      "entry_price": 1050.0,
+      "exit_price": 1006.36,
+      "notional": 99999900.0,
+      "stock_adt_cr": 687.9,
+      "order_pct_of_adt": 1.454,
+      "return_pct": 4.12,
+      "net_pnl": 4116245.88,
+      "reason": "SCALE_OUT_1.25R_PLUS_RUNNER_3.5R",
+      "vol_ratio": 2.17,
+      "rs_pct": 0.8,
+      "equity_after": 1875400700.87
+    },
+    {
+      "date": "2026-10-01",
+      "symbol": "ADANIENSOL",
+      "side": "SHORT",
+      "shares": 40882,
+      "entry_price": 1318.1,
+      "exit_price": 1341.17,
+      "notional": 53886564.2,
+      "stock_adt_cr": 215.55,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -964569.5,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 4.43,
+      "rs_pct": 15.7,
+      "equity_after": 1874436131.37
+    },
+    {
+      "date": "2026-10-01",
+      "symbol": "FORTIS",
+      "side": "SHORT",
+      "shares": 35623,
+      "entry_price": 763.0,
+      "exit_price": 776.35,
+      "notional": 27180349.0,
+      "stock_adt_cr": 108.72,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -486528.25,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 4.92,
+      "rs_pct": 6.6,
+      "equity_after": 1873949603.12
+    },
+    {
+      "date": "2026-10-01",
+      "symbol": "MARUTI",
+      "side": "SHORT",
+      "shares": 8403,
+      "entry_price": 11900.0,
+      "exit_price": 11512.84,
+      "notional": 99995700.0,
+      "stock_adt_cr": 460.87,
+      "order_pct_of_adt": 2.17,
+      "return_pct": 3.21,
+      "net_pnl": 3213275.69,
+      "reason": "SCALE_OUT_1.25R_PLUS_EOD_TRAIL",
+      "vol_ratio": 2.3,
+      "rs_pct": 14.9,
+      "equity_after": 1877162878.81
+    },
+    {
+      "date": "2026-10-01",
+      "symbol": "SCHNEIDER",
+      "side": "SHORT",
+      "shares": 5523,
+      "entry_price": 1203.0,
+      "exit_price": 1224.05,
+      "notional": 6644169.0,
+      "stock_adt_cr": 26.58,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -118930.63,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 6.54,
+      "rs_pct": 11.6,
+      "equity_after": 1877043948.18
+    },
+    {
+      "date": "2026-10-01",
+      "symbol": "MAXHEALTH",
+      "side": "SHORT",
+      "shares": 64247,
+      "entry_price": 919.85,
+      "exit_price": 935.95,
+      "notional": 59097602.95,
+      "stock_adt_cr": 236.39,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.79,
+      "net_pnl": -1057847.09,
+      "reason": "STOP_LOSS_1.75PCT",
+      "vol_ratio": 2.15,
+      "rs_pct": 10.7,
+      "equity_after": 1875986101.09
+    },
+    {
+      "date": "2026-10-01",
+      "symbol": "HDFCAMC",
+      "side": "SHORT",
+      "shares": 16202,
+      "entry_price": 2282.0,
+      "exit_price": 2308.1,
+      "notional": 36972964.0,
+      "stock_adt_cr": 147.89,
+      "order_pct_of_adt": 2.5,
+      "return_pct": -1.18,
+      "net_pnl": -437661.39,
+      "reason": "EOD_SQUARE_OFF_1515",
+      "vol_ratio": 1.75,
+      "rs_pct": 12.4,
+      "equity_after": 1875548439.7
     }
-  ],
-  "exit_reasons": {
-    "TARGET_2_RUNNER_HIT": 1014,
-    "TRANCHE_1_LOCK_PLUS_EOD": 327,
-    "EOD_PROFIT_CLOSE": 37,
-    "SL_HIT": 1169,
-    "EOD_LOSS_CLOSE": 14
-  }
+  ]
 }
