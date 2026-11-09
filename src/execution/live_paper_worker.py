@@ -380,17 +380,34 @@ class LivePaperTradingWorker:
                 logger.warning("MIS Order rejected by Security Guardrail: %s", risk_err)
                 continue
 
-            # Execute via Broker Gateway (LIVE via DhanHQ or simulated PAPER)
+            # Execute via Broker Gateway using 3-Stage Marketable Limit Protocol (±0.20% slippage protection + 8s stale cancel + partial-fill reconciliation)
             exec_res = self.app.broker_manager.execute_order(
                 symbol=sym_clean,
                 transaction_type=side,
                 quantity=qty,
                 price=entry_p,
-                order_type="MARKET",
+                order_type="MARKETABLE_LIMIT",
                 product_type="MIS" if lev > 1.0 else "CNC",
                 sl_price=sl_p,
-                target_price=tp_p
+                target_price=tp_p,
+                slippage_buffer_pct=float(params1.get("slippage_buffer_pct", 0.20)),
+                timeout_sec=8.0
             )
+            if exec_res.get("status") in ("CANCELLED_UNFILLED", "ERROR", "REJECTED") or int(exec_res.get("filled_qty", qty)) <= 0:
+                logger.warning("Skipped %s: %s", sym_clean, exec_res.get("message", "Unfilled / Rejected"))
+                continue
+
+            # Stage 3 Reconciliation: Anchor qty, entry_p, SL, TP1, and TP2 to actual filled quantity and average traded price
+            qty = int(exec_res.get("filled_qty", qty))
+            entry_p = float(exec_res.get("avg_fill_price", entry_p))
+            notional = round(entry_p * qty, 2)
+            margin_used = round(notional / lev, 2)
+            sl_dist = entry_p * (sl_pct / 100.0)
+            tp1_dist = sl_dist * tp1_rr
+            tp_dist = sl_dist * rr
+            sl_p = round(entry_p - sl_dist if side == "LONG" else entry_p + sl_dist, 2)
+            tp1_p = round(entry_p + tp1_dist if side == "LONG" else entry_p - tp1_dist, 2)
+            tp_p = round(entry_p + tp_dist if side == "LONG" else entry_p - tp_dist, 2)
 
             pos_id = exec_res.get("broker_order_id") or exec_res.get("order_id") or f"LIVE-MIS-{sym_clean}-{int(time.time()*1000) % 100000}"
             pos_dict = {
@@ -627,8 +644,32 @@ class LivePaperTradingWorker:
                 logger.warning("Swing Order rejected by Security Guardrail: %s", risk_err)
                 continue
 
+            exec_res = self.app.broker_manager.execute_order(
+                symbol=sym,
+                transaction_type="SHORT" if is_short else "LONG",
+                quantity=qty,
+                price=entry_p,
+                order_type="MARKETABLE_LIMIT",
+                product_type="CNC",
+                sl_price=stop_p,
+                target_price=tp_p,
+                slippage_buffer_pct=0.20,
+                timeout_sec=8.0
+            )
+            if exec_res.get("status") in ("CANCELLED_UNFILLED", "ERROR", "REJECTED") or int(exec_res.get("filled_qty", qty)) <= 0:
+                logger.warning("Skipped Swing %s: %s", sym, exec_res.get("message", "Unfilled / Rejected"))
+                continue
+
+            qty = int(exec_res.get("filled_qty", qty))
+            entry_p = round(float(exec_res.get("avg_fill_price", entry_p)), 2)
+            notional = round(entry_p * qty, 2)
+            margin_used = round(notional / swing_lev, 2)
+            sl_dist = abs(entry_p - stop_p)
+            tp_p = round(entry_p - sl_dist * target_rr if is_short else entry_p + sl_dist * target_rr, 2)
+            swing_pos_id = exec_res.get("broker_order_id") or exec_res.get("order_id") or f"SEPA-{int(time.time()*1000) % 100000}-{sym[:4]}"
+
             pos_dict = {
-                "pos_id": f"SEPA-{int(time.time()*1000) % 100000}-{sym[:4]}",
+                "pos_id": swing_pos_id,
                 "date": today_str,
                 "engine_id": "engine_sepa_swing",
                 "engine": "SEPA SWING",
