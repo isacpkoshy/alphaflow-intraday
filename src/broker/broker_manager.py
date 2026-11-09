@@ -261,68 +261,167 @@ class BrokerManager:
         logger.info("PASSED Pre-Trade Risk Verification for %s (Qty=%d, Value=Rs. %.2f)", sym_clean, quantity, order_val)
         return None
 
+    @staticmethod
+    def round_to_nse_tick(price: float, tick: float = 0.05) -> float:
+        """Rounds a price to the nearest valid NSE ₹0.05 tick increment."""
+        return round(round(float(price) / tick) * tick, 2)
+
+    @classmethod
+    def compute_marketable_limit_price(cls, trigger_price: float, transaction_type: str, buffer_pct: float = 0.20) -> float:
+        """
+        Stage 1 of Institutional Smart Execution:
+        Computes a Slippage-Protected Marketable Limit Price (`Trigger * (1 ± buffer_pct/100)`)
+        rounded to the nearest ₹0.05 NSE tick.
+        - Matches immediately against Best Ask/Bid by Exchange Price-Time Priority,
+          while strictly capping maximum adverse slippage at `buffer_pct` (default 0.20%).
+        """
+        is_buy = transaction_type.upper() in ("BUY", "LONG")
+        mult = (1.0 + buffer_pct / 100.0) if is_buy else (1.0 - buffer_pct / 100.0)
+        return cls.round_to_nse_tick(trigger_price * mult, 0.05)
+
     def execute_order(
         self,
         symbol: str,
         transaction_type: str,
         quantity: int,
         price: float,
-        order_type: str = "MARKET",
+        order_type: str = "MARKETABLE_LIMIT",
         product_type: str = "MIS",
         sl_price: Optional[float] = None,
-        target_price: Optional[float] = None
+        target_price: Optional[float] = None,
+        slippage_buffer_pct: float = 0.20,
+        timeout_sec: float = 8.0
     ) -> Dict[str, Any]:
         """
-        Executes an order in either LIVE broker mode (via DhanHQ API) or PAPER mode.
-        If LIVE, places broker order and attaches Stop Loss / GTT trigger.
+        Executes an order using the 3-Stage Institutional Smart Execution Protocol:
+        1. Places a Marketable Limit Order (`LIMIT` at `Trigger * (1 ± 0.20%)` rounded to ₹0.05 tick).
+        2. Polls fill status up to `timeout_sec` (default 8s) and auto-cancels any unfilled stale remainder
+           so orders never sit passively waiting for adverse reversals.
+        3. Reconciles exact `filled_qty` and `avg_fill_price` and attaches server-side GTT Stop-Loss
+           for the exact filled share count.
         """
         sym_clean = symbol.replace(".NS", "").replace(".BO", "").upper()
+        is_buy = transaction_type.upper() in ("BUY", "LONG")
+        limit_px = self.compute_marketable_limit_price(price, transaction_type, slippage_buffer_pct) if order_type.upper() in ("MARKETABLE_LIMIT", "MARKET") else self.round_to_nse_tick(price)
+
         if self.trading_mode == "LIVE" and self.is_connected and self.client:
-            dhan_tx = TransactionType.BUY if transaction_type.upper() in ("BUY", "LONG") else TransactionType.SELL
+            dhan_tx = TransactionType.BUY if is_buy else TransactionType.SELL
             dhan_prod = ProductType.INTRADAY if product_type.upper() == "MIS" else ProductType.CNC
-            dhan_otype = OrderType.MARKET if order_type.upper() == "MARKET" else OrderType.LIMIT
+            # Always route MARKET / MARKETABLE_LIMIT as an NSE LIMIT order with slippage-protection ceiling
+            dhan_otype = OrderType.LIMIT
 
             res = self.client.place_order(
                 symbol=sym_clean,
-                exchange_segment="NSE_EQ",
                 transaction_type=dhan_tx,
                 quantity=quantity,
                 order_type=dhan_otype,
                 product_type=dhan_prod,
-                price=price if order_type.upper() == "LIMIT" else 0.0,
-                trigger_price=sl_price or 0.0
+                price=limit_px,
+                trigger_price=0.0
             )
+            if res.get("status") != "SUCCESS":
+                return {
+                    "status": "ERROR",
+                    "mode": "LIVE",
+                    "broker": "DHAN",
+                    "filled_qty": 0,
+                    "avg_fill_price": price,
+                    "limit_price": limit_px,
+                    "message": res.get("message", "Order placement failed")
+                }
 
-            # If GTT SL is provided and client supports it, place Forever GTT
+            order_data = res.get("data", {})
+            order_id = order_data.get("orderId") or res.get("order_id")
+            filled_qty = int(quantity)
+            avg_fill_price = float(price)
+
+            # Stage 2 & 3: Poll order status, auto-cancel stale unfilled remainder, and reconcile exact fill
+            if order_id and hasattr(self.client, "get_order_status"):
+                deadline = time.time() + max(1.0, float(timeout_sec))
+                order_state = "PENDING"
+                while time.time() < deadline:
+                    st_res = self.client.get_order_status(str(order_id))
+                    if st_res.get("status") == "SUCCESS":
+                        st_data = st_res.get("data", {})
+                        order_state = str(st_data.get("orderStatus", "TRADED")).upper()
+                        f_qty = int(st_data.get("filledQty", st_data.get("tradedQuantity", 0)) or 0)
+                        avg_px = float(st_data.get("averageTradedPrice", st_data.get("price", 0.0)) or 0.0)
+                        if order_state in ("TRADED", "COMPLETE"):
+                            filled_qty = f_qty if f_qty > 0 else quantity
+                            if avg_px > 0:
+                                avg_fill_price = round(avg_px, 2)
+                            break
+                        if order_state in ("REJECTED", "CANCELLED", "EXPIRED"):
+                            filled_qty = f_qty
+                            if avg_px > 0:
+                                avg_fill_price = round(avg_px, 2)
+                            break
+                        filled_qty = f_qty
+                        if avg_px > 0:
+                            avg_fill_price = round(avg_px, 2)
+                    time.sleep(0.5)
+
+                # If still PENDING / PARTIALLY FILLED after timeout window, cancel unfilled remainder immediately
+                if order_state in ("PENDING", "TRANSIT", "OPEN", "PARTIALLY_FILLED"):
+                    try:
+                        self.client.cancel_order(str(order_id))
+                        logger.info("Auto-cancelled unfilled remainder for %s (Order ID: %s, Filled: %d/%d)", sym_clean, order_id, filled_qty, quantity)
+                    except Exception as e_can:
+                        logger.warning("Failed to cancel unfilled remainder for %s: %s", sym_clean, e_can)
+
+                if filled_qty <= 0:
+                    return {
+                        "status": "CANCELLED_UNFILLED",
+                        "mode": "LIVE",
+                        "broker": "DHAN",
+                        "broker_order_id": order_id,
+                        "filled_qty": 0,
+                        "avg_fill_price": price,
+                        "limit_price": limit_px,
+                        "message": f"Order {order_id} cancelled after {timeout_sec}s timeout (price gapped beyond ±{slippage_buffer_pct}% protection band)"
+                    }
+
+            # Anchor Stop-Loss GTT to exact `filled_qty` and `avg_fill_price`
             gtt_id = None
-            if sl_price and hasattr(self.client, "place_gtt"):
-                gtt_res = self.client.place_gtt(
+            if sl_price and hasattr(self.client, "place_gtt_stop"):
+                sl_ratio = abs(price - sl_price) / price if price > 0 else 0.0175
+                actual_sl = self.round_to_nse_tick(avg_fill_price * (1.0 - sl_ratio if is_buy else 1.0 + sl_ratio))
+                sl_limit = self.round_to_nse_tick(actual_sl * (0.995 if is_buy else 1.005))
+                gtt_res = self.client.place_gtt_stop(
                     symbol=sym_clean,
-                    exchange_segment="NSE_EQ",
-                    transaction_type=TransactionType.SELL if dhan_tx == TransactionType.BUY else TransactionType.BUY,
-                    quantity=quantity,
-                    trigger_price=sl_price,
-                    limit_price=round(sl_price * 0.995, 2)
+                    transaction_type=TransactionType.SELL if is_buy else TransactionType.BUY,
+                    quantity=filled_qty,
+                    trigger_price=actual_sl,
+                    limit_price=sl_limit,
+                    product_type=dhan_prod
                 )
                 if gtt_res.get("status") == "SUCCESS":
-                    gtt_id = gtt_res.get("gtt_id")
+                    gtt_id = gtt_res.get("data", {}).get("orderId") or gtt_res.get("gtt_id")
 
             return {
-                "status": res.get("status", "SUCCESS"),
+                "status": "SUCCESS",
                 "mode": "LIVE",
                 "broker": "DHAN",
-                "broker_order_id": res.get("order_id"),
+                "broker_order_id": order_id,
+                "order_type": "MARKETABLE_LIMIT",
+                "limit_price": limit_px,
+                "filled_qty": filled_qty,
+                "avg_fill_price": avg_fill_price,
                 "gtt_id": gtt_id,
-                "message": res.get("message", "Live order executed")
+                "message": f"Filled {filled_qty}/{quantity} sh @ ₹{avg_fill_price:.2f} (Limit Protection: ₹{limit_px:.2f})"
             }
 
-        # PAPER MODE: Instant simulated execution
+        # PAPER MODE: Simulates Marketable Limit execution with realistic tick rounding
         return {
             "status": "SUCCESS",
             "mode": "PAPER",
             "broker": "SIMULATED",
             "order_id": f"PAPER-{int(time.time()*1000) % 1000000}",
-            "message": "Paper order recorded successfully"
+            "order_type": "MARKETABLE_LIMIT",
+            "limit_price": limit_px,
+            "filled_qty": quantity,
+            "avg_fill_price": round(price, 2),
+            "message": f"Paper Marketable-Limit order filled ({quantity} sh @ ₹{price:.2f}, Limit Cap: ₹{limit_px:.2f})"
         }
 
     def execute_exit(
@@ -338,13 +437,18 @@ class BrokerManager:
         if self.trading_mode == "LIVE" and self.is_connected and self.client:
             exit_tx = TransactionType.SELL if side.upper() in ("BUY", "LONG") else TransactionType.BUY
             dhan_prod = ProductType.INTRADAY if product_type.upper() == "MIS" else ProductType.CNC
+            exit_limit_px = self.compute_marketable_limit_price(
+                exit_price,
+                "SELL" if side.upper() in ("BUY", "LONG") else "BUY",
+                buffer_pct=0.25
+            )
             res = self.client.place_order(
                 symbol=sym_clean,
-                exchange_segment="NSE_EQ",
                 transaction_type=exit_tx,
                 quantity=quantity,
-                order_type=OrderType.MARKET,
-                product_type=dhan_prod
+                order_type=OrderType.LIMIT,
+                product_type=dhan_prod,
+                price=exit_limit_px
             )
             return {"status": res.get("status", "SUCCESS"), "mode": "LIVE", "broker_order_id": res.get("order_id")}
 
