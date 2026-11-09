@@ -393,7 +393,8 @@ class TradingAppState:
             y_wr = float(yd.get("win_rate", win_rate))
             if "net_pnl" in yd:
                 y_pnl = round(float(yd["net_pnl"]) * scale, 2)
-                y_roi = round((y_pnl / running_eq) * 100.0, 1) if running_eq > 0 else 0.0
+                deployed_cap = min(running_eq, 50000000.0 * scale)
+                y_roi = round(float(yd.get("roi_pct", (y_pnl / deployed_cap) * 100.0 if deployed_cap > 0 else 0.0)), 1)
             else:
                 s_eq = float(yd.get("start_eq", 100000.0)) * scale
                 e_eq = float(yd.get("end_eq", 100000.0)) * scale
@@ -491,7 +492,7 @@ class TradingAppState:
                     "fo_net_pnl": 0.0,
                     "charges": round(int(raw_model.get("monthly_reports", {}).get(pt["date"][:7], {}).get("trades", 22)) * 185.0 * scale, 2),
                     "net_pnl": round(float(pt.get("net_pnl", 0.0)), 2),
-                    "roi_pct": round((float(pt.get("net_pnl", 0.0)) / max(initial_capital, float(pt.get("equity", initial_capital)) - float(pt.get("net_pnl", 0.0)))) * 100.0, 1),
+                    "roi_pct": round(float(raw_model.get("monthly_reports", {}).get(pt["date"][:7], {}).get("roi_pct", (float(pt.get("net_pnl", 0.0)) / min(50000000.0 * scale, max(initial_capital, float(pt.get("equity", initial_capital)) - float(pt.get("net_pnl", 0.0))))) * 100.0)), 1),
                 }
                 for pt in reversed(equity_curve)
             ] if (is_as10y and len(equity_curve) > 25) else yearly_reports,
@@ -534,7 +535,8 @@ class TradingAppState:
             y_trades = int(yd.get("trades", 0))
             y_wr = float(yd.get("win_rate", win_rate))
             y_pnl = round(float(yd.get("net_pnl", 0.0)) * scale, 2)
-            y_roi = round((y_pnl / running_eq) * 100.0, 1) if running_eq > 0 else 0.0
+            deployed_cap = min(running_eq, 50000000.0 * scale)
+            y_roi = round((y_pnl / deployed_cap) * 100.0, 1) if deployed_cap > 0 else 0.0
             y_chg = round(y_trades * 45.0 * scale, 2)
             running_eq = round(running_eq + y_pnl, 2)
             yearly_reports.append({
@@ -588,7 +590,7 @@ class TradingAppState:
         for m_key in sorted(month_agg.keys(), reverse=True):
             agg = month_agg[m_key]
             pnl = round(agg["net_pnl"], 2)
-            s_eq = agg["start_eq"] or initial_capital
+            s_eq = min(agg["start_eq"] or initial_capital, 50000000.0 * scale)
             roi = round((pnl / s_eq) * 100.0, 1) if s_eq > 0 else 0.0
             wr = round((agg["wins"] / max(1, agg["trades"])) * 100.0, 1)
             monthly_reports.append({

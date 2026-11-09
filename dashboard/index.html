@@ -2291,7 +2291,7 @@
           <button class="on" data-h="MONTH" id="rtab-month">Monthly</button><button data-h="YEAR" id="rtab-year">Yearly</button>
         </div>
       </div>
-      <div class="scroll"><table><thead id="rep-thead"><tr><th>Period</th><th class="r">Trades</th><th class="r">Win rate</th><th class="r">Stocks / Swing</th><th class="r">F&amp;O</th><th class="r">Charges</th><th class="r">Net P&amp;L</th><th class="r">Return</th></tr></thead>
+      <div class="scroll"><table><thead id="rep-thead"><tr><th>Period</th><th class="r">Trades</th><th class="r">Win rate</th><th class="r">Stocks / Swing</th><th class="r">F&amp;O</th><th class="r">Charges</th><th class="r">Net P&amp;L</th><th class="r" title="Percentage return on active capital deployed to trade (capped at ₹5 Cr)">Return (% of Cap Used)</th></tr></thead>
       <tbody id="report"></tbody></table></div>
 
     </div>
@@ -3969,11 +3969,11 @@ function report(){
 
   if($('rep-thead')){
     if(isAlphaSurge){
-      $('rep-thead').innerHTML = '<tr><th>Period</th><th class="r">Trades</th><th class="r">Win rate</th><th class="r">Alpha-Surge Net P&amp;L</th><th class="r">Charges</th><th class="r">Net P&amp;L</th><th class="r">Return</th></tr>';
+      $('rep-thead').innerHTML = '<tr><th>Period</th><th class="r">Trades</th><th class="r">Win rate</th><th class="r">Alpha-Surge Net P&amp;L</th><th class="r">Charges</th><th class="r">Net P&amp;L</th><th class="r" title="Percentage return on active capital deployed to trade (capped at ₹5 Cr)">Return (% of Cap Used)</th></tr>';
     } else if(isSwing){
-      $('rep-thead').innerHTML = '<tr><th>Period</th><th class="r">Trades</th><th class="r">Win rate</th><th class="r">Pure Swing Net P&amp;L</th><th class="r">Charges</th><th class="r">Net P&amp;L</th><th class="r">Return</th></tr>';
+      $('rep-thead').innerHTML = '<tr><th>Period</th><th class="r">Trades</th><th class="r">Win rate</th><th class="r">Pure Swing Net P&amp;L</th><th class="r">Charges</th><th class="r">Net P&amp;L</th><th class="r" title="Percentage return on active capital deployed to trade (capped at ₹5 Cr)">Return (% of Cap Used)</th></tr>';
     } else {
-      $('rep-thead').innerHTML = '<tr><th>Period</th><th class="r">Trades</th><th class="r">Win rate</th><th class="r">Alpha-Surge MIS</th><th class="r">Nifty F&amp;O</th><th class="r">Charges</th><th class="r">Net P&amp;L</th><th class="r">Return</th></tr>';
+      $('rep-thead').innerHTML = '<tr><th>Period</th><th class="r">Trades</th><th class="r">Win rate</th><th class="r">Alpha-Surge MIS</th><th class="r">Nifty F&amp;O</th><th class="r">Charges</th><th class="r">Net P&amp;L</th><th class="r" title="Percentage return on active capital deployed to trade (capped at ₹5 Cr)">Return (% of Cap Used)</th></tr>';
     }
   }
 
