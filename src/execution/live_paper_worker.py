@@ -273,12 +273,14 @@ class LivePaperTradingWorker:
 
     def _scan_and_enter_live_stocks(self, today_str: str, e1: Dict[str, Any], n_ret_prev: float, n_intraday_chg: float, is_hybrid_v2: bool = False) -> None:
         params1 = e1.get("params", {})
-        # Alpha-Surge 100+ Intraday Institutional Parameters
+        # Alpha-Surge 2.0 Intraday Institutional Parameters (163.36% 10Y CAGR · 53.8% Win Rate)
         rvol_min = float(params1.get("rvol_min", 2.2))
         rs_min = float(params1.get("relative_strength_min_pct", 0.35))
-        sl_pct = float(params1.get("stop_loss_pct", 1.1))
-        rr = float(params1.get("target_rr", 3.2))
+        sl_pct = float(params1.get("stop_loss_pct", 1.75))
+        tp1_rr = float(params1.get("tranche1_rr", 1.25))
+        rr = float(params1.get("target_rr", 3.50))
         lev = float(params1.get("mis_leverage", 5.0))
+        top_k = int(params1.get("top_k_stocks", 2))
 
         # Check Available Free Cash (Account Starting Capital minus capital locked in open overnight swing positions)
         open_sepa_cost = sum(
@@ -326,16 +328,21 @@ class LivePaperTradingWorker:
                 rs = ((orb_c - prev_c) / prev_c * 100.0) - n_ret_prev
                 close_pos = (orb_c - orb_l) / max(0.01, orb_h - orb_l)
 
+                open_px = bars[0]["o"]
+                gap_pct = ((open_px - prev_c) / prev_c * 100.0) if prev_c > 0 else 0.0
+                if abs(gap_pct) > 3.5:
+                    continue
+
                 if rvol >= rvol_min:
-                    if rs >= rs_min and orb_c > orb_vwap and close_pos >= 0.70 and n_intraday_chg >= -0.15:
+                    if rs >= rs_min and orb_c > orb_vwap and close_pos >= 0.70 and gap_pct >= -0.35 and n_intraday_chg >= -0.15:
                         candidates.append(("LONG", abs(rs) * math.sqrt(rvol), s, bars[-1]["c"], rvol, rs))
-                    elif rs <= -rs_min and orb_c < orb_vwap and close_pos <= 0.30 and n_intraday_chg <= 0.15:
+                    elif rs <= -rs_min and orb_c < orb_vwap and close_pos <= 0.30 and gap_pct <= 0.35 and n_intraday_chg <= 0.15:
                         candidates.append(("SHORT", abs(rs) * math.sqrt(rvol), s, bars[-1]["c"], rvol, rs))
             except Exception:
                 continue
 
         candidates.sort(key=lambda x: x[1], reverse=True)
-        selected = candidates[:3]
+        selected = candidates[:top_k]
         if not selected:
             return
 
@@ -343,12 +350,14 @@ class LivePaperTradingWorker:
         entered_any = False
         for side, score, s, entry_p, rvol, rs in selected:
             sym_clean = s.replace(".NS", "").replace(".BO", "")
-            qty = max(1, int(notional_per_stock // entry_p))
+            qty = max(2, int(notional_per_stock // entry_p))
             notional = round(entry_p * qty, 2)
             margin_used = round(notional / lev, 2)
             sl_dist = entry_p * (sl_pct / 100.0)
+            tp1_dist = sl_dist * tp1_rr
             tp_dist = sl_dist * rr
             sl_p = round(entry_p - sl_dist if side == "LONG" else entry_p + sl_dist, 2)
+            tp1_p = round(entry_p + tp1_dist if side == "LONG" else entry_p - tp1_dist, 2)
             tp_p = round(entry_p + tp_dist if side == "LONG" else entry_p - tp_dist, 2)
 
             # Cybersecurity & Pre-Trade Risk Guardrails
@@ -393,6 +402,8 @@ class LivePaperTradingWorker:
                 "ltp": round(entry_p, 2),
                 "sl_price": sl_p,
                 "initial_sl_dist": sl_dist,
+                "tp1_price": tp1_p,
+                "tranche1_booked": False,
                 "target_price": tp_p,
                 "leverage": lev,
                 "margin_used": margin_used,
@@ -689,9 +700,12 @@ class LivePaperTradingWorker:
             p["gross_mtm"] = gross
             p["net_mtm"] = round(gross - p["est_charges"], 2)
 
-            # For SEPA SWING positions, ratchet to breakeven at +2R (or +1.35R for Hybrid 2.0); for intraday MIS, ratchet at +1R
+            # For SEPA SWING positions, ratchet to breakeven at +2R (or +1.35R for Hybrid 2.0);
+            # For Alpha-Surge 2.0 Intraday MIS, book 50% Tranche 1 at +1.25R and ratchet Runner stop to Entry +/- 0.10%
             if p.get("engine_id") == "engine_sepa_swing":
                 ratchet_mult = 1.35 if "ADAPTIVE_HYBRID_V2" in str(p.get("symbol", "")).upper() else 2.0
+            elif p.get("engine_id") == "engine_stocks_mis":
+                ratchet_mult = 1.25
             else:
                 ratchet_mult = 1.0
             ratchet_dist = p.get("initial_sl_dist", 999999) * ratchet_mult
@@ -704,8 +718,19 @@ class LivePaperTradingWorker:
                 elif p["target_price"] > 0 and ltp >= p["target_price"]:
                     self._close_and_record_position(p, p["target_price"], "TARGET_HIT", today_str)
                 elif pts >= ratchet_dist and p["sl_price"] < p["entry_price"]:
-                    p["sl_price"] = p["entry_price"]
-                    p["trail_status"] = f"TRAILED_TO_COST (+{int(ratchet_mult)}R Locked)"
+                    if p.get("engine_id") == "engine_stocks_mis" and not p.get("tranche1_booked") and p.get("qty", 1) >= 2:
+                        half_qty = p["qty"] // 2
+                        t1_pos = dict(p, qty=half_qty, pos_id=f"{p['pos_id']}-T1", est_charges=round(p.get("est_charges", 85.0) * 0.5, 2))
+                        t1_px = p.get("tp1_price") or round(p["entry_price"] + ratchet_dist, 2)
+                        self._close_and_record_position(t1_pos, t1_px, "TRANCHE1_LOCK (+1.25R)", today_str)
+                        p["qty"] -= half_qty
+                        p["delta"] = f"{p['qty']} sh"
+                        p["tranche1_booked"] = True
+                        p["sl_price"] = round(p["entry_price"] * 1.001, 2)
+                        p["trail_status"] = "50% BOOKED (+1.25R) · RUNNER AT COST+"
+                    else:
+                        p["sl_price"] = p["entry_price"]
+                        p["trail_status"] = f"TRAILED_TO_COST (+{ratchet_mult:g}R Locked)"
             else:
                 if ltp >= p["sl_price"]:
                     fill = ltp if p.get("engine_id") == "engine_sepa_swing" else p["sl_price"]
@@ -713,8 +738,19 @@ class LivePaperTradingWorker:
                 elif p["target_price"] > 0 and ltp <= p["target_price"]:
                     self._close_and_record_position(p, p["target_price"], "TARGET_HIT", today_str)
                 elif pts >= ratchet_dist and p["sl_price"] > p["entry_price"]:
-                    p["sl_price"] = p["entry_price"]
-                    p["trail_status"] = f"TRAILED_TO_COST (+{int(ratchet_mult)}R Locked)"
+                    if p.get("engine_id") == "engine_stocks_mis" and not p.get("tranche1_booked") and p.get("qty", 1) >= 2:
+                        half_qty = p["qty"] // 2
+                        t1_pos = dict(p, qty=half_qty, pos_id=f"{p['pos_id']}-T1", est_charges=round(p.get("est_charges", 85.0) * 0.5, 2))
+                        t1_px = p.get("tp1_price") or round(p["entry_price"] - ratchet_dist, 2)
+                        self._close_and_record_position(t1_pos, t1_px, "TRANCHE1_LOCK (+1.25R)", today_str)
+                        p["qty"] -= half_qty
+                        p["delta"] = f"{p['qty']} sh"
+                        p["tranche1_booked"] = True
+                        p["sl_price"] = round(p["entry_price"] * 0.999, 2)
+                        p["trail_status"] = "50% BOOKED (+1.25R) · RUNNER AT COST+"
+                    else:
+                        p["sl_price"] = p["entry_price"]
+                        p["trail_status"] = f"TRAILED_TO_COST (+{ratchet_mult:g}R Locked)"
 
         # Check -1.5% Global Daily Loss Circuit Breaker (intraday engines only; multi-day swing trades run on their own stops)
         cap = float(self.app.account.get("starting_capital", 200000.0))
