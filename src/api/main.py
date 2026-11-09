@@ -485,11 +485,11 @@ class TradingAppState:
             "monthly_reports": [
                 {
                     "period": pt["date"][:7],
-                    "trades": 22,
-                    "win_rate_pct": round(float(yearly_raw.get(pt["date"][:4], {}).get("win_rate", win_rate)), 1),
+                    "trades": int(raw_model.get("monthly_reports", {}).get(pt["date"][:7], {}).get("trades", 22)),
+                    "win_rate_pct": round(float(raw_model.get("monthly_reports", {}).get(pt["date"][:7], {}).get("win_rate", yearly_raw.get(pt["date"][:4], {}).get("win_rate", win_rate))), 1),
                     "stocks_net_pnl": round(float(pt.get("net_pnl", 0.0)), 2),
                     "fo_net_pnl": 0.0,
-                    "charges": round(22 * 185.0 * scale, 2),
+                    "charges": round(int(raw_model.get("monthly_reports", {}).get(pt["date"][:7], {}).get("trades", 22)) * 185.0 * scale, 2),
                     "net_pnl": round(float(pt.get("net_pnl", 0.0)), 2),
                     "roi_pct": round((float(pt.get("net_pnl", 0.0)) / max(initial_capital, float(pt.get("equity", initial_capital)) - float(pt.get("net_pnl", 0.0)))) * 100.0, 1),
                 }
@@ -721,15 +721,15 @@ class TradingAppState:
             stocks_mis_bt = self._build_sepa_5y_backtest(
                 as100_data,
                 "stocks_mis",
-                "Engine 1: Alpha-Surge 2.0 Intraday (10-Year Audited · 163.36% CAGR · 53.8% Win Rate)",
-                "50/50 Two-Tranche Scale-Out (+1.25R Lock & +3.50R Runner) · Multi-SMA Stage-2 Filter · RVOL >= 2.2x · 1.75% Stop (Zero Overnight Risk · 18.94% MaxDD)",
+                "Engine 1: Alpha-Surge 2.0 Intraday (10-Year Audited · 150.75% CAGR · 56.4% Win Rate · Strict Liquid)",
+                "50/50 Two-Tranche Scale-Out (+1.25R Lock & +3.50R Runner) · Strict Liquidity (ADT >= ₹20 Cr, Order <= 2.5% ADT) · 18.94% MaxDD",
                 cap,
             )
         else:
             stocks_mis_bt = _wrap_1y(
                 stocks_1y,
                 "stocks_mis",
-                "Engine 1: Alpha-Surge 2.0 Intraday (10-Year Audited · 163.36% CAGR · 53.8% Win Rate)",
+                "Engine 1: Alpha-Surge 2.0 Intraday (10-Year Audited · 150.75% CAGR · 56.4% Win Rate · Strict Liquid)",
                 f"15-Minute Alpha-Surge 2.0 Sniper across NSE/BSE Universe ({lev}× Intraday Margin)",
             )
 
