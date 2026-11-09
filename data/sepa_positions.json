@@ -1,0 +1,22 @@
+[
+  {
+    "symbol": "CUMMINSIND",
+    "entry": 3820.0,
+    "stop": 3670.0,
+    "pivot": 3810.0,
+    "trailing_stop": 3820.0,
+    "two_r_target": 4120.0,
+    "two_r_alerted": true,
+    "status": "OPEN"
+  },
+  {
+    "symbol": "BSE",
+    "entry": 5490.0,
+    "stop": 5270.0,
+    "pivot": 5480.0,
+    "trailing_stop": 5270.0,
+    "two_r_target": 5930.0,
+    "two_r_alerted": false,
+    "status": "OPEN"
+  }
+]

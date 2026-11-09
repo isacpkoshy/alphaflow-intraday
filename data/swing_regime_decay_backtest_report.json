@@ -1,0 +1,7248 @@
+{
+  "benchmark": "NIFTYBEES",
+  "universe_size": 5590,
+  "test_period": "2021-10-04 to 2026-10-07 (5 Full Years)",
+  "starting_capital": 100000.0,
+  "models": {
+    "model_1_baseline": {
+      "mode_name": "Model 1: Baseline Unfiltered",
+      "initial_capital": 100000.0,
+      "final_equity": 69283.88,
+      "total_pnl": -30716.12,
+      "total_return_pct": -30.7,
+      "cagr_pct": -7.1,
+      "max_drawdown_pct": 52.7,
+      "calmar_ratio": -0.13,
+      "total_trades": 438,
+      "wins": 174,
+      "losses": 264,
+      "win_rate_pct": 39.7,
+      "profit_factor": 1.01,
+      "avg_expectancy_r": 0.03,
+      "avg_win_pct": 5.3,
+      "avg_loss_pct": -3.1,
+      "avg_holding_days": 4.6,
+      "paused_days": 0,
+      "reduced_days": 0,
+      "yearly": {
+        "2022": {
+          "trades": 53,
+          "wins": 19,
+          "net_pnl": -1048.83,
+          "bars": 254,
+          "win_rate": 35.8,
+          "pnl_pct_of_start": -1.0,
+          "avg_holding_days": 4.8
+        },
+        "2023": {
+          "trades": 103,
+          "wins": 46,
+          "net_pnl": 36779.17,
+          "bars": 467,
+          "win_rate": 44.7,
+          "pnl_pct_of_start": 36.8,
+          "avg_holding_days": 4.5
+        },
+        "2024": {
+          "trades": 108,
+          "wins": 45,
+          "net_pnl": -1880.4,
+          "bars": 481,
+          "win_rate": 41.7,
+          "pnl_pct_of_start": -1.9,
+          "avg_holding_days": 4.5
+        },
+        "2025": {
+          "trades": 96,
+          "wins": 36,
+          "net_pnl": -9288.37,
+          "bars": 467,
+          "win_rate": 37.5,
+          "pnl_pct_of_start": -9.3,
+          "avg_holding_days": 4.9
+        },
+        "2026": {
+          "trades": 78,
+          "wins": 28,
+          "net_pnl": -21798.24,
+          "bars": 332,
+          "win_rate": 35.9,
+          "pnl_pct_of_start": -21.8,
+          "avg_holding_days": 4.3
+        }
+      },
+      "top_winners": [
+        {
+          "symbol": "KINGFA",
+          "entry_date": "2023-05-12",
+          "exit_date": "2023-05-25",
+          "entry": 1722.75,
+          "exit": 2090.0,
+          "shares": 24,
+          "pnl": 8733.81,
+          "pnl_pct": 21.3,
+          "r_mult": 4.17,
+          "bars_held": 9,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "CPSEETF",
+          "entry_date": "2023-11-13",
+          "exit_date": "2023-12-15",
+          "entry": 56.65,
+          "exit": 64.38,
+          "shares": 1059,
+          "pnl": 8081.61,
+          "pnl_pct": 13.6,
+          "r_mult": 2.5,
+          "bars_held": 22,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "GKP",
+          "entry_date": "2022-07-29",
+          "exit_date": "2022-08-12",
+          "entry": 162.7,
+          "exit": 187.8,
+          "shares": 314,
+          "pnl": 7790.64,
+          "pnl_pct": 15.4,
+          "r_mult": 2.82,
+          "bars_held": 9,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "KUANTUM",
+          "entry_date": "2023-06-28",
+          "exit_date": "2023-07-03",
+          "entry": 176.05,
+          "exit": 201.3,
+          "shares": 307,
+          "pnl": 7657.59,
+          "pnl_pct": 14.3,
+          "r_mult": 2.89,
+          "bars_held": 2,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "TAC",
+          "entry_date": "2025-01-09",
+          "exit_date": "2025-01-17",
+          "entry": 685.7,
+          "exit": 772.15,
+          "shares": 86,
+          "pnl": 7335.01,
+          "pnl_pct": 12.6,
+          "r_mult": 2.59,
+          "bars_held": 6,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "BANCOINDIA",
+          "entry_date": "2023-07-13",
+          "exit_date": "2023-07-24",
+          "entry": 157.1,
+          "exit": 176.62,
+          "shares": 366,
+          "pnl": 7046.75,
+          "pnl_pct": 12.4,
+          "r_mult": 2.5,
+          "bars_held": 7,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "SHAILY",
+          "entry_date": "2024-12-09",
+          "exit_date": "2024-12-17",
+          "entry": 1345.45,
+          "exit": 1528.7,
+          "shares": 38,
+          "pnl": 6873.79,
+          "pnl_pct": 13.6,
+          "r_mult": 2.5,
+          "bars_held": 6,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "NEXT50IETF",
+          "entry_date": "2022-09-01",
+          "exit_date": "2022-09-07",
+          "entry": 45.08,
+          "exit": 50.91,
+          "shares": 1177,
+          "pnl": 6769.42,
+          "pnl_pct": 12.9,
+          "r_mult": 2.5,
+          "bars_held": 4,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "TRF",
+          "entry_date": "2023-09-21",
+          "exit_date": "2023-10-17",
+          "entry": 239.4,
+          "exit": 268.65,
+          "shares": 231,
+          "pnl": 6662.28,
+          "pnl_pct": 12.2,
+          "r_mult": 2.5,
+          "bars_held": 17,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "RAMKY",
+          "entry_date": "2023-11-02",
+          "exit_date": "2023-11-10",
+          "entry": 616.75,
+          "exit": 695.9,
+          "shares": 84,
+          "pnl": 6558.45,
+          "pnl_pct": 12.8,
+          "r_mult": 2.5,
+          "bars_held": 6,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "MAZDOCK",
+          "entry_date": "2023-09-01",
+          "exit_date": "2023-09-07",
+          "entry": 943.5,
+          "exit": 1056.19,
+          "shares": 59,
+          "pnl": 6553.78,
+          "pnl_pct": 11.9,
+          "r_mult": 2.5,
+          "bars_held": 4,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "BAJAJHLDNG",
+          "entry_date": "2022-08-18",
+          "exit_date": "2022-09-08",
+          "entry": 5531.0,
+          "exit": 6264.39,
+          "shares": 9,
+          "pnl": 6512.84,
+          "pnl_pct": 13.3,
+          "r_mult": 2.5,
+          "bars_held": 14,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "ADANIGREEN",
+          "entry_date": "2024-02-06",
+          "exit_date": "2024-02-07",
+          "entry": 1721.65,
+          "exit": 1938.07,
+          "shares": 30,
+          "pnl": 6402.68,
+          "pnl_pct": 12.6,
+          "r_mult": 2.5,
+          "bars_held": 1,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "SCHAEFFLER",
+          "entry_date": "2022-07-21",
+          "exit_date": "2022-07-29",
+          "entry": 2489.6,
+          "exit": 2830.52,
+          "shares": 19,
+          "pnl": 6393.04,
+          "pnl_pct": 13.7,
+          "r_mult": 2.5,
+          "bars_held": 6,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "HAL",
+          "entry_date": "2023-05-31",
+          "exit_date": "2023-06-08",
+          "entry": 1558.5,
+          "exit": 1767.37,
+          "shares": 31,
+          "pnl": 6389.26,
+          "pnl_pct": 13.4,
+          "r_mult": 2.5,
+          "bars_held": 6,
+          "reason": "+2.5R Championship Target"
+        }
+      ],
+      "regime_trade_stats": {
+        "BULL_TAILWIND": {
+          "trades": 206,
+          "wins": 88,
+          "pnl": 34555.57237110005
+        },
+        "NEUTRAL_CHOP": {
+          "trades": 128,
+          "wins": 53,
+          "pnl": 6958.09424961997
+        },
+        "HOSTILE_BEAR": {
+          "trades": 104,
+          "wins": 33,
+          "pnl": -38750.343136460084
+        }
+      },
+      "equity_curve": [
+        {
+          "date": "2022-05-13",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-05-20",
+          "equity": 97966.7,
+          "cash": 97966.7,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-05-27",
+          "equity": 100051.81,
+          "cash": 5395.61,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-03",
+          "equity": 104189.11,
+          "cash": 5395.61,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-10",
+          "equity": 100830.67,
+          "cash": 1356.07,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-17",
+          "equity": 93077.18,
+          "cash": 93077.18,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-24",
+          "equity": 93077.18,
+          "cash": 93077.18,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-07-01",
+          "equity": 93505.41,
+          "cash": 46525.41,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-07-08",
+          "equity": 96231.62,
+          "cash": 46461.62,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-07-15",
+          "equity": 96462.0,
+          "cash": 1166.85,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-07-22",
+          "equity": 94526.36,
+          "cash": 6688.51,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-07-29",
+          "equity": 102289.71,
+          "cash": 54729.66,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-05",
+          "equity": 104241.11,
+          "cash": 3560.56,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-16",
+          "equity": 108169.95,
+          "cash": 54280.9,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-23",
+          "equity": 104565.87,
+          "cash": 4823.82,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-30",
+          "equity": 104345.74,
+          "cash": 3210.49,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-07",
+          "equity": 113237.82,
+          "cash": 61243.92,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-14",
+          "equity": 121048.34,
+          "cash": 53.37,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-21",
+          "equity": 116267.93,
+          "cash": 59225.63,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-28",
+          "equity": 107912.45,
+          "cash": 1592.5,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-10-06",
+          "equity": 113869.9,
+          "cash": 3920.15,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-10-13",
+          "equity": 110546.4,
+          "cash": 3920.15,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-10-20",
+          "equity": 106425.34,
+          "cash": 52016.74,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-10-28",
+          "equity": 102534.57,
+          "cash": 618.32,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-11-04",
+          "equity": 101271.86,
+          "cash": 50557.01,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-11-14",
+          "equity": 96596.13,
+          "cash": 48068.63,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-11-21",
+          "equity": 100607.65,
+          "cash": 47607.95,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-11-28",
+          "equity": 103078.44,
+          "cash": 213.44,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-05",
+          "equity": 107480.71,
+          "cash": 52823.11,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-12",
+          "equity": 103029.6,
+          "cash": 51166.6,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-19",
+          "equity": 102169.54,
+          "cash": 241.39,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-26",
+          "equity": 94848.73,
+          "cash": 94848.73,
+          "open_positions": 0,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-01-02",
+          "equity": 99003.09,
+          "cash": 3973.34,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-01-09",
+          "equity": 101925.6,
+          "cash": 534.05,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-01-16",
+          "equity": 101216.88,
+          "cash": 3992.88,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-01-23",
+          "equity": 98186.84,
+          "cash": 2517.46,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-01-31",
+          "equity": 93478.1,
+          "cash": 567.9,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-02-07",
+          "equity": 89002.44,
+          "cash": 43592.94,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-02-14",
+          "equity": 85977.34,
+          "cash": 41652.34,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-02-21",
+          "equity": 84713.12,
+          "cash": 165.32,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-02-28",
+          "equity": 82657.61,
+          "cash": 21.01,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-08",
+          "equity": 84026.11,
+          "cash": 21.01,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-15",
+          "equity": 83279.39,
+          "cash": 526.79,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-22",
+          "equity": 79772.67,
+          "cash": 36559.17,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-29",
+          "equity": 79830.76,
+          "cash": 40340.76,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-04-10",
+          "equity": 80572.31,
+          "cash": 2593.16,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-04-18",
+          "equity": 79897.32,
+          "cash": 666.37,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-04-25",
+          "equity": 82118.57,
+          "cash": 666.37,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-03",
+          "equity": 85361.46,
+          "cash": 557.86,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-10",
+          "equity": 87175.51,
+          "cash": 557.86,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-17",
+          "equity": 83738.08,
+          "cash": 41830.48,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-24",
+          "equity": 90846.91,
+          "cash": 46266.91,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-31",
+          "equity": 97278.78,
+          "cash": 97278.78,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-07",
+          "equity": 103822.36,
+          "cash": 1360.36,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-14",
+          "equity": 101926.37,
+          "cash": 3606.27,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-21",
+          "equity": 104678.92,
+          "cash": 3606.27,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-28",
+          "equity": 108338.34,
+          "cash": 54409.59,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-06",
+          "equity": 117934.63,
+          "cash": 4932.09,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-13",
+          "equity": 115023.99,
+          "cash": 57729.83,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-20",
+          "equity": 119487.47,
+          "cash": 142.23,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-27",
+          "equity": 122443.05,
+          "cash": 61822.7,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-03",
+          "equity": 121265.48,
+          "cash": 60282.53,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-10",
+          "equity": 125799.32,
+          "cash": 63776.07,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-18",
+          "equity": 121463.26,
+          "cash": 5.36,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-25",
+          "equity": 117132.33,
+          "cash": 55872.28,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-01",
+          "equity": 111984.35,
+          "cash": 111984.35,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-08",
+          "equity": 120020.95,
+          "cash": 63510.95,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-15",
+          "equity": 113513.85,
+          "cash": 57129.55,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-25",
+          "equity": 112260.14,
+          "cash": 8.39,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-03",
+          "equity": 110255.2,
+          "cash": 986.5,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-10",
+          "equity": 107250.31,
+          "cash": 393.21,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-17",
+          "equity": 113445.18,
+          "cash": 113445.18,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-25",
+          "equity": 105336.12,
+          "cash": 105336.12,
+          "open_positions": 0,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-11-01",
+          "equity": 103591.03,
+          "cash": 49635.03,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-11-08",
+          "equity": 110519.11,
+          "cash": 2665.51,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-11-15",
+          "equity": 119689.95,
+          "cash": 6759.18,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-11-22",
+          "equity": 121361.62,
+          "cash": 2203.24,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-11-30",
+          "equity": 121650.87,
+          "cash": 59889.99,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-07",
+          "equity": 126844.96,
+          "cash": 725.2,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-14",
+          "equity": 127180.73,
+          "cash": 870.32,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-21",
+          "equity": 122610.88,
+          "cash": 63692.08,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-29",
+          "equity": 126266.02,
+          "cash": 2327.92,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-05",
+          "equity": 123612.26,
+          "cash": 398.16,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-12",
+          "equity": 119096.6,
+          "cash": 60932.8,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-19",
+          "equity": 112482.65,
+          "cash": 770.6,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-29",
+          "equity": 111893.69,
+          "cash": 53886.89,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-05",
+          "equity": 105546.34,
+          "cash": 51337.64,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-12",
+          "equity": 113065.13,
+          "cash": 54229.83,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-19",
+          "equity": 114475.89,
+          "cash": 2568.83,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-26",
+          "equity": 109753.4,
+          "cash": 3869.9,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-03-02",
+          "equity": 105997.53,
+          "cash": 784.03,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-03-11",
+          "equity": 102885.08,
+          "cash": 102885.08,
+          "open_positions": 0,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-03-18",
+          "equity": 99368.4,
+          "cash": 633.15,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-03-26",
+          "equity": 101535.79,
+          "cash": 70855.44,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-04-03",
+          "equity": 102196.83,
+          "cash": 25978.93,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-04-10",
+          "equity": 99058.68,
+          "cash": 587.88,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-04-19",
+          "equity": 93453.84,
+          "cash": 2291.49,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-04-26",
+          "equity": 96000.87,
+          "cash": 267.27,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-06",
+          "equity": 99641.41,
+          "cash": 7272.01,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-13",
+          "equity": 96024.36,
+          "cash": 2787.36,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-18",
+          "equity": 103219.87,
+          "cash": 52464.22,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-27",
+          "equity": 100912.68,
+          "cash": 100912.68,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-03",
+          "equity": 94450.01,
+          "cash": 44946.01,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-10",
+          "equity": 93005.38,
+          "cash": 1375.73,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-18",
+          "equity": 91977.37,
+          "cash": 247.87,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-25",
+          "equity": 86671.62,
+          "cash": 1890.37,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-02",
+          "equity": 84988.47,
+          "cash": 887.67,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-09",
+          "equity": 83785.88,
+          "cash": 40611.98,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-16",
+          "equity": 81955.71,
+          "cash": 44.01,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-24",
+          "equity": 80314.46,
+          "cash": 38915.36,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-31",
+          "equity": 83998.46,
+          "cash": 57.66,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-07",
+          "equity": 80735.76,
+          "cash": 41440.56,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-14",
+          "equity": 77561.09,
+          "cash": 433.7,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-22",
+          "equity": 75639.07,
+          "cash": 105.83,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-29",
+          "equity": 75988.61,
+          "cash": 350.56,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-05",
+          "equity": 83053.88,
+          "cash": 625.88,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-12",
+          "equity": 82632.29,
+          "cash": 112.89,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-19",
+          "equity": 80852.06,
+          "cash": 40116.76,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-26",
+          "equity": 81665.81,
+          "cash": 39991.56,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-04",
+          "equity": 80865.64,
+          "cash": 410.54,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-11",
+          "equity": 82743.44,
+          "cash": 410.54,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-18",
+          "equity": 84368.39,
+          "cash": 410.54,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-25",
+          "equity": 83392.83,
+          "cash": 6589.83,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-11-01",
+          "equity": 87614.53,
+          "cash": 7706.08,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-11-08",
+          "equity": 92570.28,
+          "cash": 823.03,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-11-18",
+          "equity": 93434.42,
+          "cash": 46093.92,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-11-26",
+          "equity": 99686.08,
+          "cash": 2022.28,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-12-03",
+          "equity": 103010.91,
+          "cash": 3925.31,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-12-10",
+          "equity": 103621.11,
+          "cash": 1670.11,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-12-17",
+          "equity": 112325.01,
+          "cash": 59671.01,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-12-24",
+          "equity": 113893.43,
+          "cash": 567.83,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-01-01",
+          "equity": 119515.83,
+          "cash": 567.83,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-01-08",
+          "equity": 120336.02,
+          "cash": 1828.82,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-01-15",
+          "equity": 123581.97,
+          "cash": 549.77,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-01-22",
+          "equity": 120744.19,
+          "cash": 2192.29,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-01-29",
+          "equity": 118923.28,
+          "cash": 531.76,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-04",
+          "equity": 119865.76,
+          "cash": 56764.98,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-11",
+          "equity": 115722.99,
+          "cash": 115722.99,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-18",
+          "equity": 110669.18,
+          "cash": 110669.18,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-25",
+          "equity": 108663.68,
+          "cash": 54213.43,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-05",
+          "equity": 104790.74,
+          "cash": 52702.34,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-12",
+          "equity": 103748.07,
+          "cash": 51494.07,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-20",
+          "equity": 105116.6,
+          "cash": 51361.4,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-27",
+          "equity": 107638.93,
+          "cash": 136.63,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-04-04",
+          "equity": 99869.73,
+          "cash": 99869.73,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-04-15",
+          "equity": 96407.35,
+          "cash": 96407.35,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-04-23",
+          "equity": 94463.06,
+          "cash": 460.27,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-04-30",
+          "equity": 98097.27,
+          "cash": 49812.27,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-05-08",
+          "equity": 97120.46,
+          "cash": 947.96,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-05-15",
+          "equity": 101166.86,
+          "cash": 947.96,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-05-22",
+          "equity": 97762.84,
+          "cash": 47064.64,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-05-29",
+          "equity": 100516.93,
+          "cash": 892.33,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-05",
+          "equity": 102839.43,
+          "cash": 892.33,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-12",
+          "equity": 105442.99,
+          "cash": 2940.91,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-19",
+          "equity": 103276.94,
+          "cash": 103276.94,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-26",
+          "equity": 103892.2,
+          "cash": 102.1,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-03",
+          "equity": 106233.62,
+          "cash": 1760.52,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-10",
+          "equity": 106924.42,
+          "cash": 32.29,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-17",
+          "equity": 104027.24,
+          "cash": 50881.64,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-24",
+          "equity": 105901.74,
+          "cash": 48920.94,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-31",
+          "equity": 102531.35,
+          "cash": 1100.65,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-08-07",
+          "equity": 97960.69,
+          "cash": 48178.84,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-08-14",
+          "equity": 95799.1,
+          "cash": 46029.1,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-08-22",
+          "equity": 92613.93,
+          "cash": 728.53,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-09-01",
+          "equity": 93558.03,
+          "cash": 728.53,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-09-08",
+          "equity": 97815.82,
+          "cash": 52148.27,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-09-15",
+          "equity": 96813.58,
+          "cash": 2466.43,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-09-22",
+          "equity": 99620.72,
+          "cash": 49554.42,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-09-29",
+          "equity": 98216.29,
+          "cash": 7.49,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-10-07",
+          "equity": 102555.24,
+          "cash": 7.49,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-10-14",
+          "equity": 99859.08,
+          "cash": 49118.93,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-10-21",
+          "equity": 103032.77,
+          "cash": 123.32,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-10-29",
+          "equity": 101788.82,
+          "cash": 123.32,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-11-06",
+          "equity": 90489.05,
+          "cash": 43784.8,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-11-13",
+          "equity": 92834.13,
+          "cash": 58388.13,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-11-20",
+          "equity": 89590.58,
+          "cash": 52.6,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-11-27",
+          "equity": 89696.74,
+          "cash": 348.94,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-12-04",
+          "equity": 89073.48,
+          "cash": 41500.08,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-12-11",
+          "equity": 91495.76,
+          "cash": 49.66,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-12-18",
+          "equity": 94508.94,
+          "cash": 1052.59,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-12-26",
+          "equity": 96785.16,
+          "cash": 48108.21,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-01-02",
+          "equity": 99095.61,
+          "cash": 628.31,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-01-09",
+          "equity": 92548.71,
+          "cash": 55.91,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-01-19",
+          "equity": 92544.8,
+          "cash": 42610.72,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-01-27",
+          "equity": 90761.13,
+          "cash": 894.48,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-02-02",
+          "equity": 79243.9,
+          "cash": 79243.9,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-02-09",
+          "equity": 77852.23,
+          "cash": 39864.03,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-02-16",
+          "equity": 78372.89,
+          "cash": 734.25,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-02-23",
+          "equity": 84179.34,
+          "cash": 42472.5,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-03-02",
+          "equity": 77892.37,
+          "cash": 77892.37,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-03-10",
+          "equity": 76050.26,
+          "cash": 40627.86,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-03-17",
+          "equity": 77262.63,
+          "cash": 3957.83,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-03-24",
+          "equity": 72877.96,
+          "cash": 72877.96,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-04-02",
+          "equity": 68898.5,
+          "cash": 32551.55,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-04-10",
+          "equity": 70985.51,
+          "cash": 35204.96,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-04-20",
+          "equity": 72374.37,
+          "cash": 2953.17,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-04-27",
+          "equity": 77456.41,
+          "cash": 40622.21,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-05",
+          "equity": 75471.46,
+          "cash": 4185.26,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-12",
+          "equity": 75092.19,
+          "cash": 40743.39,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-19",
+          "equity": 75827.03,
+          "cash": 674.39,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-26",
+          "equity": 75783.24,
+          "cash": 674.39,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-06-03",
+          "equity": 75907.48,
+          "cash": 674.39,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-06-10",
+          "equity": 72477.87,
+          "cash": 210.12,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-06-17",
+          "equity": 70207.62,
+          "cash": 33482.16,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-06-24",
+          "equity": 69524.11,
+          "cash": 15.48,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-07-02",
+          "equity": 69383.61,
+          "cash": 15.48,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-07-09",
+          "equity": 69281.23,
+          "cash": 1922.08,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-07-16",
+          "equity": 70640.33,
+          "cash": 42914.33,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-07-23",
+          "equity": 65088.11,
+          "cash": 6005.51,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-07-30",
+          "equity": 66170.71,
+          "cash": 6005.51,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-08-06",
+          "equity": 70794.36,
+          "cash": 37575.46,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2026-08-13",
+          "equity": 70024.21,
+          "cash": 1761.31,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-08-20",
+          "equity": 65345.2,
+          "cash": 952.0,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-08-27",
+          "equity": 63890.62,
+          "cash": 31090.82,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-09-03",
+          "equity": 62655.09,
+          "cash": 31792.95,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-09-10",
+          "equity": 68515.08,
+          "cash": 2254.34,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-09-18",
+          "equity": 69660.38,
+          "cash": 2915.68,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-09-25",
+          "equity": 69461.68,
+          "cash": 2915.68,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        }
+      ]
+    },
+    "model_2_regime_filter": {
+      "mode_name": "Model 2: Market Regime Filter",
+      "initial_capital": 100000.0,
+      "final_equity": 124551.27,
+      "total_pnl": 24551.27,
+      "total_return_pct": 24.6,
+      "cagr_pct": 4.5,
+      "max_drawdown_pct": 22.3,
+      "calmar_ratio": 0.2,
+      "total_trades": 329,
+      "wins": 147,
+      "losses": 182,
+      "win_rate_pct": 44.7,
+      "profit_factor": 1.18,
+      "avg_expectancy_r": 0.11,
+      "avg_win_pct": 5.2,
+      "avg_loss_pct": -3.1,
+      "avg_holding_days": 5.2,
+      "paused_days": 232,
+      "reduced_days": 124,
+      "yearly": {
+        "2022": {
+          "trades": 41,
+          "wins": 16,
+          "net_pnl": 2698.16,
+          "bars": 216,
+          "win_rate": 39.0,
+          "pnl_pct_of_start": 2.7,
+          "avg_holding_days": 5.3
+        },
+        "2023": {
+          "trades": 74,
+          "wins": 36,
+          "net_pnl": 34549.07,
+          "bars": 412,
+          "win_rate": 48.6,
+          "pnl_pct_of_start": 34.5,
+          "avg_holding_days": 5.6
+        },
+        "2024": {
+          "trades": 107,
+          "wins": 46,
+          "net_pnl": -8358.76,
+          "bars": 447,
+          "win_rate": 43.0,
+          "pnl_pct_of_start": -8.4,
+          "avg_holding_days": 4.2
+        },
+        "2025": {
+          "trades": 68,
+          "wins": 30,
+          "net_pnl": 19083.31,
+          "bars": 353,
+          "win_rate": 44.1,
+          "pnl_pct_of_start": 19.1,
+          "avg_holding_days": 5.2
+        },
+        "2026": {
+          "trades": 39,
+          "wins": 19,
+          "net_pnl": 1618.18,
+          "bars": 269,
+          "win_rate": 48.7,
+          "pnl_pct_of_start": 1.6,
+          "avg_holding_days": 6.9
+        }
+      },
+      "top_winners": [
+        {
+          "symbol": "DCI",
+          "entry_date": "2024-07-29",
+          "exit_date": "2024-08-01",
+          "entry": 380.71,
+          "exit": 440.6,
+          "shares": 155,
+          "pnl": 9181.0,
+          "pnl_pct": 15.7,
+          "r_mult": 2.88,
+          "bars_held": 3,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "CPSEETF",
+          "entry_date": "2023-11-13",
+          "exit_date": "2023-12-15",
+          "entry": 56.65,
+          "exit": 64.38,
+          "shares": 1098,
+          "pnl": 8379.97,
+          "pnl_pct": 13.6,
+          "r_mult": 2.5,
+          "bars_held": 22,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "WABAG",
+          "entry_date": "2024-06-19",
+          "exit_date": "2024-06-26",
+          "entry": 1142.05,
+          "exit": 1293.73,
+          "shares": 51,
+          "pnl": 7636.63,
+          "pnl_pct": 13.3,
+          "r_mult": 2.5,
+          "bars_held": 5,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "BAJAJHLDNG",
+          "entry_date": "2022-08-18",
+          "exit_date": "2022-09-08",
+          "entry": 5531.0,
+          "exit": 6264.39,
+          "shares": 10,
+          "pnl": 7238.71,
+          "pnl_pct": 13.3,
+          "r_mult": 2.5,
+          "bars_held": 14,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "CHEMTECH",
+          "entry_date": "2024-05-10",
+          "exit_date": "2024-05-18",
+          "entry": 155.0,
+          "exit": 174.15,
+          "shares": 377,
+          "pnl": 7120.76,
+          "pnl_pct": 12.4,
+          "r_mult": 2.56,
+          "bars_held": 6,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "ADANIGREEN",
+          "entry_date": "2024-02-06",
+          "exit_date": "2024-02-07",
+          "entry": 1721.65,
+          "exit": 1938.07,
+          "shares": 33,
+          "pnl": 7044.95,
+          "pnl_pct": 12.6,
+          "r_mult": 2.5,
+          "bars_held": 1,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "HAL",
+          "entry_date": "2023-05-31",
+          "exit_date": "2023-06-08",
+          "entry": 1558.5,
+          "exit": 1767.37,
+          "shares": 34,
+          "pnl": 7009.51,
+          "pnl_pct": 13.4,
+          "r_mult": 2.5,
+          "bars_held": 6,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "RAMKY",
+          "entry_date": "2023-11-02",
+          "exit_date": "2023-11-10",
+          "entry": 616.75,
+          "exit": 695.9,
+          "shares": 89,
+          "pnl": 6950.03,
+          "pnl_pct": 12.8,
+          "r_mult": 2.5,
+          "bars_held": 6,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "BANCOINDIA",
+          "entry_date": "2023-07-13",
+          "exit_date": "2023-07-24",
+          "entry": 157.1,
+          "exit": 176.62,
+          "shares": 357,
+          "pnl": 6872.98,
+          "pnl_pct": 12.4,
+          "r_mult": 2.5,
+          "bars_held": 7,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "TRF",
+          "entry_date": "2023-09-21",
+          "exit_date": "2023-10-17",
+          "entry": 239.4,
+          "exit": 268.65,
+          "shares": 237,
+          "pnl": 6835.85,
+          "pnl_pct": 12.2,
+          "r_mult": 2.5,
+          "bars_held": 17,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "MAZDOCK",
+          "entry_date": "2023-09-01",
+          "exit_date": "2023-09-07",
+          "entry": 943.5,
+          "exit": 1056.19,
+          "shares": 61,
+          "pnl": 6776.62,
+          "pnl_pct": 11.9,
+          "r_mult": 2.5,
+          "bars_held": 4,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "TNPETRO",
+          "entry_date": "2025-06-23",
+          "exit_date": "2025-07-01",
+          "entry": 92.53,
+          "exit": 103.58,
+          "shares": 616,
+          "pnl": 6710.23,
+          "pnl_pct": 11.9,
+          "r_mult": 2.5,
+          "bars_held": 6,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "MFSL",
+          "entry_date": "2025-05-22",
+          "exit_date": "2025-06-17",
+          "entry": 1414.0,
+          "exit": 1592.65,
+          "shares": 38,
+          "pnl": 6696.17,
+          "pnl_pct": 12.6,
+          "r_mult": 2.5,
+          "bars_held": 18,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "ADANIENT",
+          "entry_date": "2022-08-08",
+          "exit_date": "2022-08-18",
+          "entry": 2791.9,
+          "exit": 3160.43,
+          "shares": 18,
+          "pnl": 6545.27,
+          "pnl_pct": 13.2,
+          "r_mult": 2.5,
+          "bars_held": 6,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "IPCALAB",
+          "entry_date": "2024-09-24",
+          "exit_date": "2024-10-11",
+          "entry": 1480.0,
+          "exit": 1653.0,
+          "shares": 38,
+          "pnl": 6478.67,
+          "pnl_pct": 11.7,
+          "r_mult": 2.5,
+          "bars_held": 12,
+          "reason": "+2.5R Championship Target"
+        }
+      ],
+      "regime_trade_stats": {
+        "BULL_TAILWIND": {
+          "trades": 184,
+          "wins": 86,
+          "pnl": 33132.80341678011
+        },
+        "NEUTRAL_CHOP": {
+          "trades": 145,
+          "wins": 61,
+          "pnl": 16457.198759279978
+        },
+        "HOSTILE_BEAR": {
+          "trades": 0,
+          "wins": 0,
+          "pnl": 0.0
+        }
+      },
+      "equity_curve": [
+        {
+          "date": "2022-05-13",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-05-20",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-05-27",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-03",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-10",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-17",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-24",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-07-01",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-07-08",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-07-15",
+          "equity": 99811.92,
+          "cash": 75402.12,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-07-22",
+          "equity": 100190.74,
+          "cash": 51832.39,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-07-29",
+          "equity": 101786.12,
+          "cash": 51271.97,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-05",
+          "equity": 102275.5,
+          "cash": 26469.45,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-16",
+          "equity": 108149.8,
+          "cash": 28502.5,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-23",
+          "equity": 109503.01,
+          "cash": 29905.61,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-30",
+          "equity": 109241.4,
+          "cash": 54588.4,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-07",
+          "equity": 112769.85,
+          "cash": 214.05,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-14",
+          "equity": 119937.2,
+          "cash": 3615.7,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-21",
+          "equity": 120121.92,
+          "cash": 62842.32,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-28",
+          "equity": 111118.52,
+          "cash": 1287.52,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-10-06",
+          "equity": 117289.9,
+          "cash": 3621.3,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-10-13",
+          "equity": 113844.8,
+          "cash": 3621.3,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-10-20",
+          "equity": 110482.69,
+          "cash": 82138.09,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-10-28",
+          "equity": 105515.18,
+          "cash": 27034.88,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-11-04",
+          "equity": 102025.92,
+          "cash": 50893.32,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-11-14",
+          "equity": 98936.54,
+          "cash": 49586.54,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-11-21",
+          "equity": 103414.43,
+          "cash": 49516.43,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-11-28",
+          "equity": 105188.92,
+          "cash": 24736.92,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-05",
+          "equity": 107984.58,
+          "cash": 24953.38,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-12",
+          "equity": 108088.51,
+          "cash": 189.57,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-19",
+          "equity": 106042.17,
+          "cash": 189.57,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-26",
+          "equity": 99921.78,
+          "cash": 99921.78,
+          "open_positions": 0,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-01-02",
+          "equity": 102078.97,
+          "cash": 53224.12,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-01-09",
+          "equity": 102781.0,
+          "cash": 26012.1,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-01-16",
+          "equity": 101882.66,
+          "cash": 51916.66,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-01-23",
+          "equity": 100349.06,
+          "cash": 50756.67,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-01-31",
+          "equity": 97645.54,
+          "cash": 49773.84,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-02-07",
+          "equity": 94950.9,
+          "cash": 94950.9,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-02-14",
+          "equity": 94822.04,
+          "cash": 70054.04,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-02-21",
+          "equity": 94436.73,
+          "cash": 94436.73,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-02-28",
+          "equity": 94436.73,
+          "cash": 94436.73,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-08",
+          "equity": 94436.73,
+          "cash": 94436.73,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-15",
+          "equity": 94436.73,
+          "cash": 94436.73,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-22",
+          "equity": 94436.73,
+          "cash": 94436.73,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-29",
+          "equity": 94436.73,
+          "cash": 94436.73,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-04-10",
+          "equity": 93912.28,
+          "cash": 47162.98,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-04-18",
+          "equity": 95119.07,
+          "cash": 47162.98,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-04-25",
+          "equity": 96923.82,
+          "cash": 73749.24,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-03",
+          "equity": 99146.52,
+          "cash": 25386.79,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-10",
+          "equity": 99367.51,
+          "cash": 25386.79,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-17",
+          "equity": 99286.39,
+          "cash": 75875.86,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-24",
+          "equity": 104563.09,
+          "cash": 81174.01,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-31",
+          "equity": 106946.21,
+          "cash": 83810.24,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-07",
+          "equity": 113161.04,
+          "cash": 30737.65,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-14",
+          "equity": 112238.1,
+          "cash": 33924.09,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-21",
+          "equity": 112580.38,
+          "cash": 33924.09,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-28",
+          "equity": 112941.67,
+          "cash": 32843.86,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-06",
+          "equity": 115269.21,
+          "cash": 77.85,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-13",
+          "equity": 112173.49,
+          "cash": 56493.25,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-20",
+          "equity": 116520.9,
+          "cash": 321.24,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-27",
+          "equity": 119413.58,
+          "cash": 60030.38,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-03",
+          "equity": 119219.47,
+          "cash": 59481.07,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-10",
+          "equity": 123651.49,
+          "cash": 62798.49,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-18",
+          "equity": 120118.28,
+          "cash": 359.88,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-25",
+          "equity": 118209.68,
+          "cash": 359.88,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-01",
+          "equity": 116568.23,
+          "cash": 57774.33,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-08",
+          "equity": 124042.84,
+          "cash": 65769.24,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-15",
+          "equity": 116491.99,
+          "cash": 58956.99,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-25",
+          "equity": 114185.63,
+          "cash": 56013.98,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-03",
+          "equity": 114731.61,
+          "cash": 1539.71,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-10",
+          "equity": 109668.4,
+          "cash": 52989.85,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-17",
+          "equity": 117390.99,
+          "cash": 63727.39,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-25",
+          "equity": 110304.89,
+          "cash": 110304.89,
+          "open_positions": 0,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-11-01",
+          "equity": 109287.55,
+          "cash": 80617.55,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-11-08",
+          "equity": 115653.42,
+          "cash": 27323.92,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-11-15",
+          "equity": 124371.62,
+          "cash": 32922.53,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-11-22",
+          "equity": 126832.21,
+          "cash": 2186.8,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-11-30",
+          "equity": 127119.96,
+          "cash": 63084.6,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-07",
+          "equity": 132526.75,
+          "cash": 388.78,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-14",
+          "equity": 132871.29,
+          "cash": 1124.07,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-21",
+          "equity": 128106.26,
+          "cash": 64277.56,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-29",
+          "equity": 132302.24,
+          "cash": 64668.44,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-05",
+          "equity": 127833.4,
+          "cash": 58.8,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-12",
+          "equity": 123199.69,
+          "cash": 63325.19,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-19",
+          "equity": 116467.29,
+          "cash": 456.39,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-29",
+          "equity": 122898.72,
+          "cash": 47.27,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-05",
+          "equity": 116503.73,
+          "cash": 56338.03,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-12",
+          "equity": 125365.84,
+          "cash": 60043.34,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-19",
+          "equity": 129568.14,
+          "cash": 34.14,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-26",
+          "equity": 126488.85,
+          "cash": 3671.3,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-03-02",
+          "equity": 121978.83,
+          "cash": 1075.63,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-03-11",
+          "equity": 119257.47,
+          "cash": 88897.77,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-03-18",
+          "equity": 118794.57,
+          "cash": 118794.57,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-03-26",
+          "equity": 118794.57,
+          "cash": 118794.57,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-04-03",
+          "equity": 118304.19,
+          "cash": 61247.34,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-04-10",
+          "equity": 119564.49,
+          "cash": 61247.34,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-04-19",
+          "equity": 118525.5,
+          "cash": 118525.5,
+          "open_positions": 0,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-04-26",
+          "equity": 118560.16,
+          "cash": 30729.61,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-06",
+          "equity": 120709.38,
+          "cash": 61475.18,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-13",
+          "equity": 122027.98,
+          "cash": 2918.78,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-18",
+          "equity": 131187.88,
+          "cash": 66670.73,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-27",
+          "equity": 128277.32,
+          "cash": 128277.32,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-03",
+          "equity": 123388.19,
+          "cash": 60416.19,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-10",
+          "equity": 121282.59,
+          "cash": 62785.89,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-18",
+          "equity": 121260.09,
+          "cash": 32427.09,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-25",
+          "equity": 119547.98,
+          "cash": 3226.83,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-02",
+          "equity": 123066.83,
+          "cash": 62767.43,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-09",
+          "equity": 123680.1,
+          "cash": 58836.9,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-16",
+          "equity": 123043.36,
+          "cash": 1467.91,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-24",
+          "equity": 119521.36,
+          "cash": 61365.89,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-31",
+          "equity": 124433.1,
+          "cash": 1174.79,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-07",
+          "equity": 120192.77,
+          "cash": 64502.47,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-14",
+          "equity": 119516.02,
+          "cash": 2437.99,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-22",
+          "equity": 115188.92,
+          "cash": 23.44,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-29",
+          "equity": 113905.41,
+          "cash": 6992.11,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-05",
+          "equity": 119167.26,
+          "cash": 60619.26,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-12",
+          "equity": 118580.36,
+          "cash": 255.61,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-19",
+          "equity": 116086.2,
+          "cash": 56585.2,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-26",
+          "equity": 117282.84,
+          "cash": 206.44,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-04",
+          "equity": 117992.64,
+          "cash": 206.44,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-11",
+          "equity": 125468.11,
+          "cash": 62925.11,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-18",
+          "equity": 122834.88,
+          "cash": 58738.38,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-25",
+          "equity": 119548.31,
+          "cash": 91781.81,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-11-01",
+          "equity": 118569.78,
+          "cash": 62198.88,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-11-08",
+          "equity": 120796.16,
+          "cash": 30402.56,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-11-18",
+          "equity": 121101.61,
+          "cash": 58845.61,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-11-26",
+          "equity": 125163.53,
+          "cash": 62106.03,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-12-03",
+          "equity": 126669.12,
+          "cash": 62147.12,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-12-10",
+          "equity": 125026.92,
+          "cash": 62147.12,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-12-17",
+          "equity": 120334.08,
+          "cash": 58522.98,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-12-24",
+          "equity": 111795.91,
+          "cash": 56824.46,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-01-01",
+          "equity": 114514.71,
+          "cash": 56824.46,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-01-08",
+          "equity": 114668.36,
+          "cash": 85980.36,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-01-15",
+          "equity": 114265.1,
+          "cash": 114265.1,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-01-22",
+          "equity": 114265.1,
+          "cash": 114265.1,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-01-29",
+          "equity": 114265.1,
+          "cash": 114265.1,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-04",
+          "equity": 114265.1,
+          "cash": 114265.1,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-11",
+          "equity": 114265.1,
+          "cash": 114265.1,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-18",
+          "equity": 114265.1,
+          "cash": 114265.1,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-25",
+          "equity": 114265.1,
+          "cash": 114265.1,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-05",
+          "equity": 114265.1,
+          "cash": 114265.1,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-12",
+          "equity": 114265.1,
+          "cash": 114265.1,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-20",
+          "equity": 114265.1,
+          "cash": 114265.1,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-27",
+          "equity": 114265.1,
+          "cash": 114265.1,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-04-04",
+          "equity": 114265.1,
+          "cash": 114265.1,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-04-15",
+          "equity": 114265.1,
+          "cash": 114265.1,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-04-23",
+          "equity": 115625.33,
+          "cash": 57383.42,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-04-30",
+          "equity": 111405.97,
+          "cash": 111405.97,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-05-08",
+          "equity": 112028.59,
+          "cash": 1861.49,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-05-15",
+          "equity": 116653.19,
+          "cash": 1861.49,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-05-22",
+          "equity": 112754.04,
+          "cash": 54813.24,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-05-29",
+          "equity": 115938.29,
+          "cash": 1284.69,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-05",
+          "equity": 118610.29,
+          "cash": 1284.69,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-12",
+          "equity": 121610.69,
+          "cash": 3371.81,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-19",
+          "equity": 119111.25,
+          "cash": 119111.25,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-26",
+          "equity": 119851.66,
+          "cash": 2.46,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-03",
+          "equity": 122557.21,
+          "cash": 1853.11,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-10",
+          "equity": 122900.88,
+          "cash": 61140.48,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-17",
+          "equity": 121872.55,
+          "cash": 395.95,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-24",
+          "equity": 128933.5,
+          "cash": 395.95,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-31",
+          "equity": 131332.45,
+          "cash": 67240.25,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-08-07",
+          "equity": 128389.76,
+          "cash": 96252.11,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-08-14",
+          "equity": 128967.7,
+          "cash": 63189.8,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-08-22",
+          "equity": 127080.9,
+          "cash": 61776.1,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-09-01",
+          "equity": 127862.19,
+          "cash": 62897.58,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-09-08",
+          "equity": 131453.36,
+          "cash": 97903.61,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-09-15",
+          "equity": 131681.12,
+          "cash": 66090.12,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-09-22",
+          "equity": 133204.92,
+          "cash": 66090.12,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-09-29",
+          "equity": 131085.23,
+          "cash": 64863.83,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-10-07",
+          "equity": 134016.83,
+          "cash": 64863.83,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-10-14",
+          "equity": 131384.05,
+          "cash": 65636.25,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-10-21",
+          "equity": 134554.35,
+          "cash": 66337.5,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-10-29",
+          "equity": 133720.95,
+          "cash": 66337.5,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-11-06",
+          "equity": 125712.07,
+          "cash": 59884.82,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-11-13",
+          "equity": 126449.79,
+          "cash": 109226.79,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-11-20",
+          "equity": 124095.36,
+          "cash": 62231.53,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-11-27",
+          "equity": 124082.27,
+          "cash": 61559.27,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-12-04",
+          "equity": 122266.02,
+          "cash": 89984.07,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-12-11",
+          "equity": 124082.04,
+          "cash": 124082.04,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-12-18",
+          "equity": 124249.38,
+          "cash": 92754.98,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-12-26",
+          "equity": 126853.43,
+          "cash": 94640.68,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-01-02",
+          "equity": 126866.54,
+          "cash": 63022.44,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-01-09",
+          "equity": 125387.88,
+          "cash": 61905.38,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-01-19",
+          "equity": 125363.01,
+          "cash": 91311.98,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-01-27",
+          "equity": 126620.32,
+          "cash": 126620.32,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-02-02",
+          "equity": 126620.32,
+          "cash": 126620.32,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-02-09",
+          "equity": 128459.97,
+          "cash": 64058.57,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-02-16",
+          "equity": 126753.81,
+          "cash": 63920.21,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-02-23",
+          "equity": 127781.96,
+          "cash": 63068.67,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-03-02",
+          "equity": 123861.46,
+          "cash": 91416.96,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-03-10",
+          "equity": 121972.02,
+          "cash": 121972.02,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-03-17",
+          "equity": 121972.02,
+          "cash": 121972.02,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-03-24",
+          "equity": 121972.02,
+          "cash": 121972.02,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-04-02",
+          "equity": 121972.02,
+          "cash": 121972.02,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-04-10",
+          "equity": 121972.02,
+          "cash": 121972.02,
+          "open_positions": 0,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-04-20",
+          "equity": 122054.07,
+          "cash": 61927.37,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-04-27",
+          "equity": 123400.17,
+          "cash": 61927.37,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-05",
+          "equity": 123130.7,
+          "cash": 93048.9,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-12",
+          "equity": 121541.76,
+          "cash": 91486.56,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-19",
+          "equity": 122137.7,
+          "cash": 61493.9,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-26",
+          "equity": 122102.42,
+          "cash": 61493.9,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-06-03",
+          "equity": 122202.82,
+          "cash": 61493.9,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-06-10",
+          "equity": 119405.4,
+          "cash": 60377.35,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-06-17",
+          "equity": 119243.68,
+          "cash": 62231.12,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-06-24",
+          "equity": 119580.2,
+          "cash": 62231.12,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-07-02",
+          "equity": 120745.0,
+          "cash": 62231.12,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-07-09",
+          "equity": 120016.39,
+          "cash": 93278.39,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-07-16",
+          "equity": 118482.0,
+          "cash": 61540.0,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-07-23",
+          "equity": 118712.0,
+          "cash": 61540.0,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-07-30",
+          "equity": 119400.0,
+          "cash": 61540.0,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-08-06",
+          "equity": 122853.95,
+          "cash": 93109.95,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2026-08-13",
+          "equity": 124680.12,
+          "cash": 94750.12,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-08-20",
+          "equity": 123439.51,
+          "cash": 61111.26,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-08-27",
+          "equity": 121184.56,
+          "cash": 89766.81,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-09-03",
+          "equity": 118850.57,
+          "cash": 88769.75,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-09-10",
+          "equity": 124484.65,
+          "cash": 62923.73,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-09-18",
+          "equity": 125426.27,
+          "cash": 95807.27,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-09-25",
+          "equity": 124979.27,
+          "cash": 95807.27,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        }
+      ]
+    },
+    "model_3_decay_filter": {
+      "mode_name": "Model 3: Rolling 30-Trade Expectancy Filter",
+      "initial_capital": 100000.0,
+      "final_equity": 99917.53,
+      "total_pnl": -82.47,
+      "total_return_pct": -0.1,
+      "cagr_pct": -0.0,
+      "max_drawdown_pct": 40.5,
+      "calmar_ratio": -0.0,
+      "total_trades": 439,
+      "wins": 174,
+      "losses": 265,
+      "win_rate_pct": 39.6,
+      "profit_factor": 1.09,
+      "avg_expectancy_r": 0.07,
+      "avg_win_pct": 5.7,
+      "avg_loss_pct": -3.0,
+      "avg_holding_days": 4.6,
+      "paused_days": 0,
+      "reduced_days": 0,
+      "yearly": {
+        "2022": {
+          "trades": 61,
+          "wins": 22,
+          "net_pnl": 10634.25,
+          "bars": 265,
+          "win_rate": 36.1,
+          "pnl_pct_of_start": 10.6,
+          "avg_holding_days": 4.3
+        },
+        "2023": {
+          "trades": 95,
+          "wins": 47,
+          "net_pnl": 46999.15,
+          "bars": 467,
+          "win_rate": 49.5,
+          "pnl_pct_of_start": 47.0,
+          "avg_holding_days": 4.9
+        },
+        "2024": {
+          "trades": 105,
+          "wins": 47,
+          "net_pnl": 7574.93,
+          "bars": 485,
+          "win_rate": 44.8,
+          "pnl_pct_of_start": 7.6,
+          "avg_holding_days": 4.6
+        },
+        "2025": {
+          "trades": 105,
+          "wins": 36,
+          "net_pnl": -12868.6,
+          "bars": 473,
+          "win_rate": 34.3,
+          "pnl_pct_of_start": -12.9,
+          "avg_holding_days": 4.5
+        },
+        "2026": {
+          "trades": 73,
+          "wins": 22,
+          "net_pnl": -22874.32,
+          "bars": 329,
+          "win_rate": 30.1,
+          "pnl_pct_of_start": -22.9,
+          "avg_holding_days": 4.5
+        }
+      },
+      "top_winners": [
+        {
+          "symbol": "CPSEETF",
+          "entry_date": "2023-11-13",
+          "exit_date": "2023-12-15",
+          "entry": 56.65,
+          "exit": 64.38,
+          "shares": 1258,
+          "pnl": 9604.01,
+          "pnl_pct": 13.6,
+          "r_mult": 2.5,
+          "bars_held": 22,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "ADANIGREEN",
+          "entry_date": "2024-02-06",
+          "exit_date": "2024-02-07",
+          "entry": 1721.65,
+          "exit": 1938.07,
+          "shares": 42,
+          "pnl": 8971.75,
+          "pnl_pct": 12.6,
+          "r_mult": 2.5,
+          "bars_held": 1,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "KCPSUGIND",
+          "entry_date": "2023-10-09",
+          "exit_date": "2023-10-20",
+          "entry": 36.65,
+          "exit": 41.65,
+          "shares": 1666,
+          "pnl": 8226.73,
+          "pnl_pct": 13.6,
+          "r_mult": 2.5,
+          "bars_held": 9,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "LLOYDSME",
+          "entry_date": "2024-12-23",
+          "exit_date": "2025-01-02",
+          "entry": 1162.7,
+          "exit": 1297.2,
+          "shares": 62,
+          "pnl": 8222.64,
+          "pnl_pct": 11.6,
+          "r_mult": 2.5,
+          "bars_held": 7,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "KUANTUM",
+          "entry_date": "2023-06-28",
+          "exit_date": "2023-07-03",
+          "entry": 176.05,
+          "exit": 201.3,
+          "shares": 323,
+          "pnl": 8057.73,
+          "pnl_pct": 14.3,
+          "r_mult": 2.89,
+          "bars_held": 2,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "RESPONIND",
+          "entry_date": "2023-09-04",
+          "exit_date": "2023-09-07",
+          "entry": 251.8,
+          "exit": 286.06,
+          "shares": 235,
+          "pnl": 7951.02,
+          "pnl_pct": 13.6,
+          "r_mult": 2.5,
+          "bars_held": 3,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "ASHAPURMIN",
+          "entry_date": "2025-01-15",
+          "exit_date": "2025-01-17",
+          "entry": 440.75,
+          "exit": 490.75,
+          "shares": 160,
+          "pnl": 7885.78,
+          "pnl_pct": 11.3,
+          "r_mult": 2.5,
+          "bars_held": 2,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "GKP",
+          "entry_date": "2022-07-29",
+          "exit_date": "2022-08-12",
+          "entry": 162.7,
+          "exit": 187.8,
+          "shares": 314,
+          "pnl": 7790.64,
+          "pnl_pct": 15.4,
+          "r_mult": 2.82,
+          "bars_held": 9,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "COMMITTED",
+          "entry_date": "2025-02-04",
+          "exit_date": "2025-02-12",
+          "entry": 195.0,
+          "exit": 217.75,
+          "shares": 343,
+          "pnl": 7693.62,
+          "pnl_pct": 11.7,
+          "r_mult": 2.62,
+          "bars_held": 6,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "TRF",
+          "entry_date": "2023-09-21",
+          "exit_date": "2023-10-17",
+          "entry": 239.4,
+          "exit": 268.65,
+          "shares": 261,
+          "pnl": 7530.11,
+          "pnl_pct": 12.2,
+          "r_mult": 2.5,
+          "bars_held": 17,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "GOODLUCK",
+          "entry_date": "2023-12-22",
+          "exit_date": "2024-01-12",
+          "entry": 311.5,
+          "exit": 344.53,
+          "shares": 231,
+          "pnl": 7515.0,
+          "pnl_pct": 10.6,
+          "r_mult": 2.5,
+          "bars_held": 14,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "BANCOINDIA",
+          "entry_date": "2023-07-13",
+          "exit_date": "2023-07-24",
+          "entry": 157.1,
+          "exit": 176.62,
+          "shares": 385,
+          "pnl": 7413.6,
+          "pnl_pct": 12.4,
+          "r_mult": 2.5,
+          "bars_held": 7,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "DCI",
+          "entry_date": "2024-07-29",
+          "exit_date": "2024-08-01",
+          "entry": 380.71,
+          "exit": 440.6,
+          "shares": 124,
+          "pnl": 7340.8,
+          "pnl_pct": 15.7,
+          "r_mult": 2.88,
+          "bars_held": 3,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "MAZDOCK",
+          "entry_date": "2023-09-01",
+          "exit_date": "2023-09-07",
+          "entry": 943.5,
+          "exit": 1056.19,
+          "shares": 62,
+          "pnl": 6888.04,
+          "pnl_pct": 11.9,
+          "r_mult": 2.5,
+          "bars_held": 4,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "VENUSPIPES",
+          "entry_date": "2023-07-25",
+          "exit_date": "2023-08-08",
+          "entry": 1230.85,
+          "exit": 1360.25,
+          "shares": 52,
+          "pnl": 6623.92,
+          "pnl_pct": 10.5,
+          "r_mult": 2.5,
+          "bars_held": 10,
+          "reason": "+2.5R Championship Target"
+        }
+      ],
+      "regime_trade_stats": {
+        "BULL_TAILWIND": {
+          "trades": 201,
+          "wins": 91,
+          "pnl": 58318.38630982005
+        },
+        "NEUTRAL_CHOP": {
+          "trades": 134,
+          "wins": 51,
+          "pnl": -9940.714401980022
+        },
+        "HOSTILE_BEAR": {
+          "trades": 104,
+          "wins": 32,
+          "pnl": -18912.17317817998
+        }
+      },
+      "equity_curve": [
+        {
+          "date": "2022-05-13",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-05-20",
+          "equity": 97966.7,
+          "cash": 97966.7,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-05-27",
+          "equity": 100051.81,
+          "cash": 5395.61,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-03",
+          "equity": 104189.11,
+          "cash": 5395.61,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-10",
+          "equity": 100830.67,
+          "cash": 1356.07,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-17",
+          "equity": 93077.18,
+          "cash": 93077.18,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-24",
+          "equity": 93077.18,
+          "cash": 93077.18,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-07-01",
+          "equity": 93505.41,
+          "cash": 46525.41,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-07-08",
+          "equity": 96231.62,
+          "cash": 46461.62,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-07-15",
+          "equity": 96462.0,
+          "cash": 1166.85,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-07-22",
+          "equity": 94526.36,
+          "cash": 6688.51,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-07-29",
+          "equity": 102289.71,
+          "cash": 54729.66,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-05",
+          "equity": 104241.11,
+          "cash": 3560.56,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-16",
+          "equity": 108169.95,
+          "cash": 54280.9,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-23",
+          "equity": 104850.07,
+          "cash": 22933.02,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-30",
+          "equity": 104964.74,
+          "cash": 21720.14,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-07",
+          "equity": 111736.52,
+          "cash": 59742.62,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-14",
+          "equity": 119502.46,
+          "cash": 36.51,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-21",
+          "equity": 114781.51,
+          "cash": 58447.81,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-28",
+          "equity": 107081.85,
+          "cash": 38227.75,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-10-06",
+          "equity": 110955.71,
+          "cash": 20625.56,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-10-13",
+          "equity": 107959.81,
+          "cash": 20625.56,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-10-20",
+          "equity": 104897.09,
+          "cash": 70036.49,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-10-28",
+          "equity": 100689.91,
+          "cash": 35601.06,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-11-04",
+          "equity": 99788.87,
+          "cash": 67371.47,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-11-14",
+          "equity": 97034.21,
+          "cash": 64667.96,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-11-21",
+          "equity": 101555.89,
+          "cash": 101555.89,
+          "open_positions": 0,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-11-28",
+          "equity": 101386.13,
+          "cash": 36366.08,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-05",
+          "equity": 106109.28,
+          "cash": 36366.08,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-12",
+          "equity": 111443.97,
+          "cash": 38038.77,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-19",
+          "equity": 110152.59,
+          "cash": 39645.39,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-26",
+          "equity": 106553.43,
+          "cash": 106553.43,
+          "open_positions": 0,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-01-02",
+          "equity": 109676.03,
+          "cash": 50101.38,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-01-09",
+          "equity": 112978.76,
+          "cash": 19760.96,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-01-16",
+          "equity": 112558.83,
+          "cash": 3878.33,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-01-23",
+          "equity": 109188.35,
+          "cash": 2501.98,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-01-31",
+          "equity": 103924.74,
+          "cash": 1399.04,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-02-07",
+          "equity": 98730.38,
+          "cash": 64420.98,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-02-14",
+          "equity": 98245.77,
+          "cash": 31731.77,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-02-21",
+          "equity": 97684.28,
+          "cash": 64248.68,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-02-28",
+          "equity": 95329.84,
+          "cash": 45052.64,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-08",
+          "equity": 96189.24,
+          "cash": 45052.64,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-15",
+          "equity": 95683.02,
+          "cash": 45363.77,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-22",
+          "equity": 93956.62,
+          "cash": 44726.1,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-29",
+          "equity": 93999.92,
+          "cash": 77236.22,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-04-10",
+          "equity": 93949.19,
+          "cash": 60551.95,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-04-18",
+          "equity": 94901.28,
+          "cash": 61407.13,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-04-25",
+          "equity": 96593.68,
+          "cash": 79970.58,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-03",
+          "equity": 97833.53,
+          "cash": 63131.58,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-10",
+          "equity": 98669.98,
+          "cash": 63131.58,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-17",
+          "equity": 98234.87,
+          "cash": 80773.37,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-24",
+          "equity": 101113.13,
+          "cash": 82538.13,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-31",
+          "equity": 102463.62,
+          "cash": 102463.62,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-07",
+          "equity": 109235.39,
+          "cash": 2609.49,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-14",
+          "equity": 107231.01,
+          "cash": 3833.31,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-21",
+          "equity": 110122.66,
+          "cash": 3833.31,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-28",
+          "equity": 113974.62,
+          "cash": 57090.87,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-06",
+          "equity": 124077.46,
+          "cash": 5198.78,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-13",
+          "equity": 121009.16,
+          "cash": 60890.64,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-20",
+          "equity": 125701.14,
+          "cash": 314.56,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-27",
+          "equity": 128823.47,
+          "cash": 64491.67,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-03",
+          "equity": 128621.19,
+          "cash": 63904.59,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-10",
+          "equity": 133435.16,
+          "cash": 66730.91,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-18",
+          "equity": 128855.44,
+          "cash": 124.54,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-25",
+          "equity": 122363.59,
+          "cash": 56480.14,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-01",
+          "equity": 118313.48,
+          "cash": 118313.48,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-08",
+          "equity": 134525.68,
+          "cash": 67917.08,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-15",
+          "equity": 127929.53,
+          "cash": 64641.03,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-25",
+          "equity": 126533.76,
+          "cash": 62.31,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-03",
+          "equity": 125635.42,
+          "cash": 61507.72,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-10",
+          "equity": 126704.31,
+          "cash": 145.16,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-17",
+          "equity": 134716.17,
+          "cash": 70158.67,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-25",
+          "equity": 131900.33,
+          "cash": 131900.33,
+          "open_positions": 0,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-11-01",
+          "equity": 130523.95,
+          "cash": 86061.95,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-11-08",
+          "equity": 135740.76,
+          "cash": 65530.86,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-11-15",
+          "equity": 142520.43,
+          "cash": 46676.74,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-11-22",
+          "equity": 143121.78,
+          "cash": 71264.82,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-11-30",
+          "equity": 144681.61,
+          "cash": 71315.05,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-07",
+          "equity": 150861.02,
+          "cash": 674.4,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-14",
+          "equity": 151265.26,
+          "cash": 499.04,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-21",
+          "equity": 145830.3,
+          "cash": 72181.8,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-29",
+          "equity": 150576.45,
+          "cash": 118.95,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-05",
+          "equity": 156406.35,
+          "cash": 118.95,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-12",
+          "equity": 155612.11,
+          "cash": 80341.31,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-19",
+          "equity": 148946.45,
+          "cash": 73672.25,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-29",
+          "equity": 150249.19,
+          "cash": 73980.99,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-05",
+          "equity": 145703.64,
+          "cash": 72432.54,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-12",
+          "equity": 156949.57,
+          "cash": 75228.87,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-19",
+          "equity": 159012.48,
+          "cash": 640.54,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-26",
+          "equity": 152350.88,
+          "cash": 8205.38,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-03-02",
+          "equity": 147814.96,
+          "cash": 51830.76,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-03-11",
+          "equity": 145794.48,
+          "cash": 97756.98,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-03-18",
+          "equity": 142507.38,
+          "cash": 93605.73,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-03-26",
+          "equity": 144720.92,
+          "cash": 119148.02,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-04-03",
+          "equity": 145353.42,
+          "cash": 93847.32,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-04-10",
+          "equity": 144862.73,
+          "cash": 94548.73,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-04-19",
+          "equity": 141826.7,
+          "cash": 93526.7,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-04-26",
+          "equity": 143168.66,
+          "cash": 92559.51,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-06",
+          "equity": 145080.04,
+          "cash": 102283.84,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-13",
+          "equity": 143490.83,
+          "cash": 91904.33,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-18",
+          "equity": 147293.23,
+          "cash": 120984.48,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-27",
+          "equity": 145391.2,
+          "cash": 119434.48,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-03",
+          "equity": 147875.24,
+          "cash": 121667.24,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-10",
+          "equity": 148294.9,
+          "cash": 54058.65,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-18",
+          "equity": 147170.56,
+          "cash": 53904.91,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-25",
+          "equity": 145439.48,
+          "cash": 53819.93,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-02",
+          "equity": 148272.87,
+          "cash": 100894.77,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-09",
+          "equity": 148729.15,
+          "cash": 98105.95,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-16",
+          "equity": 147335.85,
+          "cash": 51987.15,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-24",
+          "equity": 147243.38,
+          "cash": 99711.08,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-31",
+          "equity": 151772.96,
+          "cash": 51541.28,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-07",
+          "equity": 146935.93,
+          "cash": 99454.23,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-14",
+          "equity": 143131.59,
+          "cash": 50232.1,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-22",
+          "equity": 140796.59,
+          "cash": 47710.79,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-29",
+          "equity": 142271.32,
+          "cash": 68913.67,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-05",
+          "equity": 142820.46,
+          "cash": 68446.26,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-12",
+          "equity": 142027.98,
+          "cash": 71305.43,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-19",
+          "equity": 140122.39,
+          "cash": 94352.39,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-26",
+          "equity": 140247.89,
+          "cash": 48510.69,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-04",
+          "equity": 140232.64,
+          "cash": 68556.49,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-11",
+          "equity": 140164.27,
+          "cash": 68438.27,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-18",
+          "equity": 141620.82,
+          "cash": 67246.86,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-25",
+          "equity": 138275.69,
+          "cash": 115136.94,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-11-01",
+          "equity": 139419.03,
+          "cash": 91204.53,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-11-08",
+          "equity": 142596.19,
+          "cash": 70523.19,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-11-18",
+          "equity": 143987.06,
+          "cash": 95998.06,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-11-26",
+          "equity": 150197.32,
+          "cash": 51450.62,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-12-03",
+          "equity": 151506.09,
+          "cash": 27625.35,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-12-10",
+          "equity": 147486.66,
+          "cash": 52229.26,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-12-17",
+          "equity": 144990.58,
+          "cash": 94217.08,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-12-24",
+          "equity": 147396.62,
+          "cash": 26658.87,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-01-01",
+          "equity": 152681.52,
+          "cash": 26658.87,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-01-08",
+          "equity": 151194.96,
+          "cash": 1523.26,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-01-15",
+          "equity": 143813.47,
+          "cash": 70823.47,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-01-22",
+          "equity": 142467.25,
+          "cash": 71112.25,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-01-29",
+          "equity": 138091.69,
+          "cash": 60.28,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-04",
+          "equity": 139135.94,
+          "cash": 66991.4,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-11",
+          "equity": 142953.3,
+          "cash": 69225.45,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-18",
+          "equity": 141435.85,
+          "cash": 141435.85,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-25",
+          "equity": 138701.84,
+          "cash": 93517.84,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-05",
+          "equity": 136364.86,
+          "cash": 91510.96,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-12",
+          "equity": 135481.48,
+          "cash": 90484.98,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-20",
+          "equity": 136676.54,
+          "cash": 90387.34,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-27",
+          "equity": 137295.73,
+          "cash": 66309.53,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-04-04",
+          "equity": 130519.82,
+          "cash": 130519.82,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-04-15",
+          "equity": 129036.94,
+          "cash": 129036.94,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-04-23",
+          "equity": 130089.72,
+          "cash": 84083.2,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-04-30",
+          "equity": 127796.76,
+          "cash": 127796.76,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-05-08",
+          "equity": 127943.58,
+          "cash": 85959.78,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-05-15",
+          "equity": 129678.18,
+          "cash": 85959.78,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-05-22",
+          "equity": 128172.77,
+          "cash": 106444.97,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-05-29",
+          "equity": 129407.31,
+          "cash": 84103.71,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-05",
+          "equity": 130463.71,
+          "cash": 84103.71,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-12",
+          "equity": 131628.84,
+          "cash": 86051.4,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-19",
+          "equity": 130701.41,
+          "cash": 130701.41,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-26",
+          "equity": 130966.75,
+          "cash": 83636.9,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-03",
+          "equity": 132003.85,
+          "cash": 85590.55,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-10",
+          "equity": 132610.66,
+          "cash": 46527.5,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-17",
+          "equity": 130456.42,
+          "cash": 64818.19,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-24",
+          "equity": 133283.26,
+          "cash": 64739.91,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-31",
+          "equity": 128935.24,
+          "cash": 86012.64,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-08-07",
+          "equity": 126420.49,
+          "cash": 85460.74,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-08-14",
+          "equity": 127185.2,
+          "cash": 43175.3,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-08-22",
+          "equity": 124777.41,
+          "cash": 60038.21,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-09-01",
+          "equity": 124791.45,
+          "cash": 80233.26,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-09-08",
+          "equity": 127251.93,
+          "cash": 104284.18,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-09-15",
+          "equity": 127067.86,
+          "cash": 44650.06,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-09-22",
+          "equity": 128984.12,
+          "cash": 44650.06,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-09-29",
+          "equity": 126334.64,
+          "cash": 43069.54,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-10-07",
+          "equity": 130019.79,
+          "cash": 43069.54,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-10-14",
+          "equity": 126926.06,
+          "cash": 85476.36,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-10-21",
+          "equity": 129426.65,
+          "cash": 63655.75,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-10-29",
+          "equity": 128789.8,
+          "cash": 63655.75,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-11-06",
+          "equity": 120239.6,
+          "cash": 98174.6,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-11-13",
+          "equity": 120935.76,
+          "cash": 86489.76,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-11-20",
+          "equity": 119403.41,
+          "cash": 77957.47,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-11-27",
+          "equity": 119362.86,
+          "cash": 77680.86,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-12-04",
+          "equity": 118109.43,
+          "cash": 96588.13,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-12-11",
+          "equity": 120661.86,
+          "cash": 41652.16,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-12-18",
+          "equity": 123631.01,
+          "cash": 84351.81,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-12-26",
+          "equity": 127147.59,
+          "cash": 85682.04,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-01-02",
+          "equity": 128694.48,
+          "cash": 44927.68,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-01-09",
+          "equity": 122654.87,
+          "cash": 79194.37,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-01-19",
+          "equity": 122518.98,
+          "cash": 99168.11,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-01-27",
+          "equity": 121596.16,
+          "cash": 61623.46,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-02-02",
+          "equity": 112967.53,
+          "cash": 112967.53,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-02-09",
+          "equity": 112184.71,
+          "cash": 94307.91,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-02-16",
+          "equity": 112431.25,
+          "cash": 74516.84,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-02-23",
+          "equity": 113574.77,
+          "cash": 72363.26,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-03-02",
+          "equity": 108577.68,
+          "cash": 108577.68,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-03-10",
+          "equity": 107570.6,
+          "cash": 89859.4,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-03-17",
+          "equity": 108091.6,
+          "cash": 74677.6,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-03-24",
+          "equity": 106047.28,
+          "cash": 106047.28,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-04-02",
+          "equity": 103955.93,
+          "cash": 84858.38,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-04-10",
+          "equity": 105114.66,
+          "cash": 86314.71,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-04-20",
+          "equity": 105685.17,
+          "cash": 70974.57,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-04-27",
+          "equity": 108172.16,
+          "cash": 89755.06,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-05",
+          "equity": 106387.2,
+          "cash": 38357.5,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-12",
+          "equity": 106036.95,
+          "cash": 71688.15,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-19",
+          "equity": 106564.11,
+          "cash": 53479.11,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-26",
+          "equity": 106374.37,
+          "cash": 53479.11,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-06-03",
+          "equity": 106049.17,
+          "cash": 53479.11,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-06-10",
+          "equity": 103313.99,
+          "cash": 36238.59,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-06-17",
+          "equity": 100601.4,
+          "cash": 50442.72,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-06-24",
+          "equity": 101363.96,
+          "cash": 50442.72,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-07-02",
+          "equity": 102275.36,
+          "cash": 50442.72,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-07-09",
+          "equity": 102078.55,
+          "cash": 53077.75,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-07-16",
+          "equity": 105067.49,
+          "cash": 87139.49,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-07-23",
+          "equity": 100093.03,
+          "cash": 65275.63,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-07-30",
+          "equity": 100848.43,
+          "cash": 65275.63,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-08-06",
+          "equity": 100859.23,
+          "cash": 65275.63,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2026-08-13",
+          "equity": 100096.51,
+          "cash": 68322.41,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-08-20",
+          "equity": 97712.33,
+          "cash": 67271.63,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-08-27",
+          "equity": 96986.4,
+          "cash": 79621.8,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-09-03",
+          "equity": 96301.13,
+          "cash": 79112.09,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-09-10",
+          "equity": 99476.8,
+          "cash": 66538.9,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-09-18",
+          "equity": 100056.03,
+          "cash": 67814.83,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-09-25",
+          "equity": 99982.03,
+          "cash": 67814.83,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        }
+      ]
+    },
+    "model_4_dual_armor": {
+      "mode_name": "Model 4: Dual Armor (Regime + Expectancy)",
+      "initial_capital": 100000.0,
+      "final_equity": 107692.23,
+      "total_pnl": 7692.23,
+      "total_return_pct": 7.7,
+      "cagr_pct": 1.5,
+      "max_drawdown_pct": 27.1,
+      "calmar_ratio": 0.06,
+      "total_trades": 311,
+      "wins": 133,
+      "losses": 178,
+      "win_rate_pct": 42.8,
+      "profit_factor": 1.12,
+      "avg_expectancy_r": 0.12,
+      "avg_win_pct": 5.7,
+      "avg_loss_pct": -3.1,
+      "avg_holding_days": 5.5,
+      "paused_days": 232,
+      "reduced_days": 127,
+      "yearly": {
+        "2022": {
+          "trades": 48,
+          "wins": 18,
+          "net_pnl": 8580.5,
+          "bars": 220,
+          "win_rate": 37.5,
+          "pnl_pct_of_start": 8.6,
+          "avg_holding_days": 4.6
+        },
+        "2023": {
+          "trades": 67,
+          "wins": 32,
+          "net_pnl": 37341.78,
+          "bars": 412,
+          "win_rate": 47.8,
+          "pnl_pct_of_start": 37.3,
+          "avg_holding_days": 6.1
+        },
+        "2024": {
+          "trades": 88,
+          "wins": 38,
+          "net_pnl": -17677.65,
+          "bars": 455,
+          "win_rate": 43.2,
+          "pnl_pct_of_start": -17.7,
+          "avg_holding_days": 5.2
+        },
+        "2025": {
+          "trades": 69,
+          "wins": 28,
+          "net_pnl": -1110.38,
+          "bars": 355,
+          "win_rate": 40.6,
+          "pnl_pct_of_start": -1.1,
+          "avg_holding_days": 5.1
+        },
+        "2026": {
+          "trades": 39,
+          "wins": 17,
+          "net_pnl": -759.72,
+          "bars": 269,
+          "win_rate": 43.6,
+          "pnl_pct_of_start": -0.8,
+          "avg_holding_days": 6.9
+        }
+      },
+      "top_winners": [
+        {
+          "symbol": "DCI",
+          "entry_date": "2024-07-29",
+          "exit_date": "2024-08-01",
+          "entry": 380.71,
+          "exit": 440.6,
+          "shares": 162,
+          "pnl": 9596.53,
+          "pnl_pct": 15.7,
+          "r_mult": 2.88,
+          "bars_held": 3,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "CPSEETF",
+          "entry_date": "2023-11-13",
+          "exit_date": "2023-12-15",
+          "entry": 56.65,
+          "exit": 64.38,
+          "shares": 1155,
+          "pnl": 8816.04,
+          "pnl_pct": 13.6,
+          "r_mult": 2.5,
+          "bars_held": 22,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "HAL",
+          "entry_date": "2023-05-31",
+          "exit_date": "2023-06-08",
+          "entry": 1558.5,
+          "exit": 1767.37,
+          "shares": 39,
+          "pnl": 8043.27,
+          "pnl_pct": 13.4,
+          "r_mult": 2.5,
+          "bars_held": 6,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "BANCOINDIA",
+          "entry_date": "2023-07-13",
+          "exit_date": "2023-07-24",
+          "entry": 157.1,
+          "exit": 176.62,
+          "shares": 413,
+          "pnl": 7954.23,
+          "pnl_pct": 12.4,
+          "r_mult": 2.5,
+          "bars_held": 7,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "TRF",
+          "entry_date": "2023-09-21",
+          "exit_date": "2023-10-17",
+          "entry": 239.4,
+          "exit": 268.65,
+          "shares": 270,
+          "pnl": 7790.46,
+          "pnl_pct": 12.2,
+          "r_mult": 2.5,
+          "bars_held": 17,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "BAJAJHLDNG",
+          "entry_date": "2022-08-18",
+          "exit_date": "2022-09-08",
+          "entry": 5531.0,
+          "exit": 6264.39,
+          "shares": 10,
+          "pnl": 7238.71,
+          "pnl_pct": 13.3,
+          "r_mult": 2.5,
+          "bars_held": 14,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "VENUSPIPES",
+          "entry_date": "2023-07-25",
+          "exit_date": "2023-08-08",
+          "entry": 1230.85,
+          "exit": 1360.25,
+          "shares": 56,
+          "pnl": 7134.99,
+          "pnl_pct": 10.5,
+          "r_mult": 2.5,
+          "bars_held": 10,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "HINDZINC",
+          "entry_date": "2023-01-05",
+          "exit_date": "2023-01-19",
+          "entry": 337.7,
+          "exit": 381.91,
+          "shares": 160,
+          "pnl": 6979.67,
+          "pnl_pct": 13.1,
+          "r_mult": 2.5,
+          "bars_held": 10,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "NEXT50BETA",
+          "entry_date": "2024-01-04",
+          "exit_date": "2024-02-27",
+          "entry": 57.46,
+          "exit": 63.3,
+          "shares": 1165,
+          "pnl": 6697.43,
+          "pnl_pct": 10.2,
+          "r_mult": 2.5,
+          "bars_held": 37,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "ADANIENT",
+          "entry_date": "2022-08-08",
+          "exit_date": "2022-08-18",
+          "entry": 2791.9,
+          "exit": 3160.43,
+          "shares": 18,
+          "pnl": 6545.27,
+          "pnl_pct": 13.2,
+          "r_mult": 2.5,
+          "bars_held": 6,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "VRLLOG",
+          "entry_date": "2023-05-17",
+          "exit_date": "2023-05-22",
+          "entry": 656.4,
+          "exit": 730.73,
+          "shares": 87,
+          "pnl": 6369.99,
+          "pnl_pct": 11.3,
+          "r_mult": 2.5,
+          "bars_held": 3,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "SMLMAH",
+          "entry_date": "2023-05-26",
+          "exit_date": "2023-05-29",
+          "entry": 1020.0,
+          "exit": 1114.8,
+          "shares": 59,
+          "pnl": 5494.27,
+          "pnl_pct": 9.3,
+          "r_mult": 2.5,
+          "bars_held": 1,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "NMDC",
+          "entry_date": "2023-11-24",
+          "exit_date": "2023-12-14",
+          "entry": 55.81,
+          "exit": 62.91,
+          "shares": 767,
+          "pnl": 5367.8,
+          "pnl_pct": 12.7,
+          "r_mult": 2.78,
+          "bars_held": 13,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "WABAG",
+          "entry_date": "2024-06-19",
+          "exit_date": "2024-06-26",
+          "entry": 1142.05,
+          "exit": 1293.73,
+          "shares": 35,
+          "pnl": 5234.55,
+          "pnl_pct": 13.3,
+          "r_mult": 2.5,
+          "bars_held": 5,
+          "reason": "+2.5R Championship Target"
+        },
+        {
+          "symbol": "MAZDOCK",
+          "entry_date": "2023-09-01",
+          "exit_date": "2023-09-07",
+          "entry": 943.5,
+          "exit": 1056.19,
+          "shares": 46,
+          "pnl": 5105.32,
+          "pnl_pct": 11.9,
+          "r_mult": 2.5,
+          "bars_held": 4,
+          "reason": "+2.5R Championship Target"
+        }
+      ],
+      "regime_trade_stats": {
+        "BULL_TAILWIND": {
+          "trades": 166,
+          "wins": 72,
+          "pnl": 21453.226777840126
+        },
+        "NEUTRAL_CHOP": {
+          "trades": 145,
+          "wins": 61,
+          "pnl": 4921.277432660018
+        },
+        "HOSTILE_BEAR": {
+          "trades": 0,
+          "wins": 0,
+          "pnl": 0.0
+        }
+      },
+      "equity_curve": [
+        {
+          "date": "2022-05-13",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-05-20",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-05-27",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-03",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-10",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-17",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-06-24",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-07-01",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-07-08",
+          "equity": 100000.0,
+          "cash": 100000.0,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2022-07-15",
+          "equity": 99811.92,
+          "cash": 75402.12,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-07-22",
+          "equity": 100190.74,
+          "cash": 51832.39,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-07-29",
+          "equity": 101786.12,
+          "cash": 51271.97,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-05",
+          "equity": 102275.5,
+          "cash": 26469.45,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-16",
+          "equity": 108149.8,
+          "cash": 28502.5,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-23",
+          "equity": 109503.01,
+          "cash": 29905.61,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-08-30",
+          "equity": 109241.4,
+          "cash": 54588.4,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-07",
+          "equity": 112769.85,
+          "cash": 214.05,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-14",
+          "equity": 119937.2,
+          "cash": 3615.7,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-21",
+          "equity": 120121.92,
+          "cash": 62842.32,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-09-28",
+          "equity": 111118.52,
+          "cash": 1287.52,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-10-06",
+          "equity": 117289.9,
+          "cash": 3621.3,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-10-13",
+          "equity": 113844.8,
+          "cash": 3621.3,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-10-20",
+          "equity": 110482.69,
+          "cash": 82138.09,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-10-28",
+          "equity": 105515.18,
+          "cash": 27034.88,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-11-04",
+          "equity": 102583.08,
+          "cash": 51283.38,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-11-14",
+          "equity": 98990.15,
+          "cash": 65760.8,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-11-21",
+          "equity": 104114.44,
+          "cash": 104114.44,
+          "open_positions": 0,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2022-11-28",
+          "equity": 103817.43,
+          "cash": 70802.03,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-05",
+          "equity": 106216.23,
+          "cash": 70802.03,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-12",
+          "equity": 110344.87,
+          "cash": 38037.57,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-19",
+          "equity": 109085.89,
+          "cash": 39570.19,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2022-12-26",
+          "equity": 105644.57,
+          "cash": 105644.57,
+          "open_positions": 0,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-01-02",
+          "equity": 107689.75,
+          "cash": 71200.15,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-01-09",
+          "equity": 109429.08,
+          "cash": 36155.68,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-01-16",
+          "equity": 110743.85,
+          "cash": 28169.45,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-01-23",
+          "equity": 115372.81,
+          "cash": 60076.12,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-01-31",
+          "equity": 113240.32,
+          "cash": 56531.22,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-02-07",
+          "equity": 110322.84,
+          "cash": 110322.84,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-02-14",
+          "equity": 110189.24,
+          "cash": 81422.24,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-02-21",
+          "equity": 109744.94,
+          "cash": 109744.94,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-02-28",
+          "equity": 109744.94,
+          "cash": 109744.94,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-08",
+          "equity": 109744.94,
+          "cash": 109744.94,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-15",
+          "equity": 109744.94,
+          "cash": 109744.94,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-22",
+          "equity": 109744.94,
+          "cash": 109744.94,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-03-29",
+          "equity": 109744.94,
+          "cash": 109744.94,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2023-04-10",
+          "equity": 109141.85,
+          "cash": 54838.95,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-04-18",
+          "equity": 110541.74,
+          "cash": 54838.95,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-04-25",
+          "equity": 112638.18,
+          "cash": 85682.2,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-03",
+          "equity": 115227.66,
+          "cash": 29409.18,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-10",
+          "equity": 115484.75,
+          "cash": 29409.18,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-17",
+          "equity": 115393.8,
+          "cash": 88163.37,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-24",
+          "equity": 121527.41,
+          "cash": 94321.93,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-05-31",
+          "equity": 124290.2,
+          "cash": 97379.13,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-07",
+          "equity": 131421.78,
+          "cash": 36504.69,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-14",
+          "equity": 130343.93,
+          "cash": 39284.32,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-21",
+          "equity": 130741.76,
+          "cash": 39284.32,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-06-28",
+          "equity": 131180.51,
+          "cash": 37811.65,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-06",
+          "equity": 133412.74,
+          "cash": 33.87,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-13",
+          "equity": 129806.75,
+          "cash": 65855.17,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-20",
+          "equity": 134826.13,
+          "cash": 875.01,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-07-27",
+          "equity": 138187.56,
+          "cash": 68907.16,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-03",
+          "equity": 137829.94,
+          "cash": 128.89,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-10",
+          "equity": 143705.69,
+          "cash": 4075.49,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-18",
+          "equity": 139355.36,
+          "cash": 708.06,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-08-25",
+          "equity": 137145.86,
+          "cash": 708.06,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-01",
+          "equity": 135280.89,
+          "cash": 66667.29,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-08",
+          "equity": 141205.62,
+          "cash": 73199.22,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-15",
+          "equity": 132509.06,
+          "cash": 66919.16,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-09-25",
+          "equity": 129882.93,
+          "cash": 63611.43,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-03",
+          "equity": 130487.83,
+          "cash": 3691.73,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-10",
+          "equity": 124859.38,
+          "cash": 60288.88,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-17",
+          "equity": 133728.28,
+          "cash": 133728.28,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-10-25",
+          "equity": 124203.73,
+          "cash": 124203.73,
+          "open_positions": 0,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-11-01",
+          "equity": 123200.68,
+          "cash": 111826.68,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2023-11-08",
+          "equity": 125669.11,
+          "cash": 90921.41,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-11-15",
+          "equity": 131074.83,
+          "cash": 53928.03,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-11-22",
+          "equity": 132516.84,
+          "cash": 2442.69,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-11-30",
+          "equity": 134839.7,
+          "cash": 22549.24,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-07",
+          "equity": 140200.17,
+          "cash": 22549.24,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-14",
+          "equity": 143476.76,
+          "cash": 70723.31,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-21",
+          "equity": 137220.24,
+          "cash": 137220.24,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2023-12-29",
+          "equity": 137087.17,
+          "cash": 366.67,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-05",
+          "equity": 130359.26,
+          "cash": 27.66,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-12",
+          "equity": 128113.45,
+          "cash": 60601.7,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-19",
+          "equity": 126660.45,
+          "cash": 59172.0,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-01-29",
+          "equity": 125473.84,
+          "cash": 68.39,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-05",
+          "equity": 125829.79,
+          "cash": 68.39,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-12",
+          "equity": 125444.2,
+          "cash": 56010.2,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-19",
+          "equity": 131067.27,
+          "cash": 15328.07,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-02-26",
+          "equity": 131608.37,
+          "cash": 15328.07,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-03-02",
+          "equity": 128072.83,
+          "cash": 709.18,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-03-11",
+          "equity": 125219.88,
+          "cash": 93322.98,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-03-18",
+          "equity": 124724.38,
+          "cash": 124724.38,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-03-26",
+          "equity": 124724.38,
+          "cash": 124724.38,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-04-03",
+          "equity": 124239.67,
+          "cash": 66188.97,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-04-10",
+          "equity": 125549.47,
+          "cash": 66188.97,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-04-19",
+          "equity": 124448.13,
+          "cash": 124448.13,
+          "open_positions": 0,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-04-26",
+          "equity": 124233.36,
+          "cash": 85297.31,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-06",
+          "equity": 125480.85,
+          "cash": 103736.65,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-13",
+          "equity": 125977.5,
+          "cash": 84011.2,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-18",
+          "equity": 130108.09,
+          "cash": 87204.59,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-05-27",
+          "equity": 127038.86,
+          "cash": 84522.32,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-03",
+          "equity": 131152.34,
+          "cash": 88928.34,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-10",
+          "equity": 126688.17,
+          "cash": 87690.37,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-18",
+          "equity": 126671.79,
+          "cash": 66937.74,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-06-25",
+          "equity": 125486.41,
+          "cash": 45328.86,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-02",
+          "equity": 127972.46,
+          "cash": 64801.66,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-09",
+          "equity": 128574.33,
+          "cash": 61455.93,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-16",
+          "equity": 126786.95,
+          "cash": 2448.95,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-24",
+          "equity": 125168.06,
+          "cash": 63836.06,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-07-31",
+          "equity": 131098.21,
+          "cash": 927.57,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-07",
+          "equity": 125100.04,
+          "cash": 84167.54,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-14",
+          "equity": 121890.33,
+          "cash": 42297.64,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-22",
+          "equity": 119911.49,
+          "cash": 40145.45,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-08-29",
+          "equity": 121169.25,
+          "cash": 58181.8,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-05",
+          "equity": 121643.36,
+          "cash": 57790.76,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-12",
+          "equity": 120958.91,
+          "cash": 60805.46,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-19",
+          "equity": 119341.5,
+          "cash": 80437.0,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-09-26",
+          "equity": 119431.52,
+          "cash": 41364.27,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-04",
+          "equity": 119409.39,
+          "cash": 58653.94,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-11",
+          "equity": 119140.33,
+          "cash": 67914.83,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-18",
+          "equity": 120546.93,
+          "cash": 57282.64,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-10-25",
+          "equity": 117384.79,
+          "cash": 108129.29,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-11-01",
+          "equity": 117044.97,
+          "cash": 98000.67,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-11-08",
+          "equity": 117726.57,
+          "cash": 86546.82,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-11-18",
+          "equity": 117790.99,
+          "cash": 96390.49,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2024-11-26",
+          "equity": 119174.41,
+          "cash": 89429.41,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2024-12-03",
+          "equity": 120248.28,
+          "cash": 91040.08,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-12-10",
+          "equity": 119645.88,
+          "cash": 91040.08,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-12-17",
+          "equity": 117840.9,
+          "cash": 96708.9,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2024-12-24",
+          "equity": 114496.15,
+          "cash": 95441.15,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-01-01",
+          "equity": 115439.4,
+          "cash": 95441.15,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-01-08",
+          "equity": 115274.13,
+          "cash": 105363.73,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-01-15",
+          "equity": 115121.74,
+          "cash": 115121.74,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-01-22",
+          "equity": 115121.74,
+          "cash": 115121.74,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-01-29",
+          "equity": 115121.74,
+          "cash": 115121.74,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-04",
+          "equity": 115121.74,
+          "cash": 115121.74,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-11",
+          "equity": 115121.74,
+          "cash": 115121.74,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-18",
+          "equity": 115121.74,
+          "cash": 115121.74,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-02-25",
+          "equity": 115121.74,
+          "cash": 115121.74,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-05",
+          "equity": 115121.74,
+          "cash": 115121.74,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-12",
+          "equity": 115121.74,
+          "cash": 115121.74,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-20",
+          "equity": 115121.74,
+          "cash": 115121.74,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-03-27",
+          "equity": 115121.74,
+          "cash": 115121.74,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-04-04",
+          "equity": 115121.74,
+          "cash": 115121.74,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-04-15",
+          "equity": 115121.74,
+          "cash": 115121.74,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-04-23",
+          "equity": 115537.61,
+          "cash": 95174.84,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-04-30",
+          "equity": 112978.72,
+          "cash": 112978.72,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-05-08",
+          "equity": 113325.22,
+          "cash": 41073.62,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-05-15",
+          "equity": 116407.62,
+          "cash": 41073.62,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-05-22",
+          "equity": 113856.14,
+          "cash": 75228.94,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-05-29",
+          "equity": 115993.22,
+          "cash": 39358.62,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-05",
+          "equity": 117755.32,
+          "cash": 39358.62,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-12",
+          "equity": 119715.25,
+          "cash": 41694.13,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-19",
+          "equity": 117122.34,
+          "cash": 117122.34,
+          "open_positions": 0,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-06-26",
+          "equity": 117597.6,
+          "cash": 40040.35,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-03",
+          "equity": 119332.83,
+          "cash": 42241.73,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-10",
+          "equity": 119816.34,
+          "cash": 41851.79,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-17",
+          "equity": 118030.44,
+          "cash": 40660.56,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-24",
+          "equity": 120435.87,
+          "cash": 40516.17,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-07-31",
+          "equity": 115619.3,
+          "cash": 80164.4,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-08-07",
+          "equity": 113868.8,
+          "cash": 95384.4,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-08-14",
+          "equity": 114170.85,
+          "cash": 76160.95,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-08-22",
+          "equity": 113040.27,
+          "cash": 83677.87,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-09-01",
+          "equity": 113026.88,
+          "cash": 92773.55,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-09-08",
+          "equity": 114132.51,
+          "cash": 103670.76,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-09-15",
+          "equity": 113986.29,
+          "cash": 76939.39,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-09-22",
+          "equity": 114848.55,
+          "cash": 76939.39,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-09-29",
+          "equity": 113637.26,
+          "cash": 76196.46,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-10-07",
+          "equity": 115293.46,
+          "cash": 76196.46,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-10-14",
+          "equity": 113408.82,
+          "cash": 76961.67,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-10-21",
+          "equity": 115079.53,
+          "cash": 86881.88,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-10-29",
+          "equity": 114813.83,
+          "cash": 86881.88,
+          "open_positions": 2,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2025-11-06",
+          "equity": 110874.87,
+          "cash": 91016.37,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-11-13",
+          "equity": 110794.88,
+          "cash": 93571.88,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-11-20",
+          "equity": 110016.4,
+          "cash": 91298.17,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-11-27",
+          "equity": 109942.79,
+          "cash": 91672.79,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-12-04",
+          "equity": 109322.96,
+          "cash": 99695.01,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2025-12-11",
+          "equity": 109783.59,
+          "cash": 109783.59,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-12-18",
+          "equity": 109794.33,
+          "cash": 100057.78,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2025-12-26",
+          "equity": 110418.4,
+          "cash": 100598.9,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-01-02",
+          "equity": 110306.61,
+          "cash": 90891.81,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-01-09",
+          "equity": 109830.78,
+          "cash": 82159.58,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-01-19",
+          "equity": 109326.4,
+          "cash": 98849.16,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-01-27",
+          "equity": 109699.42,
+          "cash": 109699.42,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-02-02",
+          "equity": 109699.42,
+          "cash": 109699.42,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-02-09",
+          "equity": 110569.19,
+          "cash": 82955.79,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-02-16",
+          "equity": 109710.28,
+          "cash": 91303.68,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-02-23",
+          "equity": 109995.39,
+          "cash": 90503.38,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-03-02",
+          "equity": 108774.92,
+          "cash": 99041.57,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-03-10",
+          "equity": 108194.09,
+          "cash": 108194.09,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-03-17",
+          "equity": 108194.09,
+          "cash": 108194.09,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-03-24",
+          "equity": 108194.09,
+          "cash": 108194.09,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-04-02",
+          "equity": 108194.09,
+          "cash": 108194.09,
+          "open_positions": 0,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-04-10",
+          "equity": 108194.09,
+          "cash": 108194.09,
+          "open_positions": 0,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-04-20",
+          "equity": 108137.18,
+          "cash": 82646.03,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-04-27",
+          "equity": 108586.13,
+          "cash": 82646.03,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-05",
+          "equity": 108586.16,
+          "cash": 99991.36,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-12",
+          "equity": 108042.25,
+          "cash": 99455.05,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-19",
+          "equity": 108199.24,
+          "cash": 81494.32,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-05-26",
+          "equity": 108102.68,
+          "cash": 81494.32,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-06-03",
+          "equity": 107936.2,
+          "cash": 81494.32,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-06-10",
+          "equity": 106506.2,
+          "cash": 72373.55,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-06-17",
+          "equity": 106376.88,
+          "cash": 72925.92,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-06-24",
+          "equity": 106552.2,
+          "cash": 72925.92,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-07-02",
+          "equity": 107241.0,
+          "cash": 72925.92,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-07-09",
+          "equity": 106795.88,
+          "cash": 90753.08,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-07-16",
+          "equity": 105880.71,
+          "cash": 75085.71,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-07-23",
+          "equity": 106041.21,
+          "cash": 75085.71,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-07-30",
+          "equity": 106423.71,
+          "cash": 75085.71,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-08-06",
+          "equity": 108098.69,
+          "cash": 90860.69,
+          "open_positions": 1,
+          "regime": "BULL_TAILWIND"
+        },
+        {
+          "date": "2026-08-13",
+          "equity": 107899.31,
+          "cash": 98879.31,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-08-20",
+          "equity": 107481.85,
+          "cash": 89114.55,
+          "open_positions": 2,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-08-27",
+          "equity": 106790.7,
+          "cash": 97123.7,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-09-03",
+          "equity": 105965.75,
+          "cash": 96589.91,
+          "open_positions": 1,
+          "regime": "NEUTRAL_CHOP"
+        },
+        {
+          "date": "2026-09-10",
+          "equity": 107677.38,
+          "cash": 88858.52,
+          "open_positions": 2,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-09-18",
+          "equity": 107954.73,
+          "cash": 99069.03,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        },
+        {
+          "date": "2026-09-25",
+          "equity": 107820.63,
+          "cash": 99069.03,
+          "open_positions": 1,
+          "regime": "HOSTILE_BEAR"
+        }
+      ]
+    }
+  }
+}

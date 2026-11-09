@@ -1,0 +1,17 @@
+{
+  "selected_broker": "dhan",
+  "trading_mode": "PAPER",
+  "max_daily_loss_inr": -4500.0,
+  "max_capital_per_trade_pct": 50.0,
+  "dhan": {
+    "client_id": "",
+    "access_token": "",
+    "token_expiry": "",
+    "is_sandbox": false
+  },
+  "zerodha": {
+    "api_key": "",
+    "api_secret": "",
+    "access_token": ""
+  }
+}

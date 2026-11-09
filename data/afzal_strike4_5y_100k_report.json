@@ -1,0 +1,568 @@
+{
+  "model_b1_championship_pure": {
+    "initial_capital": 100000.0,
+    "final_equity": 274533.57,
+    "total_gain": 174533.57,
+    "total_return_pct": 174.5,
+    "cagr": 22.38,
+    "max_drawdown_pct": 46.43,
+    "total_trades": 456,
+    "win_rate": 46.5,
+    "profit_factor": 1.14,
+    "avg_win_pct": 5.0,
+    "avg_loss_pct": -3.3,
+    "avg_win_r": 1.11,
+    "avg_loss_r": -0.79,
+    "avg_holding_days": 4.5,
+    "yearly": {
+      "2022": {
+        "trades": 67,
+        "win_rate": 46.3,
+        "net_pnl": 63272.09,
+        "pnl_pct_of_start": 63.3,
+        "avg_holding_days": 4.1
+      },
+      "2023": {
+        "trades": 102,
+        "win_rate": 53.9,
+        "net_pnl": 147014.73,
+        "pnl_pct_of_start": 147.0,
+        "avg_holding_days": 4.8
+      },
+      "2024": {
+        "trades": 110,
+        "win_rate": 44.5,
+        "net_pnl": 81980.17,
+        "pnl_pct_of_start": 82.0,
+        "avg_holding_days": 4.5
+      },
+      "2025": {
+        "trades": 100,
+        "win_rate": 43.0,
+        "net_pnl": -18507.61,
+        "pnl_pct_of_start": -18.5,
+        "avg_holding_days": 4.8
+      },
+      "2026": {
+        "trades": 77,
+        "win_rate": 44.2,
+        "net_pnl": -99809.86,
+        "pnl_pct_of_start": -99.8,
+        "avg_holding_days": 4.3
+      }
+    },
+    "top_winners": [
+      {
+        "symbol": "DCI",
+        "entry_date": "2024-07-29",
+        "exit_date": "2024-08-01",
+        "entry": 380.71,
+        "exit": 440.6,
+        "shares": 464,
+        "cost": 176649.44,
+        "proceeds": 204438.40000000002,
+        "pnl": 27788.96000000002,
+        "pnl_pct": 15.731133933965497,
+        "r_mult": 2.879949989180361,
+        "reason": "+2.5R Championship Target",
+        "bars_held": 3,
+        "year": 2024
+      },
+      {
+        "symbol": "RMDRIP",
+        "entry_date": "2026-01-06",
+        "exit_date": "2026-01-23",
+        "entry": 50.99,
+        "exit": 57.89,
+        "shares": 3588,
+        "cost": 182952.12,
+        "proceeds": 207709.32,
+        "pnl": 24757.20000000001,
+        "pnl_pct": 13.532065110806037,
+        "r_mult": 2.5390050044156562,
+        "reason": "+2.5R Championship Target",
+        "bars_held": 12,
+        "year": 2026
+      },
+      {
+        "symbol": "ASHAPURMIN",
+        "entry_date": "2025-01-15",
+        "exit_date": "2025-01-17",
+        "entry": 440.75,
+        "exit": 490.75,
+        "shares": 474,
+        "cost": 208915.5,
+        "proceeds": 232615.5,
+        "pnl": 23700.0,
+        "pnl_pct": 11.344299489506524,
+        "r_mult": 2.5,
+        "reason": "+2.5R Championship Target",
+        "bars_held": 2,
+        "year": 2025
+      },
+      {
+        "symbol": "RAMCOCEM",
+        "entry_date": "2024-11-21",
+        "exit_date": "2024-12-02",
+        "entry": 914.95,
+        "exit": 1027.4187500000003,
+        "shares": 210,
+        "cost": 192139.5,
+        "proceeds": 215757.93750000006,
+        "pnl": 23618.43750000006,
+        "pnl_pct": 12.292338379146425,
+        "r_mult": 2.5000000000000013,
+        "reason": "+2.5R Championship Target",
+        "bars_held": 7,
+        "year": 2024
+      },
+      {
+        "symbol": "COMMITTED",
+        "entry_date": "2025-02-04",
+        "exit_date": "2025-02-12",
+        "entry": 195.0,
+        "exit": 217.75,
+        "shares": 1031,
+        "cost": 201045.0,
+        "proceeds": 224500.25,
+        "pnl": 23455.25,
+        "pnl_pct": 11.666666666666666,
+        "r_mult": 2.620363971435148,
+        "reason": "+2.5R Championship Target",
+        "bars_held": 6,
+        "year": 2025
+      }
+    ],
+    "exit_reasons": {
+      "Stop Loss Hit": 130,
+      "Failed Breakout Cut": 168,
+      "10 EMA Swing Trail": 61,
+      "+2.5R Championship Target": 73,
+      "Gap Stop Loss": 24
+    }
+  },
+  "model_b2_championship_half_half": {
+    "initial_capital": 100000.0,
+    "final_equity": 240667.57,
+    "total_gain": 140667.57,
+    "total_return_pct": 140.7,
+    "cagr": 19.2,
+    "max_drawdown_pct": 36.41,
+    "total_trades": 260,
+    "win_rate": 48.5,
+    "profit_factor": 1.27,
+    "avg_win_pct": 10.0,
+    "avg_loss_pct": -3.3,
+    "avg_win_r": 2.38,
+    "avg_loss_r": -0.78,
+    "avg_holding_days": 10.8,
+    "yearly": {
+      "2022": {
+        "trades": 36,
+        "win_rate": 61.1,
+        "net_pnl": 44124.18,
+        "pnl_pct_of_start": 44.1,
+        "avg_holding_days": 9.7
+      },
+      "2023": {
+        "trades": 55,
+        "win_rate": 52.7,
+        "net_pnl": 41718.35,
+        "pnl_pct_of_start": 41.7,
+        "avg_holding_days": 11.7
+      },
+      "2024": {
+        "trades": 52,
+        "win_rate": 51.9,
+        "net_pnl": 87074.36,
+        "pnl_pct_of_start": 87.1,
+        "avg_holding_days": 13.8
+      },
+      "2025": {
+        "trades": 51,
+        "win_rate": 49.0,
+        "net_pnl": 42993.28,
+        "pnl_pct_of_start": 43.0,
+        "avg_holding_days": 11.8
+      },
+      "2026": {
+        "trades": 66,
+        "win_rate": 34.8,
+        "net_pnl": -76952.0,
+        "pnl_pct_of_start": -77.0,
+        "avg_holding_days": 7.5
+      }
+    },
+    "top_winners": [
+      {
+        "symbol": "OSIAJEE",
+        "entry_date": "2025-04-22",
+        "exit_date": "2025-07-28",
+        "entry": 168.5,
+        "exit": 280.0,
+        "shares": 383,
+        "cost": 64535.5,
+        "proceeds": 107240.0,
+        "pnl": 42704.5,
+        "pnl_pct": 66.17210682492582,
+        "r_mult": 33.105700712589126,
+        "reason": "20 SMA Runner Trail",
+        "bars_held": 68,
+        "year": 2025
+      },
+      {
+        "symbol": "VERITAS",
+        "entry_date": "2024-03-14",
+        "exit_date": "2024-05-09",
+        "entry": 895.8,
+        "exit": 1374.7,
+        "shares": 52,
+        "cost": 46581.6,
+        "proceeds": 71484.40000000001,
+        "pnl": 24902.80000000001,
+        "pnl_pct": 53.46059388256309,
+        "r_mult": 10.957054933992298,
+        "reason": "20 SMA Runner Trail",
+        "bars_held": 35,
+        "year": 2024
+      },
+      {
+        "symbol": "JSLL",
+        "entry_date": "2024-10-25",
+        "exit_date": "2024-12-19",
+        "entry": 318.45,
+        "exit": 431.215,
+        "shares": 183,
+        "cost": 58276.35,
+        "proceeds": 78912.345,
+        "pnl": 20635.995000000003,
+        "pnl_pct": 35.4105825090281,
+        "r_mult": 8.585731688746753,
+        "reason": "20 SMA Runner Trail",
+        "bars_held": 37,
+        "year": 2024
+      },
+      {
+        "symbol": "CPPLUS",
+        "entry_date": "2026-04-02",
+        "exit_date": "2026-05-15",
+        "entry": 1799.6,
+        "exit": 2365.025,
+        "shares": 34,
+        "cost": 61186.4,
+        "proceeds": 80410.85,
+        "pnl": 19224.450000000004,
+        "pnl_pct": 31.419482107134932,
+        "r_mult": 9.1707890682021,
+        "reason": "20 SMA Runner Trail",
+        "bars_held": 28,
+        "year": 2026
+      },
+      {
+        "symbol": "BPCL",
+        "entry_date": "2023-12-26",
+        "exit_date": "2024-02-28",
+        "entry": 225.8,
+        "exit": 303.3825,
+        "shares": 207,
+        "cost": 46740.600000000006,
+        "proceeds": 62800.1775,
+        "pnl": 16059.577499999992,
+        "pnl_pct": 34.35894596988484,
+        "r_mult": 6.596029586804947,
+        "reason": "20 SMA Runner Trail",
+        "bars_held": 45,
+        "year": 2024
+      }
+    ],
+    "exit_reasons": {
+      "Stop Loss Hit": 82,
+      "Failed Breakout Cut": 71,
+      "+2.5R Partial Profit (50%)": 50,
+      "20 SMA Runner Trail": 41,
+      "Gap Stop Loss": 16
+    }
+  },
+  "model_b3_championship_hard_target": {
+    "initial_capital": 100000.0,
+    "final_equity": 375182.93,
+    "total_gain": 275182.93,
+    "total_return_pct": 275.2,
+    "cagr": 30.27,
+    "max_drawdown_pct": 28.25,
+    "total_trades": 323,
+    "win_rate": 42.4,
+    "profit_factor": 1.35,
+    "avg_win_pct": 6.8,
+    "avg_loss_pct": -3.3,
+    "avg_win_r": 1.51,
+    "avg_loss_r": -0.78,
+    "avg_holding_days": 6.4,
+    "yearly": {
+      "2022": {
+        "trades": 52,
+        "win_rate": 46.2,
+        "net_pnl": 70711.63,
+        "pnl_pct_of_start": 70.7,
+        "avg_holding_days": 5.3
+      },
+      "2023": {
+        "trades": 80,
+        "win_rate": 46.2,
+        "net_pnl": 55039.99,
+        "pnl_pct_of_start": 55.0,
+        "avg_holding_days": 6.0
+      },
+      "2024": {
+        "trades": 79,
+        "win_rate": 41.8,
+        "net_pnl": 71997.75,
+        "pnl_pct_of_start": 72.0,
+        "avg_holding_days": 6.3
+      },
+      "2025": {
+        "trades": 53,
+        "win_rate": 39.6,
+        "net_pnl": 68896.77,
+        "pnl_pct_of_start": 68.9,
+        "avg_holding_days": 8.3
+      },
+      "2026": {
+        "trades": 59,
+        "win_rate": 37.3,
+        "net_pnl": 9673.4,
+        "pnl_pct_of_start": 9.7,
+        "avg_holding_days": 6.4
+      }
+    },
+    "top_winners": [
+      {
+        "symbol": "PSUBNKIETF",
+        "entry_date": "2025-10-27",
+        "exit_date": "2026-01-20",
+        "entry": 80.95,
+        "exit": 91.85900000000001,
+        "shares": 2130,
+        "cost": 172423.5,
+        "proceeds": 195659.67,
+        "pnl": 23236.170000000013,
+        "pnl_pct": 13.476219888820266,
+        "r_mult": 2.4999999999999982,
+        "reason": "+2.5R Hard Target Hit",
+        "bars_held": 58,
+        "year": 2026
+      },
+      {
+        "symbol": "POWERMECH",
+        "entry_date": "2025-05-22",
+        "exit_date": "2025-05-23",
+        "entry": 2947.9,
+        "exit": 3398.9,
+        "shares": 51,
+        "cost": 150342.9,
+        "proceeds": 173343.9,
+        "pnl": 23001.0,
+        "pnl_pct": 15.299026425591098,
+        "r_mult": 3.568037974683542,
+        "reason": "+2.5R Hard Target Hit",
+        "bars_held": 1,
+        "year": 2025
+      },
+      {
+        "symbol": "NIACL",
+        "entry_date": "2026-08-31",
+        "exit_date": "2026-09-04",
+        "entry": 191.23,
+        "exit": 216.00874999999996,
+        "shares": 924,
+        "cost": 176696.52,
+        "proceeds": 199592.08499999996,
+        "pnl": 22895.564999999973,
+        "pnl_pct": 12.957564189719173,
+        "r_mult": 2.5,
+        "reason": "+2.5R Hard Target Hit",
+        "bars_held": 4,
+        "year": 2026
+      },
+      {
+        "symbol": "VADILALIND",
+        "entry_date": "2026-08-10",
+        "exit_date": "2026-08-13",
+        "entry": 7380.0,
+        "exit": 8281.012499999999,
+        "shares": 24,
+        "cost": 177120.0,
+        "proceeds": 198744.3,
+        "pnl": 21624.29999999999,
+        "pnl_pct": 12.20884146341462,
+        "r_mult": 2.4999999999999987,
+        "reason": "+2.5R Hard Target Hit",
+        "bars_held": 3,
+        "year": 2026
+      },
+      {
+        "symbol": "BALRAMCHIN",
+        "entry_date": "2026-04-30",
+        "exit_date": "2026-07-13",
+        "entry": 521.05,
+        "exit": 586.1749999999998,
+        "shares": 329,
+        "cost": 171425.44999999998,
+        "proceeds": 192851.57499999995,
+        "pnl": 21426.12499999997,
+        "pnl_pct": 12.498800498992399,
+        "r_mult": 2.5,
+        "reason": "+2.5R Hard Target Hit",
+        "bars_held": 49,
+        "year": 2026
+      }
+    ],
+    "exit_reasons": {
+      "Stop Loss Hit": 109,
+      "Failed Breakout Cut": 125,
+      "+2.5R Hard Target Hit": 74,
+      "Gap Stop Loss": 15
+    }
+  },
+  "model_a_position_50sma": {
+    "initial_capital": 100000.0,
+    "final_equity": 256562.48,
+    "total_gain": 156562.48,
+    "total_return_pct": 156.6,
+    "cagr": 20.74,
+    "max_drawdown_pct": 34.86,
+    "total_trades": 157,
+    "win_rate": 35.0,
+    "profit_factor": 1.4,
+    "avg_win_pct": 10.3,
+    "avg_loss_pct": -3.3,
+    "avg_win_r": 2.77,
+    "avg_loss_r": -0.81,
+    "avg_holding_days": 13.4,
+    "yearly": {
+      "2022": {
+        "trades": 11,
+        "win_rate": 54.5,
+        "net_pnl": 22169.24,
+        "pnl_pct_of_start": 22.2,
+        "avg_holding_days": 18.5
+      },
+      "2023": {
+        "trades": 32,
+        "win_rate": 43.8,
+        "net_pnl": 29639.65,
+        "pnl_pct_of_start": 29.6,
+        "avg_holding_days": 16.3
+      },
+      "2024": {
+        "trades": 28,
+        "win_rate": 42.9,
+        "net_pnl": 104711.83,
+        "pnl_pct_of_start": 104.7,
+        "avg_holding_days": 18.0
+      },
+      "2025": {
+        "trades": 44,
+        "win_rate": 25.0,
+        "net_pnl": -5881.71,
+        "pnl_pct_of_start": -5.9,
+        "avg_holding_days": 10.8
+      },
+      "2026": {
+        "trades": 42,
+        "win_rate": 28.6,
+        "net_pnl": -2204.73,
+        "pnl_pct_of_start": -2.2,
+        "avg_holding_days": 9.4
+      }
+    },
+    "top_winners": [
+      {
+        "symbol": "CPPLUS",
+        "entry_date": "2026-04-02",
+        "exit_date": "2026-07-29",
+        "entry": 1799.6,
+        "exit": 3345.336,
+        "shares": 56,
+        "cost": 100777.59999999999,
+        "proceeds": 187338.816,
+        "pnl": 86561.216,
+        "pnl_pct": 85.89330962436097,
+        "r_mult": 25.070732300705547,
+        "reason": "50 SMA Position Trail",
+        "bars_held": 79,
+        "year": 2026
+      },
+      {
+        "symbol": "OSIAJEE",
+        "entry_date": "2025-04-22",
+        "exit_date": "2025-08-11",
+        "entry": 168.5,
+        "exit": 263.0,
+        "shares": 663,
+        "cost": 111715.5,
+        "proceeds": 174369.0,
+        "pnl": 62653.5,
+        "pnl_pct": 56.083086053412465,
+        "r_mult": 28.058194774346834,
+        "reason": "50 SMA Position Trail",
+        "bars_held": 78,
+        "year": 2025
+      },
+      {
+        "symbol": "VERITAS",
+        "entry_date": "2024-03-14",
+        "exit_date": "2024-06-04",
+        "entry": 895.8,
+        "exit": 1307.3,
+        "shares": 118,
+        "cost": 105704.4,
+        "proceeds": 154261.4,
+        "pnl": 48557.0,
+        "pnl_pct": 45.936592989506586,
+        "r_mult": 9.414967854119503,
+        "reason": "50 SMA Position Trail",
+        "bars_held": 53,
+        "year": 2024
+      },
+      {
+        "symbol": "JSLL",
+        "entry_date": "2024-10-25",
+        "exit_date": "2025-01-22",
+        "entry": 318.45,
+        "exit": 428.249,
+        "shares": 385,
+        "cost": 122603.25,
+        "proceeds": 164875.86500000002,
+        "pnl": 42272.61500000002,
+        "pnl_pct": 34.47919610613913,
+        "r_mult": 8.359905588548799,
+        "reason": "50 SMA Position Trail",
+        "bars_held": 60,
+        "year": 2025
+      },
+      {
+        "symbol": "OMINFRAL",
+        "entry_date": "2023-10-11",
+        "exit_date": "2024-01-25",
+        "entry": 88.55,
+        "exit": 130.997,
+        "shares": 897,
+        "cost": 79429.34999999999,
+        "proceeds": 117504.30900000001,
+        "pnl": 38074.95900000002,
+        "pnl_pct": 47.93562958780352,
+        "r_mult": 16.525987930698857,
+        "reason": "50 SMA Position Trail",
+        "bars_held": 73,
+        "year": 2024
+      }
+    ],
+    "exit_reasons": {
+      "Stop Loss Hit": 59,
+      "Failed Breakout Cut": 60,
+      "50 SMA Position Trail": 26,
+      "Gap Stop Loss": 12
+    }
+  }
+}

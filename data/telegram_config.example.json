@@ -1,0 +1,9 @@
+{
+  "enabled": false,
+  "bot_token": "",
+  "chat_id": "",
+  "alert_on_entry": true,
+  "alert_on_target": true,
+  "alert_on_sl": true,
+  "alert_on_eod": true
+}

@@ -1,0 +1,443 @@
+{
+  "3_slots": {
+    "initial_capital": 100000.0,
+    "final_equity": 226574.98,
+    "total_gain": 126574.98,
+    "total_return_pct": 126.6,
+    "cagr": 17.77,
+    "max_drawdown_pct": 11.5,
+    "total_trades": 72,
+    "win_rate": 41.7,
+    "profit_factor": 4.04,
+    "avg_win_pct": 12.6,
+    "avg_loss_pct": -1.6,
+    "avg_win_r": 3.66,
+    "avg_loss_r": -0.54,
+    "runners_5r_count": 4,
+    "runners_10r_count": 2,
+    "best_trade": {
+      "symbol": "ITI",
+      "entry_date": "2023-07-05",
+      "exit_date": "2024-02-12",
+      "entry": 109.6,
+      "exit": 315.099,
+      "shares": 369,
+      "cost": 40442.4,
+      "proceeds": 116271.531,
+      "pnl": 75829.131,
+      "pnl_pct": 187.49908759124088,
+      "r_mult": 51.163699738578444,
+      "reason": "50 SMA Trailing Stop",
+      "bars_held": 151,
+      "year": 2024
+    },
+    "yearly": {
+      "2022": {
+        "trades": 12,
+        "win_rate": 33.3,
+        "net_pnl": 14300.98,
+        "pnl_pct_of_start": 14.3
+      },
+      "2023": {
+        "trades": 14,
+        "win_rate": 42.9,
+        "net_pnl": 10856.52,
+        "pnl_pct_of_start": 10.9
+      },
+      "2024": {
+        "trades": 34,
+        "win_rate": 41.2,
+        "net_pnl": 86579.26,
+        "pnl_pct_of_start": 86.6
+      },
+      "2025": {
+        "trades": 10,
+        "win_rate": 40.0,
+        "net_pnl": 3415.95,
+        "pnl_pct_of_start": 3.4
+      },
+      "2026": {
+        "trades": 2,
+        "win_rate": 100.0,
+        "net_pnl": 4065.08,
+        "pnl_pct_of_start": 4.1
+      }
+    },
+    "top_winners": [
+      {
+        "symbol": "ITI",
+        "entry_date": "2023-07-05",
+        "exit_date": "2024-02-12",
+        "entry": 109.6,
+        "exit": 315.099,
+        "shares": 369,
+        "cost": 40442.4,
+        "proceeds": 116271.531,
+        "pnl": 75829.131,
+        "pnl_pct": 187.49908759124088,
+        "r_mult": 51.163699738578444,
+        "reason": "50 SMA Trailing Stop",
+        "bars_held": 151,
+        "year": 2024
+      },
+      {
+        "symbol": "CANBK",
+        "entry_date": "2023-11-30",
+        "exit_date": "2024-04-19",
+        "entry": 80.6,
+        "exit": 115.0,
+        "shares": 566,
+        "cost": 45619.6,
+        "proceeds": 65090.0,
+        "pnl": 19470.4,
+        "pnl_pct": 42.679900744416884,
+        "r_mult": 9.614309670206813,
+        "reason": "50 SMA Trailing Stop",
+        "bars_held": 95,
+        "year": 2024
+      },
+      {
+        "symbol": "AMBUJACEM",
+        "entry_date": "2022-07-29",
+        "exit_date": "2022-12-21",
+        "entry": 374.8,
+        "exit": 552.224,
+        "shares": 88,
+        "cost": 32982.4,
+        "proceeds": 48595.71200000001,
+        "pnl": 15613.312000000005,
+        "pnl_pct": 47.33831376734259,
+        "r_mult": 17.857581400030217,
+        "reason": "50 SMA Trailing Stop",
+        "bars_held": 97,
+        "year": 2022
+      },
+      {
+        "symbol": "OFSS",
+        "entry_date": "2023-03-06",
+        "exit_date": "2023-10-04",
+        "entry": 2996.5,
+        "exit": 3813.0640000000003,
+        "shares": 12,
+        "cost": 35958.0,
+        "proceeds": 45756.768000000004,
+        "pnl": 9798.768000000004,
+        "pnl_pct": 27.25059235775072,
+        "r_mult": 5.777302957407666,
+        "reason": "50 SMA Trailing Stop",
+        "bars_held": 142,
+        "year": 2023
+      },
+      {
+        "symbol": "ICICIGI",
+        "entry_date": "2023-11-15",
+        "exit_date": "2024-04-15",
+        "entry": 1395.55,
+        "exit": 1647.2,
+        "shares": 28,
+        "cost": 39075.4,
+        "proceeds": 46121.6,
+        "pnl": 7046.199999999997,
+        "pnl_pct": 18.032317007631406,
+        "r_mult": 3.451515567137575,
+        "reason": "50 SMA Trailing Stop",
+        "bars_held": 102,
+        "year": 2024
+      }
+    ]
+  },
+  "4_slots": {
+    "initial_capital": 100000.0,
+    "final_equity": 215856.0,
+    "total_gain": 115856.0,
+    "total_return_pct": 115.9,
+    "cagr": 16.64,
+    "max_drawdown_pct": 10.52,
+    "total_trades": 87,
+    "win_rate": 43.7,
+    "profit_factor": 4.32,
+    "avg_win_pct": 12.6,
+    "avg_loss_pct": -1.8,
+    "avg_win_r": 3.62,
+    "avg_loss_r": -0.6,
+    "runners_5r_count": 6,
+    "runners_10r_count": 3,
+    "best_trade": {
+      "symbol": "ITI",
+      "entry_date": "2023-07-05",
+      "exit_date": "2024-02-12",
+      "entry": 109.6,
+      "exit": 315.099,
+      "shares": 275,
+      "cost": 30140.0,
+      "proceeds": 86652.22499999999,
+      "pnl": 56512.22499999999,
+      "pnl_pct": 187.49908759124088,
+      "r_mult": 51.163699738578444,
+      "reason": "50 SMA Trailing Stop",
+      "bars_held": 151,
+      "year": 2024
+    },
+    "yearly": {
+      "2022": {
+        "trades": 14,
+        "win_rate": 28.6,
+        "net_pnl": 9394.44,
+        "pnl_pct_of_start": 9.4
+      },
+      "2023": {
+        "trades": 24,
+        "win_rate": 41.7,
+        "net_pnl": 8772.98,
+        "pnl_pct_of_start": 8.8
+      },
+      "2024": {
+        "trades": 33,
+        "win_rate": 45.5,
+        "net_pnl": 76160.04,
+        "pnl_pct_of_start": 76.2
+      },
+      "2025": {
+        "trades": 13,
+        "win_rate": 46.2,
+        "net_pnl": 3271.88,
+        "pnl_pct_of_start": 3.3
+      },
+      "2026": {
+        "trades": 3,
+        "win_rate": 100.0,
+        "net_pnl": 12824.41,
+        "pnl_pct_of_start": 12.8
+      }
+    },
+    "top_winners": [
+      {
+        "symbol": "ITI",
+        "entry_date": "2023-07-05",
+        "exit_date": "2024-02-12",
+        "entry": 109.6,
+        "exit": 315.099,
+        "shares": 275,
+        "cost": 30140.0,
+        "proceeds": 86652.22499999999,
+        "pnl": 56512.22499999999,
+        "pnl_pct": 187.49908759124088,
+        "r_mult": 51.163699738578444,
+        "reason": "50 SMA Trailing Stop",
+        "bars_held": 151,
+        "year": 2024
+      },
+      {
+        "symbol": "CANBK",
+        "entry_date": "2023-11-30",
+        "exit_date": "2024-04-19",
+        "entry": 80.6,
+        "exit": 115.0,
+        "shares": 455,
+        "cost": 36673.0,
+        "proceeds": 52325.0,
+        "pnl": 15652.0,
+        "pnl_pct": 42.679900744416884,
+        "r_mult": 9.614309670206813,
+        "reason": "50 SMA Trailing Stop",
+        "bars_held": 95,
+        "year": 2024
+      },
+      {
+        "symbol": "AMBUJACEM",
+        "entry_date": "2022-07-29",
+        "exit_date": "2022-12-21",
+        "entry": 374.8,
+        "exit": 552.224,
+        "shares": 66,
+        "cost": 24736.8,
+        "proceeds": 36446.784,
+        "pnl": 11709.984,
+        "pnl_pct": 47.33831376734259,
+        "r_mult": 17.857581400030217,
+        "reason": "50 SMA Trailing Stop",
+        "bars_held": 97,
+        "year": 2022
+      },
+      {
+        "symbol": "NHIT",
+        "entry_date": "2025-09-02",
+        "exit_date": "2026-08-07",
+        "entry": 138.0,
+        "exit": 165.27919999999997,
+        "shares": 367,
+        "cost": 50646.0,
+        "proceeds": 60657.46639999999,
+        "pnl": 10011.46639999999,
+        "pnl_pct": 19.76753623188404,
+        "r_mult": 6.2710804597701175,
+        "reason": "50 SMA Trailing Stop",
+        "bars_held": 152,
+        "year": 2026
+      },
+      {
+        "symbol": "OFSS",
+        "entry_date": "2023-03-06",
+        "exit_date": "2023-10-04",
+        "entry": 2996.5,
+        "exit": 3813.0640000000003,
+        "shares": 9,
+        "cost": 26968.5,
+        "proceeds": 34317.576,
+        "pnl": 7349.076000000001,
+        "pnl_pct": 27.25059235775072,
+        "r_mult": 5.777302957407666,
+        "reason": "50 SMA Trailing Stop",
+        "bars_held": 142,
+        "year": 2023
+      }
+    ]
+  },
+  "2_slots": {
+    "initial_capital": 100000.0,
+    "final_equity": 275494.08,
+    "total_gain": 175494.08,
+    "total_return_pct": 175.5,
+    "cagr": 22.47,
+    "max_drawdown_pct": 13.55,
+    "total_trades": 48,
+    "win_rate": 35.4,
+    "profit_factor": 4.49,
+    "avg_win_pct": 19.1,
+    "avg_loss_pct": -1.5,
+    "avg_win_r": 5.32,
+    "avg_loss_r": -0.5,
+    "runners_5r_count": 4,
+    "runners_10r_count": 2,
+    "best_trade": {
+      "symbol": "ITI",
+      "entry_date": "2023-07-05",
+      "exit_date": "2024-02-12",
+      "entry": 109.6,
+      "exit": 315.099,
+      "shares": 572,
+      "cost": 62691.2,
+      "proceeds": 180236.628,
+      "pnl": 117545.428,
+      "pnl_pct": 187.49908759124088,
+      "r_mult": 51.163699738578444,
+      "reason": "50 SMA Trailing Stop",
+      "bars_held": 151,
+      "year": 2024
+    },
+    "yearly": {
+      "2022": {
+        "trades": 6,
+        "win_rate": 33.3,
+        "net_pnl": 21140.72,
+        "pnl_pct_of_start": 21.1
+      },
+      "2023": {
+        "trades": 11,
+        "win_rate": 36.4,
+        "net_pnl": 11551.32,
+        "pnl_pct_of_start": 11.6
+      },
+      "2024": {
+        "trades": 26,
+        "win_rate": 38.5,
+        "net_pnl": 130672.7,
+        "pnl_pct_of_start": 130.7
+      },
+      "2025": {
+        "trades": 4,
+        "win_rate": 25.0,
+        "net_pnl": 3027.74,
+        "pnl_pct_of_start": 3.0
+      },
+      "2026": {
+        "trades": 1,
+        "win_rate": 0.0,
+        "net_pnl": -4693.38,
+        "pnl_pct_of_start": -4.7
+      }
+    },
+    "top_winners": [
+      {
+        "symbol": "ITI",
+        "entry_date": "2023-07-05",
+        "exit_date": "2024-02-12",
+        "entry": 109.6,
+        "exit": 315.099,
+        "shares": 572,
+        "cost": 62691.2,
+        "proceeds": 180236.628,
+        "pnl": 117545.428,
+        "pnl_pct": 187.49908759124088,
+        "r_mult": 51.163699738578444,
+        "reason": "50 SMA Trailing Stop",
+        "bars_held": 151,
+        "year": 2024
+      },
+      {
+        "symbol": "CANBK",
+        "entry_date": "2023-11-30",
+        "exit_date": "2024-04-19",
+        "entry": 80.6,
+        "exit": 115.0,
+        "shares": 868,
+        "cost": 69960.79999999999,
+        "proceeds": 99820.0,
+        "pnl": 29859.20000000001,
+        "pnl_pct": 42.679900744416884,
+        "r_mult": 9.614309670206813,
+        "reason": "50 SMA Trailing Stop",
+        "bars_held": 95,
+        "year": 2024
+      },
+      {
+        "symbol": "AMBUJACEM",
+        "entry_date": "2022-07-29",
+        "exit_date": "2022-12-21",
+        "entry": 374.8,
+        "exit": 552.224,
+        "shares": 133,
+        "cost": 49848.4,
+        "proceeds": 73445.792,
+        "pnl": 23597.392,
+        "pnl_pct": 47.33831376734259,
+        "r_mult": 17.857581400030217,
+        "reason": "50 SMA Trailing Stop",
+        "bars_held": 97,
+        "year": 2022
+      },
+      {
+        "symbol": "OFSS",
+        "entry_date": "2023-03-06",
+        "exit_date": "2023-10-04",
+        "entry": 2996.5,
+        "exit": 3813.0640000000003,
+        "shares": 19,
+        "cost": 56933.5,
+        "proceeds": 72448.216,
+        "pnl": 15514.716,
+        "pnl_pct": 27.25059235775072,
+        "r_mult": 5.777302957407666,
+        "reason": "50 SMA Trailing Stop",
+        "bars_held": 142,
+        "year": 2023
+      },
+      {
+        "symbol": "FMCGIETF",
+        "entry_date": "2024-07-08",
+        "exit_date": "2024-10-04",
+        "entry": 61.44,
+        "exit": 66.608,
+        "shares": 2161,
+        "cost": 132771.84,
+        "proceeds": 143939.888,
+        "pnl": 11168.04800000001,
+        "pnl_pct": 8.411458333333343,
+        "r_mult": 1.8248587570621533,
+        "reason": "50 SMA Trailing Stop",
+        "bars_held": 61,
+        "year": 2024
+      }
+    ]
+  }
+}

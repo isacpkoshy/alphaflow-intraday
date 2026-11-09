@@ -1,0 +1,366 @@
+{
+  "u1_stage2_entry_25r": {
+    "final_equity": 287198.4,
+    "total_return_pct": 187.2,
+    "cagr": 23.49,
+    "max_dd": 57.84,
+    "trades": 243,
+    "win_rate": 35.0,
+    "profit_factor": 1.17,
+    "avg_win_pct": 13.57,
+    "avg_loss_pct": -5.53,
+    "avg_bars": 7.3,
+    "yearly": {
+      "2022": {
+        "start_eq": 100000.0,
+        "end_eq": 130164.37,
+        "gain_pct": 30.16,
+        "trades": 14
+      },
+      "2023": {
+        "start_eq": 130164.37,
+        "end_eq": 295822.05,
+        "gain_pct": 127.27,
+        "trades": 45
+      },
+      "2024": {
+        "start_eq": 295822.05,
+        "end_eq": 394639.72,
+        "gain_pct": 33.4,
+        "trades": 79
+      },
+      "2025": {
+        "start_eq": 394639.72,
+        "end_eq": 313729.61,
+        "gain_pct": -20.5,
+        "trades": 48
+      },
+      "2026": {
+        "start_eq": 313729.61,
+        "end_eq": 287198.4,
+        "gain_pct": -8.46,
+        "trades": 57
+      }
+    },
+    "top_winners": [
+      {
+        "symbol": "UNIVASTU",
+        "entry_date": "2024-12-24",
+        "exit_date": "2024-12-31",
+        "year": 2024,
+        "entry": 83.81,
+        "exit": 95.333875,
+        "cost": 182705.80000000002,
+        "proceeds": 207827.8475,
+        "pnl": 25122.047499999986,
+        "pnl_pct": 13.750000000000004,
+        "r_mult": 2.5000000000000013,
+        "bars": 4,
+        "reason": "+2.5R Target Hit"
+      },
+      {
+        "symbol": "SKMEGGPROD",
+        "entry_date": "2025-10-09",
+        "exit_date": "2025-10-30",
+        "year": 2025,
+        "entry": 170.0,
+        "exit": 203.0,
+        "cost": 125460.0,
+        "proceeds": 149814.0,
+        "pnl": 24354.0,
+        "pnl_pct": 19.411764705882355,
+        "r_mult": 3.5294117647058845,
+        "bars": 14,
+        "reason": "+2.5R Target Hit"
+      },
+      {
+        "symbol": "ASHOKA",
+        "entry_date": "2024-12-03",
+        "exit_date": "2024-12-12",
+        "year": 2024,
+        "entry": 259.82,
+        "exit": 295.54525000000007,
+        "cost": 176157.96,
+        "proceeds": 200379.67950000006,
+        "pnl": 24221.719500000065,
+        "pnl_pct": 13.750000000000028,
+        "r_mult": 2.500000000000001,
+        "bars": 7,
+        "reason": "+2.5R Target Hit"
+      },
+      {
+        "symbol": "AEROFLEX",
+        "entry_date": "2025-01-16",
+        "exit_date": "2025-01-17",
+        "year": 2025,
+        "entry": 223.35,
+        "exit": 254.06062500000002,
+        "cost": 161705.4,
+        "proceeds": 183939.89250000002,
+        "pnl": 22234.492500000022,
+        "pnl_pct": 13.750000000000009,
+        "r_mult": 2.4999999999999987,
+        "bars": 1,
+        "reason": "+2.5R Target Hit"
+      },
+      {
+        "symbol": "REFEX",
+        "entry_date": "2024-11-28",
+        "exit_date": "2024-12-03",
+        "year": 2024,
+        "entry": 494.2,
+        "exit": 562.1525000000001,
+        "cost": 155178.8,
+        "proceeds": 176515.88500000004,
+        "pnl": 21337.08500000005,
+        "pnl_pct": 13.750000000000032,
+        "r_mult": 2.500000000000002,
+        "bars": 3,
+        "reason": "+2.5R Target Hit"
+      }
+    ]
+  },
+  "u2_stage2_strike_25r": {
+    "final_equity": 266750.57,
+    "total_return_pct": 166.75,
+    "cagr": 21.68,
+    "max_dd": 40.9,
+    "trades": 235,
+    "win_rate": 37.9,
+    "profit_factor": 1.26,
+    "avg_win_pct": 8.6,
+    "avg_loss_pct": -3.73,
+    "avg_bars": 5.8,
+    "yearly": {
+      "2022": {
+        "start_eq": 100000.0,
+        "end_eq": 107336.11,
+        "gain_pct": 7.34,
+        "trades": 14
+      },
+      "2023": {
+        "start_eq": 107336.11,
+        "end_eq": 209156.26,
+        "gain_pct": 94.86,
+        "trades": 58
+      },
+      "2024": {
+        "start_eq": 209156.26,
+        "end_eq": 298983.45,
+        "gain_pct": 42.95,
+        "trades": 76
+      },
+      "2025": {
+        "start_eq": 298983.45,
+        "end_eq": 269316.79,
+        "gain_pct": -9.92,
+        "trades": 49
+      },
+      "2026": {
+        "start_eq": 269316.79,
+        "end_eq": 266750.57,
+        "gain_pct": -0.95,
+        "trades": 38
+      }
+    },
+    "top_winners": [
+      {
+        "symbol": "PIGL",
+        "entry_date": "2024-11-13",
+        "exit_date": "2024-11-21",
+        "year": 2024,
+        "entry": 247.0,
+        "exit": 291.63,
+        "cost": 135850.0,
+        "proceeds": 160396.5,
+        "pnl": 24546.5,
+        "pnl_pct": 18.06882591093117,
+        "r_mult": 3.5566854210165575,
+        "bars": 4,
+        "reason": "+2.5R Target Hit"
+      },
+      {
+        "symbol": "GSMFOILS",
+        "entry_date": "2025-06-24",
+        "exit_date": "2025-07-08",
+        "year": 2025,
+        "entry": 154.1,
+        "exit": 177.5,
+        "cost": 144854.0,
+        "proceeds": 166850.0,
+        "pnl": 21996.0,
+        "pnl_pct": 15.184944841012335,
+        "r_mult": 3.0870712401055482,
+        "bars": 10,
+        "reason": "+2.5R Target Hit"
+      },
+      {
+        "symbol": "ASMTEC",
+        "entry_date": "2025-07-11",
+        "exit_date": "2025-07-21",
+        "year": 2025,
+        "entry": 2714.8,
+        "exit": 3066.8000000000006,
+        "cost": 165602.80000000002,
+        "proceeds": 187074.80000000005,
+        "pnl": 21472.00000000003,
+        "pnl_pct": 12.965964343598072,
+        "r_mult": 2.5,
+        "bars": 6,
+        "reason": "+2.5R Target Hit"
+      },
+      {
+        "symbol": "GARGI",
+        "entry_date": "2024-08-19",
+        "exit_date": "2024-08-22",
+        "year": 2024,
+        "entry": 884.9,
+        "exit": 1024.3,
+        "cost": 131850.1,
+        "proceeds": 152620.69999999998,
+        "pnl": 20770.599999999977,
+        "pnl_pct": 15.753192451124418,
+        "r_mult": 3.2193251887947207,
+        "bars": 3,
+        "reason": "+2.5R Target Hit"
+      },
+      {
+        "symbol": "SEJALLTD",
+        "entry_date": "2024-10-16",
+        "exit_date": "2024-10-21",
+        "year": 2024,
+        "entry": 448.4,
+        "exit": 517.95,
+        "cost": 133174.8,
+        "proceeds": 153831.15000000002,
+        "pnl": 20656.350000000035,
+        "pnl_pct": 15.510704727921516,
+        "r_mult": 3.0638766519823832,
+        "bars": 3,
+        "reason": "+2.5R Target Hit"
+      }
+    ]
+  },
+  "u3_stage2_entry_50sma": {
+    "final_equity": 280323.8,
+    "total_return_pct": 180.32,
+    "cagr": 22.89,
+    "max_dd": 64.4,
+    "trades": 131,
+    "win_rate": 19.8,
+    "profit_factor": 1.37,
+    "avg_win_pct": 32.56,
+    "avg_loss_pct": -3.99,
+    "avg_bars": 14.1,
+    "yearly": {
+      "2022": {
+        "start_eq": 100000.0,
+        "end_eq": 107240.47,
+        "gain_pct": 7.24,
+        "trades": 4
+      },
+      "2023": {
+        "start_eq": 107240.47,
+        "end_eq": 252346.81,
+        "gain_pct": 135.31,
+        "trades": 14
+      },
+      "2024": {
+        "start_eq": 252346.81,
+        "end_eq": 357635.55,
+        "gain_pct": 41.72,
+        "trades": 22
+      },
+      "2025": {
+        "start_eq": 357635.55,
+        "end_eq": 256461.09,
+        "gain_pct": -28.29,
+        "trades": 50
+      },
+      "2026": {
+        "start_eq": 256461.09,
+        "end_eq": 280323.8,
+        "gain_pct": 9.3,
+        "trades": 41
+      }
+    },
+    "top_winners": [
+      {
+        "symbol": "ANANTRAJ",
+        "entry_date": "2023-03-14",
+        "exit_date": "2024-03-12",
+        "year": 2024,
+        "entry": 111.6,
+        "exit": 318.95,
+        "cost": 45198.0,
+        "proceeds": 129174.75,
+        "pnl": 83976.75,
+        "pnl_pct": 185.79749103942652,
+        "r_mult": 33.781362007168426,
+        "bars": 247,
+        "reason": "50 SMA Trend Exit"
+      },
+      {
+        "symbol": "MODINSU",
+        "entry_date": "2026-04-01",
+        "exit_date": "2026-07-29",
+        "year": 2026,
+        "entry": 229.05,
+        "exit": 471.65,
+        "cost": 68944.05,
+        "proceeds": 141966.65,
+        "pnl": 73022.59999999999,
+        "pnl_pct": 105.91573892163282,
+        "r_mult": 19.25740707666048,
+        "bars": 80,
+        "reason": "50 SMA Trend Exit"
+      },
+      {
+        "symbol": "GVPIL",
+        "entry_date": "2026-04-01",
+        "exit_date": "2026-07-10",
+        "year": 2026,
+        "entry": 401.3,
+        "exit": 820.35,
+        "cost": 68622.3,
+        "proceeds": 140279.85,
+        "pnl": 71657.55,
+        "pnl_pct": 104.42312484425618,
+        "r_mult": 19.96284210275585,
+        "bars": 67,
+        "reason": "50 SMA Trend Exit"
+      },
+      {
+        "symbol": "WEALTH",
+        "entry_date": "2024-03-13",
+        "exit_date": "2024-06-14",
+        "year": 2024,
+        "entry": 516.0,
+        "exit": 787.15,
+        "cost": 129000.0,
+        "proceeds": 196787.5,
+        "pnl": 67787.5,
+        "pnl_pct": 52.54844961240309,
+        "r_mult": 9.554263565891455,
+        "bars": 62,
+        "reason": "50 SMA Trend Exit"
+      },
+      {
+        "symbol": "KSOLVES",
+        "entry_date": "2023-03-01",
+        "exit_date": "2023-09-05",
+        "year": 2023,
+        "entry": 221.8,
+        "exit": 522.8,
+        "cost": 46356.200000000004,
+        "proceeds": 109265.2,
+        "pnl": 62908.99999999999,
+        "pnl_pct": 135.7078449053201,
+        "r_mult": 24.67415361914908,
+        "bars": 126,
+        "reason": "50 SMA Trend Exit"
+      }
+    ]
+  },
+  "passing_count": 216
+}

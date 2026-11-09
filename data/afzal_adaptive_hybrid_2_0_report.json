@@ -1,0 +1,7052 @@
+{
+  "title": "Next-Gen Adaptive Swing (Pure Swing \u00b7 5-Year Full Universe \u00b7 76.99% CAGR)",
+  "subtitle": "3-State Traffic Light: Bull +3.0R Sprint \u00b7 Yellow +2.0R Quick Lock & Top 10% RS \u00b7 Red 100% Cash Defense (45.1% Win Rate \u00b7 20.95% MaxDD)",
+  "initial_capital": 300000.0,
+  "final_equity": 3649078.82,
+  "total_gain": 3349078.82,
+  "total_return_pct": 1116.4,
+  "cagr_pct": 76.99,
+  "net_cagr_charges": 77.25,
+  "net_cagr_stcg": 61.18,
+  "net_cagr_slab": 53.15,
+  "max_drawdown_pct": 20.95,
+  "total_trades": 246,
+  "win_rate_pct": 45.1,
+  "profit_factor": 1.96,
+  "avg_holding_days": 6.8,
+  "yearly": {
+    "2022": {
+      "trades": 30,
+      "wins": 13,
+      "win_rate": 43.3,
+      "net_pnl": 137915.05,
+      "avg_holding_days": 7.1
+    },
+    "2023": {
+      "trades": 59,
+      "wins": 31,
+      "win_rate": 52.5,
+      "net_pnl": 381621.89,
+      "avg_holding_days": 6.5
+    },
+    "2024": {
+      "trades": 68,
+      "wins": 29,
+      "win_rate": 42.6,
+      "net_pnl": 759884.86,
+      "avg_holding_days": 6.6
+    },
+    "2025": {
+      "trades": 42,
+      "wins": 20,
+      "win_rate": 47.6,
+      "net_pnl": 1818817.72,
+      "avg_holding_days": 7.9
+    },
+    "2026": {
+      "trades": 47,
+      "wins": 18,
+      "win_rate": 38.3,
+      "net_pnl": 266794.51,
+      "avg_holding_days": 6.6
+    }
+  },
+  "regime_counts": {
+    "GREEN": 545,
+    "YELLOW": 343,
+    "RED": 206
+  },
+  "top_winners": [
+    {
+      "symbol": "POLYSIL",
+      "entry_date": "2025-09-01",
+      "exit_date": "2025-09-22",
+      "entry": 169.2,
+      "exit": 222.0,
+      "shares": 8493,
+      "pnl": 448430.40000000014,
+      "pnl_pct": 31.205673758865256,
+      "r_mult": 6.457530728306753,
+      "reason": "Monster Chandelier PDL Trail",
+      "bars_held": 15,
+      "year": 2025,
+      "regime_at_exit": "GREEN",
+      "setup_name": "MONSTER_VOLUME_THRUST",
+      "is_monster": true
+    },
+    {
+      "symbol": "MVKAGRO",
+      "entry_date": "2025-08-07",
+      "exit_date": "2025-09-01",
+      "entry": 260.15,
+      "exit": 349.05,
+      "shares": 4392,
+      "pnl": 390448.8000000003,
+      "pnl_pct": 34.17259273496062,
+      "r_mult": 7.000275601401633,
+      "reason": "Monster 15d Time Cap",
+      "bars_held": 15,
+      "year": 2025,
+      "regime_at_exit": "YELLOW",
+      "setup_name": "MONSTER_VOLUME_THRUST",
+      "is_monster": true
+    },
+    {
+      "symbol": "MVKAGRO",
+      "entry_date": "2025-07-02",
+      "exit_date": "2025-07-23",
+      "entry": 160.5,
+      "exit": 215.6,
+      "shares": 6547,
+      "pnl": 360739.69999999995,
+      "pnl_pct": 34.33021806853582,
+      "r_mult": 7.161889907064404,
+      "reason": "Monster 15d Time Cap",
+      "bars_held": 15,
+      "year": 2025,
+      "regime_at_exit": "GREEN",
+      "setup_name": "MONSTER_VOLUME_THRUST",
+      "is_monster": true
+    },
+    {
+      "symbol": "INOVSYNTH",
+      "entry_date": "2026-08-10",
+      "exit_date": "2026-10-05",
+      "entry": 137.2,
+      "exit": 157.0353,
+      "shares": 13364,
+      "pnl": 265078.94920000015,
+      "pnl_pct": 14.457215743440246,
+      "r_mult": 3.5868535262206174,
+      "reason": "Monster Chandelier PDL Trail",
+      "bars_held": 11,
+      "year": 2026,
+      "regime_at_exit": "YELLOW",
+      "setup_name": "MONSTER_VOLUME_THRUST",
+      "is_monster": true
+    },
+    {
+      "symbol": "THANGAMAYL",
+      "entry_date": "2026-07-14",
+      "exit_date": "2026-07-28",
+      "entry": 6459.0,
+      "exit": 7346.0,
+      "shares": 262,
+      "pnl": 232394.0,
+      "pnl_pct": 13.732775971512618,
+      "r_mult": 2.6064853587223205,
+      "reason": "+2.0R Target Hit",
+      "bars_held": 10,
+      "year": 2026,
+      "regime_at_exit": "YELLOW",
+      "setup_name": "PULLBACK_BOUNCE",
+      "is_monster": false
+    },
+    {
+      "symbol": "OLECTRA",
+      "entry_date": "2026-06-12",
+      "exit_date": "2026-06-19",
+      "entry": 1296.0,
+      "exit": 1490.508,
+      "shares": 1178,
+      "pnl": 229130.42400000012,
+      "pnl_pct": 15.008333333333338,
+      "r_mult": 3.0,
+      "reason": "+3.0R Target Hit",
+      "bars_held": 5,
+      "year": 2026,
+      "regime_at_exit": "GREEN",
+      "setup_name": "PULLBACK_BOUNCE",
+      "is_monster": false
+    },
+    {
+      "symbol": "AAYUSH",
+      "entry_date": "2024-10-16",
+      "exit_date": "2024-11-07",
+      "entry": 57.1,
+      "exit": 76.7,
+      "shares": 10274,
+      "pnl": 201370.40000000002,
+      "pnl_pct": 34.32574430823118,
+      "r_mult": 7.003752010005368,
+      "reason": "Monster 15d Time Cap",
+      "bars_held": 15,
+      "year": 2024,
+      "regime_at_exit": "YELLOW",
+      "setup_name": "MONSTER_VOLUME_THRUST",
+      "is_monster": true
+    },
+    {
+      "symbol": "RAJSEC",
+      "entry_date": "2026-06-29",
+      "exit_date": "2026-07-08",
+      "entry": 51.4,
+      "exit": 57.6,
+      "shares": 31490,
+      "pnl": 195238.0,
+      "pnl_pct": 12.062256809338527,
+      "r_mult": 3.867747972551464,
+      "reason": "+2.0R Target Hit",
+      "bars_held": 7,
+      "year": 2026,
+      "regime_at_exit": "YELLOW",
+      "setup_name": "STRIKE_BASE_BREAKOUT",
+      "is_monster": false
+    },
+    {
+      "symbol": "SAMBHV",
+      "entry_date": "2026-04-27",
+      "exit_date": "2026-05-11",
+      "entry": 122.6,
+      "exit": 136.0,
+      "shares": 13800,
+      "pnl": 184920.0,
+      "pnl_pct": 10.929853181076679,
+      "r_mult": 2.038953134510047,
+      "reason": "+2.0R Target Hit",
+      "bars_held": 9,
+      "year": 2026,
+      "regime_at_exit": "YELLOW",
+      "setup_name": "PULLBACK_BOUNCE",
+      "is_monster": false
+    },
+    {
+      "symbol": "GOLDBETA",
+      "entry_date": "2025-11-25",
+      "exit_date": "2025-12-23",
+      "entry": 104.9,
+      "exit": 116.1,
+      "shares": 16200,
+      "pnl": 181440.0,
+      "pnl_pct": 10.676835081029541,
+      "r_mult": 2.0721554116558716,
+      "reason": "+2.0R Target Hit",
+      "bars_held": 20,
+      "year": 2025,
+      "regime_at_exit": "YELLOW",
+      "setup_name": "STRIKE_BASE_BREAKOUT",
+      "is_monster": false
+    },
+    {
+      "symbol": "PSUBNKIETF",
+      "entry_date": "2025-10-27",
+      "exit_date": "2026-01-14",
+      "entry": 80.95,
+      "exit": 90.29,
+      "shares": 19162,
+      "pnl": 178973.08000000007,
+      "pnl_pct": 11.537986411365043,
+      "r_mult": 2.140434503620862,
+      "reason": "+2.0R Target Hit",
+      "bars_held": 55,
+      "year": 2026,
+      "regime_at_exit": "RED",
+      "setup_name": "PULLBACK_BOUNCE",
+      "is_monster": false
+    },
+    {
+      "symbol": "LAURUSLABS",
+      "entry_date": "2026-08-25",
+      "exit_date": "2026-09-24",
+      "entry": 1866.2,
+      "exit": 2054.598,
+      "shares": 947,
+      "pnl": 178412.90599999973,
+      "pnl_pct": 10.095273818454608,
+      "r_mult": 1.9999999999999976,
+      "reason": "+2.0R Target Hit",
+      "bars_held": 21,
+      "year": 2026,
+      "regime_at_exit": "RED",
+      "setup_name": "STRIKE_BASE_BREAKOUT",
+      "is_monster": false
+    },
+    {
+      "symbol": "HEROMOTOCO",
+      "entry_date": "2025-09-30",
+      "exit_date": "2025-11-25",
+      "entry": 5472.5,
+      "exit": 6060.120000000001,
+      "shares": 290,
+      "pnl": 170409.80000000028,
+      "pnl_pct": 10.73768844221107,
+      "r_mult": 2.0,
+      "reason": "+2.0R Target Hit",
+      "bars_held": 37,
+      "year": 2025,
+      "regime_at_exit": "YELLOW",
+      "setup_name": "PULLBACK_BOUNCE",
+      "is_monster": false
+    },
+    {
+      "symbol": "INNOMET",
+      "entry_date": "2026-07-17",
+      "exit_date": "2026-08-07",
+      "entry": 173.7,
+      "exit": 190.5,
+      "shares": 9708,
+      "pnl": 163094.40000000014,
+      "pnl_pct": 9.671848013816934,
+      "r_mult": 1.9837052780729747,
+      "reason": "Monster 15d Time Cap",
+      "bars_held": 15,
+      "year": 2026,
+      "regime_at_exit": "GREEN",
+      "setup_name": "MONSTER_VOLUME_THRUST",
+      "is_monster": true
+    },
+    {
+      "symbol": "RAJTUBE",
+      "entry_date": "2025-06-17",
+      "exit_date": "2025-07-02",
+      "entry": 49.29,
+      "exit": 56.876020000000004,
+      "shares": 20397,
+      "pnl": 154732.04994000017,
+      "pnl_pct": 15.39058632582675,
+      "r_mult": 3.195593748683604,
+      "reason": "Monster Chandelier PDL Trail",
+      "bars_held": 11,
+      "year": 2025,
+      "regime_at_exit": "GREEN",
+      "setup_name": "MONSTER_VOLUME_THRUST",
+      "is_monster": true
+    },
+    {
+      "symbol": "ZENTEC",
+      "entry_date": "2025-05-27",
+      "exit_date": "2025-06-04",
+      "entry": 1917.8,
+      "exit": 2221.2499999999995,
+      "shares": 475,
+      "pnl": 144138.74999999977,
+      "pnl_pct": 15.822817812076318,
+      "r_mult": 3.0,
+      "reason": "+3.0R Target Hit",
+      "bars_held": 6,
+      "year": 2025,
+      "regime_at_exit": "GREEN",
+      "setup_name": "PULLBACK_BOUNCE",
+      "is_monster": false
+    },
+    {
+      "symbol": "TEMBO",
+      "entry_date": "2024-11-19",
+      "exit_date": "2024-12-17",
+      "entry": 68.75,
+      "exit": 80.95,
+      "shares": 11016,
+      "pnl": 134395.20000000007,
+      "pnl_pct": 17.74545454545455,
+      "r_mult": 3.6304121410504377,
+      "reason": "+2.0R Target Hit",
+      "bars_held": 19,
+      "year": 2024,
+      "regime_at_exit": "YELLOW",
+      "setup_name": "PULLBACK_BOUNCE",
+      "is_monster": false
+    },
+    {
+      "symbol": "SHILPAMED",
+      "entry_date": "2026-05-29",
+      "exit_date": "2026-06-05",
+      "entry": 498.95,
+      "exit": 539.817,
+      "shares": 3287,
+      "pnl": 134329.82900000014,
+      "pnl_pct": 8.190600260547152,
+      "r_mult": 2.0000000000000027,
+      "reason": "+2.0R Target Hit",
+      "bars_held": 5,
+      "year": 2026,
+      "regime_at_exit": "YELLOW",
+      "setup_name": "PULLBACK_BOUNCE",
+      "is_monster": false
+    },
+    {
+      "symbol": "POWERMECH",
+      "entry_date": "2025-05-22",
+      "exit_date": "2025-05-23",
+      "entry": 2947.9,
+      "exit": 3398.9,
+      "shares": 282,
+      "pnl": 127182.0,
+      "pnl_pct": 15.299026425591098,
+      "r_mult": 3.568037974683542,
+      "reason": "+3.0R Target Hit",
+      "bars_held": 1,
+      "year": 2025,
+      "regime_at_exit": "GREEN",
+      "setup_name": "PULLBACK_BOUNCE",
+      "is_monster": false
+    },
+    {
+      "symbol": "GENCON",
+      "entry_date": "2026-02-18",
+      "exit_date": "2026-02-24",
+      "entry": 53.19,
+      "exit": 56.61,
+      "shares": 34085,
+      "pnl": 116570.70000000019,
+      "pnl_pct": 6.429780033840951,
+      "r_mult": 2.0,
+      "reason": "+2.0R Target Hit",
+      "bars_held": 4,
+      "year": 2026,
+      "regime_at_exit": "YELLOW",
+      "setup_name": "PULLBACK_BOUNCE",
+      "is_monster": false
+    },
+    {
+      "symbol": "HSIL",
+      "entry_date": "2025-08-20",
+      "exit_date": "2025-08-29",
+      "entry": 268.65,
+      "exit": 295.907,
+      "shares": 4154,
+      "pnl": 113225.57799999998,
+      "pnl_pct": 10.145914758980089,
+      "r_mult": 2.0836295531857965,
+      "reason": "Monster Chandelier PDL Trail",
+      "bars_held": 6,
+      "year": 2025,
+      "regime_at_exit": "YELLOW",
+      "setup_name": "MONSTER_VOLUME_THRUST",
+      "is_monster": true
+    },
+    {
+      "symbol": "GABRIEL",
+      "entry_date": "2025-08-29",
+      "exit_date": "2025-09-01",
+      "entry": 1152.4,
+      "exit": 1257.2220000000007,
+      "shares": 1066,
+      "pnl": 111740.25200000056,
+      "pnl_pct": 9.095973620270788,
+      "r_mult": 2.0,
+      "reason": "+2.0R Target Hit",
+      "bars_held": 1,
+      "year": 2025,
+      "regime_at_exit": "YELLOW",
+      "setup_name": "PULLBACK_BOUNCE",
+      "is_monster": false
+    },
+    {
+      "symbol": "EMROCK",
+      "entry_date": "2025-12-23",
+      "exit_date": "2025-12-31",
+      "entry": 169.7,
+      "exit": 180.0,
+      "shares": 10467,
+      "pnl": 107810.1000000001,
+      "pnl_pct": 6.069534472598711,
+      "r_mult": 1.2666010821446145,
+      "reason": "Monster Chandelier PDL Trail",
+      "bars_held": 5,
+      "year": 2025,
+      "regime_at_exit": "YELLOW",
+      "setup_name": "MONSTER_VOLUME_THRUST",
+      "is_monster": true
+    },
+    {
+      "symbol": "MFSL",
+      "entry_date": "2025-04-25",
+      "exit_date": "2025-05-23",
+      "entry": 1266.4,
+      "exit": 1430.0230000000006,
+      "shares": 625,
+      "pnl": 102264.37500000035,
+      "pnl_pct": 12.920325331648808,
+      "r_mult": 3.0,
+      "reason": "+3.0R Target Hit",
+      "bars_held": 19,
+      "year": 2025,
+      "regime_at_exit": "GREEN",
+      "setup_name": "PULLBACK_BOUNCE",
+      "is_monster": false
+    },
+    {
+      "symbol": "VERITAS",
+      "entry_date": "2023-12-20",
+      "exit_date": "2024-01-08",
+      "entry": 476.7,
+      "exit": 591.2152,
+      "shares": 884,
+      "pnl": 101231.43679999997,
+      "pnl_pct": 24.02248793790644,
+      "r_mult": 4.971896233582987,
+      "reason": "Monster Chandelier PDL Trail",
+      "bars_held": 12,
+      "year": 2024,
+      "regime_at_exit": "GREEN",
+      "setup_name": "MONSTER_VOLUME_THRUST",
+      "is_monster": true
+    }
+  ],
+  "equity_curve": [
+    {
+      "date": "2022-05-13",
+      "equity": 300120.0,
+      "cash": 300120.0,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-05-16",
+      "equity": 300240.05,
+      "cash": 300240.05,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-05-17",
+      "equity": 300360.14,
+      "cash": 300360.14,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-05-18",
+      "equity": 300480.29,
+      "cash": 300480.29,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-05-19",
+      "equity": 300600.48,
+      "cash": 300600.48,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-05-20",
+      "equity": 300720.72,
+      "cash": 300720.72,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-05-23",
+      "equity": 300841.01,
+      "cash": 300841.01,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-05-24",
+      "equity": 300961.35,
+      "cash": 300961.35,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-05-25",
+      "equity": 301081.73,
+      "cash": 301081.73,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-05-26",
+      "equity": 301202.16,
+      "cash": 301202.16,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-05-27",
+      "equity": 301322.64,
+      "cash": 301322.64,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-05-30",
+      "equity": 301443.17,
+      "cash": 301443.17,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-05-31",
+      "equity": 301563.75,
+      "cash": 301563.75,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-01",
+      "equity": 301684.37,
+      "cash": 301684.37,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-02",
+      "equity": 301805.05,
+      "cash": 301805.05,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-03",
+      "equity": 301925.77,
+      "cash": 301925.77,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-06",
+      "equity": 302046.54,
+      "cash": 302046.54,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-07",
+      "equity": 302167.36,
+      "cash": 302167.36,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-08",
+      "equity": 302288.23,
+      "cash": 302288.23,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-09",
+      "equity": 302409.14,
+      "cash": 302409.14,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-10",
+      "equity": 302530.11,
+      "cash": 302530.11,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-13",
+      "equity": 302651.12,
+      "cash": 302651.12,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-14",
+      "equity": 302772.18,
+      "cash": 302772.18,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-15",
+      "equity": 302893.29,
+      "cash": 302893.29,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-16",
+      "equity": 303014.44,
+      "cash": 303014.44,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-17",
+      "equity": 303135.65,
+      "cash": 303135.65,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-20",
+      "equity": 303256.9,
+      "cash": 303256.9,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-21",
+      "equity": 303378.21,
+      "cash": 303378.21,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-22",
+      "equity": 303499.56,
+      "cash": 303499.56,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-23",
+      "equity": 303620.96,
+      "cash": 303620.96,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-24",
+      "equity": 303742.41,
+      "cash": 303742.41,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-27",
+      "equity": 303863.9,
+      "cash": 303863.9,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-28",
+      "equity": 303985.45,
+      "cash": 303985.45,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-29",
+      "equity": 304107.04,
+      "cash": 304107.04,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-06-30",
+      "equity": 304228.69,
+      "cash": 304228.69,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-07-01",
+      "equity": 304350.38,
+      "cash": 304350.38,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-07-04",
+      "equity": 304472.12,
+      "cash": 304472.12,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-07-05",
+      "equity": 304593.91,
+      "cash": 304593.91,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-07-06",
+      "equity": 304715.74,
+      "cash": 304715.74,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-07-07",
+      "equity": 304837.63,
+      "cash": 304837.63,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-07-08",
+      "equity": 304959.57,
+      "cash": 304959.57,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-07-11",
+      "equity": 304959.57,
+      "cash": 304959.57,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-07-12",
+      "equity": 298359.55,
+      "cash": 144528.55,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-07-13",
+      "equity": 296296.05,
+      "cash": 82.6,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-07-14",
+      "equity": 296208.84,
+      "cash": 138832.09,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-07-15",
+      "equity": 293286.96,
+      "cash": 133946.41,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-07-18",
+      "equity": 297190.86,
+      "cash": 657.91,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-07-19",
+      "equity": 305809.71,
+      "cash": 657.91,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-07-20",
+      "equity": 307860.06,
+      "cash": 657.91,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-07-21",
+      "equity": 309254.31,
+      "cash": 657.91,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-07-22",
+      "equity": 310014.71,
+      "cash": 657.91,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-07-25",
+      "equity": 316762.41,
+      "cash": 657.91,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-07-26",
+      "equity": 318830.31,
+      "cash": 657.91,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-07-27",
+      "equity": 320331.66,
+      "cash": 657.91,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-07-28",
+      "equity": 326692.89,
+      "cash": 153114.79,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-07-29",
+      "equity": 333695.86,
+      "cash": 176854.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-01",
+      "equity": 348374.66,
+      "cash": 10025.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-02",
+      "equity": 352075.21,
+      "cash": 10025.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-03",
+      "equity": 349341.96,
+      "cash": 10025.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-04",
+      "equity": 350916.41,
+      "cash": 10025.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-05",
+      "equity": 354874.81,
+      "cash": 10025.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-08",
+      "equity": 363280.21,
+      "cash": 10025.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-10",
+      "equity": 368176.81,
+      "cash": 10025.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-11",
+      "equity": 371415.36,
+      "cash": 10025.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-12",
+      "equity": 375720.41,
+      "cash": 10025.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-16",
+      "equity": 385976.46,
+      "cash": 10025.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-17",
+      "equity": 396318.81,
+      "cash": 181946.21,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-18",
+      "equity": 399329.41,
+      "cash": 1305.61,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-19",
+      "equity": 401195.21,
+      "cash": 1305.61,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-22",
+      "equity": 396674.37,
+      "cash": 218441.07,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-23",
+      "equity": 393637.77,
+      "cash": 20202.07,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-24",
+      "equity": 393405.17,
+      "cash": 20202.07,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-25",
+      "equity": 390296.77,
+      "cash": 20202.07,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-26",
+      "equity": 388334.99,
+      "cash": 210992.79,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-29",
+      "equity": 392201.99,
+      "cash": 16849.44,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-08-30",
+      "equity": 394323.89,
+      "cash": 16849.44,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-01",
+      "equity": 397959.84,
+      "cash": 210403.24,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-02",
+      "equity": 396430.44,
+      "cash": 11567.74,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-05",
+      "equity": 393849.94,
+      "cash": 11567.74,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-06",
+      "equity": 390358.69,
+      "cash": 203107.99,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-07",
+      "equity": 386084.14,
+      "cash": 8869.54,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-08",
+      "equity": 392069.49,
+      "cash": 8869.54,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-09",
+      "equity": 390632.74,
+      "cash": 8869.54,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-12",
+      "equity": 395193.94,
+      "cash": 8869.54,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-13",
+      "equity": 396702.09,
+      "cash": 8869.54,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-14",
+      "equity": 394600.69,
+      "cash": 8869.54,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-15",
+      "equity": 403003.84,
+      "cash": 8869.54,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-16",
+      "equity": 395645.79,
+      "cash": 8869.54,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-19",
+      "equity": 392962.34,
+      "cash": 8869.54,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-20",
+      "equity": 394386.49,
+      "cash": 8869.54,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-21",
+      "equity": 385741.49,
+      "cash": 8869.54,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-22",
+      "equity": 391631.64,
+      "cash": 8869.54,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-23",
+      "equity": 384864.39,
+      "cash": 8869.54,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-09-26",
+      "equity": 380087.45,
+      "cash": 193741.15,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-09-27",
+      "equity": 380233.75,
+      "cash": 193741.15,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-09-28",
+      "equity": 377932.85,
+      "cash": 193741.15,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-09-29",
+      "equity": 373570.45,
+      "cash": 193741.15,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-09-30",
+      "equity": 372652.75,
+      "cash": 193741.15,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-10-03",
+      "equity": 370378.45,
+      "cash": 193741.15,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-10-04",
+      "equity": 372400.05,
+      "cash": 193741.15,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-10-06",
+      "equity": 370764.15,
+      "cash": 193741.15,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-10-07",
+      "equity": 370804.05,
+      "cash": 193741.15,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-10-10",
+      "equity": 371152.75,
+      "cash": 8432.35,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-10-11",
+      "equity": 369468.95,
+      "cash": 195770.95,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-10-12",
+      "equity": 372341.75,
+      "cash": 195770.95,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-10-13",
+      "equity": 369226.85,
+      "cash": 9897.4,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-10-14",
+      "equity": 366759.15,
+      "cash": 9897.4,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-10-17",
+      "equity": 367224.29,
+      "cash": 188246.19,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-10-18",
+      "equity": 369363.54,
+      "cash": 4667.94,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-10-19",
+      "equity": 366684.44,
+      "cash": 189461.94,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-10-20",
+      "equity": 374677.44,
+      "cash": 6190.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-10-21",
+      "equity": 367917.84,
+      "cash": 6190.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-10-24",
+      "equity": 368084.04,
+      "cash": 6190.14,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-10-25",
+      "equity": 362130.54,
+      "cash": 6190.14,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-10-27",
+      "equity": 361540.14,
+      "cash": 178559.34,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-10-28",
+      "equity": 363673.24,
+      "cash": 1167.34,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-10-31",
+      "equity": 361495.74,
+      "cash": 1167.34,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-11-01",
+      "equity": 355158.4,
+      "cash": 169471.3,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-11-02",
+      "equity": 372328.4,
+      "cash": 205179.6,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-11-03",
+      "equity": 366998.15,
+      "cash": 201359.95,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-11-04",
+      "equity": 364088.16,
+      "cash": 181865.61,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-11-07",
+      "equity": 368266.26,
+      "cash": 56.76,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-11-09",
+      "equity": 364926.66,
+      "cash": 56.76,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-11-10",
+      "equity": 355804.62,
+      "cash": 174627.27,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-11-11",
+      "equity": 349413.4,
+      "cash": 169435.9,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-11-14",
+      "equity": 348866.75,
+      "cash": 68.9,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-11-15",
+      "equity": 379051.61,
+      "cash": 379051.61,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-11-16",
+      "equity": 402472.59,
+      "cash": 203291.79,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-11-17",
+      "equity": 399269.39,
+      "cash": 203291.79,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-11-18",
+      "equity": 400450.39,
+      "cash": 3691.79,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-11-21",
+      "equity": 401687.11,
+      "cash": 207326.61,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-11-22",
+      "equity": 403932.61,
+      "cash": 207326.61,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-11-23",
+      "equity": 400817.46,
+      "cash": 204959.96,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-11-24",
+      "equity": 404327.56,
+      "cash": 4610.06,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-11-25",
+      "equity": 403527.76,
+      "cash": 4610.06,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-11-28",
+      "equity": 404729.48,
+      "cash": 4610.06,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-11-29",
+      "equity": 398219.86,
+      "cash": 4610.06,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-11-30",
+      "equity": 402506.06,
+      "cash": 4610.06,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-01",
+      "equity": 402355.66,
+      "cash": 4610.06,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-02",
+      "equity": 403064.44,
+      "cash": 4610.06,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-05",
+      "equity": 422045.96,
+      "cash": 4610.06,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-06",
+      "equity": 430595.88,
+      "cash": 4610.06,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-07",
+      "equity": 439938.06,
+      "cash": 4610.06,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-08",
+      "equity": 453778.24,
+      "cash": 241884.56,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-09",
+      "equity": 450924.75,
+      "cash": 14995.58,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-12",
+      "equity": 469110.09,
+      "cash": 242338.73,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-13",
+      "equity": 479663.93,
+      "cash": 7867.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-14",
+      "equity": 479250.41,
+      "cash": 7867.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-15",
+      "equity": 476198.08,
+      "cash": 7867.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-16",
+      "equity": 465435.74,
+      "cash": 7867.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-19",
+      "equity": 473457.28,
+      "cash": 7867.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-20",
+      "equity": 468042.94,
+      "cash": 7867.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-21",
+      "equity": 453904.93,
+      "cash": 7867.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2022-12-22",
+      "equity": 445499.9,
+      "cash": 445499.9,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-12-23",
+      "equity": 445678.1,
+      "cash": 445678.1,
+      "regime": "RED"
+    },
+    {
+      "date": "2022-12-26",
+      "equity": 445678.1,
+      "cash": 445678.1,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-12-27",
+      "equity": 450088.5,
+      "cash": 222952.9,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-12-28",
+      "equity": 454618.1,
+      "cash": 222952.9,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-12-29",
+      "equity": 459207.3,
+      "cash": 222952.9,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2022-12-30",
+      "equity": 466687.7,
+      "cash": 37.9,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-02",
+      "equity": 474574.2,
+      "cash": 245768.7,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-03",
+      "equity": 476075.7,
+      "cash": 245768.7,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-04",
+      "equity": 471738.45,
+      "cash": 7819.55,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-05",
+      "equity": 474187.85,
+      "cash": 7819.55,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-06",
+      "equity": 473140.35,
+      "cash": 7819.55,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-09",
+      "equity": 484704.96,
+      "cash": 254402.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-10",
+      "equity": 475497.81,
+      "cash": 238518.11,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-11",
+      "equity": 483429.61,
+      "cash": 845.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-12",
+      "equity": 487055.81,
+      "cash": 845.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-13",
+      "equity": 511644.76,
+      "cash": 264616.36,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-16",
+      "equity": 511672.96,
+      "cash": 8866.51,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-17",
+      "equity": 507204.76,
+      "cash": 8866.51,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-18",
+      "equity": 515099.36,
+      "cash": 8866.51,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-19",
+      "equity": 515049.14,
+      "cash": 238311.49,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-20",
+      "equity": 517175.17,
+      "cash": 3.91,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-23",
+      "equity": 512577.6,
+      "cash": 281683.77,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-24",
+      "equity": 511249.73,
+      "cash": 511249.73,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-25",
+      "equity": 511249.73,
+      "cash": 511249.73,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-27",
+      "equity": 511249.73,
+      "cash": 511249.73,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-30",
+      "equity": 511249.73,
+      "cash": 511249.73,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-01-31",
+      "equity": 511249.73,
+      "cash": 511249.73,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-02-01",
+      "equity": 511249.73,
+      "cash": 511249.73,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-02-02",
+      "equity": 509175.41,
+      "cash": 509175.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-02-03",
+      "equity": 509175.41,
+      "cash": 509175.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-02-06",
+      "equity": 509175.41,
+      "cash": 509175.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-02-07",
+      "equity": 509175.41,
+      "cash": 509175.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-02-08",
+      "equity": 509175.41,
+      "cash": 509175.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-02-09",
+      "equity": 509175.41,
+      "cash": 509175.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-02-10",
+      "equity": 509175.41,
+      "cash": 509175.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-02-13",
+      "equity": 507736.21,
+      "cash": 254642.61,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-02-14",
+      "equity": 519968.46,
+      "cash": 254744.46,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-02-15",
+      "equity": 517397.56,
+      "cash": 254846.36,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-02-16",
+      "equity": 533399.41,
+      "cash": 533399.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-02-17",
+      "equity": 536803.21,
+      "cash": 536803.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-02-20",
+      "equity": 536803.21,
+      "cash": 536803.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-02-21",
+      "equity": 537017.93,
+      "cash": 537017.93,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-02-22",
+      "equity": 537232.74,
+      "cash": 537232.74,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-02-23",
+      "equity": 537447.63,
+      "cash": 537447.63,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-02-24",
+      "equity": 537662.61,
+      "cash": 537662.61,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-02-27",
+      "equity": 537877.67,
+      "cash": 537877.67,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-02-28",
+      "equity": 538092.83,
+      "cash": 538092.83,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-01",
+      "equity": 538308.06,
+      "cash": 538308.06,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-02",
+      "equity": 538523.39,
+      "cash": 538523.39,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-03",
+      "equity": 538738.8,
+      "cash": 538738.8,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-06",
+      "equity": 538954.29,
+      "cash": 538954.29,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-08",
+      "equity": 538954.29,
+      "cash": 538954.29,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-03-09",
+      "equity": 548775.89,
+      "cash": 2191.74,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-10",
+      "equity": 561696.69,
+      "cash": 300242.24,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-13",
+      "equity": 558793.3,
+      "cash": 558793.3,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-14",
+      "equity": 559016.82,
+      "cash": 559016.82,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-15",
+      "equity": 559240.43,
+      "cash": 559240.43,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-16",
+      "equity": 559464.12,
+      "cash": 559464.12,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-17",
+      "equity": 559687.91,
+      "cash": 559687.91,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-20",
+      "equity": 559911.78,
+      "cash": 559911.78,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-21",
+      "equity": 560135.75,
+      "cash": 560135.75,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-22",
+      "equity": 560359.8,
+      "cash": 560359.8,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-23",
+      "equity": 560583.94,
+      "cash": 560583.94,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-24",
+      "equity": 560808.18,
+      "cash": 560808.18,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-27",
+      "equity": 561032.5,
+      "cash": 561032.5,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-28",
+      "equity": 561256.91,
+      "cash": 561256.91,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-29",
+      "equity": 561481.42,
+      "cash": 561481.42,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-03-31",
+      "equity": 561706.01,
+      "cash": 561706.01,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-04-03",
+      "equity": 561930.69,
+      "cash": 561930.69,
+      "regime": "RED"
+    },
+    {
+      "date": "2023-04-05",
+      "equity": 561930.69,
+      "cash": 561930.69,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-04-06",
+      "equity": 560963.19,
+      "cash": 280968.69,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-04-10",
+      "equity": 560814.79,
+      "cash": 2406.49,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-04-11",
+      "equity": 552605.83,
+      "cash": 273385.33,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-04-12",
+      "equity": 554440.31,
+      "cash": 273671.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-04-13",
+      "equity": 578392.01,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-04-17",
+      "equity": 582859.31,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-04-18",
+      "equity": 575699.81,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-04-19",
+      "equity": 582505.91,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-04-20",
+      "equity": 582839.61,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-04-21",
+      "equity": 584177.31,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-04-24",
+      "equity": 590537.61,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-04-25",
+      "equity": 595305.01,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-04-26",
+      "equity": 599183.41,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-04-27",
+      "equity": 596351.01,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-04-28",
+      "equity": 597307.21,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-02",
+      "equity": 602397.01,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-03",
+      "equity": 601084.51,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-04",
+      "equity": 600248.81,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-05",
+      "equity": 585851.31,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-08",
+      "equity": 584516.51,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-09",
+      "equity": 582132.81,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-10",
+      "equity": 589230.61,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-11",
+      "equity": 591821.71,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-12",
+      "equity": 574594.71,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-15",
+      "equity": 570329.61,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-16",
+      "equity": 569283.61,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-17",
+      "equity": 567934.61,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-18",
+      "equity": 569112.41,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-19",
+      "equity": 574465.81,
+      "cash": 55.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-22",
+      "equity": 565836.81,
+      "cash": 281017.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-23",
+      "equity": 561171.46,
+      "cash": 135.51,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-24",
+      "equity": 561383.26,
+      "cash": 281308.26,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-25",
+      "equity": 559291.91,
+      "cash": 915.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-26",
+      "equity": 563793.61,
+      "cash": 283455.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-29",
+      "equity": 580451.81,
+      "cash": 1935.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-30",
+      "equity": 586349.21,
+      "cash": 1935.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-05-31",
+      "equity": 584433.81,
+      "cash": 1935.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-01",
+      "equity": 587965.01,
+      "cash": 1935.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-02",
+      "equity": 585076.81,
+      "cash": 1935.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-05",
+      "equity": 570617.01,
+      "cash": 1935.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-06",
+      "equity": 595982.17,
+      "cash": 314852.77,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-07",
+      "equity": 598196.77,
+      "cash": 314694.97,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-08",
+      "equity": 593639.62,
+      "cash": 308688.02,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-09",
+      "equity": 592508.92,
+      "cash": 12018.02,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-12",
+      "equity": 588161.72,
+      "cash": 12018.02,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-13",
+      "equity": 591711.92,
+      "cash": 12018.02,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-14",
+      "equity": 588176.32,
+      "cash": 12018.02,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-15",
+      "equity": 582572.82,
+      "cash": 12018.02,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-16",
+      "equity": 581968.22,
+      "cash": 12018.02,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-19",
+      "equity": 587284.02,
+      "cash": 12018.02,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-20",
+      "equity": 590259.92,
+      "cash": 12018.02,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-21",
+      "equity": 588578.47,
+      "cash": 12018.02,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-22",
+      "equity": 581246.42,
+      "cash": 12018.02,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-23",
+      "equity": 576104.52,
+      "cash": 292470.92,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-26",
+      "equity": 587623.32,
+      "cash": 4421.12,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-27",
+      "equity": 585930.12,
+      "cash": 4421.12,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-28",
+      "equity": 594923.92,
+      "cash": 4421.12,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-06-30",
+      "equity": 589436.32,
+      "cash": 4421.12,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-03",
+      "equity": 583935.92,
+      "cash": 4421.12,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-04",
+      "equity": 584829.72,
+      "cash": 4421.12,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-05",
+      "equity": 603840.12,
+      "cash": 4421.12,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-06",
+      "equity": 614099.52,
+      "cash": 4421.12,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-07",
+      "equity": 612375.92,
+      "cash": 4421.12,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-10",
+      "equity": 613150.63,
+      "cash": 310124.63,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-11",
+      "equity": 613444.93,
+      "cash": 3657.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-12",
+      "equity": 615498.23,
+      "cash": 3657.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-13",
+      "equity": 611688.43,
+      "cash": 313235.63,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-14",
+      "equity": 617391.13,
+      "cash": 7519.03,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-17",
+      "equity": 634915.63,
+      "cash": 7519.03,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-18",
+      "equity": 636842.93,
+      "cash": 7519.03,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-19",
+      "equity": 634267.53,
+      "cash": 7519.03,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-20",
+      "equity": 647114.83,
+      "cash": 7519.03,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-21",
+      "equity": 648713.33,
+      "cash": 7519.03,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-24",
+      "equity": 662855.63,
+      "cash": 7519.03,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-25",
+      "equity": 658027.03,
+      "cash": 7519.03,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-26",
+      "equity": 659700.43,
+      "cash": 7519.03,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-27",
+      "equity": 672251.08,
+      "cash": 341041.88,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-28",
+      "equity": 670325.38,
+      "cash": 338921.58,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-07-31",
+      "equity": 689061.58,
+      "cash": 3775.58,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-01",
+      "equity": 673069.38,
+      "cash": 3775.58,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-02",
+      "equity": 654684.58,
+      "cash": 321723.98,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-03",
+      "equity": 654194.48,
+      "cash": 1509.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-04",
+      "equity": 659190.98,
+      "cash": 1509.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-07",
+      "equity": 654373.28,
+      "cash": 1509.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-08",
+      "equity": 681521.58,
+      "cash": 354221.88,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-09",
+      "equity": 687108.48,
+      "cash": 14779.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-10",
+      "equity": 683049.18,
+      "cash": 14779.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-11",
+      "equity": 692665.38,
+      "cash": 357761.88,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-14",
+      "equity": 694148.88,
+      "cash": 360214.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-16",
+      "equity": 697201.98,
+      "cash": 361050.18,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-17",
+      "equity": 695633.18,
+      "cash": 13297.68,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-18",
+      "equity": 690386.48,
+      "cash": 13297.68,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-21",
+      "equity": 691388.38,
+      "cash": 13297.68,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-22",
+      "equity": 689376.4,
+      "cash": 348470.8,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-23",
+      "equity": 701172.51,
+      "cash": 701172.51,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-24",
+      "equity": 696080.11,
+      "cash": 265.31,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-25",
+      "equity": 676059.61,
+      "cash": 329895.31,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-08-28",
+      "equity": 683866.11,
+      "cash": 335491.31,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-08-29",
+      "equity": 678670.86,
+      "cash": 332948.66,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-08-30",
+      "equity": 671528.96,
+      "cash": 5.56,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-08-31",
+      "equity": 662879.76,
+      "cash": 320694.36,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-09-01",
+      "equity": 660131.66,
+      "cash": 2.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-04",
+      "equity": 691476.51,
+      "cash": 2.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-05",
+      "equity": 688365.96,
+      "cash": 2.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-06",
+      "equity": 678814.91,
+      "cash": 2.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-07",
+      "equity": 697743.71,
+      "cash": 2.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-08",
+      "equity": 693800.21,
+      "cash": 2.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-11",
+      "equity": 708149.11,
+      "cash": 2.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-12",
+      "equity": 669913.36,
+      "cash": 306507.16,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-13",
+      "equity": 688609.61,
+      "cash": 264.11,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-14",
+      "equity": 699739.86,
+      "cash": 264.11,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-15",
+      "equity": 714235.49,
+      "cash": 404697.19,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-18",
+      "equity": 703424.14,
+      "cash": 47753.89,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-20",
+      "equity": 701849.43,
+      "cash": 392620.48,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-21",
+      "equity": 684068.48,
+      "cash": 41762.98,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-22",
+      "equity": 703098.77,
+      "cash": 339670.67,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-25",
+      "equity": 699625.42,
+      "cash": 91.87,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-26",
+      "equity": 712645.17,
+      "cash": 91.87,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-27",
+      "equity": 705837.17,
+      "cash": 91.87,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-09-28",
+      "equity": 690467.17,
+      "cash": 91.87,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-09-29",
+      "equity": 705806.67,
+      "cash": 91.87,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-10-03",
+      "equity": 716844.27,
+      "cash": 91.87,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-10-04",
+      "equity": 690659.17,
+      "cash": 91.87,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-10-05",
+      "equity": 691632.97,
+      "cash": 91.87,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-10-06",
+      "equity": 717546.52,
+      "cash": 91.87,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-10-09",
+      "equity": 694589.37,
+      "cash": 350949.37,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-10-10",
+      "equity": 707085.37,
+      "cash": 350949.37,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-10-11",
+      "equity": 720300.77,
+      "cash": 28.57,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-10-12",
+      "equity": 717370.57,
+      "cash": 28.57,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-10-13",
+      "equity": 707474.37,
+      "cash": 28.57,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-10-16",
+      "equity": 706714.57,
+      "cash": 28.57,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-10-17",
+      "equity": 717361.57,
+      "cash": 28.57,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-10-18",
+      "equity": 705790.97,
+      "cash": 28.57,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-10-19",
+      "equity": 712355.77,
+      "cash": 28.57,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-10-20",
+      "equity": 686979.37,
+      "cash": 28.57,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-10-23",
+      "equity": 653731.31,
+      "cash": 653731.31,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-10-25",
+      "equity": 653731.31,
+      "cash": 653731.31,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-10-26",
+      "equity": 653731.31,
+      "cash": 653731.31,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-10-27",
+      "equity": 653731.31,
+      "cash": 653731.31,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-10-30",
+      "equity": 660174.81,
+      "cash": 326953.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-10-31",
+      "equity": 666802.41,
+      "cash": 326953.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-11-01",
+      "equity": 673430.01,
+      "cash": 673430.01,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-11-02",
+      "equity": 673430.01,
+      "cash": 673430.01,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-11-03",
+      "equity": 666984.61,
+      "cash": 336781.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-11-06",
+      "equity": 670207.31,
+      "cash": 336781.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-11-07",
+      "equity": 676652.71,
+      "cash": 336781.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-11-08",
+      "equity": 673925.81,
+      "cash": 336781.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-11-09",
+      "equity": 667232.51,
+      "cash": 336781.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-11-10",
+      "equity": 655588.6,
+      "cash": 323402.6,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-11-12",
+      "equity": 676608.15,
+      "cash": 19.1,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-11-13",
+      "equity": 689556.0,
+      "cash": 350924.6,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2023-11-15",
+      "equity": 696249.3,
+      "cash": 350924.6,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-11-16",
+      "equity": 701403.4,
+      "cash": 2887.8,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-11-17",
+      "equity": 705088.6,
+      "cash": 2887.8,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-11-20",
+      "equity": 715818.6,
+      "cash": 349918.2,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-11-21",
+      "equity": 752116.9,
+      "cash": 249.9,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-11-22",
+      "equity": 763788.46,
+      "cash": 383261.96,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-11-23",
+      "equity": 768827.26,
+      "cash": 389911.66,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-11-24",
+      "equity": 770757.31,
+      "cash": 393897.31,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-11-28",
+      "equity": 795739.56,
+      "cash": 390899.41,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-11-29",
+      "equity": 794551.96,
+      "cash": 392404.76,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-11-30",
+      "equity": 789106.86,
+      "cash": 4.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-01",
+      "equity": 782719.31,
+      "cash": 4.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-04",
+      "equity": 793514.96,
+      "cash": 4.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-05",
+      "equity": 791098.21,
+      "cash": 383150.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-06",
+      "equity": 786446.26,
+      "cash": 375529.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-07",
+      "equity": 793450.91,
+      "cash": 37.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-08",
+      "equity": 799990.11,
+      "cash": 37.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-11",
+      "equity": 794952.11,
+      "cash": 37.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-12",
+      "equity": 783234.16,
+      "cash": 37.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-13",
+      "equity": 795563.51,
+      "cash": 37.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-14",
+      "equity": 800882.86,
+      "cash": 37.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-15",
+      "equity": 809672.66,
+      "cash": 438392.66,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-18",
+      "equity": 831468.66,
+      "cash": 33862.41,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-19",
+      "equity": 850888.41,
+      "cash": 33862.41,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-20",
+      "equity": 842963.07,
+      "cash": 842963.07,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-21",
+      "equity": 851361.07,
+      "cash": 421560.27,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-22",
+      "equity": 870440.97,
+      "cash": 686.97,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-26",
+      "equity": 875409.57,
+      "cash": 686.97,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-27",
+      "equity": 884512.57,
+      "cash": 686.97,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-28",
+      "equity": 885615.27,
+      "cash": 686.97,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2023-12-29",
+      "equity": 894780.87,
+      "cash": 686.97,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-01",
+      "equity": 893356.27,
+      "cash": 686.97,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-02",
+      "equity": 893488.1,
+      "cash": 399950.9,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-03",
+      "equity": 904115.7,
+      "cash": 58.9,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-04",
+      "equity": 916783.35,
+      "cash": 58.9,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-05",
+      "equity": 924146.5,
+      "cash": 58.9,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-08",
+      "equity": 911598.38,
+      "cash": 522693.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-09",
+      "equity": 917702.13,
+      "cash": 522693.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-10",
+      "equity": 924866.88,
+      "cash": 65731.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-11",
+      "equity": 925453.88,
+      "cash": 65731.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-12",
+      "equity": 930006.88,
+      "cash": 65731.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-15",
+      "equity": 939271.63,
+      "cash": 65731.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-16",
+      "equity": 990083.16,
+      "cash": 525707.16,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-17",
+      "equity": 986164.76,
+      "cash": 524450.76,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-18",
+      "equity": 995094.01,
+      "cash": 532808.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-19",
+      "equity": 1014706.46,
+      "cash": 35518.56,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-20",
+      "equity": 1000694.41,
+      "cash": 35518.56,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-23",
+      "equity": 1008549.86,
+      "cash": 35518.56,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-24",
+      "equity": 1022186.61,
+      "cash": 35518.56,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-25",
+      "equity": 1033719.96,
+      "cash": 35518.56,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-29",
+      "equity": 1026765.46,
+      "cash": 35518.56,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-30",
+      "equity": 997280.91,
+      "cash": 35518.56,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-01-31",
+      "equity": 947156.5,
+      "cash": 947156.5,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-01",
+      "equity": 954843.1,
+      "cash": 473817.9,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-02",
+      "equity": 953453.15,
+      "cash": 17.54,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-05",
+      "equity": 944493.6,
+      "cash": 451638.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-06",
+      "equity": 957879.64,
+      "cash": 182.51,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-07",
+      "equity": 958821.21,
+      "cash": 182.51,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-08",
+      "equity": 961990.11,
+      "cash": 469469.51,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-09",
+      "equity": 961560.77,
+      "cash": 55.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-12",
+      "equity": 955942.71,
+      "cash": 55.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-13",
+      "equity": 936938.19,
+      "cash": 55.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-14",
+      "equity": 934654.9,
+      "cash": 55.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-15",
+      "equity": 948502.93,
+      "cash": 55.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-16",
+      "equity": 960430.62,
+      "cash": 55.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-19",
+      "equity": 966147.3,
+      "cash": 55.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-20",
+      "equity": 966085.88,
+      "cash": 55.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-21",
+      "equity": 967211.76,
+      "cash": 55.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-22",
+      "equity": 967971.12,
+      "cash": 55.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-23",
+      "equity": 969002.65,
+      "cash": 55.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-26",
+      "equity": 976847.38,
+      "cash": 444769.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-27",
+      "equity": 983600.73,
+      "cash": 491.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-28",
+      "equity": 984116.44,
+      "cash": 553963.94,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-02-29",
+      "equity": 986364.64,
+      "cash": 544057.64,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-03-01",
+      "equity": 999664.54,
+      "cash": 51101.24,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-03-02",
+      "equity": 1007021.89,
+      "cash": 51101.24,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-03-04",
+      "equity": 1011315.34,
+      "cash": 51101.24,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-03-05",
+      "equity": 1008495.59,
+      "cash": 51101.24,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-03-06",
+      "equity": 992577.14,
+      "cash": 51101.24,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-03-07",
+      "equity": 994804.84,
+      "cash": 51101.24,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-03-11",
+      "equity": 989051.49,
+      "cash": 51101.24,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-03-12",
+      "equity": 957452.66,
+      "cash": 528541.16,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-03-13",
+      "equity": 950255.21,
+      "cash": 950255.21,
+      "regime": "RED"
+    },
+    {
+      "date": "2024-03-14",
+      "equity": 950635.32,
+      "cash": 950635.32,
+      "regime": "RED"
+    },
+    {
+      "date": "2024-03-15",
+      "equity": 951015.57,
+      "cash": 951015.57,
+      "regime": "RED"
+    },
+    {
+      "date": "2024-03-18",
+      "equity": 951395.98,
+      "cash": 951395.98,
+      "regime": "RED"
+    },
+    {
+      "date": "2024-03-19",
+      "equity": 951776.54,
+      "cash": 951776.54,
+      "regime": "RED"
+    },
+    {
+      "date": "2024-03-20",
+      "equity": 952157.25,
+      "cash": 952157.25,
+      "regime": "RED"
+    },
+    {
+      "date": "2024-03-21",
+      "equity": 952538.11,
+      "cash": 952538.11,
+      "regime": "RED"
+    },
+    {
+      "date": "2024-03-22",
+      "equity": 952919.12,
+      "cash": 952919.12,
+      "regime": "RED"
+    },
+    {
+      "date": "2024-03-26",
+      "equity": 953300.29,
+      "cash": 953300.29,
+      "regime": "RED"
+    },
+    {
+      "date": "2024-03-27",
+      "equity": 953681.61,
+      "cash": 953681.61,
+      "regime": "RED"
+    },
+    {
+      "date": "2024-03-28",
+      "equity": 953681.61,
+      "cash": 953681.61,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-04-01",
+      "equity": 950110.46,
+      "cash": 477205.06,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-04-02",
+      "equity": 946870.41,
+      "cash": 477205.06,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-04-03",
+      "equity": 944387.16,
+      "cash": 477205.06,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-04-04",
+      "equity": 939263.36,
+      "cash": 7628.26,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-04-05",
+      "equity": 950630.76,
+      "cash": 7628.26,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-04-08",
+      "equity": 941118.51,
+      "cash": 467811.06,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-04-09",
+      "equity": 935579.81,
+      "cash": 83.06,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-04-10",
+      "equity": 927850.06,
+      "cash": 83.06,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-04-12",
+      "equity": 909761.7,
+      "cash": 460088.1,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-04-15",
+      "equity": 902463.74,
+      "cash": 452158.94,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-04-16",
+      "equity": 914776.74,
+      "cash": 1074.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-04-18",
+      "equity": 900918.34,
+      "cash": 1074.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-04-19",
+      "equity": 885826.34,
+      "cash": 1074.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-04-22",
+      "equity": 896948.14,
+      "cash": 1074.14,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-04-23",
+      "equity": 896244.98,
+      "cash": 428690.78,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-04-24",
+      "equity": 912864.28,
+      "cash": 421.68,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-04-25",
+      "equity": 914574.58,
+      "cash": 421.68,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-04-26",
+      "equity": 912382.58,
+      "cash": 421.68,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-04-29",
+      "equity": 926293.88,
+      "cash": 421.68,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-04-30",
+      "equity": 913919.78,
+      "cash": 421.68,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-02",
+      "equity": 918752.78,
+      "cash": 421.68,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-03",
+      "equity": 932066.48,
+      "cash": 421.68,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-06",
+      "equity": 938456.48,
+      "cash": 421.68,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-07",
+      "equity": 913687.98,
+      "cash": 421.68,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-08",
+      "equity": 918369.78,
+      "cash": 421.68,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-09",
+      "equity": 916320.13,
+      "cash": 916320.13,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-05-10",
+      "equity": 912283.63,
+      "cash": 912283.63,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-05-13",
+      "equity": 950902.09,
+      "cash": 486360.29,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-05-14",
+      "equity": 968034.54,
+      "cash": 12193.04,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-05-15",
+      "equity": 992501.44,
+      "cash": 12193.04,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-05-16",
+      "equity": 1008178.44,
+      "cash": 12193.04,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-17",
+      "equity": 1026304.29,
+      "cash": 12193.04,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-18",
+      "equity": 1047377.09,
+      "cash": 12193.04,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-21",
+      "equity": 1046672.97,
+      "cash": 1046672.97,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-22",
+      "equity": 1053915.76,
+      "cash": 199.59,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-23",
+      "equity": 1051201.83,
+      "cash": 199.59,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-24",
+      "equity": 1027118.13,
+      "cash": 508278.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-27",
+      "equity": 1032130.13,
+      "cash": 1032130.13,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-28",
+      "equity": 1040456.68,
+      "cash": 2836.18,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-29",
+      "equity": 1030368.73,
+      "cash": 520513.93,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-30",
+      "equity": 1012413.73,
+      "cash": 5377.93,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-05-31",
+      "equity": 995607.23,
+      "cash": 995607.23,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-03",
+      "equity": 992204.57,
+      "cash": 472048.57,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-04",
+      "equity": 930841.38,
+      "cash": 930841.38,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-06-05",
+      "equity": 930841.38,
+      "cash": 930841.38,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-06-06",
+      "equity": 930841.38,
+      "cash": 930841.38,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-06-07",
+      "equity": 934103.88,
+      "cash": 465653.88,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-10",
+      "equity": 929997.63,
+      "cash": 929997.63,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-11",
+      "equity": 929997.63,
+      "cash": 929997.63,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-12",
+      "equity": 927848.23,
+      "cash": 3496.23,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-13",
+      "equity": 919336.43,
+      "cash": 3496.23,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-14",
+      "equity": 918469.63,
+      "cash": 3496.23,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-18",
+      "equity": 919504.73,
+      "cash": 3496.23,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-19",
+      "equity": 909623.43,
+      "cash": 3496.23,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-20",
+      "equity": 919517.93,
+      "cash": 3496.23,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-21",
+      "equity": 920811.53,
+      "cash": 3496.23,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-24",
+      "equity": 934267.83,
+      "cash": 3496.23,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-25",
+      "equity": 926886.83,
+      "cash": 3496.23,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-26",
+      "equity": 917148.42,
+      "cash": 443245.32,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-27",
+      "equity": 910605.82,
+      "cash": 1615.32,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-06-28",
+      "equity": 884383.52,
+      "cash": 441353.52,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-01",
+      "equity": 885826.92,
+      "cash": 432616.92,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-02",
+      "equity": 886358.82,
+      "cash": 1081.32,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-03",
+      "equity": 911179.42,
+      "cash": 1081.32,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-04",
+      "equity": 940928.82,
+      "cash": 515419.62,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-05",
+      "equity": 946756.17,
+      "cash": 45436.92,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-08",
+      "equity": 964945.62,
+      "cash": 45436.92,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-09",
+      "equity": 980505.27,
+      "cash": 45436.92,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-10",
+      "equity": 966173.37,
+      "cash": 45436.92,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-11",
+      "equity": 958857.72,
+      "cash": 454614.42,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-12",
+      "equity": 961587.92,
+      "cash": 17.42,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-15",
+      "equity": 987760.22,
+      "cash": 17.42,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-16",
+      "equity": 967541.67,
+      "cash": 455594.52,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-18",
+      "equity": 944882.62,
+      "cash": 27.72,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-19",
+      "equity": 926371.44,
+      "cash": 435095.49,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-22",
+      "equity": 950204.66,
+      "cash": 0.05,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-23",
+      "equity": 950540.36,
+      "cash": 0.05,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-24",
+      "equity": 969894.85,
+      "cash": 0.05,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-25",
+      "equity": 978575.62,
+      "cash": 0.05,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-26",
+      "equity": 1014840.33,
+      "cash": 0.05,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-29",
+      "equity": 1033684.47,
+      "cash": 544054.55,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-30",
+      "equity": 1069187.46,
+      "cash": 27431.08,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-07-31",
+      "equity": 1106215.68,
+      "cash": 27431.08,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-01",
+      "equity": 1141308.78,
+      "cash": 27431.08,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-02",
+      "equity": 1126591.8,
+      "cash": 27431.08,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-05",
+      "equity": 1087657.09,
+      "cash": 546689.04,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-06",
+      "equity": 1064688.51,
+      "cash": 519758.11,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-07",
+      "equity": 1117915.26,
+      "cash": 554684.06,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-08",
+      "equity": 1113181.86,
+      "cash": 1885.66,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-09",
+      "equity": 1117790.66,
+      "cash": 1885.66,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-12",
+      "equity": 1123453.06,
+      "cash": 1885.66,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-13",
+      "equity": 1115926.66,
+      "cash": 1885.66,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-14",
+      "equity": 1106729.46,
+      "cash": 1885.66,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-16",
+      "equity": 1139169.86,
+      "cash": 1885.66,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-19",
+      "equity": 1145887.86,
+      "cash": 1885.66,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-20",
+      "equity": 1143487.46,
+      "cash": 1885.66,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-21",
+      "equity": 1167809.86,
+      "cash": 1885.66,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-22",
+      "equity": 1141897.06,
+      "cash": 1885.66,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-23",
+      "equity": 1147197.66,
+      "cash": 1885.66,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-26",
+      "equity": 1142741.86,
+      "cash": 1885.66,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-27",
+      "equity": 1140608.26,
+      "cash": 1885.66,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-28",
+      "equity": 1133085.66,
+      "cash": 554684.06,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-29",
+      "equity": 1121355.11,
+      "cash": 56.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-08-30",
+      "equity": 1120600.11,
+      "cash": 56.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-02",
+      "equity": 1105123.86,
+      "cash": 522181.46,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-03",
+      "equity": 1108668.76,
+      "cash": 657.46,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-04",
+      "equity": 1130041.26,
+      "cash": 544690.86,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-05",
+      "equity": 1130915.96,
+      "cash": 26.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-06",
+      "equity": 1133795.26,
+      "cash": 26.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-09",
+      "equity": 1142551.96,
+      "cash": 26.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-10",
+      "equity": 1134360.36,
+      "cash": 26.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-11",
+      "equity": 1133515.36,
+      "cash": 26.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-12",
+      "equity": 1140400.06,
+      "cash": 26.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-13",
+      "equity": 1136384.96,
+      "cash": 26.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-16",
+      "equity": 1131681.86,
+      "cash": 26.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-17",
+      "equity": 1118826.26,
+      "cash": 26.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-18",
+      "equity": 1108000.26,
+      "cash": 26.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-19",
+      "equity": 1115307.76,
+      "cash": 26.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-20",
+      "equity": 1121607.66,
+      "cash": 26.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-23",
+      "equity": 1118914.76,
+      "cash": 26.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-24",
+      "equity": 1133588.56,
+      "cash": 26.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-25",
+      "equity": 1102954.66,
+      "cash": 26.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-26",
+      "equity": 1085666.76,
+      "cash": 521300.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-27",
+      "equity": 1059212.46,
+      "cash": 496462.86,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-09-30",
+      "equity": 1069843.41,
+      "cash": 501761.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-10-01",
+      "equity": 1098584.01,
+      "cash": 511100.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-10-03",
+      "equity": 1089415.31,
+      "cash": 2.51,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-10-04",
+      "equity": 1103017.41,
+      "cash": 2.51,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-10-07",
+      "equity": 1098954.91,
+      "cash": 1098954.91,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-10-08",
+      "equity": 1098954.91,
+      "cash": 1098954.91,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-10-09",
+      "equity": 1128782.96,
+      "cash": 1375.16,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-10-10",
+      "equity": 1126020.56,
+      "cash": 1375.16,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-10-11",
+      "equity": 1146566.86,
+      "cash": 1375.16,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-10-14",
+      "equity": 1152432.06,
+      "cash": 1375.16,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-10-15",
+      "equity": 1154107.86,
+      "cash": 1375.16,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-10-16",
+      "equity": 1173394.77,
+      "cash": 604405.52,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-10-17",
+      "equity": 1191933.87,
+      "cash": 17760.12,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-10-18",
+      "equity": 1199069.82,
+      "cash": 17760.12,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-10-21",
+      "equity": 1228455.62,
+      "cash": 17760.12,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-10-22",
+      "equity": 1231333.92,
+      "cash": 17760.12,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-10-23",
+      "equity": 1241318.22,
+      "cash": 17760.12,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-10-24",
+      "equity": 1260499.47,
+      "cash": 17760.12,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-10-25",
+      "equity": 1266918.13,
+      "cash": 17767.23,
+      "regime": "RED"
+    },
+    {
+      "date": "2024-10-28",
+      "equity": 1288632.13,
+      "cash": 17774.33,
+      "regime": "RED"
+    },
+    {
+      "date": "2024-10-29",
+      "equity": 1307573.54,
+      "cash": 17781.44,
+      "regime": "RED"
+    },
+    {
+      "date": "2024-10-30",
+      "equity": 1320867.19,
+      "cash": 17781.44,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-10-31",
+      "equity": 1352354.82,
+      "cash": 623928.22,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-01",
+      "equity": 1210573.62,
+      "cash": 623928.22,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-04",
+      "equity": 1366738.42,
+      "cash": 623928.22,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-05",
+      "equity": 1392361.82,
+      "cash": 172.67,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-06",
+      "equity": 1419845.87,
+      "cash": 172.67,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-07",
+      "equity": 1448171.97,
+      "cash": 788188.47,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-08",
+      "equity": 1461305.97,
+      "cash": 788188.47,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-11",
+      "equity": 1519266.86,
+      "cash": 832687.01,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-12",
+      "equity": 1530978.01,
+      "cash": 832687.01,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-13",
+      "equity": 1514780.63,
+      "cash": 1514780.63,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-14",
+      "equity": 1514780.63,
+      "cash": 1514780.63,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-18",
+      "equity": 1514780.63,
+      "cash": 1514780.63,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-19",
+      "equity": 1514780.63,
+      "cash": 1514780.63,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-21",
+      "equity": 1544779.57,
+      "cash": 44.69,
+      "regime": "RED"
+    },
+    {
+      "date": "2024-11-22",
+      "equity": 1575642.83,
+      "cash": 44.69,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-25",
+      "equity": 1607370.41,
+      "cash": 803753.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-26",
+      "equity": 1591397.21,
+      "cash": 803753.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-27",
+      "equity": 1601311.61,
+      "cash": 803753.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-28",
+      "equity": 1585338.41,
+      "cash": 803753.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-11-29",
+      "equity": 1580296.16,
+      "cash": 11087.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-12-02",
+      "equity": 1601773.31,
+      "cash": 11087.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-12-03",
+      "equity": 1617746.51,
+      "cash": 11087.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-12-04",
+      "equity": 1617677.66,
+      "cash": 11087.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-12-05",
+      "equity": 1617797.54,
+      "cash": 11087.21,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-12-06",
+      "equity": 1649797.4,
+      "cash": 11087.21,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-12-09",
+      "equity": 1662896.72,
+      "cash": 11087.21,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-12-10",
+      "equity": 1629779.87,
+      "cash": 11087.21,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-12-11",
+      "equity": 1629109.19,
+      "cash": 11087.21,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-12-12",
+      "equity": 1598792.51,
+      "cash": 11087.21,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-12-13",
+      "equity": 1630430.3,
+      "cash": 11087.21,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-12-16",
+      "equity": 1654596.65,
+      "cash": 11087.21,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2024-12-17",
+      "equity": 1681154.93,
+      "cash": 902832.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-12-18",
+      "equity": 1673078.77,
+      "cash": 910232.11,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-12-19",
+      "equity": 1646509.57,
+      "cash": 1646509.57,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-12-20",
+      "equity": 1639674.46,
+      "cash": 778069.96,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-12-23",
+      "equity": 1657037.41,
+      "cash": 869470.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-12-24",
+      "equity": 1633293.01,
+      "cash": 853007.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-12-26",
+      "equity": 1653121.21,
+      "cash": 36508.36,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-12-27",
+      "equity": 1663986.91,
+      "cash": 36508.36,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-12-30",
+      "equity": 1667825.86,
+      "cash": 36508.36,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2024-12-31",
+      "equity": 1669464.91,
+      "cash": 36508.36,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-01-01",
+      "equity": 1649211.16,
+      "cash": 36508.36,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-01-02",
+      "equity": 1655101.96,
+      "cash": 36508.36,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-01-03",
+      "equity": 1674441.11,
+      "cash": 857734.31,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-01-06",
+      "equity": 1663357.96,
+      "cash": 858077.41,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-07",
+      "equity": 1675116.61,
+      "cash": 858077.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-01-08",
+      "equity": 1630852.86,
+      "cash": 795254.11,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-09",
+      "equity": 1634597.47,
+      "cash": 795572.22,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-10",
+      "equity": 1616870.94,
+      "cash": 795890.44,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-13",
+      "equity": 1585954.57,
+      "cash": 1585954.57,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-14",
+      "equity": 1586588.95,
+      "cash": 1586588.95,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-15",
+      "equity": 1587223.59,
+      "cash": 1587223.59,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-16",
+      "equity": 1587858.48,
+      "cash": 1587858.48,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-17",
+      "equity": 1588493.62,
+      "cash": 1588493.62,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-20",
+      "equity": 1589129.02,
+      "cash": 1589129.02,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-21",
+      "equity": 1589764.67,
+      "cash": 1589764.67,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-22",
+      "equity": 1590400.58,
+      "cash": 1590400.58,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-23",
+      "equity": 1591036.74,
+      "cash": 1591036.74,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-24",
+      "equity": 1591673.15,
+      "cash": 1591673.15,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-27",
+      "equity": 1592309.82,
+      "cash": 1592309.82,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-28",
+      "equity": 1592946.75,
+      "cash": 1592946.75,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-29",
+      "equity": 1593583.92,
+      "cash": 1593583.92,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-30",
+      "equity": 1594221.36,
+      "cash": 1594221.36,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-01-31",
+      "equity": 1594859.05,
+      "cash": 1594859.05,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-01",
+      "equity": 1595496.99,
+      "cash": 1595496.99,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-03",
+      "equity": 1596135.19,
+      "cash": 1596135.19,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-04",
+      "equity": 1596773.64,
+      "cash": 1596773.64,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-05",
+      "equity": 1597412.35,
+      "cash": 1597412.35,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-06",
+      "equity": 1598051.32,
+      "cash": 1598051.32,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-07",
+      "equity": 1598690.54,
+      "cash": 1598690.54,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-10",
+      "equity": 1599330.01,
+      "cash": 1599330.01,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-11",
+      "equity": 1599969.75,
+      "cash": 1599969.75,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-12",
+      "equity": 1600609.73,
+      "cash": 1600609.73,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-13",
+      "equity": 1601249.98,
+      "cash": 1601249.98,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-14",
+      "equity": 1601890.48,
+      "cash": 1601890.48,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-17",
+      "equity": 1602531.23,
+      "cash": 1602531.23,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-18",
+      "equity": 1603172.25,
+      "cash": 1603172.25,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-19",
+      "equity": 1603813.52,
+      "cash": 1603813.52,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-20",
+      "equity": 1604455.04,
+      "cash": 1604455.04,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-21",
+      "equity": 1605096.82,
+      "cash": 1605096.82,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-24",
+      "equity": 1605738.86,
+      "cash": 1605738.86,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-25",
+      "equity": 1606381.16,
+      "cash": 1606381.16,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-27",
+      "equity": 1607023.71,
+      "cash": 1607023.71,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-02-28",
+      "equity": 1607666.52,
+      "cash": 1607666.52,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-03",
+      "equity": 1608309.59,
+      "cash": 1608309.59,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-04",
+      "equity": 1608952.91,
+      "cash": 1608952.91,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-05",
+      "equity": 1609596.49,
+      "cash": 1609596.49,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-06",
+      "equity": 1610240.33,
+      "cash": 1610240.33,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-07",
+      "equity": 1610884.43,
+      "cash": 1610884.43,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-10",
+      "equity": 1611528.78,
+      "cash": 1611528.78,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-11",
+      "equity": 1612173.39,
+      "cash": 1612173.39,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-12",
+      "equity": 1612818.26,
+      "cash": 1612818.26,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-13",
+      "equity": 1613463.39,
+      "cash": 1613463.39,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-17",
+      "equity": 1614108.77,
+      "cash": 1614108.77,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-18",
+      "equity": 1614754.42,
+      "cash": 1614754.42,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-19",
+      "equity": 1615400.32,
+      "cash": 1615400.32,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-20",
+      "equity": 1616046.48,
+      "cash": 1616046.48,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-21",
+      "equity": 1616692.9,
+      "cash": 1616692.9,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-24",
+      "equity": 1617339.57,
+      "cash": 1617339.57,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-25",
+      "equity": 1617986.51,
+      "cash": 1617986.51,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-26",
+      "equity": 1618633.7,
+      "cash": 1618633.7,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-27",
+      "equity": 1619281.16,
+      "cash": 1619281.16,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-03-28",
+      "equity": 1619928.87,
+      "cash": 1619928.87,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-04-01",
+      "equity": 1620576.84,
+      "cash": 1620576.84,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-04-02",
+      "equity": 1621225.07,
+      "cash": 1621225.07,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-04-03",
+      "equity": 1621873.56,
+      "cash": 1621873.56,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-04-04",
+      "equity": 1622522.31,
+      "cash": 1622522.31,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-04-07",
+      "equity": 1623171.32,
+      "cash": 1623171.32,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-04-08",
+      "equity": 1623820.59,
+      "cash": 1623820.59,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-04-09",
+      "equity": 1624470.12,
+      "cash": 1624470.12,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-04-11",
+      "equity": 1625119.91,
+      "cash": 1625119.91,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-04-15",
+      "equity": 1625119.91,
+      "cash": 1625119.91,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-04-16",
+      "equity": 1616669.91,
+      "cash": 815869.91,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-04-17",
+      "equity": 1624180.96,
+      "cash": 818180.96,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-04-21",
+      "equity": 1625945.84,
+      "cash": 6135.44,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-04-22",
+      "equity": 1603814.38,
+      "cash": 809795.44,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-04-23",
+      "equity": 1597494.92,
+      "cash": 7903.94,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-04-24",
+      "equity": 1614204.18,
+      "cash": 811360.88,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-04-25",
+      "equity": 1593814.78,
+      "cash": 791923.28,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-04-26",
+      "equity": 1593814.78,
+      "cash": 423.28,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-04-28",
+      "equity": 1612818.48,
+      "cash": 423.28,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-04-29",
+      "equity": 1645001.33,
+      "cash": 423.28,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-04-30",
+      "equity": 1666024.71,
+      "cash": 850399.71,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-02",
+      "equity": 1672599.41,
+      "cash": 858036.91,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-05",
+      "equity": 1652060.41,
+      "cash": 23398.21,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-06",
+      "equity": 1664049.31,
+      "cash": 870799.31,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-07",
+      "equity": 1689101.21,
+      "cash": 39482.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-08",
+      "equity": 1662613.91,
+      "cash": 39482.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-05-09",
+      "equity": 1655831.11,
+      "cash": 39482.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-05-12",
+      "equity": 1672164.51,
+      "cash": 39482.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-13",
+      "equity": 1667712.91,
+      "cash": 39482.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-14",
+      "equity": 1699673.71,
+      "cash": 39482.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-15",
+      "equity": 1717576.91,
+      "cash": 39482.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-16",
+      "equity": 1708122.61,
+      "cash": 39482.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-19",
+      "equity": 1720156.51,
+      "cash": 39482.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-20",
+      "equity": 1700190.31,
+      "cash": 39482.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-21",
+      "equity": 1718827.41,
+      "cash": 39482.81,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-22",
+      "equity": 1715342.01,
+      "cash": 831592.01,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-23",
+      "equity": 1852538.38,
+      "cash": 1852538.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-26",
+      "equity": 1827236.63,
+      "cash": 60.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-27",
+      "equity": 1847503.38,
+      "cash": 912690.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-28",
+      "equity": 1875804.38,
+      "cash": 1735.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-29",
+      "equity": 1967814.88,
+      "cash": 963569.88,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-05-30",
+      "equity": 2001376.48,
+      "cash": 216.28,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-02",
+      "equity": 1954552.58,
+      "cash": 948645.08,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-03",
+      "equity": 1981398.08,
+      "cash": 27.08,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-04",
+      "equity": 2012384.83,
+      "cash": 1055120.83,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-05",
+      "equity": 2000735.83,
+      "cash": 52412.83,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-06",
+      "equity": 2030666.83,
+      "cash": 52412.83,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-09",
+      "equity": 2058956.83,
+      "cash": 52412.83,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-10",
+      "equity": 2058581.83,
+      "cash": 52412.83,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-11",
+      "equity": 2068208.83,
+      "cash": 52412.83,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-12",
+      "equity": 2062382.83,
+      "cash": 52412.83,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-13",
+      "equity": 2042813.83,
+      "cash": 52412.83,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-16",
+      "equity": 2052803.83,
+      "cash": 52412.83,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-17",
+      "equity": 2025963.64,
+      "cash": 1005405.64,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-18",
+      "equity": 2041474.47,
+      "cash": 1016117.28,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-19",
+      "equity": 2068274.52,
+      "cash": 97.83,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-20",
+      "equity": 2043888.9,
+      "cash": 977533.74,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-23",
+      "equity": 2052960.12,
+      "cash": 183.24,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-24",
+      "equity": 2068019.46,
+      "cash": 183.24,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-25",
+      "equity": 2059427.04,
+      "cash": 972266.94,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-26",
+      "equity": 2065907.36,
+      "cash": 957126.44,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-27",
+      "equity": 2070789.92,
+      "cash": 939980.24,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-06-30",
+      "equity": 2096658.62,
+      "cash": 1271.04,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-01",
+      "equity": 2109726.87,
+      "cash": 1271.04,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-02",
+      "equity": 2101739.22,
+      "cash": 1161371.22,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-03",
+      "equity": 2108332.42,
+      "cash": 110577.72,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-04",
+      "equity": 2113022.17,
+      "cash": 110577.72,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-07",
+      "equity": 2122386.47,
+      "cash": 110577.72,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-08",
+      "equity": 2146648.27,
+      "cash": 110577.72,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-09",
+      "equity": 2161772.54,
+      "cash": 1002298.84,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-10",
+      "equity": 2193870.24,
+      "cash": 58.52,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-11",
+      "equity": 2209103.92,
+      "cash": 58.52,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-14",
+      "equity": 2212938.71,
+      "cash": 58.52,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-15",
+      "equity": 2217710.76,
+      "cash": 963305.56,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-16",
+      "equity": 2255329.36,
+      "cash": 1617.56,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-17",
+      "equity": 2309254.66,
+      "cash": 1617.56,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-18",
+      "equity": 2349675.31,
+      "cash": 1617.56,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-21",
+      "equity": 2382014.66,
+      "cash": 1617.56,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-22",
+      "equity": 2403397.36,
+      "cash": 1617.56,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-23",
+      "equity": 2432168.76,
+      "cash": 1413150.76,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-24",
+      "equity": 2450596.76,
+      "cash": 197124.36,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-07-25",
+      "equity": 2378151.16,
+      "cash": 1367687.16,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-07-28",
+      "equity": 2380335.16,
+      "cash": 178658.16,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-07-29",
+      "equity": 2382819.16,
+      "cash": 178658.16,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-07-30",
+      "equity": 2414060.46,
+      "cash": 178658.16,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-07-31",
+      "equity": 2425999.26,
+      "cash": 178658.16,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-01",
+      "equity": 2414818.16,
+      "cash": 178658.16,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-04",
+      "equity": 2403273.56,
+      "cash": 178658.16,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-05",
+      "equity": 2377559.71,
+      "cash": 1211326.16,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-06",
+      "equity": 2365520.06,
+      "cash": 22642.16,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-07",
+      "equity": 2320576.96,
+      "cash": 1142826.61,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-08",
+      "equity": 2353788.31,
+      "cash": 247.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-11",
+      "equity": 2353516.51,
+      "cash": 247.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-12",
+      "equity": 2377233.31,
+      "cash": 247.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-13",
+      "equity": 2403071.41,
+      "cash": 247.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-14",
+      "equity": 2438880.61,
+      "cash": 247.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-18",
+      "equity": 2440365.61,
+      "cash": 247.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-19",
+      "equity": 2443070.11,
+      "cash": 247.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-20",
+      "equity": 2451208.81,
+      "cash": 1116040.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-21",
+      "equity": 2500004.31,
+      "cash": 68.71,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-22",
+      "equity": 2549874.01,
+      "cash": 68.71,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-25",
+      "equity": 2600598.31,
+      "cash": 68.71,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-26",
+      "equity": 2652604.51,
+      "cash": 68.71,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-28",
+      "equity": 2705465.31,
+      "cash": 68.71,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-08-29",
+      "equity": 2732428.39,
+      "cash": 1229266.39,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-09-01",
+      "equity": 2874034.24,
+      "cash": 2874034.24,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-09-02",
+      "equity": 2907032.49,
+      "cash": 22.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-09-03",
+      "equity": 2993286.74,
+      "cash": 22.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-09-04",
+      "equity": 3033780.74,
+      "cash": 22.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-09-05",
+      "equity": 3069465.24,
+      "cash": 22.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-09-08",
+      "equity": 3053083.29,
+      "cash": 22.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-09-09",
+      "equity": 3133803.19,
+      "cash": 22.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-09-10",
+      "equity": 3131617.39,
+      "cash": 22.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-09-11",
+      "equity": 3143257.04,
+      "cash": 22.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-09-12",
+      "equity": 3177043.69,
+      "cash": 22.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-09-15",
+      "equity": 3218433.99,
+      "cash": 22.14,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-09-16",
+      "equity": 3253255.29,
+      "cash": 22.14,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-09-17",
+      "equity": 3296398.14,
+      "cash": 22.14,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-09-18",
+      "equity": 3341826.09,
+      "cash": 22.14,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-09-19",
+      "equity": 3380206.44,
+      "cash": 22.14,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-09-22",
+      "equity": 3428713.84,
+      "cash": 1885468.14,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-09-23",
+      "equity": 3443079.54,
+      "cash": 171193.14,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-09-24",
+      "equity": 3405163.24,
+      "cash": 171193.14,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-09-25",
+      "equity": 3355550.84,
+      "cash": 171193.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-09-26",
+      "equity": 3281346.84,
+      "cash": 171193.14,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-09-29",
+      "equity": 3221775.86,
+      "cash": 1796265.76,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-09-30",
+      "equity": 3175626.91,
+      "cash": 1763996.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-10-01",
+      "equity": 3274822.81,
+      "cash": 176971.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-10-03",
+      "equity": 3332015.61,
+      "cash": 176971.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-10-06",
+      "equity": 3328801.31,
+      "cash": 176971.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-10-07",
+      "equity": 3364839.31,
+      "cash": 176971.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-10-08",
+      "equity": 3312620.11,
+      "cash": 176971.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-10-09",
+      "equity": 3241881.61,
+      "cash": 176971.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-10-10",
+      "equity": 3232658.41,
+      "cash": 176971.21,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-10-13",
+      "equity": 3226077.71,
+      "cash": 1613967.71,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-10-14",
+      "equity": 3229702.71,
+      "cash": 1613967.71,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-10-15",
+      "equity": 3252077.11,
+      "cash": 214.91,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-10-16",
+      "equity": 3293877.91,
+      "cash": 214.91,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-10-17",
+      "equity": 3269769.51,
+      "cash": 214.91,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-10-20",
+      "equity": 3251019.31,
+      "cash": 214.91,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-10-21",
+      "equity": 3251452.71,
+      "cash": 214.91,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-10-23",
+      "equity": 3234632.71,
+      "cash": 214.91,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-10-24",
+      "equity": 3189639.91,
+      "cash": 214.91,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-10-27",
+      "equity": 3188726.31,
+      "cash": 1551241.31,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-10-28",
+      "equity": 3201565.57,
+      "cash": 77.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-10-29",
+      "equity": 3179763.45,
+      "cash": 77.41,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-10-30",
+      "equity": 3162854.99,
+      "cash": 77.41,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-10-31",
+      "equity": 3195792.35,
+      "cash": 77.41,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-11-03",
+      "equity": 3225768.03,
+      "cash": 77.41,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2025-11-04",
+      "equity": 3152744.57,
+      "cash": 77.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-06",
+      "equity": 3149434.91,
+      "cash": 77.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-07",
+      "equity": 3150890.77,
+      "cash": 77.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-10",
+      "equity": 3173329.79,
+      "cash": 77.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-11",
+      "equity": 3184784.43,
+      "cash": 77.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-12",
+      "equity": 3227767.19,
+      "cash": 77.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-13",
+      "equity": 3204659.35,
+      "cash": 77.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-14",
+      "equity": 3229263.81,
+      "cash": 77.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-17",
+      "equity": 3329957.65,
+      "cash": 77.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-18",
+      "equity": 3326990.11,
+      "cash": 77.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-19",
+      "equity": 3369056.97,
+      "cash": 77.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-20",
+      "equity": 3390547.09,
+      "cash": 77.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-21",
+      "equity": 3361332.75,
+      "cash": 77.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-24",
+      "equity": 3351746.97,
+      "cash": 77.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-25",
+      "equity": 3398929.13,
+      "cash": 1757512.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-26",
+      "equity": 3424579.57,
+      "cash": 58132.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-27",
+      "equity": 3422323.65,
+      "cash": 58132.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-11-28",
+      "equity": 3426051.47,
+      "cash": 58132.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-01",
+      "equity": 3466804.15,
+      "cash": 58132.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-02",
+      "equity": 3451501.19,
+      "cash": 58132.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-03",
+      "equity": 3407863.79,
+      "cash": 58132.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-04",
+      "equity": 3401767.03,
+      "cash": 58132.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-05",
+      "equity": 3437512.27,
+      "cash": 58132.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-08",
+      "equity": 3396102.09,
+      "cash": 58155.47,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-12-09",
+      "equity": 3408763.83,
+      "cash": 58178.73,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-12-10",
+      "equity": 3393030.74,
+      "cash": 58202.0,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-12-11",
+      "equity": 3412079.06,
+      "cash": 58202.0,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-12",
+      "equity": 3454451.74,
+      "cash": 58202.0,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-15",
+      "equity": 3483350.62,
+      "cash": 58202.0,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-16",
+      "equity": 3448685.6,
+      "cash": 58202.0,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-17",
+      "equity": 3477268.7,
+      "cash": 58225.28,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-12-18",
+      "equity": 3476394.95,
+      "cash": 58248.57,
+      "regime": "RED"
+    },
+    {
+      "date": "2025-12-19",
+      "equity": 3481951.93,
+      "cash": 58248.57,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-22",
+      "equity": 3512514.33,
+      "cash": 58248.57,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-23",
+      "equity": 3552700.59,
+      "cash": 1939068.57,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-24",
+      "equity": 3584315.88,
+      "cash": 162818.67,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-26",
+      "equity": 3611229.27,
+      "cash": 162818.67,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-29",
+      "equity": 3649205.11,
+      "cash": 162818.67,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-30",
+      "equity": 3718311.99,
+      "cash": 162818.67,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2025-12-31",
+      "equity": 3697876.59,
+      "cash": 2046878.67,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-01-01",
+      "equity": 3740098.75,
+      "cash": 198151.82,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-01-02",
+      "equity": 3728151.18,
+      "cash": 198151.82,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-01-05",
+      "equity": 3670299.07,
+      "cash": 1976953.13,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-01-06",
+      "equity": 3685650.51,
+      "cash": 141925.13,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-01-07",
+      "equity": 3689555.97,
+      "cash": 141925.13,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-01-08",
+      "equity": 3604932.73,
+      "cash": 1945503.53,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-01-09",
+      "equity": 3615347.74,
+      "cash": 143200.64,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-01-12",
+      "equity": 3589870.58,
+      "cash": 143257.92,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-01-13",
+      "equity": 3570334.45,
+      "cash": 143315.22,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-01-14",
+      "equity": 3579383.03,
+      "cash": 3579383.03,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-01-16",
+      "equity": 3580814.79,
+      "cash": 3580814.79,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-01-19",
+      "equity": 3582247.11,
+      "cash": 3582247.11,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-01-20",
+      "equity": 3583680.01,
+      "cash": 3583680.01,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-01-21",
+      "equity": 3585113.48,
+      "cash": 3585113.48,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-01-22",
+      "equity": 3586547.53,
+      "cash": 3586547.53,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-01-23",
+      "equity": 3587982.15,
+      "cash": 3587982.15,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-01-27",
+      "equity": 3589417.34,
+      "cash": 3589417.34,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-01-28",
+      "equity": 3590853.11,
+      "cash": 3590853.11,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-01-29",
+      "equity": 3592289.45,
+      "cash": 3592289.45,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-01-30",
+      "equity": 3593726.36,
+      "cash": 3593726.36,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-02-01",
+      "equity": 3595163.85,
+      "cash": 3595163.85,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-02-02",
+      "equity": 3596601.92,
+      "cash": 3596601.92,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-02-03",
+      "equity": 3596601.92,
+      "cash": 3596601.92,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-04",
+      "equity": 3586316.02,
+      "cash": 84.82,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-05",
+      "equity": 3534184.7,
+      "cash": 1722984.2,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-06",
+      "equity": 3541638.2,
+      "cash": 1722984.2,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-09",
+      "equity": 3553898.3,
+      "cash": 1804206.5,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-10",
+      "equity": 3555839.4,
+      "cash": 27326.5,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-11",
+      "equity": 3539304.9,
+      "cash": 27326.5,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-12",
+      "equity": 3558503.2,
+      "cash": 1778822.5,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-13",
+      "equity": 3563142.2,
+      "cash": 2.5,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-16",
+      "equity": 3515046.7,
+      "cash": 2.5,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-17",
+      "equity": 3520606.0,
+      "cash": 2.5,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-18",
+      "equity": 3626026.2,
+      "cash": 1869052.5,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-19",
+      "equity": 3635244.35,
+      "cash": 56071.35,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-20",
+      "equity": 3672531.1,
+      "cash": 56071.35,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-23",
+      "equity": 3668846.1,
+      "cash": 56071.35,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-24",
+      "equity": 3704778.0,
+      "cash": 1985623.2,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-25",
+      "equity": 3657932.34,
+      "cash": 1911372.54,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-26",
+      "equity": 3626830.24,
+      "cash": 82683.54,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-02-27",
+      "equity": 3618307.41,
+      "cash": 82716.61,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-02",
+      "equity": 3556887.95,
+      "cash": 1816827.05,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-04",
+      "equity": 3477278.88,
+      "cash": 1817553.78,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-05",
+      "equity": 3510578.71,
+      "cash": 1818280.81,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-06",
+      "equity": 3504650.52,
+      "cash": 1819008.12,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-09",
+      "equity": 3454137.51,
+      "cash": 3454137.51,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-10",
+      "equity": 3455519.17,
+      "cash": 3455519.17,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-11",
+      "equity": 3456901.38,
+      "cash": 3456901.38,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-12",
+      "equity": 3458284.14,
+      "cash": 3458284.14,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-13",
+      "equity": 3459667.45,
+      "cash": 3459667.45,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-16",
+      "equity": 3461051.32,
+      "cash": 3461051.32,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-17",
+      "equity": 3462435.74,
+      "cash": 3462435.74,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-18",
+      "equity": 3463820.71,
+      "cash": 3463820.71,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-19",
+      "equity": 3465206.24,
+      "cash": 3465206.24,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-20",
+      "equity": 3466592.32,
+      "cash": 3466592.32,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-23",
+      "equity": 3467978.96,
+      "cash": 3467978.96,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-24",
+      "equity": 3469366.15,
+      "cash": 3469366.15,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-25",
+      "equity": 3470753.9,
+      "cash": 3470753.9,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-27",
+      "equity": 3472142.2,
+      "cash": 3472142.2,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-03-30",
+      "equity": 3473531.06,
+      "cash": 3473531.06,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-04-01",
+      "equity": 3474920.47,
+      "cash": 3474920.47,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-04-02",
+      "equity": 3476310.44,
+      "cash": 3476310.44,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-04-06",
+      "equity": 3477700.96,
+      "cash": 3477700.96,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-04-07",
+      "equity": 3479092.04,
+      "cash": 3479092.04,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-04-08",
+      "equity": 3479092.04,
+      "cash": 3479092.04,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-04-09",
+      "equity": 3479092.04,
+      "cash": 3479092.04,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-04-10",
+      "equity": 3479092.04,
+      "cash": 3479092.04,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-04-13",
+      "equity": 3468039.04,
+      "cash": 1767883.54,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-04-15",
+      "equity": 3529334.04,
+      "cash": 33957.04,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-04-16",
+      "equity": 3500701.54,
+      "cash": 33957.04,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-04-17",
+      "equity": 3525091.54,
+      "cash": 33957.04,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-04-20",
+      "equity": 3527000.54,
+      "cash": 33957.04,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-04-21",
+      "equity": 3562886.04,
+      "cash": 33957.04,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-04-22",
+      "equity": 3505515.54,
+      "cash": 33957.04,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-04-23",
+      "equity": 3481042.04,
+      "cash": 33957.04,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-04-24",
+      "equity": 3401987.44,
+      "cash": 1684643.44,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-04-27",
+      "equity": 3415882.24,
+      "cash": 1691905.24,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-04-28",
+      "equity": 3477142.24,
+      "cash": 25.24,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-04-29",
+      "equity": 3482161.24,
+      "cash": 25.24,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-04-30",
+      "equity": 3444509.74,
+      "cash": 25.24,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-05-04",
+      "equity": 3448984.24,
+      "cash": 25.24,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-05-05",
+      "equity": 3421673.74,
+      "cash": 25.24,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-05-06",
+      "equity": 3367741.24,
+      "cash": 25.24,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-05-07",
+      "equity": 3492142.24,
+      "cash": 25.24,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-05-08",
+      "equity": 3471667.24,
+      "cash": 25.24,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-05-11",
+      "equity": 3571255.24,
+      "cash": 1876825.24,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-05-12",
+      "equity": 3591954.84,
+      "cash": 91345.04,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-05-13",
+      "equity": 3659093.7,
+      "cash": 91345.04,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-05-14",
+      "equity": 3698388.6,
+      "cash": 91345.04,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-05-15",
+      "equity": 3659384.5,
+      "cash": 1854304.0,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-05-18",
+      "equity": 3580445.1,
+      "cash": 24869.0,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-05-19",
+      "equity": 3545184.21,
+      "cash": 1757289.21,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-05-20",
+      "equity": 3561494.91,
+      "cash": 928.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-05-21",
+      "equity": 3580622.61,
+      "cash": 928.41,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-05-22",
+      "equity": 3464058.53,
+      "cash": 1715358.53,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-05-25",
+      "equity": 3432711.63,
+      "cash": 219.83,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-05-26",
+      "equity": 3387066.62,
+      "cash": 1653441.62,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-05-27",
+      "equity": 3323969.54,
+      "cash": 95.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-05-29",
+      "equity": 3297915.53,
+      "cash": 1640270.46,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-06-01",
+      "equity": 3293386.15,
+      "cash": 221.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-06-02",
+      "equity": 3370400.61,
+      "cash": 221.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-06-03",
+      "equity": 3347931.18,
+      "cash": 221.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-06-04",
+      "equity": 3328907.82,
+      "cash": 221.81,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-06-05",
+      "equity": 3344845.27,
+      "cash": 3344845.27,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-06-08",
+      "equity": 3256016.29,
+      "cash": 3256016.29,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-06-09",
+      "equity": 3163763.65,
+      "cash": 1542407.25,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-06-10",
+      "equity": 3108050.45,
+      "cash": 279.85,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-06-11",
+      "equity": 3055328.16,
+      "cash": 3055328.16,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-06-12",
+      "equity": 3055328.16,
+      "cash": 3055328.16,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-06-15",
+      "equity": 2998411.26,
+      "cash": 1496461.26,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-06-16",
+      "equity": 3007355.71,
+      "cash": 1510824.51,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-06-17",
+      "equity": 3132850.61,
+      "cash": 7679.31,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-06-18",
+      "equity": 3217318.41,
+      "cash": 1513223.61,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-06-19",
+      "equity": 3265448.28,
+      "cash": 1755929.53,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-06-22",
+      "equity": 3265760.78,
+      "cash": 123830.23,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-06-23",
+      "equity": 3247476.73,
+      "cash": 1603161.48,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-06-24",
+      "equity": 3219076.83,
+      "cash": 279.68,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-06-25",
+      "equity": 3176879.03,
+      "cash": 279.68,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-06-29",
+      "equity": 3237227.68,
+      "cash": 1631495.48,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-06-30",
+      "equity": 3273214.98,
+      "cash": 12909.48,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-01",
+      "equity": 3260367.83,
+      "cash": 12909.48,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-02",
+      "equity": 3260868.83,
+      "cash": 12909.48,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-03",
+      "equity": 3250709.03,
+      "cash": 12909.48,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-06",
+      "equity": 3249435.13,
+      "cash": 12909.48,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-07",
+      "equity": 3256769.43,
+      "cash": 12909.48,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-08",
+      "equity": 3378929.58,
+      "cash": 3378929.58,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-07-09",
+      "equity": 3426241.01,
+      "cash": 4033.11,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-07-10",
+      "equity": 3527996.6,
+      "cash": 4033.11,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-13",
+      "equity": 3639039.74,
+      "cash": 4033.11,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-14",
+      "equity": 3538264.98,
+      "cash": 1693393.98,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-15",
+      "equity": 3569790.28,
+      "cash": 1135.98,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-16",
+      "equity": 3458134.98,
+      "cash": 1135.98,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-17",
+      "equity": 3372903.58,
+      "cash": 1686671.58,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-20",
+      "equity": 3393165.18,
+      "cash": 391.98,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-21",
+      "equity": 3444828.18,
+      "cash": 391.98,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-22",
+      "equity": 3485802.98,
+      "cash": 391.98,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-07-23",
+      "equity": 3624727.18,
+      "cash": 391.98,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-07-24",
+      "equity": 3597623.18,
+      "cash": 391.98,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-07-27",
+      "equity": 3667774.98,
+      "cash": 391.98,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-28",
+      "equity": 3642389.18,
+      "cash": 1925043.98,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-07-29",
+      "equity": 3633331.93,
+      "cash": 104027.73,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-07-30",
+      "equity": 3680636.03,
+      "cash": 1963776.23,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-07-31",
+      "equity": 3677912.68,
+      "cash": 1927074.88,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-03",
+      "equity": 3695376.33,
+      "cash": 88200.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-04",
+      "equity": 3719182.33,
+      "cash": 88200.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-05",
+      "equity": 3701105.18,
+      "cash": 88200.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-06",
+      "equity": 3730789.23,
+      "cash": 88200.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-07",
+      "equity": 3741361.23,
+      "cash": 1937574.38,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-10",
+      "equity": 3667131.35,
+      "cash": 1859824.0,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-11",
+      "equity": 3679101.05,
+      "cash": 26283.2,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-12",
+      "equity": 3658916.85,
+      "cash": 26283.2,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-13",
+      "equity": 3676167.3,
+      "cash": 26283.2,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-14",
+      "equity": 3660794.45,
+      "cash": 26283.2,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-17",
+      "equity": 3668626.4,
+      "cash": 26283.2,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-18",
+      "equity": 3642722.55,
+      "cash": 26283.2,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-19",
+      "equity": 3688254.35,
+      "cash": 26283.2,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-20",
+      "equity": 3666544.6,
+      "cash": 26283.2,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-21",
+      "equity": 3649411.5,
+      "cash": 26283.2,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-24",
+      "equity": 3687958.65,
+      "cash": 26283.2,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-25",
+      "equity": 3602471.5,
+      "cash": 1768930.7,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-26",
+      "equity": 3622169.1,
+      "cash": 1639.3,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-27",
+      "equity": 3662321.9,
+      "cash": 1639.3,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-28",
+      "equity": 3670939.6,
+      "cash": 1639.3,
+      "regime": "GREEN"
+    },
+    {
+      "date": "2026-08-31",
+      "equity": 3702809.3,
+      "cash": 1639.3,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-09-01",
+      "equity": 3598115.3,
+      "cash": 1639.3,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-09-02",
+      "equity": 3600388.1,
+      "cash": 1639.3,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-09-03",
+      "equity": 3604649.6,
+      "cash": 1639.3,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-09-04",
+      "equity": 3577660.1,
+      "cash": 1639.3,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-09-07",
+      "equity": 3685248.8,
+      "cash": 1639.3,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-09-08",
+      "equity": 3678894.4,
+      "cash": 1639.3,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-09-09",
+      "equity": 3669519.1,
+      "cash": 1639.3,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-09-10",
+      "equity": 3677095.1,
+      "cash": 1639.3,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-09-11",
+      "equity": 3699823.1,
+      "cash": 1639.3,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-09-15",
+      "equity": 3751497.8,
+      "cash": 1639.3,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-09-16",
+      "equity": 3639688.6,
+      "cash": 1639.3,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-09-17",
+      "equity": 3680030.8,
+      "cash": 1639.3,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-09-18",
+      "equity": 3685618.1,
+      "cash": 1639.3,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-09-21",
+      "equity": 3856005.6,
+      "cash": 1639.3,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-09-22",
+      "equity": 3735335.6,
+      "cash": 1639.3,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-09-23",
+      "equity": 3761378.1,
+      "cash": 1639.3,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-09-24",
+      "equity": 3781663.34,
+      "cash": 1948122.54,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-09-25",
+      "equity": 3781663.34,
+      "cash": 1948122.54,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-09-28",
+      "equity": 3893458.09,
+      "cash": 57344.53,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-09-29",
+      "equity": 3963639.94,
+      "cash": 57367.46,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-09-30",
+      "equity": 4004345.95,
+      "cash": 57390.41,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-10-01",
+      "equity": 4007892.33,
+      "cash": 57413.37,
+      "regime": "RED"
+    },
+    {
+      "date": "2026-10-05",
+      "equity": 4035012.86,
+      "cash": 2156033.12,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-10-06",
+      "equity": 3982297.52,
+      "cash": 138806.72,
+      "regime": "YELLOW"
+    },
+    {
+      "date": "2026-10-07",
+      "equity": 3920274.92,
+      "cash": 2046614.72,
+      "regime": "YELLOW"
+    }
+  ]
+}

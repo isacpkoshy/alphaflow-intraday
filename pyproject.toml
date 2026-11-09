@@ -1,0 +1,9 @@
+[project]
+name = "alphaflow-intraday"
+version = "1.0.0"
+description = "Dual-Engine Automated Intraday Trading Platform for NSE Cash Stocks (MIS) & Index F&O (Nifty 50)"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+alphaflow = "src.api.main:run_server"

@@ -1,0 +1,190 @@
+{
+  "architecture": "3_tranche_pyramid",
+  "sizing_mode": "fixed_slot",
+  "initial_capital": 300000.0,
+  "final_equity": 991336.64,
+  "total_net_profit": 691336.64,
+  "total_return_pct": 230.4,
+  "cagr_pct": 27.0,
+  "max_drawdown_pct": 21.6,
+  "win_rate_pct": 61.5,
+  "profit_factor": 1.76,
+  "avg_r": 1.36,
+  "avg_holding_days": 12.9,
+  "total_trades": 161,
+  "yearly": {
+    "2022": {
+      "trades": 30,
+      "wins": 22,
+      "win_rate": 73.3,
+      "net_pnl": 167533.31
+    },
+    "2023": {
+      "trades": 53,
+      "wins": 34,
+      "win_rate": 64.2,
+      "net_pnl": 233006.71
+    },
+    "2024": {
+      "trades": 51,
+      "wins": 30,
+      "win_rate": 58.8,
+      "net_pnl": 314231.51
+    },
+    "2025": {
+      "trades": 23,
+      "wins": 12,
+      "win_rate": 52.2,
+      "net_pnl": 114414.89
+    },
+    "2026": {
+      "trades": 4,
+      "wins": 1,
+      "win_rate": 25.0,
+      "net_pnl": -70853.75
+    }
+  },
+  "top_winners": [
+    {
+      "symbol": "KHAZANCHI",
+      "entry_date": "2024-11-06",
+      "exit_date": "2024-12-17",
+      "entry": 552.9,
+      "exit": 637.18,
+      "shares": 678,
+      "cost": 374866.2,
+      "net_pnl": 56604.08,
+      "r_mult": 3.48,
+      "reason": "21_EMA Tranche 3 Runner Trail",
+      "bars": 27,
+      "year": 2024
+    },
+    {
+      "symbol": "TVSSRICHAK",
+      "entry_date": "2025-10-16",
+      "exit_date": "2025-11-25",
+      "entry": 3907.9,
+      "exit": 4770.56,
+      "shares": 55,
+      "cost": 214934.5,
+      "net_pnl": 47111.17,
+      "r_mult": 5.0,
+      "reason": "+5.0R Tranche 2 (30%)",
+      "bars": 26,
+      "year": 2025
+    },
+    {
+      "symbol": "PRAMARA",
+      "entry_date": "2025-09-11",
+      "exit_date": "2025-11-03",
+      "entry": 269.15,
+      "exit": 328.0,
+      "shares": 766,
+      "cost": 206168.9,
+      "net_pnl": 44757.6,
+      "r_mult": 5.01,
+      "reason": "+5.0R Tranche 2 (30%)",
+      "bars": 35,
+      "year": 2025
+    },
+    {
+      "symbol": "VIPULLTD",
+      "entry_date": "2024-04-30",
+      "exit_date": "2024-05-18",
+      "entry": 33.95,
+      "exit": 41.6,
+      "shares": 4618,
+      "cost": 156781.1,
+      "net_pnl": 35077.17,
+      "r_mult": 5.18,
+      "reason": "+5.0R Tranche 2 (30%)",
+      "bars": 13,
+      "year": 2024
+    },
+    {
+      "symbol": "TVSSRICHAK",
+      "entry_date": "2025-10-16",
+      "exit_date": "2025-12-08",
+      "entry": 3907.9,
+      "exit": 4518.45,
+      "shares": 57,
+      "cost": 222750.3,
+      "net_pnl": 34472.42,
+      "r_mult": 3.54,
+      "reason": "21_EMA Tranche 3 Runner Trail",
+      "bars": 35,
+      "year": 2025
+    },
+    {
+      "symbol": "FORTIS",
+      "entry_date": "2024-11-06",
+      "exit_date": "2024-11-25",
+      "entry": 621.65,
+      "exit": 735.64,
+      "shares": 301,
+      "cost": 187116.65,
+      "net_pnl": 34026.78,
+      "r_mult": 5.0,
+      "reason": "+5.0R Tranche 2 (30%)",
+      "bars": 11,
+      "year": 2024
+    },
+    {
+      "symbol": "MANAPPURAM",
+      "entry_date": "2025-05-12",
+      "exit_date": "2025-07-07",
+      "entry": 230.73,
+      "exit": 270.71,
+      "shares": 827,
+      "cost": 190813.71,
+      "net_pnl": 32777.95,
+      "r_mult": 5.74,
+      "reason": "21_EMA Tranche 3 Runner Trail",
+      "bars": 40,
+      "year": 2025
+    },
+    {
+      "symbol": "HNDFDS",
+      "entry_date": "2022-10-14",
+      "exit_date": "2022-12-12",
+      "entry": 478.15,
+      "exit": 653.8,
+      "shares": 183,
+      "cost": 87501.45,
+      "net_pnl": 31981.25,
+      "r_mult": 10.45,
+      "reason": "21_EMA Tranche 3 Runner Trail",
+      "bars": 39,
+      "year": 2022
+    },
+    {
+      "symbol": "ASAHISONG",
+      "entry_date": "2024-06-11",
+      "exit_date": "2024-06-27",
+      "entry": 379.1,
+      "exit": 457.45,
+      "shares": 411,
+      "cost": 155810.1,
+      "net_pnl": 31958.29,
+      "r_mult": 5.0,
+      "reason": "+5.0R Tranche 2 (30%)",
+      "bars": 11,
+      "year": 2024
+    },
+    {
+      "symbol": "TVSSRICHAK",
+      "entry_date": "2025-10-16",
+      "exit_date": "2025-11-14",
+      "entry": 3907.9,
+      "exit": 4339.23,
+      "shares": 74,
+      "cost": 289184.6,
+      "net_pnl": 31512.91,
+      "r_mult": 2.5,
+      "reason": "+2.5R Tranche 1 (40%)",
+      "bars": 19,
+      "year": 2025
+    }
+  ],
+  "elapsed_sec": 6.23
+}

@@ -1,0 +1,71 @@
+{
+  "account": {
+    "initial_capital_inr": 300000.0,
+    "global_max_daily_loss_pct": 1.5,
+    "global_trailing_profit_lock_pct": 2.0,
+    "mandatory_square_off_time": "15:15:00",
+    "allocation_mode": "SMART_OVERFLOW"
+  },
+  "engines": {
+    "engine_stocks_mis": {
+      "id": "engine_stocks_mis",
+      "name": "Engine 1: Alpha-Surge 100+ Intraday (10-Year Audited \u00b7 106.88% CAGR \u00b7 3.2R Target)",
+      "short_name": "ALPHA-SURGE 100+ MIS",
+      "enabled": true,
+      "mode": "PAPER_SIM",
+      "capital_share_pct": 30.0,
+      "max_engine_daily_loss_pct": 1.0,
+      "params": {
+        "orb_minutes": 15,
+        "rvol_min": 2.2,
+        "relative_strength_min_pct": 0.35,
+        "nifty_alignment_required": true,
+        "top_k_stocks": 3,
+        "mis_leverage": 5.0,
+        "stop_loss_pct": 1.1,
+        "target_rr": 3.2,
+        "trail_to_cost_at_1r": true,
+        "vwap_cross_exit_after_1r": true
+      }
+    },
+    "engine_fo_hybrid": {
+      "id": "engine_fo_hybrid",
+      "name": "NSE Index F&O \u2014 RAIHE Hybrid (Nifty 50)",
+      "short_name": "NIFTY F&O",
+      "enabled": true,
+      "mode": "PAPER_SIM",
+      "capital_share_pct": 45.0,
+      "max_engine_daily_loss_pct": 1.0,
+      "params": {
+        "underlying": "NIFTY 50",
+        "lot_size": 65,
+        "orb_minutes": 15,
+        "adx_trend_cutoff": 25.0,
+        "vol_ratio_cutoff": 1.2,
+        "straddle_leg_sl_pct": 20.0,
+        "trail_surviving_leg_to_cost": true,
+        "dynamic_futures_delta_hedge": true,
+        "trend_target_rr": 2.5
+      }
+    },
+    "engine_sepa_swing": {
+      "id": "engine_sepa_swing",
+      "name": "Engine 3: Next-Gen Adaptive Swing (Pure Swing \u00b7 76.99% CAGR \u00b7 5Y)",
+      "short_name": "ADAPTIVE SWING",
+      "enabled": true,
+      "mode": "PAPER_SIM",
+      "capital_share_pct": 25.0,
+      "max_engine_daily_loss_pct": 1.0,
+      "params": {
+        "active_filter": "adaptive_hybrid_v2",
+        "max_open_positions": 2,
+        "risk_per_trade_pct": 1.0,
+        "ratchet_breakeven_at_r": 1.35,
+        "target_rr": 3.0,
+        "require_ai_enter_verdict": true,
+        "min_volume_ratio": 1.3,
+        "swing_leverage": 1.0
+      }
+    }
+  }
+}

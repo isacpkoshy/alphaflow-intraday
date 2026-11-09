@@ -1,0 +1,43 @@
+# ==========================================
+# Cyber Security & Credential Protection
+# ==========================================
+# Broker API Keys, Telegram & Upstox Access Tokens (CRITICAL)
+config/broker_config.json
+config/broker_credentials.json
+data/telegram_config.json
+data/upstox_token.json
+.env
+*.env
+*.pem
+*.key
+*secret*
+*credentials*
+
+# Runtime Settings & Secrets
+config/settings.json
+
+# Local Trades & SQLite Databases
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+*.db
+data/*.sqlite3
+data/*.db
+data/account.json
+data/open_positions.json
+data/trades.sqlite3
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# System & Editor Artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+logs/
