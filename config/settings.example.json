@@ -9,8 +9,8 @@
   "engines": {
     "engine_stocks_mis": {
       "id": "engine_stocks_mis",
-      "name": "Engine 1: Alpha-Surge 100+ Intraday (10-Year Audited \u00b7 106.88% CAGR \u00b7 3.2R Target)",
-      "short_name": "ALPHA-SURGE 100+ MIS",
+      "name": "Engine 1: Alpha-Surge 2.0 Intraday (10-Year Audited \u00b7 163.36% CAGR \u00b7 53.8% Win Rate)",
+      "short_name": "ALPHA-SURGE 2.0 MIS",
       "enabled": true,
       "mode": "PAPER_SIM",
       "capital_share_pct": 30.0,
@@ -20,12 +20,13 @@
         "rvol_min": 2.2,
         "relative_strength_min_pct": 0.35,
         "nifty_alignment_required": true,
-        "top_k_stocks": 3,
+        "top_k_stocks": 2,
         "mis_leverage": 5.0,
-        "stop_loss_pct": 1.1,
-        "target_rr": 3.2,
+        "stop_loss_pct": 1.75,
+        "target_rr": 3.5,
         "trail_to_cost_at_1r": true,
-        "vwap_cross_exit_after_1r": true
+        "vwap_cross_exit_after_1r": true,
+        "tranche1_rr": 1.25
       }
     },
     "engine_fo_hybrid": {

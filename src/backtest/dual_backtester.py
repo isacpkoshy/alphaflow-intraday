@@ -193,49 +193,99 @@ class DualEngineAnalytics:
         trail_cost: bool,
         vwap_exit: bool,
     ) -> Tuple[float, float, str, str]:
-        """Returns (raw_return_ratio, exit_price, exit_status, exit_time)."""
+        """
+        Alpha-Surge 2.0 Asymmetric Two-Tranche Intraday Execution:
+        - Initial Stop-Loss: `sl_pct` (default 1.75%, strictly penalized first if touched).
+        - Tranche 1 (50% Qty): Books profit at +1.25R (`one_r_price`), immediately banking cash and ratcheting Runner stop to Entry +/- 0.10%.
+        - Tranche 2 (50% Runner): Trails to `target_rr` (default +3.50R) or 15:15 EOD Close.
+        """
         sl_dist = entry_price * (sl_pct / 100.0)
+        tp1_dist = sl_dist * 1.25
         target_dist = sl_dist * target_rr
 
         if side == "LONG":
             sl_price = entry_price - sl_dist
+            tp1_price = entry_price + tp1_dist
             target_price = entry_price + target_dist
-            one_r_price = entry_price + sl_dist
+            be_price = round(entry_price * 1.001, 2)
         else:
             sl_price = entry_price + sl_dist
+            tp1_price = entry_price - tp1_dist
             target_price = entry_price - target_dist
-            one_r_price = entry_price - sl_dist
+            be_price = round(entry_price * 0.999, 2)
 
-        moved_to_cost = False
+        tranche1_booked = False
+        ret1 = 0.0
         for b in bars_after[:-1]:
             t_str = b.get("time", "14:15")
             if side == "LONG":
-                if b["l"] <= sl_price:
-                    status = "TRAILED_COST" if moved_to_cost else "SL_HIT"
-                    return (sl_price - entry_price) / entry_price, round(sl_price, 2), status, t_str
-                if b["h"] >= target_price:
-                    return (target_price - entry_price) / entry_price, round(target_price, 2), "TARGET_HIT", t_str
-                if vwap_exit and moved_to_cost and b["c"] < b["vwap"]:
-                    return (b["c"] - entry_price) / entry_price, round(b["c"], 2), "VWAP_PROFIT_LOCK", t_str
-                if trail_cost and not moved_to_cost and b["h"] >= one_r_price:
-                    sl_price = entry_price
-                    moved_to_cost = True
+                if not tranche1_booked:
+                    if b["l"] <= sl_price:
+                        return (sl_price - entry_price) / entry_price, round(sl_price, 2), "SL_HIT", t_str
+                    if b["h"] >= tp1_price:
+                        tranche1_booked = True
+                        ret1 = (tp1_price - entry_price) / entry_price
+                        sl_price = be_price
+                        if b["h"] >= target_price:
+                            ret2 = (target_price - entry_price) / entry_price
+                            blended_ret = 0.5 * ret1 + 0.5 * ret2
+                            blended_px = round(0.5 * tp1_price + 0.5 * target_price, 2)
+                            return blended_ret, blended_px, "TARGET_HIT", t_str
+                else:
+                    if b["l"] <= sl_price:
+                        ret2 = (sl_price - entry_price) / entry_price
+                        blended_ret = 0.5 * ret1 + 0.5 * ret2
+                        blended_px = round(0.5 * tp1_price + 0.5 * sl_price, 2)
+                        return blended_ret, blended_px, "TRANCHE1_LOCK_RATCHET", t_str
+                    if b["h"] >= target_price:
+                        ret2 = (target_price - entry_price) / entry_price
+                        blended_ret = 0.5 * ret1 + 0.5 * ret2
+                        blended_px = round(0.5 * tp1_price + 0.5 * target_price, 2)
+                        return blended_ret, blended_px, "TARGET_HIT", t_str
+                    if vwap_exit and b["c"] < b["vwap"] and b["c"] > be_price:
+                        ret2 = (b["c"] - entry_price) / entry_price
+                        blended_ret = 0.5 * ret1 + 0.5 * ret2
+                        blended_px = round(0.5 * tp1_price + 0.5 * b["c"], 2)
+                        return blended_ret, blended_px, "VWAP_PROFIT_LOCK", t_str
             else:
-                if b["h"] >= sl_price:
-                    status = "TRAILED_COST" if moved_to_cost else "SL_HIT"
-                    return (entry_price - sl_price) / entry_price, round(sl_price, 2), status, t_str
-                if b["l"] <= target_price:
-                    return (entry_price - target_price) / entry_price, round(target_price, 2), "TARGET_HIT", t_str
-                if vwap_exit and moved_to_cost and b["c"] > b["vwap"]:
-                    return (entry_price - b["c"]) / entry_price, round(b["c"], 2), "VWAP_PROFIT_LOCK", t_str
-                if trail_cost and not moved_to_cost and b["l"] <= one_r_price:
-                    sl_price = entry_price
-                    moved_to_cost = True
+                if not tranche1_booked:
+                    if b["h"] >= sl_price:
+                        return (entry_price - sl_price) / entry_price, round(sl_price, 2), "SL_HIT", t_str
+                    if b["l"] <= tp1_price:
+                        tranche1_booked = True
+                        ret1 = (entry_price - tp1_price) / entry_price
+                        sl_price = be_price
+                        if b["l"] <= target_price:
+                            ret2 = (entry_price - target_price) / entry_price
+                            blended_ret = 0.5 * ret1 + 0.5 * ret2
+                            blended_px = round(0.5 * tp1_price + 0.5 * target_price, 2)
+                            return blended_ret, blended_px, "TARGET_HIT", t_str
+                else:
+                    if b["h"] >= sl_price:
+                        ret2 = (entry_price - sl_price) / entry_price
+                        blended_ret = 0.5 * ret1 + 0.5 * ret2
+                        blended_px = round(0.5 * tp1_price + 0.5 * sl_price, 2)
+                        return blended_ret, blended_px, "TRANCHE1_LOCK_RATCHET", t_str
+                    if b["l"] <= target_price:
+                        ret2 = (entry_price - target_price) / entry_price
+                        blended_ret = 0.5 * ret1 + 0.5 * ret2
+                        blended_px = round(0.5 * tp1_price + 0.5 * target_price, 2)
+                        return blended_ret, blended_px, "TARGET_HIT", t_str
+                    if vwap_exit and b["c"] > b["vwap"] and b["c"] < be_price:
+                        ret2 = (entry_price - b["c"]) / entry_price
+                        blended_ret = 0.5 * ret1 + 0.5 * ret2
+                        blended_px = round(0.5 * tp1_price + 0.5 * b["c"], 2)
+                        return blended_ret, blended_px, "VWAP_PROFIT_LOCK", t_str
 
         last_b = bars_after[-1]
         last_c = last_b["c"]
-        ret = ((last_c - entry_price) / entry_price) if side == "LONG" else ((entry_price - last_c) / entry_price)
-        return ret, round(last_c, 2), "EOD_SQUARE_OFF", "15:15"
+        ret_eod = ((last_c - entry_price) / entry_price) if side == "LONG" else ((entry_price - last_c) / entry_price)
+        if tranche1_booked:
+            ret2 = max(0.001, ret_eod)
+            blended_ret = 0.5 * ret1 + 0.5 * ret2
+            blended_px = round(0.5 * tp1_price + 0.5 * last_c, 2)
+            return blended_ret, blended_px, "TRANCHE1_LOCK_EOD", "15:15"
+        return ret_eod, round(last_c, 2), "EOD_SQUARE_OFF", "15:15"
 
     def _simulate_nifty_fo_day(self, date_str: str, nf: Dict[str, Any], lots: int, lot_size: int = 75, adx_cutoff: float = 25.0) -> Dict[str, Any]:
         """

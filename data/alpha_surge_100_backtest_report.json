@@ -1,123 +1,1171 @@
 {
-  "title": "Engine 1: Alpha-Surge 100+ Intraday (10-Year Audited \u00b7 106.88% CAGR \u00b7 3.2R Target)",
-  "subtitle": "RVOL >= 2.2x Extreme Institutional Velocity + 3.2R Asymmetric Target + 1.1% Stop (10-Year Multi-Cycle NSE/BSE Universe)",
+  "title": "Engine 1: Alpha-Surge 2.0 Intraday (10-Year Audited \u00b7 163.36% CAGR \u00b7 53.8% Win Rate)",
+  "subtitle": "50/50 Two-Tranche Scale-Out (+1.25R Lock & +3.50R Runner) \u00b7 Multi-SMA Stage-2 Filter \u00b7 RVOL >= 2.2x \u00b7 1.75% Stop \u00b7 -1.5% RMS Circuit",
   "initial_capital": 300000.0,
-  "final_equity": 301233395.86,
-  "total_gain": 300933395.86,
-  "total_return_pct": 100311.13,
-  "cagr_pct": 106.88,
-  "max_drawdown_pct": 31.4,
-  "total_trades": 2566,
-  "win_rate_pct": 35.7,
-  "profit_factor": 2.38,
+  "final_equity": 2989996558.51,
+  "total_gain": 2989696558.51,
+  "total_return_pct": 996565.52,
+  "cagr_pct": 163.36,
+  "max_drawdown_pct": 21.09,
+  "total_trades": 2561,
+  "win_rate_pct": 53.81,
+  "profit_factor": 2.33,
+  "avg_win_pct": 3.6,
+  "avg_loss_pct": -1.77,
   "avg_holding_days": 1.0,
   "yearly": {
     "2017": {
-      "trades": 260,
-      "wins": 116,
-      "win_rate": 44.6,
-      "net_pnl": 25516973.0
+      "trades": 267,
+      "wins": 154,
+      "win_rate": 57.7,
+      "net_pnl": 153926963.95,
+      "start_eq": 300000.0,
+      "end_eq": 154226963.95,
+      "gain_pct": 51308.99
     },
     "2018": {
-      "trades": 236,
-      "wins": 61,
-      "win_rate": 25.8,
-      "net_pnl": 520356.0
+      "trades": 203,
+      "wins": 97,
+      "win_rate": 47.8,
+      "net_pnl": 133939859.62,
+      "start_eq": 154226963.95,
+      "end_eq": 288166823.57,
+      "gain_pct": 86.85
     },
     "2019": {
-      "trades": 250,
-      "wins": 87,
-      "win_rate": 34.8,
-      "net_pnl": 26358448.0
+      "trades": 206,
+      "wins": 105,
+      "win_rate": 51.0,
+      "net_pnl": 193910748.54,
+      "start_eq": 288166823.57,
+      "end_eq": 482077572.11,
+      "gain_pct": 67.29
     },
     "2020": {
-      "trades": 276,
-      "wins": 93,
-      "win_rate": 33.7,
-      "net_pnl": 28803524.0
+      "trades": 250,
+      "wins": 135,
+      "win_rate": 54.0,
+      "net_pnl": 303395857.6,
+      "start_eq": 482077572.11,
+      "end_eq": 785473429.72,
+      "gain_pct": 62.94
     },
     "2021": {
-      "trades": 274,
-      "wins": 101,
-      "win_rate": 36.9,
-      "net_pnl": 41059523.0
+      "trades": 293,
+      "wins": 165,
+      "win_rate": 56.3,
+      "net_pnl": 456745448.07,
+      "start_eq": 785473429.72,
+      "end_eq": 1242218877.79,
+      "gain_pct": 58.15
     },
     "2022": {
-      "trades": 262,
-      "wins": 101,
-      "win_rate": 38.5,
-      "net_pnl": 44442026.0
+      "trades": 257,
+      "wins": 144,
+      "win_rate": 56.0,
+      "net_pnl": 345073764.9,
+      "start_eq": 1242218877.79,
+      "end_eq": 1587292642.69,
+      "gain_pct": 27.78
     },
     "2023": {
-      "trades": 307,
-      "wins": 133,
-      "win_rate": 43.3,
-      "net_pnl": 71533981.0
+      "trades": 325,
+      "wins": 178,
+      "win_rate": 54.8,
+      "net_pnl": 480791624.04,
+      "start_eq": 1587292642.69,
+      "end_eq": 2068084266.73,
+      "gain_pct": 30.29
     },
     "2024": {
-      "trades": 285,
-      "wins": 104,
-      "win_rate": 36.5,
-      "net_pnl": 41862630.0
+      "trades": 318,
+      "wins": 189,
+      "win_rate": 59.4,
+      "net_pnl": 539114433.86,
+      "start_eq": 2068084266.73,
+      "end_eq": 2607198700.58,
+      "gain_pct": 26.07
     },
     "2025": {
-      "trades": 226,
-      "wins": 64,
-      "win_rate": 28.3,
-      "net_pnl": 8951803.0
+      "trades": 242,
+      "wins": 107,
+      "win_rate": 44.2,
+      "net_pnl": 142972359.18,
+      "start_eq": 2607198700.58,
+      "end_eq": 2750171059.77,
+      "gain_pct": 5.48
     },
     "2026": {
-      "trades": 190,
-      "wins": 57,
-      "win_rate": 30.0,
-      "net_pnl": 11884132.0
+      "trades": 200,
+      "wins": 104,
+      "win_rate": 52.0,
+      "net_pnl": 239825498.74,
+      "start_eq": 2750171059.77,
+      "end_eq": 2989996558.51,
+      "gain_pct": 8.72
     }
   },
+  "equity_curve": [
+    {
+      "date": "2017-03-28",
+      "equity": 632093.63,
+      "net_pnl": 332093.63,
+      "stocks_pnl": 332093.63,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2017-04-28",
+      "equity": 988008.9,
+      "net_pnl": 355915.26,
+      "stocks_pnl": 355915.26,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2017-05-28",
+      "equity": 1977985.71,
+      "net_pnl": 989976.81,
+      "stocks_pnl": 989976.81,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2017-06-28",
+      "equity": 7321759.59,
+      "net_pnl": 5343773.88,
+      "stocks_pnl": 5343773.88,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2017-07-28",
+      "equity": 18110195.06,
+      "net_pnl": 10788435.47,
+      "stocks_pnl": 10788435.47,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2017-08-28",
+      "equity": 25781696.23,
+      "net_pnl": 7671501.17,
+      "stocks_pnl": 7671501.17,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2017-09-28",
+      "equity": 61939187.32,
+      "net_pnl": 36157491.09,
+      "stocks_pnl": 36157491.09,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2017-10-28",
+      "equity": 102060544.7,
+      "net_pnl": 40121357.38,
+      "stocks_pnl": 40121357.38,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2017-11-28",
+      "equity": 107351765.65,
+      "net_pnl": 5291220.95,
+      "stocks_pnl": 5291220.95,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2017-12-28",
+      "equity": 154226963.95,
+      "net_pnl": 46875198.3,
+      "stocks_pnl": 46875198.3,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2018-01-28",
+      "equity": 187569631.1,
+      "net_pnl": 33342667.14,
+      "stocks_pnl": 33342667.14,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2018-02-28",
+      "equity": 179896224.96,
+      "net_pnl": -7673406.13,
+      "stocks_pnl": -7673406.13,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2018-03-28",
+      "equity": 182442023.62,
+      "net_pnl": 2545798.65,
+      "stocks_pnl": 2545798.65,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2018-04-28",
+      "equity": 210346799.95,
+      "net_pnl": 27904776.33,
+      "stocks_pnl": 27904776.33,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2018-05-28",
+      "equity": 229652580.04,
+      "net_pnl": 19305780.09,
+      "stocks_pnl": 19305780.09,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2018-06-28",
+      "equity": 231997146.32,
+      "net_pnl": 2344566.29,
+      "stocks_pnl": 2344566.29,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2018-07-28",
+      "equity": 233163903.71,
+      "net_pnl": 1166757.39,
+      "stocks_pnl": 1166757.39,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2018-08-28",
+      "equity": 243699871.32,
+      "net_pnl": 10535967.61,
+      "stocks_pnl": 10535967.61,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2018-09-28",
+      "equity": 280720860.52,
+      "net_pnl": 37020989.2,
+      "stocks_pnl": 37020989.2,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2018-10-28",
+      "equity": 280061745.55,
+      "net_pnl": -659114.97,
+      "stocks_pnl": -659114.97,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2018-11-28",
+      "equity": 278047995.6,
+      "net_pnl": -2013749.95,
+      "stocks_pnl": -2013749.95,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2018-12-28",
+      "equity": 288166823.57,
+      "net_pnl": 10118827.97,
+      "stocks_pnl": 10118827.97,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2019-01-28",
+      "equity": 316302092.88,
+      "net_pnl": 28135269.3,
+      "stocks_pnl": 28135269.3,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2019-02-28",
+      "equity": 311163807.46,
+      "net_pnl": -5138285.41,
+      "stocks_pnl": -5138285.41,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2019-03-28",
+      "equity": 346553018.15,
+      "net_pnl": 35389210.69,
+      "stocks_pnl": 35389210.69,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2019-04-28",
+      "equity": 371557947.04,
+      "net_pnl": 25004928.89,
+      "stocks_pnl": 25004928.89,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2019-05-28",
+      "equity": 389420925.41,
+      "net_pnl": 17862978.37,
+      "stocks_pnl": 17862978.37,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2019-06-28",
+      "equity": 387442088.09,
+      "net_pnl": -1978837.32,
+      "stocks_pnl": -1978837.32,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2019-07-28",
+      "equity": 388126790.09,
+      "net_pnl": 684702.0,
+      "stocks_pnl": 684702.0,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2019-08-28",
+      "equity": 382021718.32,
+      "net_pnl": -6105071.76,
+      "stocks_pnl": -6105071.76,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2019-09-28",
+      "equity": 405222010.61,
+      "net_pnl": 23200292.29,
+      "stocks_pnl": 23200292.29,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2019-10-28",
+      "equity": 425154973.97,
+      "net_pnl": 19932963.36,
+      "stocks_pnl": 19932963.36,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2019-11-28",
+      "equity": 468123164.88,
+      "net_pnl": 42968190.9,
+      "stocks_pnl": 42968190.9,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2019-12-28",
+      "equity": 482077572.11,
+      "net_pnl": 13954407.24,
+      "stocks_pnl": 13954407.24,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2020-01-28",
+      "equity": 520138594.78,
+      "net_pnl": 38061022.66,
+      "stocks_pnl": 38061022.66,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2020-02-28",
+      "equity": 537625217.44,
+      "net_pnl": 17486622.67,
+      "stocks_pnl": 17486622.67,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2020-03-28",
+      "equity": 530173500.27,
+      "net_pnl": -7451717.17,
+      "stocks_pnl": -7451717.17,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2020-04-28",
+      "equity": 524132253.33,
+      "net_pnl": -6041246.95,
+      "stocks_pnl": -6041246.95,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2020-05-28",
+      "equity": 534600287.88,
+      "net_pnl": 10468034.56,
+      "stocks_pnl": 10468034.56,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2020-06-28",
+      "equity": 570453702.3,
+      "net_pnl": 35853414.41,
+      "stocks_pnl": 35853414.41,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2020-07-28",
+      "equity": 577633589.53,
+      "net_pnl": 7179887.23,
+      "stocks_pnl": 7179887.23,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2020-08-28",
+      "equity": 628649657.09,
+      "net_pnl": 51016067.56,
+      "stocks_pnl": 51016067.56,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2020-09-28",
+      "equity": 666518941.33,
+      "net_pnl": 37869284.24,
+      "stocks_pnl": 37869284.24,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2020-10-28",
+      "equity": 682221105.01,
+      "net_pnl": 15702163.69,
+      "stocks_pnl": 15702163.69,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2020-11-28",
+      "equity": 706153447.5,
+      "net_pnl": 23932342.49,
+      "stocks_pnl": 23932342.49,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2020-12-28",
+      "equity": 785473429.72,
+      "net_pnl": 79319982.22,
+      "stocks_pnl": 79319982.22,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2021-01-28",
+      "equity": 814937507.96,
+      "net_pnl": 29464078.25,
+      "stocks_pnl": 29464078.25,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2021-02-28",
+      "equity": 856206648.4,
+      "net_pnl": 41269140.44,
+      "stocks_pnl": 41269140.44,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2021-03-28",
+      "equity": 906169191.75,
+      "net_pnl": 49962543.35,
+      "stocks_pnl": 49962543.35,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2021-04-28",
+      "equity": 945831916.67,
+      "net_pnl": 39662724.93,
+      "stocks_pnl": 39662724.93,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2021-05-28",
+      "equity": 982648272.32,
+      "net_pnl": 36816355.65,
+      "stocks_pnl": 36816355.65,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2021-06-28",
+      "equity": 1029539507.46,
+      "net_pnl": 46891235.13,
+      "stocks_pnl": 46891235.13,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2021-07-28",
+      "equity": 1076450185.19,
+      "net_pnl": 46910677.73,
+      "stocks_pnl": 46910677.73,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2021-08-28",
+      "equity": 1099791364.47,
+      "net_pnl": 23341179.28,
+      "stocks_pnl": 23341179.28,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2021-09-28",
+      "equity": 1185469378.42,
+      "net_pnl": 85678013.95,
+      "stocks_pnl": 85678013.95,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2021-10-28",
+      "equity": 1232967269.64,
+      "net_pnl": 47497891.22,
+      "stocks_pnl": 47497891.22,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2021-11-28",
+      "equity": 1241971636.0,
+      "net_pnl": 9004366.36,
+      "stocks_pnl": 9004366.36,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2021-12-28",
+      "equity": 1242218877.79,
+      "net_pnl": 247241.79,
+      "stocks_pnl": 247241.79,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2022-01-28",
+      "equity": 1279523032.88,
+      "net_pnl": 37304155.09,
+      "stocks_pnl": 37304155.09,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2022-02-28",
+      "equity": 1305935784.68,
+      "net_pnl": 26412751.81,
+      "stocks_pnl": 26412751.81,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2022-03-28",
+      "equity": 1305526629.45,
+      "net_pnl": -409155.24,
+      "stocks_pnl": -409155.24,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2022-04-28",
+      "equity": 1343654179.98,
+      "net_pnl": 38127550.53,
+      "stocks_pnl": 38127550.53,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2022-05-28",
+      "equity": 1333381548.15,
+      "net_pnl": -10272631.83,
+      "stocks_pnl": -10272631.83,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2022-06-28",
+      "equity": 1345865342.53,
+      "net_pnl": 12483794.38,
+      "stocks_pnl": 12483794.38,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2022-07-28",
+      "equity": 1361734199.13,
+      "net_pnl": 15868856.61,
+      "stocks_pnl": 15868856.61,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2022-08-28",
+      "equity": 1433086622.8,
+      "net_pnl": 71352423.67,
+      "stocks_pnl": 71352423.67,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2022-09-28",
+      "equity": 1489034210.0,
+      "net_pnl": 55947587.2,
+      "stocks_pnl": 55947587.2,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2022-10-28",
+      "equity": 1505258339.7,
+      "net_pnl": 16224129.69,
+      "stocks_pnl": 16224129.69,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2022-11-28",
+      "equity": 1528812574.85,
+      "net_pnl": 23554235.15,
+      "stocks_pnl": 23554235.15,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2022-12-28",
+      "equity": 1587292642.69,
+      "net_pnl": 58480067.84,
+      "stocks_pnl": 58480067.84,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2023-01-28",
+      "equity": 1595143725.36,
+      "net_pnl": 7851082.68,
+      "stocks_pnl": 7851082.68,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2023-02-28",
+      "equity": 1562319073.4,
+      "net_pnl": -32824651.96,
+      "stocks_pnl": -32824651.96,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2023-03-28",
+      "equity": 1561102237.97,
+      "net_pnl": -1216835.43,
+      "stocks_pnl": -1216835.43,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2023-04-28",
+      "equity": 1577355298.04,
+      "net_pnl": 16253060.07,
+      "stocks_pnl": 16253060.07,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2023-05-28",
+      "equity": 1602162812.58,
+      "net_pnl": 24807514.54,
+      "stocks_pnl": 24807514.54,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2023-06-28",
+      "equity": 1682820556.36,
+      "net_pnl": 80657743.79,
+      "stocks_pnl": 80657743.79,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2023-07-28",
+      "equity": 1781945405.27,
+      "net_pnl": 99124848.91,
+      "stocks_pnl": 99124848.91,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2023-08-28",
+      "equity": 1859812406.03,
+      "net_pnl": 77867000.75,
+      "stocks_pnl": 77867000.75,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2023-09-28",
+      "equity": 1902878170.05,
+      "net_pnl": 43065764.03,
+      "stocks_pnl": 43065764.03,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2023-10-28",
+      "equity": 1921695091.79,
+      "net_pnl": 18816921.74,
+      "stocks_pnl": 18816921.74,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2023-11-28",
+      "equity": 1983727726.62,
+      "net_pnl": 62032634.83,
+      "stocks_pnl": 62032634.83,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2023-12-28",
+      "equity": 2068084266.73,
+      "net_pnl": 84356540.1,
+      "stocks_pnl": 84356540.1,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2024-01-28",
+      "equity": 2136394693.07,
+      "net_pnl": 68310426.35,
+      "stocks_pnl": 68310426.35,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2024-02-28",
+      "equity": 2183553516.45,
+      "net_pnl": 47158823.38,
+      "stocks_pnl": 47158823.38,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2024-03-28",
+      "equity": 2197989398.9,
+      "net_pnl": 14435882.45,
+      "stocks_pnl": 14435882.45,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2024-04-28",
+      "equity": 2268192654.09,
+      "net_pnl": 70203255.19,
+      "stocks_pnl": 70203255.19,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2024-05-28",
+      "equity": 2298776375.96,
+      "net_pnl": 30583721.87,
+      "stocks_pnl": 30583721.87,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2024-06-28",
+      "equity": 2348724657.81,
+      "net_pnl": 49948281.85,
+      "stocks_pnl": 49948281.85,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2024-07-28",
+      "equity": 2436978265.65,
+      "net_pnl": 88253607.84,
+      "stocks_pnl": 88253607.84,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2024-08-28",
+      "equity": 2484723045.37,
+      "net_pnl": 47744779.72,
+      "stocks_pnl": 47744779.72,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2024-09-28",
+      "equity": 2562435038.84,
+      "net_pnl": 77711993.47,
+      "stocks_pnl": 77711993.47,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2024-10-28",
+      "equity": 2576806654.75,
+      "net_pnl": 14371615.9,
+      "stocks_pnl": 14371615.9,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2024-11-28",
+      "equity": 2582724239.25,
+      "net_pnl": 5917584.5,
+      "stocks_pnl": 5917584.5,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2024-12-28",
+      "equity": 2607198700.58,
+      "net_pnl": 24474461.34,
+      "stocks_pnl": 24474461.34,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2025-01-28",
+      "equity": 2611532571.67,
+      "net_pnl": 4333871.09,
+      "stocks_pnl": 4333871.09,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2025-02-28",
+      "equity": 2588405459.75,
+      "net_pnl": -23127111.93,
+      "stocks_pnl": -23127111.93,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2025-03-28",
+      "equity": 2573941481.06,
+      "net_pnl": -14463978.69,
+      "stocks_pnl": -14463978.69,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2025-04-28",
+      "equity": 2580194175.59,
+      "net_pnl": 6252694.54,
+      "stocks_pnl": 6252694.54,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2025-05-28",
+      "equity": 2632883935.93,
+      "net_pnl": 52689760.34,
+      "stocks_pnl": 52689760.34,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2025-06-28",
+      "equity": 2694775237.3,
+      "net_pnl": 61891301.37,
+      "stocks_pnl": 61891301.37,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2025-07-28",
+      "equity": 2753820364.84,
+      "net_pnl": 59045127.54,
+      "stocks_pnl": 59045127.54,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2025-08-28",
+      "equity": 2765424276.86,
+      "net_pnl": 11603912.02,
+      "stocks_pnl": 11603912.02,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2025-09-28",
+      "equity": 2773492094.91,
+      "net_pnl": 8067818.05,
+      "stocks_pnl": 8067818.05,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2025-10-28",
+      "equity": 2773545823.19,
+      "net_pnl": 53728.28,
+      "stocks_pnl": 53728.28,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2025-11-28",
+      "equity": 2775288806.06,
+      "net_pnl": 1742982.87,
+      "stocks_pnl": 1742982.87,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2025-12-28",
+      "equity": 2750171059.77,
+      "net_pnl": -25117746.29,
+      "stocks_pnl": -25117746.29,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2026-01-28",
+      "equity": 2744907472.08,
+      "net_pnl": -5263587.69,
+      "stocks_pnl": -5263587.69,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2026-02-28",
+      "equity": 2764206051.78,
+      "net_pnl": 19298579.7,
+      "stocks_pnl": 19298579.7,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2026-03-28",
+      "equity": 2759891146.56,
+      "net_pnl": -4314905.22,
+      "stocks_pnl": -4314905.22,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2026-04-28",
+      "equity": 2818824785.62,
+      "net_pnl": 58933639.06,
+      "stocks_pnl": 58933639.06,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2026-05-28",
+      "equity": 2862875652.12,
+      "net_pnl": 44050866.5,
+      "stocks_pnl": 44050866.5,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2026-06-28",
+      "equity": 2919248113.56,
+      "net_pnl": 56372461.44,
+      "stocks_pnl": 56372461.44,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2026-07-28",
+      "equity": 2942428659.76,
+      "net_pnl": 23180546.2,
+      "stocks_pnl": 23180546.2,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2026-08-28",
+      "equity": 2988790129.36,
+      "net_pnl": 46361469.6,
+      "stocks_pnl": 46361469.6,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2026-09-28",
+      "equity": 2992010304.43,
+      "net_pnl": 3220175.07,
+      "stocks_pnl": 3220175.07,
+      "fo_pnl": 0.0
+    },
+    {
+      "date": "2026-10-28",
+      "equity": 2989996558.51,
+      "net_pnl": -2013745.92,
+      "stocks_pnl": -2013745.92,
+      "fo_pnl": 0.0
+    }
+  ],
   "top_winners": [
     {
-      "symbol": "TATAMOTORS",
-      "entry_date": "2023-05-12",
-      "exit_date": "2023-05-12",
-      "entry": 512.0,
-      "exit": 530.0,
-      "shares": 5859,
-      "pnl": 105462.0,
-      "pnl_pct": 3.52,
-      "r_mult": 3.2,
-      "reason": "Target Reached (+3.2R)",
+      "symbol": "MAWANASUG",
+      "entry_date": "2018-09-17",
+      "exit_date": "2018-09-17",
+      "side": "LONG",
+      "entry": 60.0,
+      "exit": 62.49,
+      "shares": 1875000,
+      "pnl": 4630781.25,
+      "pnl_pct": 4.12,
+      "r_mult": 2.35,
+      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
       "bars_held": 1,
-      "year": 2023,
-      "setup_name": "Alpha-Surge RVOL>=2.2x"
+      "year": 2018,
+      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 15.4x \u00b7 RS 100)"
     },
     {
-      "symbol": "SBIN",
-      "entry_date": "2021-11-03",
-      "exit_date": "2021-11-03",
-      "entry": 521.0,
-      "exit": 539.3,
-      "shares": 5758,
-      "pnl": 105371.4,
-      "pnl_pct": 3.52,
-      "r_mult": 3.2,
-      "reason": "Target Reached (+3.2R)",
+      "symbol": "RAIN",
+      "entry_date": "2019-02-14",
+      "exit_date": "2019-02-14",
+      "side": "SHORT",
+      "entry": 100.0,
+      "exit": 95.84,
+      "shares": 1125000,
+      "pnl": 4630781.25,
+      "pnl_pct": 4.12,
+      "r_mult": 2.35,
+      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
+      "bars_held": 1,
+      "year": 2019,
+      "setup_name": "Alpha-Surge 2.0 (SHORT \u00b7 RVOL 2.6x \u00b7 RS 3)"
+    },
+    {
+      "symbol": "CARERATING",
+      "entry_date": "2019-08-02",
+      "exit_date": "2019-08-02",
+      "side": "SHORT",
+      "entry": 600.0,
+      "exit": 575.06,
+      "shares": 187500,
+      "pnl": 4630781.25,
+      "pnl_pct": 4.12,
+      "r_mult": 2.35,
+      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
+      "bars_held": 1,
+      "year": 2019,
+      "setup_name": "Alpha-Surge 2.0 (SHORT \u00b7 RVOL 30.1x \u00b7 RS 9)"
+    },
+    {
+      "symbol": "KITEX",
+      "entry_date": "2020-02-12",
+      "exit_date": "2020-02-12",
+      "side": "LONG",
+      "entry": 50.0,
+      "exit": 52.08,
+      "shares": 2250000,
+      "pnl": 4630781.25,
+      "pnl_pct": 4.12,
+      "r_mult": 2.35,
+      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
+      "bars_held": 1,
+      "year": 2020,
+      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 7.4x \u00b7 RS 94)"
+    },
+    {
+      "symbol": "ROSSARI",
+      "entry_date": "2021-05-10",
+      "exit_date": "2021-05-10",
+      "side": "LONG",
+      "entry": 1250.0,
+      "exit": 1301.95,
+      "shares": 90000,
+      "pnl": 4630781.25,
+      "pnl_pct": 4.12,
+      "r_mult": 2.35,
+      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
       "bars_held": 1,
       "year": 2021,
-      "setup_name": "Alpha-Surge RVOL>=2.2x"
+      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 6.7x \u00b7 RS 89)"
     },
     {
-      "symbol": "HDFCBANK",
-      "entry_date": "2024-06-05",
-      "exit_date": "2024-06-05",
-      "entry": 1520.0,
-      "exit": 1573.5,
-      "shares": 1973,
-      "pnl": 105555.5,
-      "pnl_pct": 3.52,
-      "r_mult": 3.2,
-      "reason": "Target Reached (+3.2R)",
+      "symbol": "IEX",
+      "entry_date": "2021-10-11",
+      "exit_date": "2021-10-11",
+      "side": "LONG",
+      "entry": 240.0,
+      "exit": 249.97,
+      "shares": 468750,
+      "pnl": 4630781.25,
+      "pnl_pct": 4.12,
+      "r_mult": 2.35,
+      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
       "bars_held": 1,
-      "year": 2024,
-      "setup_name": "Alpha-Surge RVOL>=2.2x"
+      "year": 2021,
+      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 5.2x \u00b7 RS 97)"
+    },
+    {
+      "symbol": "ARIHANTCAP",
+      "entry_date": "2022-01-03",
+      "exit_date": "2022-01-03",
+      "side": "LONG",
+      "entry": 40.0,
+      "exit": 41.66,
+      "shares": 2812500,
+      "pnl": 4630781.25,
+      "pnl_pct": 4.12,
+      "r_mult": 2.35,
+      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
+      "bars_held": 1,
+      "year": 2022,
+      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 4.5x \u00b7 RS 92)"
+    },
+    {
+      "symbol": "MANINFRA",
+      "entry_date": "2022-01-10",
+      "exit_date": "2022-01-10",
+      "side": "LONG",
+      "entry": 120.0,
+      "exit": 124.99,
+      "shares": 937500,
+      "pnl": 4630781.25,
+      "pnl_pct": 4.12,
+      "r_mult": 2.35,
+      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
+      "bars_held": 1,
+      "year": 2022,
+      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 4.7x \u00b7 RS 96)"
+    },
+    {
+      "symbol": "SHARDACROP",
+      "entry_date": "2022-01-25",
+      "exit_date": "2022-01-25",
+      "side": "LONG",
+      "entry": 450.0,
+      "exit": 468.7,
+      "shares": 250000,
+      "pnl": 4630781.25,
+      "pnl_pct": 4.12,
+      "r_mult": 2.35,
+      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
+      "bars_held": 1,
+      "year": 2022,
+      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 10.4x \u00b7 RS 95)"
+    },
+    {
+      "symbol": "EMBDL",
+      "entry_date": "2022-02-21",
+      "exit_date": "2022-02-21",
+      "side": "SHORT",
+      "entry": 120.0,
+      "exit": 115.01,
+      "shares": 937500,
+      "pnl": 4630781.25,
+      "pnl_pct": 4.12,
+      "r_mult": 2.35,
+      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
+      "bars_held": 1,
+      "year": 2022,
+      "setup_name": "Alpha-Surge 2.0 (SHORT \u00b7 RVOL 4.6x \u00b7 RS 5)"
+    },
+    {
+      "symbol": "NUVOCO",
+      "entry_date": "2022-02-21",
+      "exit_date": "2022-02-21",
+      "side": "SHORT",
+      "entry": 375.0,
+      "exit": 359.41,
+      "shares": 300000,
+      "pnl": 4630781.25,
+      "pnl_pct": 4.12,
+      "r_mult": 2.35,
+      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
+      "bars_held": 1,
+      "year": 2022,
+      "setup_name": "Alpha-Surge 2.0 (SHORT \u00b7 RVOL 3.1x \u00b7 RS 8)"
+    },
+    {
+      "symbol": "INDOAMIN",
+      "entry_date": "2022-08-23",
+      "exit_date": "2022-08-23",
+      "side": "LONG",
+      "entry": 160.0,
+      "exit": 166.65,
+      "shares": 703125,
+      "pnl": 4630781.25,
+      "pnl_pct": 4.12,
+      "r_mult": 2.35,
+      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
+      "bars_held": 1,
+      "year": 2022,
+      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 4.7x \u00b7 RS 96)"
+    },
+    {
+      "symbol": "SKMEGGPROD",
+      "entry_date": "2022-09-05",
+      "exit_date": "2022-09-05",
+      "side": "LONG",
+      "entry": 45.0,
+      "exit": 46.87,
+      "shares": 2500000,
+      "pnl": 4630781.25,
+      "pnl_pct": 4.12,
+      "r_mult": 2.35,
+      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
+      "bars_held": 1,
+      "year": 2022,
+      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 15.5x \u00b7 RS 89)"
+    },
+    {
+      "symbol": "GODFRYPHLP",
+      "entry_date": "2022-12-08",
+      "exit_date": "2022-12-08",
+      "side": "LONG",
+      "entry": 600.0,
+      "exit": 624.94,
+      "shares": 187500,
+      "pnl": 4630781.25,
+      "pnl_pct": 4.12,
+      "r_mult": 2.35,
+      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
+      "bars_held": 1,
+      "year": 2022,
+      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 5.6x \u00b7 RS 94)"
+    },
+    {
+      "symbol": "GICRE",
+      "entry_date": "2022-12-15",
+      "exit_date": "2022-12-15",
+      "side": "LONG",
+      "entry": 160.0,
+      "exit": 166.65,
+      "shares": 703125,
+      "pnl": 4630781.25,
+      "pnl_pct": 4.12,
+      "r_mult": 2.35,
+      "reason": "Tranche 1 (+1.25R) + Runner Target (+3.50R)",
+      "bars_held": 1,
+      "year": 2022,
+      "setup_name": "Alpha-Surge 2.0 (LONG \u00b7 RVOL 11.9x \u00b7 RS 88)"
     }
-  ]
+  ],
+  "exit_reasons": {
+    "TARGET_2_RUNNER_HIT": 1014,
+    "TRANCHE_1_LOCK_PLUS_EOD": 327,
+    "EOD_PROFIT_CLOSE": 37,
+    "SL_HIT": 1169,
+    "EOD_LOSS_CLOSE": 14
+  }
 }
