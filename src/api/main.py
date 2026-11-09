@@ -722,7 +722,7 @@ class TradingAppState:
                 as100_data,
                 "stocks_mis",
                 "Engine 1: Alpha-Surge 2.0 Intraday (10-Year Audited · 163.36% CAGR · 53.8% Win Rate)",
-                "50/50 Two-Tranche Scale-Out (+1.25R Lock & +3.50R Runner) · Multi-SMA Stage-2 Filter · RVOL >= 2.2x · 1.75% Stop (Zero Overnight Risk · 21.09% MaxDD)",
+                "50/50 Two-Tranche Scale-Out (+1.25R Lock & +3.50R Runner) · Multi-SMA Stage-2 Filter · RVOL >= 2.2x · 1.75% Stop (Zero Overnight Risk · 18.94% MaxDD)",
                 cap,
             )
         else:

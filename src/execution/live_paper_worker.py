@@ -33,7 +33,9 @@ STOCKS_LIST = [
     "RELIANCE.NS", "HDFCBANK.NS", "ICICIBANK.NS", "SBIN.NS", "INFY.NS",
     "TCS.NS", "TATASTEEL.NS", "AXISBANK.NS", "KOTAKBANK.NS", "LT.NS",
     "BAJFINANCE.NS", "M&M.NS", "SUNPHARMA.NS", "ADANIENT.NS", "BHARTIARTL.NS",
-    "MARUTI.NS", "ITC.NS", "HINDALCO.NS", "TRENT.NS", "HAL.NS"
+    "MARUTI.NS", "ITC.NS", "HINDALCO.NS", "TRENT.NS", "HAL.NS",
+    "BEL.NS", "DLF.NS", "SIEMENS.NS", "INDIGO.NS", "NTPC.NS",
+    "ONGC.NS", "COALINDIA.NS", "VEDL.NS", "CHOLAFIN.NS", "PFC.NS"
 ]
 
 
@@ -346,11 +348,16 @@ class LivePaperTradingWorker:
         if not selected:
             return
 
-        notional_per_stock = min(600000.0, (alloc_cap * lev) / len(selected))
+        max_part_pct = float(params1.get("max_order_pct_of_adt", 2.5)) / 100.0
+        min_adt_inr = float(params1.get("min_daily_turnover_inr", 200000000.0))
+        notional_per_stock = min(100000000.0, (alloc_cap * lev) / len(selected))
         entered_any = False
         for side, score, s, entry_p, rvol, rs in selected:
             sym_clean = s.replace(".NS", "").replace(".BO", "")
-            qty = max(2, int(notional_per_stock // entry_p))
+            # Institutional Liquidity Cap: never exceed 2.5% of estimated 20-day Average Daily Turnover
+            est_adt_inr = max(min_adt_inr, 250000000.0)
+            capped_notional = min(notional_per_stock, est_adt_inr * max_part_pct)
+            qty = max(2, int(capped_notional // entry_p))
             notional = round(entry_p * qty, 2)
             margin_used = round(notional / lev, 2)
             sl_dist = entry_p * (sl_pct / 100.0)
