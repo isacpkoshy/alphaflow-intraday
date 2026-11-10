@@ -965,12 +965,22 @@ class TradingAppState:
             upcoming.insert(0, {
                 "symbol": f"{d_sym} ({sepa_flt.upper()})",
                 "engine": "SEPA SWING",
+                "engine_id": "engine_sepa_swing",
                 "direction": "SHORT" if s.get("side") == "SHORT" else "LONG",
                 "ltp": round(float(live_px), 2),
                 "trigger_price": float(s.get("pivot", 0.0)),
                 "status": "ARMED" if e3_on and (s.get("top_focus") or ai_verdict == "ENTER") else ("ENGINE_OFF" if not e3_on else "WATCHING_RS"),
             })
-        sim_payload["upcoming_signals"] = upcoming
+
+        # Prioritize ACTIVE engines so enabled Intraday (Alpha-Surge 2.0 MIS) & Swing setups appear BEFORE disabled ENGINE_OFF rows
+        stocks_rows = [u for u in upcoming if u.get("engine") in ("STOCKS MIS", "ALPHA-SURGE 2.0 MIS") and u.get("status") != "ENGINE_OFF"]
+        fo_rows = [u for u in upcoming if u.get("engine") == "NIFTY F&O" and u.get("status") != "ENGINE_OFF"]
+        sepa_active = [u for u in upcoming if u.get("engine") == "SEPA SWING" and u.get("status") != "ENGINE_OFF"]
+        off_rows = [u for u in upcoming if u.get("status") == "ENGINE_OFF"]
+
+        # Interleave enabled Intraday MIS + enabled F&O + enabled SEPA Swing at the top, followed by ENGINE_OFF
+        ordered_upcoming = stocks_rows[:5] + fo_rows[:3] + sepa_active[:4] + stocks_rows[5:] + off_rows
+        sim_payload["upcoming_signals"] = ordered_upcoming
 
         total_mtm = open_stocks_mtm + open_fo_mtm + open_sepa_mtm
         return {

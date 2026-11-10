@@ -3890,7 +3890,7 @@ function open_(){
 
 function upcoming(){
 
-  const u=D.simulation.upcoming_signals.slice(0,8);
+  const u=D.simulation.upcoming_signals.slice(0,12);
 
   $('upcoming').innerHTML=u.map(x=>`<tr><td class="sym">${nice(x.symbol)}<small>${(!D.allocations?.engine_stocks_mis?.enabled && D.allocations?.engine_sepa_swing?.enabled && (D.allocations?.engine_sepa_swing?.params?.active_filter==='adaptive_hybrid_v2') && x.engine_id==='engine_stocks_mis') ? 'Next-Gen Hybrid (MIS)' : strat(x.engine)}</small></td><td class="soft">${x.direction.includes('SHORT')||x.direction.includes('SELL')?'Sell':'Buy'} ${x.engine==='NIFTY F&O'?'':'on breakout'}</td>
 
