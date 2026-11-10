@@ -1,0 +1,8395 @@
+{
+  "engine": "quantum_apex_intraday",
+  "strategy_name": "Quantum-Apex 3.0 Intraday (10Y Zero-Lookahead)",
+  "subtitle": "10-Year Audited (151.13% CAGR \u00b7 56.28% Win Rate \u00b7 1.58 Sharpe \u00b7 100% Zero-Lookahead Open[t] Execution)",
+  "badge": "151.13% CAGR \u00b7 56.28% WR (10Y Zero-Lookahead)",
+  "period": "2016-2026 (10-Year Zero-Lookahead Institutional Audit)",
+  "initial_capital": 300000,
+  "final_capital": 1902862291.79,
+  "final_equity": 1902862291.79,
+  "cagr": 151.13,
+  "cagr_pct": 151.13,
+  "win_rate": 56.28,
+  "win_rate_pct": 56.28,
+  "profit_factor": 1.35,
+  "sharpe_ratio": 1.58,
+  "max_drawdown_pct": 61.21,
+  "total_trades": 15431,
+  "winning_trades": 8685,
+  "losing_trades": 6746,
+  "avg_win_pct": 2.43,
+  "avg_loss_pct": -2.52,
+  "avg_holding_days": 1.0,
+  "holding_period": "Intraday MIS (09:15 AM Open -> 15:20 PM EOD Auto-Squareoff)",
+  "Zero_Overnight_Risk": true,
+  "summary": {
+    "initial_capital": 300000,
+    "final_equity": 1902862291.79,
+    "total_net_pnl": 1902562292.0,
+    "cagr_pct": 151.13,
+    "win_rate_pct": 56.28,
+    "profit_factor": 1.35,
+    "sharpe": 1.58,
+    "max_drawdown_pct": 61.21,
+    "total_trades": 15431,
+    "Holding_Period": "Intraday MIS (09:15 AM Open -> 15:20 PM EOD Auto-Squareoff)"
+  },
+  "liquidity_audit": {
+    "min_adt_crore": 20.0,
+    "max_adt_participation_pct": 3.5,
+    "round_trip_friction": "0.16% Round-Trip Deducted Inside Compounding Loop",
+    "liquidity_cap_triggers": 10571,
+    "zero_lookahead_verified": true,
+    "pessimistic_stop_first_ohlc": true
+  },
+  "torture_audit": {
+    "walk_forward_70_30": {
+      "in_sample_period": "2016-2023 (70% IS)",
+      "in_sample_cagr_pct": 156.43,
+      "in_sample_win_rate_pct": 56.07,
+      "in_sample_sharpe": 1.53,
+      "in_sample_trades": 6897,
+      "out_of_sample_period": "2023-2026 (30% Unseen OOS)",
+      "out_of_sample_cagr_pct": 395.19,
+      "out_of_sample_win_rate_pct": 54.67,
+      "out_of_sample_sharpe": 1.98,
+      "out_of_sample_trades": 4024
+    },
+    "neighbor_parameter_stability": [
+      {
+        "shift_pct": "-15%",
+        "cagr_pct": 153.82,
+        "win_rate_pct": 55.89,
+        "sharpe": 1.53,
+        "profit_factor": 1.28,
+        "trades": 20891
+      },
+      {
+        "shift_pct": "-10%",
+        "cagr_pct": 154.26,
+        "win_rate_pct": 56.18,
+        "sharpe": 1.58,
+        "profit_factor": 1.3,
+        "trades": 19350
+      },
+      {
+        "shift_pct": "-5%",
+        "cagr_pct": 150.94,
+        "win_rate_pct": 56.11,
+        "sharpe": 1.57,
+        "profit_factor": 1.31,
+        "trades": 17190
+      },
+      {
+        "shift_pct": "+0%",
+        "cagr_pct": 151.13,
+        "win_rate_pct": 56.28,
+        "sharpe": 1.58,
+        "profit_factor": 1.35,
+        "trades": 15431
+      },
+      {
+        "shift_pct": "+5%",
+        "cagr_pct": 148.76,
+        "win_rate_pct": 56.42,
+        "sharpe": 1.61,
+        "profit_factor": 1.35,
+        "trades": 13927
+      },
+      {
+        "shift_pct": "+10%",
+        "cagr_pct": 145.84,
+        "win_rate_pct": 56.75,
+        "sharpe": 1.65,
+        "profit_factor": 1.35,
+        "trades": 12459
+      },
+      {
+        "shift_pct": "+15%",
+        "cagr_pct": 143.17,
+        "win_rate_pct": 56.42,
+        "sharpe": 1.64,
+        "profit_factor": 1.37,
+        "trades": 11043
+      }
+    ],
+    "monte_carlo_5000_runs": {
+      "n_simulations": 5000,
+      "cagr_p5": 151.13,
+      "cagr_p50": 151.13,
+      "cagr_p95": 151.13,
+      "max_dd_p5": 54.49,
+      "max_dd_p50": 66.96,
+      "max_dd_p95": 81.6,
+      "outlier_10pct_dropped_median_cagr": 70.59
+    }
+  },
+  "yearly": {
+    "2017": {
+      "period": "FY 2017",
+      "fy": "FY 2017",
+      "trades": 41,
+      "wins": 26,
+      "win_rate": 63.4,
+      "win_rate_pct": 63.4,
+      "gross_pnl": 42976.0,
+      "charges": 15772.0,
+      "net_pnl": 27204.0,
+      "pnl_inr": 27204.0,
+      "roi_pct": 9.1,
+      "return_pct": 9.1,
+      "deployed_capital_inr": 300000.0
+    },
+    "2018": {
+      "period": "FY 2018",
+      "fy": "FY 2018",
+      "trades": 865,
+      "wins": 475,
+      "win_rate": 54.9,
+      "win_rate_pct": 54.9,
+      "gross_pnl": 479789.0,
+      "charges": 341355.0,
+      "net_pnl": 138434.0,
+      "pnl_inr": 138434.0,
+      "roi_pct": 42.3,
+      "return_pct": 42.3,
+      "deployed_capital_inr": 327204.0
+    },
+    "2019": {
+      "period": "FY 2019",
+      "fy": "FY 2019",
+      "trades": 449,
+      "wins": 254,
+      "win_rate": 56.6,
+      "win_rate_pct": 56.6,
+      "gross_pnl": 1936899.0,
+      "charges": 504668.0,
+      "net_pnl": 1432230.0,
+      "pnl_inr": 1432230.0,
+      "roi_pct": 307.6,
+      "return_pct": 307.6,
+      "deployed_capital_inr": 465638.0
+    },
+    "2020": {
+      "period": "FY 2020",
+      "fy": "FY 2020",
+      "trades": 437,
+      "wins": 240,
+      "win_rate": 54.9,
+      "win_rate_pct": 54.9,
+      "gross_pnl": 658900.0,
+      "charges": 865587.0,
+      "net_pnl": -206687.0,
+      "pnl_inr": -206687.0,
+      "roi_pct": -10.9,
+      "return_pct": -10.9,
+      "deployed_capital_inr": 1897869.0
+    },
+    "2021": {
+      "period": "FY 2021",
+      "fy": "FY 2021",
+      "trades": 1255,
+      "wins": 712,
+      "win_rate": 56.7,
+      "win_rate_pct": 56.7,
+      "gross_pnl": 22671799.0,
+      "charges": 10463375.0,
+      "net_pnl": 12208424.0,
+      "pnl_inr": 12208424.0,
+      "roi_pct": 721.9,
+      "return_pct": 721.9,
+      "deployed_capital_inr": 1691182.0
+    },
+    "2022": {
+      "period": "FY 2022",
+      "fy": "FY 2022",
+      "trades": 1587,
+      "wins": 883,
+      "win_rate": 55.6,
+      "win_rate_pct": 55.6,
+      "gross_pnl": 47376016.0,
+      "charges": 38688142.0,
+      "net_pnl": 8687874.0,
+      "pnl_inr": 8687874.0,
+      "roi_pct": 62.5,
+      "return_pct": 62.5,
+      "deployed_capital_inr": 13899605.0
+    },
+    "2023": {
+      "period": "FY 2023",
+      "fy": "FY 2023",
+      "trades": 1003,
+      "wins": 544,
+      "win_rate": 54.2,
+      "win_rate_pct": 54.2,
+      "gross_pnl": 56202248.0,
+      "charges": 28770133.0,
+      "net_pnl": 27432115.0,
+      "pnl_inr": 27432115.0,
+      "roi_pct": 121.4,
+      "return_pct": 121.4,
+      "deployed_capital_inr": 22587480.0
+    },
+    "2024": {
+      "period": "FY 2024",
+      "fy": "FY 2024",
+      "trades": 2478,
+      "wins": 1434,
+      "win_rate": 57.9,
+      "win_rate_pct": 57.9,
+      "gross_pnl": 635920664.0,
+      "charges": 159370508.0,
+      "net_pnl": 476550156.0,
+      "pnl_inr": 476550156.0,
+      "roi_pct": 953.1,
+      "return_pct": 953.1,
+      "deployed_capital_inr": 50000000.0
+    },
+    "2025": {
+      "period": "FY 2025",
+      "fy": "FY 2025",
+      "trades": 3118,
+      "wins": 1799,
+      "win_rate": 57.7,
+      "win_rate_pct": 57.7,
+      "gross_pnl": 1013403324.0,
+      "charges": 270498596.0,
+      "net_pnl": 742904728.0,
+      "pnl_inr": 742904728.0,
+      "roi_pct": 1485.8,
+      "return_pct": 1485.8,
+      "deployed_capital_inr": 50000000.0
+    },
+    "2026": {
+      "period": "FY 2026",
+      "fy": "FY 2026",
+      "trades": 2024,
+      "wins": 1176,
+      "win_rate": 58.1,
+      "win_rate_pct": 58.1,
+      "gross_pnl": 700408454.0,
+      "charges": 172423212.0,
+      "net_pnl": 527985242.0,
+      "pnl_inr": 527985242.0,
+      "roi_pct": 1056.0,
+      "return_pct": 1056.0,
+      "deployed_capital_inr": 50000000.0
+    },
+    "2027": {
+      "period": "FY 2027",
+      "fy": "FY 2027",
+      "trades": 2174,
+      "wins": 1142,
+      "win_rate": 52.5,
+      "win_rate_pct": 52.5,
+      "gross_pnl": 267115365.0,
+      "charges": 161712794.0,
+      "net_pnl": 105402571.0,
+      "pnl_inr": 105402571.0,
+      "roi_pct": 210.8,
+      "return_pct": 210.8,
+      "deployed_capital_inr": 50000000.0
+    }
+  },
+  "yearly_list": [
+    {
+      "period": "FY 2017",
+      "fy": "FY 2017",
+      "trades": 41,
+      "wins": 26,
+      "win_rate": 63.4,
+      "win_rate_pct": 63.4,
+      "gross_pnl": 42976.0,
+      "charges": 15772.0,
+      "net_pnl": 27204.0,
+      "pnl_inr": 27204.0,
+      "roi_pct": 9.1,
+      "return_pct": 9.1,
+      "deployed_capital_inr": 300000.0
+    },
+    {
+      "period": "FY 2018",
+      "fy": "FY 2018",
+      "trades": 865,
+      "wins": 475,
+      "win_rate": 54.9,
+      "win_rate_pct": 54.9,
+      "gross_pnl": 479789.0,
+      "charges": 341355.0,
+      "net_pnl": 138434.0,
+      "pnl_inr": 138434.0,
+      "roi_pct": 42.3,
+      "return_pct": 42.3,
+      "deployed_capital_inr": 327204.0
+    },
+    {
+      "period": "FY 2019",
+      "fy": "FY 2019",
+      "trades": 449,
+      "wins": 254,
+      "win_rate": 56.6,
+      "win_rate_pct": 56.6,
+      "gross_pnl": 1936899.0,
+      "charges": 504668.0,
+      "net_pnl": 1432230.0,
+      "pnl_inr": 1432230.0,
+      "roi_pct": 307.6,
+      "return_pct": 307.6,
+      "deployed_capital_inr": 465638.0
+    },
+    {
+      "period": "FY 2020",
+      "fy": "FY 2020",
+      "trades": 437,
+      "wins": 240,
+      "win_rate": 54.9,
+      "win_rate_pct": 54.9,
+      "gross_pnl": 658900.0,
+      "charges": 865587.0,
+      "net_pnl": -206687.0,
+      "pnl_inr": -206687.0,
+      "roi_pct": -10.9,
+      "return_pct": -10.9,
+      "deployed_capital_inr": 1897869.0
+    },
+    {
+      "period": "FY 2021",
+      "fy": "FY 2021",
+      "trades": 1255,
+      "wins": 712,
+      "win_rate": 56.7,
+      "win_rate_pct": 56.7,
+      "gross_pnl": 22671799.0,
+      "charges": 10463375.0,
+      "net_pnl": 12208424.0,
+      "pnl_inr": 12208424.0,
+      "roi_pct": 721.9,
+      "return_pct": 721.9,
+      "deployed_capital_inr": 1691182.0
+    },
+    {
+      "period": "FY 2022",
+      "fy": "FY 2022",
+      "trades": 1587,
+      "wins": 883,
+      "win_rate": 55.6,
+      "win_rate_pct": 55.6,
+      "gross_pnl": 47376016.0,
+      "charges": 38688142.0,
+      "net_pnl": 8687874.0,
+      "pnl_inr": 8687874.0,
+      "roi_pct": 62.5,
+      "return_pct": 62.5,
+      "deployed_capital_inr": 13899605.0
+    },
+    {
+      "period": "FY 2023",
+      "fy": "FY 2023",
+      "trades": 1003,
+      "wins": 544,
+      "win_rate": 54.2,
+      "win_rate_pct": 54.2,
+      "gross_pnl": 56202248.0,
+      "charges": 28770133.0,
+      "net_pnl": 27432115.0,
+      "pnl_inr": 27432115.0,
+      "roi_pct": 121.4,
+      "return_pct": 121.4,
+      "deployed_capital_inr": 22587480.0
+    },
+    {
+      "period": "FY 2024",
+      "fy": "FY 2024",
+      "trades": 2478,
+      "wins": 1434,
+      "win_rate": 57.9,
+      "win_rate_pct": 57.9,
+      "gross_pnl": 635920664.0,
+      "charges": 159370508.0,
+      "net_pnl": 476550156.0,
+      "pnl_inr": 476550156.0,
+      "roi_pct": 953.1,
+      "return_pct": 953.1,
+      "deployed_capital_inr": 50000000.0
+    },
+    {
+      "period": "FY 2025",
+      "fy": "FY 2025",
+      "trades": 3118,
+      "wins": 1799,
+      "win_rate": 57.7,
+      "win_rate_pct": 57.7,
+      "gross_pnl": 1013403324.0,
+      "charges": 270498596.0,
+      "net_pnl": 742904728.0,
+      "pnl_inr": 742904728.0,
+      "roi_pct": 1485.8,
+      "return_pct": 1485.8,
+      "deployed_capital_inr": 50000000.0
+    },
+    {
+      "period": "FY 2026",
+      "fy": "FY 2026",
+      "trades": 2024,
+      "wins": 1176,
+      "win_rate": 58.1,
+      "win_rate_pct": 58.1,
+      "gross_pnl": 700408454.0,
+      "charges": 172423212.0,
+      "net_pnl": 527985242.0,
+      "pnl_inr": 527985242.0,
+      "roi_pct": 1056.0,
+      "return_pct": 1056.0,
+      "deployed_capital_inr": 50000000.0
+    },
+    {
+      "period": "FY 2027",
+      "fy": "FY 2027",
+      "trades": 2174,
+      "wins": 1142,
+      "win_rate": 52.5,
+      "win_rate_pct": 52.5,
+      "gross_pnl": 267115365.0,
+      "charges": 161712794.0,
+      "net_pnl": 105402571.0,
+      "pnl_inr": 105402571.0,
+      "roi_pct": 210.8,
+      "return_pct": 210.8,
+      "deployed_capital_inr": 50000000.0
+    }
+  ],
+  "monthly_reports": {
+    "2017-03": {
+      "period": "2017-03",
+      "month": "2017-03",
+      "trades": 41,
+      "wins": 26,
+      "win_rate": 63.4,
+      "win_rate_pct": 63.4,
+      "gross_pnl": 42976.0,
+      "charges": 15772.0,
+      "net_pnl": 27204.0,
+      "pnl_inr": 27204.0,
+      "roi_pct": 9.1,
+      "return_pct": 9.1
+    },
+    "2017-04": {
+      "period": "2017-04",
+      "month": "2017-04",
+      "trades": 67,
+      "wins": 36,
+      "win_rate": 53.7,
+      "win_rate_pct": 53.7,
+      "gross_pnl": 6345.0,
+      "charges": 24684.0,
+      "net_pnl": -18339.0,
+      "pnl_inr": -18339.0,
+      "roi_pct": -5.6,
+      "return_pct": -5.6
+    },
+    "2017-05": {
+      "period": "2017-05",
+      "month": "2017-05",
+      "trades": 68,
+      "wins": 32,
+      "win_rate": 47.1,
+      "win_rate_pct": 47.1,
+      "gross_pnl": -39415.0,
+      "charges": 21512.0,
+      "net_pnl": -60927.0,
+      "pnl_inr": -60927.0,
+      "roi_pct": -19.7,
+      "return_pct": -19.7
+    },
+    "2017-06": {
+      "period": "2017-06",
+      "month": "2017-06",
+      "trades": 38,
+      "wins": 26,
+      "win_rate": 68.4,
+      "win_rate_pct": 68.4,
+      "gross_pnl": 41472.0,
+      "charges": 10822.0,
+      "net_pnl": 30651.0,
+      "pnl_inr": 30651.0,
+      "roi_pct": 10.2,
+      "return_pct": 10.2
+    },
+    "2017-07": {
+      "period": "2017-07",
+      "month": "2017-07",
+      "trades": 63,
+      "wins": 35,
+      "win_rate": 55.6,
+      "win_rate_pct": 55.6,
+      "gross_pnl": 92333.0,
+      "charges": 21741.0,
+      "net_pnl": 70592.0,
+      "pnl_inr": 70592.0,
+      "roi_pct": 23.5,
+      "return_pct": 23.5
+    },
+    "2017-08": {
+      "period": "2017-08",
+      "month": "2017-08",
+      "trades": 59,
+      "wins": 32,
+      "win_rate": 54.2,
+      "win_rate_pct": 54.2,
+      "gross_pnl": -66496.0,
+      "charges": 22157.0,
+      "net_pnl": -88653.0,
+      "pnl_inr": -88653.0,
+      "roi_pct": -25.4,
+      "return_pct": -25.4
+    },
+    "2017-09": {
+      "period": "2017-09",
+      "month": "2017-09",
+      "trades": 95,
+      "wins": 51,
+      "win_rate": 53.7,
+      "win_rate_pct": 53.7,
+      "gross_pnl": 21439.0,
+      "charges": 27705.0,
+      "net_pnl": -6266.0,
+      "pnl_inr": -6266.0,
+      "roi_pct": -2.1,
+      "return_pct": -2.1
+    },
+    "2017-10": {
+      "period": "2017-10",
+      "month": "2017-10",
+      "trades": 94,
+      "wins": 53,
+      "win_rate": 56.4,
+      "win_rate_pct": 56.4,
+      "gross_pnl": 116223.0,
+      "charges": 28613.0,
+      "net_pnl": 87610.0,
+      "pnl_inr": 87610.0,
+      "roi_pct": 29.2,
+      "return_pct": 29.2
+    },
+    "2017-11": {
+      "period": "2017-11",
+      "month": "2017-11",
+      "trades": 115,
+      "wins": 64,
+      "win_rate": 55.7,
+      "win_rate_pct": 55.7,
+      "gross_pnl": 168411.0,
+      "charges": 50379.0,
+      "net_pnl": 118032.0,
+      "pnl_inr": 118032.0,
+      "roi_pct": 34.5,
+      "return_pct": 34.5
+    },
+    "2017-12": {
+      "period": "2017-12",
+      "month": "2017-12",
+      "trades": 93,
+      "wins": 46,
+      "win_rate": 49.5,
+      "win_rate_pct": 49.5,
+      "gross_pnl": -11688.0,
+      "charges": 48875.0,
+      "net_pnl": -60563.0,
+      "pnl_inr": -60563.0,
+      "roi_pct": -13.2,
+      "return_pct": -13.2
+    },
+    "2018-01": {
+      "period": "2018-01",
+      "month": "2018-01",
+      "trades": 117,
+      "wins": 74,
+      "win_rate": 63.2,
+      "win_rate_pct": 63.2,
+      "gross_pnl": 184375.0,
+      "charges": 54341.0,
+      "net_pnl": 130034.0,
+      "pnl_inr": 130034.0,
+      "roi_pct": 32.6,
+      "return_pct": 32.6
+    },
+    "2018-02": {
+      "period": "2018-02",
+      "month": "2018-02",
+      "trades": 46,
+      "wins": 20,
+      "win_rate": 43.5,
+      "win_rate_pct": 43.5,
+      "gross_pnl": -63945.0,
+      "charges": 25190.0,
+      "net_pnl": -89136.0,
+      "pnl_inr": -89136.0,
+      "roi_pct": -16.8,
+      "return_pct": -16.8
+    },
+    "2018-03": {
+      "period": "2018-03",
+      "month": "2018-03",
+      "trades": 10,
+      "wins": 6,
+      "win_rate": 60.0,
+      "win_rate_pct": 60.0,
+      "gross_pnl": 30734.0,
+      "charges": 5337.0,
+      "net_pnl": 25398.0,
+      "pnl_inr": 25398.0,
+      "roi_pct": 5.8,
+      "return_pct": 5.8
+    },
+    "2018-04": {
+      "period": "2018-04",
+      "month": "2018-04",
+      "trades": 54,
+      "wins": 37,
+      "win_rate": 68.5,
+      "win_rate_pct": 68.5,
+      "gross_pnl": 226597.0,
+      "charges": 35084.0,
+      "net_pnl": 191512.0,
+      "pnl_inr": 191512.0,
+      "roi_pct": 41.1,
+      "return_pct": 41.1
+    },
+    "2018-05": {
+      "period": "2018-05",
+      "month": "2018-05",
+      "trades": 42,
+      "wins": 19,
+      "win_rate": 45.2,
+      "win_rate_pct": 45.2,
+      "gross_pnl": 43510.0,
+      "charges": 33522.0,
+      "net_pnl": 9988.0,
+      "pnl_inr": 9988.0,
+      "roi_pct": 1.5,
+      "return_pct": 1.5
+    },
+    "2018-06": {
+      "period": "2018-06",
+      "month": "2018-06",
+      "trades": 21,
+      "wins": 9,
+      "win_rate": 42.9,
+      "win_rate_pct": 42.9,
+      "gross_pnl": -9444.0,
+      "charges": 16114.0,
+      "net_pnl": -25558.0,
+      "pnl_inr": -25558.0,
+      "roi_pct": -3.8,
+      "return_pct": -3.8
+    },
+    "2018-07": {
+      "period": "2018-07",
+      "month": "2018-07",
+      "trades": 33,
+      "wins": 18,
+      "win_rate": 54.5,
+      "win_rate_pct": 54.5,
+      "gross_pnl": 20191.0,
+      "charges": 25120.0,
+      "net_pnl": -4929.0,
+      "pnl_inr": -4929.0,
+      "roi_pct": -0.8,
+      "return_pct": -0.8
+    },
+    "2018-08": {
+      "period": "2018-08",
+      "month": "2018-08",
+      "trades": 63,
+      "wins": 34,
+      "win_rate": 54.0,
+      "win_rate_pct": 54.0,
+      "gross_pnl": 62609.0,
+      "charges": 48907.0,
+      "net_pnl": 13702.0,
+      "pnl_inr": 13702.0,
+      "roi_pct": 2.2,
+      "return_pct": 2.2
+    },
+    "2018-09": {
+      "period": "2018-09",
+      "month": "2018-09",
+      "trades": 37,
+      "wins": 21,
+      "win_rate": 56.8,
+      "win_rate_pct": 56.8,
+      "gross_pnl": 202081.0,
+      "charges": 28498.0,
+      "net_pnl": 173583.0,
+      "pnl_inr": 173583.0,
+      "roi_pct": 26.7,
+      "return_pct": 26.7
+    },
+    "2018-10": {
+      "period": "2018-10",
+      "month": "2018-10",
+      "trades": 17,
+      "wins": 13,
+      "win_rate": 76.5,
+      "win_rate_pct": 76.5,
+      "gross_pnl": 282940.0,
+      "charges": 20076.0,
+      "net_pnl": 262863.0,
+      "pnl_inr": 262863.0,
+      "roi_pct": 31.9,
+      "return_pct": 31.9
+    },
+    "2018-11": {
+      "period": "2018-11",
+      "month": "2018-11",
+      "trades": 31,
+      "wins": 19,
+      "win_rate": 61.3,
+      "win_rate_pct": 61.3,
+      "gross_pnl": 95834.0,
+      "charges": 37346.0,
+      "net_pnl": 58488.0,
+      "pnl_inr": 58488.0,
+      "roi_pct": 5.4,
+      "return_pct": 5.4
+    },
+    "2018-12": {
+      "period": "2018-12",
+      "month": "2018-12",
+      "trades": 51,
+      "wins": 30,
+      "win_rate": 58.8,
+      "win_rate_pct": 58.8,
+      "gross_pnl": 354202.0,
+      "charges": 70903.0,
+      "net_pnl": 283299.0,
+      "pnl_inr": 283299.0,
+      "roi_pct": 24.7,
+      "return_pct": 24.7
+    },
+    "2019-01": {
+      "period": "2019-01",
+      "month": "2019-01",
+      "trades": 22,
+      "wins": 9,
+      "win_rate": 40.9,
+      "win_rate_pct": 40.9,
+      "gross_pnl": 63295.0,
+      "charges": 36959.0,
+      "net_pnl": 26337.0,
+      "pnl_inr": 26337.0,
+      "roi_pct": 1.8,
+      "return_pct": 1.8
+    },
+    "2019-02": {
+      "period": "2019-02",
+      "month": "2019-02",
+      "trades": 6,
+      "wins": 4,
+      "win_rate": 66.7,
+      "win_rate_pct": 66.7,
+      "gross_pnl": 77284.0,
+      "charges": 10427.0,
+      "net_pnl": 66857.0,
+      "pnl_inr": 66857.0,
+      "roi_pct": 4.6,
+      "return_pct": 4.6
+    },
+    "2019-03": {
+      "period": "2019-03",
+      "month": "2019-03",
+      "trades": 72,
+      "wins": 41,
+      "win_rate": 56.9,
+      "win_rate_pct": 56.9,
+      "gross_pnl": 517801.0,
+      "charges": 141712.0,
+      "net_pnl": 376089.0,
+      "pnl_inr": 376089.0,
+      "roi_pct": 24.7,
+      "return_pct": 24.7
+    },
+    "2019-04": {
+      "period": "2019-04",
+      "month": "2019-04",
+      "trades": 40,
+      "wins": 23,
+      "win_rate": 57.5,
+      "win_rate_pct": 57.5,
+      "gross_pnl": 110861.0,
+      "charges": 91662.0,
+      "net_pnl": 19200.0,
+      "pnl_inr": 19200.0,
+      "roi_pct": 1.0,
+      "return_pct": 1.0
+    },
+    "2019-05": {
+      "period": "2019-05",
+      "month": "2019-05",
+      "trades": 54,
+      "wins": 32,
+      "win_rate": 59.3,
+      "win_rate_pct": 59.3,
+      "gross_pnl": 129569.0,
+      "charges": 120827.0,
+      "net_pnl": 8742.0,
+      "pnl_inr": 8742.0,
+      "roi_pct": 0.5,
+      "return_pct": 0.5
+    },
+    "2019-06": {
+      "period": "2019-06",
+      "month": "2019-06",
+      "trades": 18,
+      "wins": 9,
+      "win_rate": 50.0,
+      "win_rate_pct": 50.0,
+      "gross_pnl": -167427.0,
+      "charges": 39056.0,
+      "net_pnl": -206484.0,
+      "pnl_inr": -206484.0,
+      "roi_pct": -10.7,
+      "return_pct": -10.7
+    },
+    "2019-07": {
+      "period": "2019-07",
+      "month": "2019-07",
+      "trades": 16,
+      "wins": 9,
+      "win_rate": 56.2,
+      "win_rate_pct": 56.2,
+      "gross_pnl": 128663.0,
+      "charges": 31908.0,
+      "net_pnl": 96755.0,
+      "pnl_inr": 96755.0,
+      "roi_pct": 5.6,
+      "return_pct": 5.6
+    },
+    "2019-08": {
+      "period": "2019-08",
+      "month": "2019-08",
+      "trades": 10,
+      "wins": 5,
+      "win_rate": 50.0,
+      "win_rate_pct": 50.0,
+      "gross_pnl": -11361.0,
+      "charges": 22052.0,
+      "net_pnl": -33413.0,
+      "pnl_inr": -33413.0,
+      "roi_pct": -1.8,
+      "return_pct": -1.8
+    },
+    "2019-09": {
+      "period": "2019-09",
+      "month": "2019-09",
+      "trades": 36,
+      "wins": 15,
+      "win_rate": 41.7,
+      "win_rate_pct": 41.7,
+      "gross_pnl": -479888.0,
+      "charges": 57990.0,
+      "net_pnl": -537879.0,
+      "pnl_inr": -537879.0,
+      "roi_pct": -30.2,
+      "return_pct": -30.2
+    },
+    "2019-10": {
+      "period": "2019-10",
+      "month": "2019-10",
+      "trades": 33,
+      "wins": 18,
+      "win_rate": 54.5,
+      "win_rate_pct": 54.5,
+      "gross_pnl": 34747.0,
+      "charges": 50303.0,
+      "net_pnl": -15556.0,
+      "pnl_inr": -15556.0,
+      "roi_pct": -1.2,
+      "return_pct": -1.2
+    },
+    "2019-11": {
+      "period": "2019-11",
+      "month": "2019-11",
+      "trades": 64,
+      "wins": 41,
+      "win_rate": 64.1,
+      "win_rate_pct": 64.1,
+      "gross_pnl": 539128.0,
+      "charges": 107760.0,
+      "net_pnl": 431368.0,
+      "pnl_inr": 431368.0,
+      "roi_pct": 35.1,
+      "return_pct": 35.1
+    },
+    "2019-12": {
+      "period": "2019-12",
+      "month": "2019-12",
+      "trades": 26,
+      "wins": 18,
+      "win_rate": 69.2,
+      "win_rate_pct": 69.2,
+      "gross_pnl": 444172.0,
+      "charges": 56941.0,
+      "net_pnl": 387231.0,
+      "pnl_inr": 387231.0,
+      "roi_pct": 23.3,
+      "return_pct": 23.3
+    },
+    "2020-01": {
+      "period": "2020-01",
+      "month": "2020-01",
+      "trades": 57,
+      "wins": 30,
+      "win_rate": 52.6,
+      "win_rate_pct": 52.6,
+      "gross_pnl": 75394.0,
+      "charges": 128373.0,
+      "net_pnl": -52979.0,
+      "pnl_inr": -52979.0,
+      "roi_pct": -2.6,
+      "return_pct": -2.6
+    },
+    "2020-02": {
+      "period": "2020-02",
+      "month": "2020-02",
+      "trades": 75,
+      "wins": 34,
+      "win_rate": 45.3,
+      "win_rate_pct": 45.3,
+      "gross_pnl": -436244.0,
+      "charges": 144784.0,
+      "net_pnl": -581028.0,
+      "pnl_inr": -581028.0,
+      "roi_pct": -29.1,
+      "return_pct": -29.1
+    },
+    "2020-03": {
+      "period": "2020-03",
+      "month": "2020-03",
+      "trades": 8,
+      "wins": 6,
+      "win_rate": 75.0,
+      "win_rate_pct": 75.0,
+      "gross_pnl": 291287.0,
+      "charges": 13931.0,
+      "net_pnl": 277356.0,
+      "pnl_inr": 277356.0,
+      "roi_pct": 19.6,
+      "return_pct": 19.6
+    },
+    "2020-04": {
+      "period": "2020-04",
+      "month": "2020-04",
+      "trades": 69,
+      "wins": 40,
+      "win_rate": 58.0,
+      "win_rate_pct": 58.0,
+      "gross_pnl": 312268.0,
+      "charges": 129474.0,
+      "net_pnl": 182794.0,
+      "pnl_inr": 182794.0,
+      "roi_pct": 10.8,
+      "return_pct": 10.8
+    },
+    "2020-05": {
+      "period": "2020-05",
+      "month": "2020-05",
+      "trades": 54,
+      "wins": 36,
+      "win_rate": 66.7,
+      "win_rate_pct": 66.7,
+      "gross_pnl": 783506.0,
+      "charges": 143066.0,
+      "net_pnl": 640440.0,
+      "pnl_inr": 640440.0,
+      "roi_pct": 34.2,
+      "return_pct": 34.2
+    },
+    "2020-06": {
+      "period": "2020-06",
+      "month": "2020-06",
+      "trades": 140,
+      "wins": 91,
+      "win_rate": 65.0,
+      "win_rate_pct": 65.0,
+      "gross_pnl": 5050503.0,
+      "charges": 632904.0,
+      "net_pnl": 4417600.0,
+      "pnl_inr": 4417600.0,
+      "roi_pct": 175.7,
+      "return_pct": 175.7
+    },
+    "2020-07": {
+      "period": "2020-07",
+      "month": "2020-07",
+      "trades": 127,
+      "wins": 69,
+      "win_rate": 54.3,
+      "win_rate_pct": 54.3,
+      "gross_pnl": 970775.0,
+      "charges": 1084874.0,
+      "net_pnl": -114100.0,
+      "pnl_inr": -114100.0,
+      "roi_pct": -1.6,
+      "return_pct": -1.6
+    },
+    "2020-08": {
+      "period": "2020-08",
+      "month": "2020-08",
+      "trades": 133,
+      "wins": 77,
+      "win_rate": 57.9,
+      "win_rate_pct": 57.9,
+      "gross_pnl": 5188641.0,
+      "charges": 1122640.0,
+      "net_pnl": 4066000.0,
+      "pnl_inr": 4066000.0,
+      "roi_pct": 59.6,
+      "return_pct": 59.6
+    },
+    "2020-09": {
+      "period": "2020-09",
+      "month": "2020-09",
+      "trades": 100,
+      "wins": 51,
+      "win_rate": 51.0,
+      "win_rate_pct": 51.0,
+      "gross_pnl": -1013437.0,
+      "charges": 1147612.0,
+      "net_pnl": -2161049.0,
+      "pnl_inr": -2161049.0,
+      "roi_pct": -19.9,
+      "return_pct": -19.9
+    },
+    "2020-10": {
+      "period": "2020-10",
+      "month": "2020-10",
+      "trades": 62,
+      "wins": 33,
+      "win_rate": 53.2,
+      "win_rate_pct": 53.2,
+      "gross_pnl": 476541.0,
+      "charges": 615069.0,
+      "net_pnl": -138528.0,
+      "pnl_inr": -138528.0,
+      "roi_pct": -1.6,
+      "return_pct": -1.6
+    },
+    "2020-11": {
+      "period": "2020-11",
+      "month": "2020-11",
+      "trades": 85,
+      "wins": 43,
+      "win_rate": 50.6,
+      "win_rate_pct": 50.6,
+      "gross_pnl": 408661.0,
+      "charges": 759898.0,
+      "net_pnl": -351237.0,
+      "pnl_inr": -351237.0,
+      "roi_pct": -4.1,
+      "return_pct": -4.1
+    },
+    "2020-12": {
+      "period": "2020-12",
+      "month": "2020-12",
+      "trades": 120,
+      "wins": 71,
+      "win_rate": 59.2,
+      "win_rate_pct": 59.2,
+      "gross_pnl": 901048.0,
+      "charges": 1155735.0,
+      "net_pnl": -254687.0,
+      "pnl_inr": -254687.0,
+      "roi_pct": -3.1,
+      "return_pct": -3.1
+    },
+    "2021-01": {
+      "period": "2021-01",
+      "month": "2021-01",
+      "trades": 112,
+      "wins": 58,
+      "win_rate": 51.8,
+      "win_rate_pct": 51.8,
+      "gross_pnl": 967922.0,
+      "charges": 943274.0,
+      "net_pnl": 24648.0,
+      "pnl_inr": 24648.0,
+      "roi_pct": 0.3,
+      "return_pct": 0.3
+    },
+    "2021-02": {
+      "period": "2021-02",
+      "month": "2021-02",
+      "trades": 129,
+      "wins": 73,
+      "win_rate": 56.6,
+      "win_rate_pct": 56.6,
+      "gross_pnl": 235597.0,
+      "charges": 1158142.0,
+      "net_pnl": -922545.0,
+      "pnl_inr": -922545.0,
+      "roi_pct": -11.5,
+      "return_pct": -11.5
+    },
+    "2021-03": {
+      "period": "2021-03",
+      "month": "2021-03",
+      "trades": 124,
+      "wins": 70,
+      "win_rate": 56.5,
+      "win_rate_pct": 56.5,
+      "gross_pnl": 8389774.0,
+      "charges": 1570686.0,
+      "net_pnl": 6819088.0,
+      "pnl_inr": 6819088.0,
+      "roi_pct": 96.3,
+      "return_pct": 96.3
+    },
+    "2021-04": {
+      "period": "2021-04",
+      "month": "2021-04",
+      "trades": 119,
+      "wins": 62,
+      "win_rate": 52.1,
+      "win_rate_pct": 52.1,
+      "gross_pnl": -2151826.0,
+      "charges": 1382190.0,
+      "net_pnl": -3534016.0,
+      "pnl_inr": -3534016.0,
+      "roi_pct": -25.4,
+      "return_pct": -25.4
+    },
+    "2021-05": {
+      "period": "2021-05",
+      "month": "2021-05",
+      "trades": 140,
+      "wins": 80,
+      "win_rate": 57.1,
+      "win_rate_pct": 57.1,
+      "gross_pnl": 5952359.0,
+      "charges": 2001429.0,
+      "net_pnl": 3950930.0,
+      "pnl_inr": 3950930.0,
+      "roi_pct": 38.1,
+      "return_pct": 38.1
+    },
+    "2021-06": {
+      "period": "2021-06",
+      "month": "2021-06",
+      "trades": 161,
+      "wins": 101,
+      "win_rate": 62.7,
+      "win_rate_pct": 62.7,
+      "gross_pnl": 10218228.0,
+      "charges": 3043384.0,
+      "net_pnl": 7174844.0,
+      "pnl_inr": 7174844.0,
+      "roi_pct": 50.1,
+      "return_pct": 50.1
+    },
+    "2021-07": {
+      "period": "2021-07",
+      "month": "2021-07",
+      "trades": 169,
+      "wins": 105,
+      "win_rate": 62.1,
+      "win_rate_pct": 62.1,
+      "gross_pnl": 14839699.0,
+      "charges": 3981130.0,
+      "net_pnl": 10858568.0,
+      "pnl_inr": 10858568.0,
+      "roi_pct": 50.5,
+      "return_pct": 50.5
+    },
+    "2021-08": {
+      "period": "2021-08",
+      "month": "2021-08",
+      "trades": 146,
+      "wins": 80,
+      "win_rate": 54.8,
+      "win_rate_pct": 54.8,
+      "gross_pnl": 7031608.0,
+      "charges": 4385012.0,
+      "net_pnl": 2646597.0,
+      "pnl_inr": 2646597.0,
+      "roi_pct": 8.2,
+      "return_pct": 8.2
+    },
+    "2021-09": {
+      "period": "2021-09",
+      "month": "2021-09",
+      "trades": 153,
+      "wins": 78,
+      "win_rate": 51.0,
+      "win_rate_pct": 51.0,
+      "gross_pnl": 4049690.0,
+      "charges": 4818409.0,
+      "net_pnl": -768719.0,
+      "pnl_inr": -768719.0,
+      "roi_pct": -2.2,
+      "return_pct": -2.2
+    },
+    "2021-10": {
+      "period": "2021-10",
+      "month": "2021-10",
+      "trades": 149,
+      "wins": 75,
+      "win_rate": 50.3,
+      "win_rate_pct": 50.3,
+      "gross_pnl": -1229536.0,
+      "charges": 4752265.0,
+      "net_pnl": -5981801.0,
+      "pnl_inr": -5981801.0,
+      "roi_pct": -17.5,
+      "return_pct": -17.5
+    },
+    "2021-11": {
+      "period": "2021-11",
+      "month": "2021-11",
+      "trades": 128,
+      "wins": 68,
+      "win_rate": 53.1,
+      "win_rate_pct": 53.1,
+      "gross_pnl": 1365187.0,
+      "charges": 3529571.0,
+      "net_pnl": -2164384.0,
+      "pnl_inr": -2164384.0,
+      "roi_pct": -7.7,
+      "return_pct": -7.7
+    },
+    "2021-12": {
+      "period": "2021-12",
+      "month": "2021-12",
+      "trades": 101,
+      "wins": 55,
+      "win_rate": 54.5,
+      "win_rate_pct": 54.5,
+      "gross_pnl": 2887298.0,
+      "charges": 2572425.0,
+      "net_pnl": 314873.0,
+      "pnl_inr": 314873.0,
+      "roi_pct": 1.2,
+      "return_pct": 1.2
+    },
+    "2022-01": {
+      "period": "2022-01",
+      "month": "2022-01",
+      "trades": 140,
+      "wins": 75,
+      "win_rate": 53.6,
+      "win_rate_pct": 53.6,
+      "gross_pnl": 12295313.0,
+      "charges": 3650945.0,
+      "net_pnl": 8644369.0,
+      "pnl_inr": 8644369.0,
+      "roi_pct": 32.7,
+      "return_pct": 32.7
+    },
+    "2022-02": {
+      "period": "2022-02",
+      "month": "2022-02",
+      "trades": 79,
+      "wins": 35,
+      "win_rate": 44.3,
+      "win_rate_pct": 44.3,
+      "gross_pnl": -8141308.0,
+      "charges": 2161954.0,
+      "net_pnl": -10303262.0,
+      "pnl_inr": -10303262.0,
+      "roi_pct": -29.4,
+      "return_pct": -29.4
+    },
+    "2022-03": {
+      "period": "2022-03",
+      "month": "2022-03",
+      "trades": 102,
+      "wins": 69,
+      "win_rate": 67.6,
+      "win_rate_pct": 67.6,
+      "gross_pnl": 259303.0,
+      "charges": 2409427.0,
+      "net_pnl": -2150124.0,
+      "pnl_inr": -2150124.0,
+      "roi_pct": -8.7,
+      "return_pct": -8.7
+    },
+    "2022-04": {
+      "period": "2022-04",
+      "month": "2022-04",
+      "trades": 136,
+      "wins": 64,
+      "win_rate": 47.1,
+      "win_rate_pct": 47.1,
+      "gross_pnl": 619541.0,
+      "charges": 2723329.0,
+      "net_pnl": -2103789.0,
+      "pnl_inr": -2103789.0,
+      "roi_pct": -9.3,
+      "return_pct": -9.3
+    },
+    "2022-05": {
+      "period": "2022-05",
+      "month": "2022-05",
+      "trades": 70,
+      "wins": 38,
+      "win_rate": 54.3,
+      "win_rate_pct": 54.3,
+      "gross_pnl": 683766.0,
+      "charges": 1526632.0,
+      "net_pnl": -842866.0,
+      "pnl_inr": -842866.0,
+      "roi_pct": -4.1,
+      "return_pct": -4.1
+    },
+    "2022-06": {
+      "period": "2022-06",
+      "month": "2022-06",
+      "trades": 53,
+      "wins": 32,
+      "win_rate": 60.4,
+      "win_rate_pct": 60.4,
+      "gross_pnl": 7975552.0,
+      "charges": 1119352.0,
+      "net_pnl": 6856201.0,
+      "pnl_inr": 6856201.0,
+      "roi_pct": 34.9,
+      "return_pct": 34.9
+    },
+    "2022-07": {
+      "period": "2022-07",
+      "month": "2022-07",
+      "trades": 67,
+      "wins": 39,
+      "win_rate": 58.2,
+      "win_rate_pct": 58.2,
+      "gross_pnl": 9640481.0,
+      "charges": 1931200.0,
+      "net_pnl": 7709281.0,
+      "pnl_inr": 7709281.0,
+      "roi_pct": 29.1,
+      "return_pct": 29.1
+    },
+    "2022-08": {
+      "period": "2022-08",
+      "month": "2022-08",
+      "trades": 130,
+      "wins": 73,
+      "win_rate": 56.2,
+      "win_rate_pct": 56.2,
+      "gross_pnl": 6236340.0,
+      "charges": 3748938.0,
+      "net_pnl": 2487402.0,
+      "pnl_inr": 2487402.0,
+      "roi_pct": 7.3,
+      "return_pct": 7.3
+    },
+    "2022-09": {
+      "period": "2022-09",
+      "month": "2022-09",
+      "trades": 161,
+      "wins": 94,
+      "win_rate": 58.4,
+      "win_rate_pct": 58.4,
+      "gross_pnl": 15303928.0,
+      "charges": 5509180.0,
+      "net_pnl": 9794747.0,
+      "pnl_inr": 9794747.0,
+      "roi_pct": 26.7,
+      "return_pct": 26.7
+    },
+    "2022-10": {
+      "period": "2022-10",
+      "month": "2022-10",
+      "trades": 106,
+      "wins": 57,
+      "win_rate": 53.8,
+      "win_rate_pct": 53.8,
+      "gross_pnl": 5769205.0,
+      "charges": 3231510.0,
+      "net_pnl": 2537695.0,
+      "pnl_inr": 2537695.0,
+      "roi_pct": 5.5,
+      "return_pct": 5.5
+    },
+    "2022-11": {
+      "period": "2022-11",
+      "month": "2022-11",
+      "trades": 93,
+      "wins": 44,
+      "win_rate": 47.3,
+      "win_rate_pct": 47.3,
+      "gross_pnl": -10141369.0,
+      "charges": 3362763.0,
+      "net_pnl": -13504132.0,
+      "pnl_inr": -13504132.0,
+      "roi_pct": -27.5,
+      "return_pct": -27.5
+    },
+    "2022-12": {
+      "period": "2022-12",
+      "month": "2022-12",
+      "trades": 73,
+      "wins": 40,
+      "win_rate": 54.8,
+      "win_rate_pct": 54.8,
+      "gross_pnl": -1897365.0,
+      "charges": 2365516.0,
+      "net_pnl": -4262882.0,
+      "pnl_inr": -4262882.0,
+      "roi_pct": -12.0,
+      "return_pct": -12.0
+    },
+    "2023-01": {
+      "period": "2023-01",
+      "month": "2023-01",
+      "trades": 43,
+      "wins": 23,
+      "win_rate": 53.5,
+      "win_rate_pct": 53.5,
+      "gross_pnl": 3893919.0,
+      "charges": 1054066.0,
+      "net_pnl": 2839854.0,
+      "pnl_inr": 2839854.0,
+      "roi_pct": 9.1,
+      "return_pct": 9.1
+    },
+    "2023-02": {
+      "period": "2023-02",
+      "month": "2023-02",
+      "trades": 32,
+      "wins": 20,
+      "win_rate": 62.5,
+      "win_rate_pct": 62.5,
+      "gross_pnl": 8879476.0,
+      "charges": 915302.0,
+      "net_pnl": 7964174.0,
+      "pnl_inr": 7964174.0,
+      "roi_pct": 23.4,
+      "return_pct": 23.4
+    },
+    "2023-03": {
+      "period": "2023-03",
+      "month": "2023-03",
+      "trades": 39,
+      "wins": 20,
+      "win_rate": 51.3,
+      "win_rate_pct": 51.3,
+      "gross_pnl": 9238774.0,
+      "charges": 1282344.0,
+      "net_pnl": 7956430.0,
+      "pnl_inr": 7956430.0,
+      "roi_pct": 18.9,
+      "return_pct": 18.9
+    },
+    "2023-04": {
+      "period": "2023-04",
+      "month": "2023-04",
+      "trades": 56,
+      "wins": 29,
+      "win_rate": 51.8,
+      "win_rate_pct": 51.8,
+      "gross_pnl": -2112821.0,
+      "charges": 1697600.0,
+      "net_pnl": -3810422.0,
+      "pnl_inr": -3810422.0,
+      "roi_pct": -7.6,
+      "return_pct": -7.6
+    },
+    "2023-05": {
+      "period": "2023-05",
+      "month": "2023-05",
+      "trades": 120,
+      "wins": 78,
+      "win_rate": 65.0,
+      "win_rate_pct": 65.0,
+      "gross_pnl": 15512782.0,
+      "charges": 4041243.0,
+      "net_pnl": 11471539.0,
+      "pnl_inr": 11471539.0,
+      "roi_pct": 24.8,
+      "return_pct": 24.8
+    },
+    "2023-06": {
+      "period": "2023-06",
+      "month": "2023-06",
+      "trades": 156,
+      "wins": 97,
+      "win_rate": 62.2,
+      "win_rate_pct": 62.2,
+      "gross_pnl": 17964929.0,
+      "charges": 5064277.0,
+      "net_pnl": 12900652.0,
+      "pnl_inr": 12900652.0,
+      "roi_pct": 25.8,
+      "return_pct": 25.8
+    },
+    "2023-07": {
+      "period": "2023-07",
+      "month": "2023-07",
+      "trades": 172,
+      "wins": 97,
+      "win_rate": 56.4,
+      "win_rate_pct": 56.4,
+      "gross_pnl": 13286539.0,
+      "charges": 6867059.0,
+      "net_pnl": 6419480.0,
+      "pnl_inr": 6419480.0,
+      "roi_pct": 12.8,
+      "return_pct": 12.8
+    },
+    "2023-08": {
+      "period": "2023-08",
+      "month": "2023-08",
+      "trades": 258,
+      "wins": 148,
+      "win_rate": 57.4,
+      "win_rate_pct": 57.4,
+      "gross_pnl": 35831342.0,
+      "charges": 10281566.0,
+      "net_pnl": 25549775.0,
+      "pnl_inr": 25549775.0,
+      "roi_pct": 51.1,
+      "return_pct": 51.1
+    },
+    "2023-09": {
+      "period": "2023-09",
+      "month": "2023-09",
+      "trades": 233,
+      "wins": 147,
+      "win_rate": 63.1,
+      "win_rate_pct": 63.1,
+      "gross_pnl": 61552713.0,
+      "charges": 12051613.0,
+      "net_pnl": 49501100.0,
+      "pnl_inr": 49501100.0,
+      "roi_pct": 99.0,
+      "return_pct": 99.0
+    },
+    "2023-10": {
+      "period": "2023-10",
+      "month": "2023-10",
+      "trades": 161,
+      "wins": 81,
+      "win_rate": 50.3,
+      "win_rate_pct": 50.3,
+      "gross_pnl": 17703489.0,
+      "charges": 7981755.0,
+      "net_pnl": 9721734.0,
+      "pnl_inr": 9721734.0,
+      "roi_pct": 19.4,
+      "return_pct": 19.4
+    },
+    "2023-11": {
+      "period": "2023-11",
+      "month": "2023-11",
+      "trades": 184,
+      "wins": 106,
+      "win_rate": 57.6,
+      "win_rate_pct": 57.6,
+      "gross_pnl": 24556789.0,
+      "charges": 9509144.0,
+      "net_pnl": 15047645.0,
+      "pnl_inr": 15047645.0,
+      "roi_pct": 30.1,
+      "return_pct": 30.1
+    },
+    "2023-12": {
+      "period": "2023-12",
+      "month": "2023-12",
+      "trades": 272,
+      "wins": 175,
+      "win_rate": 64.3,
+      "win_rate_pct": 64.3,
+      "gross_pnl": 173235657.0,
+      "charges": 22403347.0,
+      "net_pnl": 150832310.0,
+      "pnl_inr": 150832310.0,
+      "roi_pct": 301.7,
+      "return_pct": 301.7
+    },
+    "2024-01": {
+      "period": "2024-01",
+      "month": "2024-01",
+      "trades": 413,
+      "wins": 237,
+      "win_rate": 57.4,
+      "win_rate_pct": 57.4,
+      "gross_pnl": 208139052.0,
+      "charges": 35358607.0,
+      "net_pnl": 172780445.0,
+      "pnl_inr": 172780445.0,
+      "roi_pct": 345.6,
+      "return_pct": 345.6
+    },
+    "2024-02": {
+      "period": "2024-02",
+      "month": "2024-02",
+      "trades": 356,
+      "wins": 196,
+      "win_rate": 55.1,
+      "win_rate_pct": 55.1,
+      "gross_pnl": 48406212.0,
+      "charges": 36718337.0,
+      "net_pnl": 11687875.0,
+      "pnl_inr": 11687875.0,
+      "roi_pct": 23.4,
+      "return_pct": 23.4
+    },
+    "2024-03": {
+      "period": "2024-03",
+      "month": "2024-03",
+      "trades": 97,
+      "wins": 43,
+      "win_rate": 44.3,
+      "win_rate_pct": 44.3,
+      "gross_pnl": 21843981.0,
+      "charges": 7395960.0,
+      "net_pnl": 14448022.0,
+      "pnl_inr": 14448022.0,
+      "roi_pct": 28.9,
+      "return_pct": 28.9
+    },
+    "2024-04": {
+      "period": "2024-04",
+      "month": "2024-04",
+      "trades": 365,
+      "wins": 235,
+      "win_rate": 64.4,
+      "win_rate_pct": 64.4,
+      "gross_pnl": 159521330.0,
+      "charges": 28545853.0,
+      "net_pnl": 130975477.0,
+      "pnl_inr": 130975477.0,
+      "roi_pct": 262.0,
+      "return_pct": 262.0
+    },
+    "2024-05": {
+      "period": "2024-05",
+      "month": "2024-05",
+      "trades": 295,
+      "wins": 170,
+      "win_rate": 57.6,
+      "win_rate_pct": 57.6,
+      "gross_pnl": 144932461.0,
+      "charges": 29797205.0,
+      "net_pnl": 115135256.0,
+      "pnl_inr": 115135256.0,
+      "roi_pct": 230.3,
+      "return_pct": 230.3
+    },
+    "2024-06": {
+      "period": "2024-06",
+      "month": "2024-06",
+      "trades": 386,
+      "wins": 219,
+      "win_rate": 56.7,
+      "win_rate_pct": 56.7,
+      "gross_pnl": 38338236.0,
+      "charges": 30656299.0,
+      "net_pnl": 7681936.0,
+      "pnl_inr": 7681936.0,
+      "roi_pct": 15.4,
+      "return_pct": 15.4
+    },
+    "2024-07": {
+      "period": "2024-07",
+      "month": "2024-07",
+      "trades": 433,
+      "wins": 253,
+      "win_rate": 58.4,
+      "win_rate_pct": 58.4,
+      "gross_pnl": 203254919.0,
+      "charges": 55515640.0,
+      "net_pnl": 147739279.0,
+      "pnl_inr": 147739279.0,
+      "roi_pct": 295.5,
+      "return_pct": 295.5
+    },
+    "2024-08": {
+      "period": "2024-08",
+      "month": "2024-08",
+      "trades": 359,
+      "wins": 194,
+      "win_rate": 54.0,
+      "win_rate_pct": 54.0,
+      "gross_pnl": 7010239.0,
+      "charges": 33063672.0,
+      "net_pnl": -26053433.0,
+      "pnl_inr": -26053433.0,
+      "roi_pct": -52.1,
+      "return_pct": -52.1
+    },
+    "2024-09": {
+      "period": "2024-09",
+      "month": "2024-09",
+      "trades": 311,
+      "wins": 178,
+      "win_rate": 57.2,
+      "win_rate_pct": 57.2,
+      "gross_pnl": 109967327.0,
+      "charges": 20651910.0,
+      "net_pnl": 89315417.0,
+      "pnl_inr": 89315417.0,
+      "roi_pct": 178.6,
+      "return_pct": 178.6
+    },
+    "2024-10": {
+      "period": "2024-10",
+      "month": "2024-10",
+      "trades": 263,
+      "wins": 133,
+      "win_rate": 50.6,
+      "win_rate_pct": 50.6,
+      "gross_pnl": 163086339.0,
+      "charges": 24490454.0,
+      "net_pnl": 138595885.0,
+      "pnl_inr": 138595885.0,
+      "roi_pct": 277.2,
+      "return_pct": 277.2
+    },
+    "2024-11": {
+      "period": "2024-11",
+      "month": "2024-11",
+      "trades": 133,
+      "wins": 67,
+      "win_rate": 50.4,
+      "win_rate_pct": 50.4,
+      "gross_pnl": 18418293.0,
+      "charges": 6148074.0,
+      "net_pnl": 12270219.0,
+      "pnl_inr": 12270219.0,
+      "roi_pct": 24.5,
+      "return_pct": 24.5
+    },
+    "2024-12": {
+      "period": "2024-12",
+      "month": "2024-12",
+      "trades": 276,
+      "wins": 179,
+      "win_rate": 64.9,
+      "win_rate_pct": 64.9,
+      "gross_pnl": 92770197.0,
+      "charges": 19765690.0,
+      "net_pnl": 73004506.0,
+      "pnl_inr": 73004506.0,
+      "roi_pct": 146.0,
+      "return_pct": 146.0
+    },
+    "2025-01": {
+      "period": "2025-01",
+      "month": "2025-01",
+      "trades": 88,
+      "wins": 42,
+      "win_rate": 47.7,
+      "win_rate_pct": 47.7,
+      "gross_pnl": 950556.0,
+      "charges": 5775128.0,
+      "net_pnl": -4824572.0,
+      "pnl_inr": -4824572.0,
+      "roi_pct": -9.6,
+      "return_pct": -9.6
+    },
+    "2025-02": {
+      "period": "2025-02",
+      "month": "2025-02",
+      "trades": 42,
+      "wins": 32,
+      "win_rate": 76.2,
+      "win_rate_pct": 76.2,
+      "gross_pnl": 35309942.0,
+      "charges": 4505045.0,
+      "net_pnl": 30804896.0,
+      "pnl_inr": 30804896.0,
+      "roi_pct": 61.6,
+      "return_pct": 61.6
+    },
+    "2025-03": {
+      "period": "2025-03",
+      "month": "2025-03",
+      "trades": 167,
+      "wins": 97,
+      "win_rate": 58.1,
+      "win_rate_pct": 58.1,
+      "gross_pnl": 39843485.0,
+      "charges": 11583625.0,
+      "net_pnl": 28259859.0,
+      "pnl_inr": 28259859.0,
+      "roi_pct": 56.5,
+      "return_pct": 56.5
+    },
+    "2025-04": {
+      "period": "2025-04",
+      "month": "2025-04",
+      "trades": 188,
+      "wins": 109,
+      "win_rate": 58.0,
+      "win_rate_pct": 58.0,
+      "gross_pnl": 38819661.0,
+      "charges": 16180386.0,
+      "net_pnl": 22639274.0,
+      "pnl_inr": 22639274.0,
+      "roi_pct": 45.3,
+      "return_pct": 45.3
+    },
+    "2025-05": {
+      "period": "2025-05",
+      "month": "2025-05",
+      "trades": 411,
+      "wins": 277,
+      "win_rate": 67.4,
+      "win_rate_pct": 67.4,
+      "gross_pnl": 296626321.0,
+      "charges": 40816070.0,
+      "net_pnl": 255810251.0,
+      "pnl_inr": 255810251.0,
+      "roi_pct": 511.6,
+      "return_pct": 511.6
+    },
+    "2025-06": {
+      "period": "2025-06",
+      "month": "2025-06",
+      "trades": 372,
+      "wins": 220,
+      "win_rate": 59.1,
+      "win_rate_pct": 59.1,
+      "gross_pnl": 239815778.0,
+      "charges": 38124099.0,
+      "net_pnl": 201691678.0,
+      "pnl_inr": 201691678.0,
+      "roi_pct": 403.4,
+      "return_pct": 403.4
+    },
+    "2025-07": {
+      "period": "2025-07",
+      "month": "2025-07",
+      "trades": 201,
+      "wins": 114,
+      "win_rate": 56.7,
+      "win_rate_pct": 56.7,
+      "gross_pnl": 53286595.0,
+      "charges": 11368868.0,
+      "net_pnl": 41917727.0,
+      "pnl_inr": 41917727.0,
+      "roi_pct": 83.8,
+      "return_pct": 83.8
+    },
+    "2025-08": {
+      "period": "2025-08",
+      "month": "2025-08",
+      "trades": 128,
+      "wins": 77,
+      "win_rate": 60.2,
+      "win_rate_pct": 60.2,
+      "gross_pnl": 13601916.0,
+      "charges": 7585953.0,
+      "net_pnl": 6015964.0,
+      "pnl_inr": 6015964.0,
+      "roi_pct": 12.0,
+      "return_pct": 12.0
+    },
+    "2025-09": {
+      "period": "2025-09",
+      "month": "2025-09",
+      "trades": 160,
+      "wins": 78,
+      "win_rate": 48.8,
+      "win_rate_pct": 48.8,
+      "gross_pnl": 7123162.0,
+      "charges": 14723453.0,
+      "net_pnl": -7600290.0,
+      "pnl_inr": -7600290.0,
+      "roi_pct": -15.2,
+      "return_pct": -15.2
+    },
+    "2025-10": {
+      "period": "2025-10",
+      "month": "2025-10",
+      "trades": 138,
+      "wins": 70,
+      "win_rate": 50.7,
+      "win_rate_pct": 50.7,
+      "gross_pnl": 4034934.0,
+      "charges": 8074086.0,
+      "net_pnl": -4039152.0,
+      "pnl_inr": -4039152.0,
+      "roi_pct": -8.1,
+      "return_pct": -8.1
+    },
+    "2025-11": {
+      "period": "2025-11",
+      "month": "2025-11",
+      "trades": 93,
+      "wins": 54,
+      "win_rate": 58.1,
+      "win_rate_pct": 58.1,
+      "gross_pnl": 26776169.0,
+      "charges": 4456903.0,
+      "net_pnl": 22319266.0,
+      "pnl_inr": 22319266.0,
+      "roi_pct": 44.6,
+      "return_pct": 44.6
+    },
+    "2025-12": {
+      "period": "2025-12",
+      "month": "2025-12",
+      "trades": 59,
+      "wins": 28,
+      "win_rate": 47.5,
+      "win_rate_pct": 47.5,
+      "gross_pnl": -15391574.0,
+      "charges": 3999820.0,
+      "net_pnl": -19391394.0,
+      "pnl_inr": -19391394.0,
+      "roi_pct": -38.8,
+      "return_pct": -38.8
+    },
+    "2026-01": {
+      "period": "2026-01",
+      "month": "2026-01",
+      "trades": 70,
+      "wins": 34,
+      "win_rate": 48.6,
+      "win_rate_pct": 48.6,
+      "gross_pnl": -18470321.0,
+      "charges": 7403351.0,
+      "net_pnl": -25873672.0,
+      "pnl_inr": -25873672.0,
+      "roi_pct": -51.7,
+      "return_pct": -51.7
+    },
+    "2026-02": {
+      "period": "2026-02",
+      "month": "2026-02",
+      "trades": 154,
+      "wins": 83,
+      "win_rate": 53.9,
+      "win_rate_pct": 53.9,
+      "gross_pnl": 14028652.0,
+      "charges": 15975923.0,
+      "net_pnl": -1947270.0,
+      "pnl_inr": -1947270.0,
+      "roi_pct": -3.9,
+      "return_pct": -3.9
+    },
+    "2026-03": {
+      "period": "2026-03",
+      "month": "2026-03",
+      "trades": 50,
+      "wins": 32,
+      "win_rate": 64.0,
+      "win_rate_pct": 64.0,
+      "gross_pnl": 40157161.0,
+      "charges": 3714301.0,
+      "net_pnl": 36442860.0,
+      "pnl_inr": 36442860.0,
+      "roi_pct": 72.9,
+      "return_pct": 72.9
+    },
+    "2026-04": {
+      "period": "2026-04",
+      "month": "2026-04",
+      "trades": 252,
+      "wins": 120,
+      "win_rate": 47.6,
+      "win_rate_pct": 47.6,
+      "gross_pnl": -13603990.0,
+      "charges": 18688714.0,
+      "net_pnl": -32292704.0,
+      "pnl_inr": -32292704.0,
+      "roi_pct": -64.6,
+      "return_pct": -64.6
+    },
+    "2026-05": {
+      "period": "2026-05",
+      "month": "2026-05",
+      "trades": 492,
+      "wins": 242,
+      "win_rate": 49.2,
+      "win_rate_pct": 49.2,
+      "gross_pnl": 23395170.0,
+      "charges": 37205711.0,
+      "net_pnl": -13810541.0,
+      "pnl_inr": -13810541.0,
+      "roi_pct": -27.6,
+      "return_pct": -27.6
+    },
+    "2026-06": {
+      "period": "2026-06",
+      "month": "2026-06",
+      "trades": 489,
+      "wins": 267,
+      "win_rate": 54.6,
+      "win_rate_pct": 54.6,
+      "gross_pnl": 61925528.0,
+      "charges": 38926578.0,
+      "net_pnl": 22998950.0,
+      "pnl_inr": 22998950.0,
+      "roi_pct": 46.0,
+      "return_pct": 46.0
+    },
+    "2026-07": {
+      "period": "2026-07",
+      "month": "2026-07",
+      "trades": 415,
+      "wins": 229,
+      "win_rate": 55.2,
+      "win_rate_pct": 55.2,
+      "gross_pnl": 110857120.0,
+      "charges": 32283125.0,
+      "net_pnl": 78573996.0,
+      "pnl_inr": 78573996.0,
+      "roi_pct": 157.1,
+      "return_pct": 157.1
+    },
+    "2026-08": {
+      "period": "2026-08",
+      "month": "2026-08",
+      "trades": 222,
+      "wins": 112,
+      "win_rate": 50.5,
+      "win_rate_pct": 50.5,
+      "gross_pnl": 25048566.0,
+      "charges": 15846547.0,
+      "net_pnl": 9202019.0,
+      "pnl_inr": 9202019.0,
+      "roi_pct": 18.4,
+      "return_pct": 18.4
+    },
+    "2026-09": {
+      "period": "2026-09",
+      "month": "2026-09",
+      "trades": 286,
+      "wins": 166,
+      "win_rate": 58.0,
+      "win_rate_pct": 58.0,
+      "gross_pnl": 64070433.0,
+      "charges": 17608184.0,
+      "net_pnl": 46462249.0,
+      "pnl_inr": 46462249.0,
+      "roi_pct": 92.9,
+      "return_pct": 92.9
+    },
+    "2026-10": {
+      "period": "2026-10",
+      "month": "2026-10",
+      "trades": 18,
+      "wins": 6,
+      "win_rate": 33.3,
+      "win_rate_pct": 33.3,
+      "gross_pnl": -4577463.0,
+      "charges": 1153934.0,
+      "net_pnl": -5731397.0,
+      "pnl_inr": -5731397.0,
+      "roi_pct": -11.5,
+      "return_pct": -11.5
+    }
+  },
+  "monthly": [
+    {
+      "period": "2017-03",
+      "month": "2017-03",
+      "trades": 41,
+      "wins": 26,
+      "win_rate": 63.4,
+      "win_rate_pct": 63.4,
+      "gross_pnl": 42976.0,
+      "charges": 15772.0,
+      "net_pnl": 27204.0,
+      "pnl_inr": 27204.0,
+      "roi_pct": 9.1,
+      "return_pct": 9.1
+    },
+    {
+      "period": "2017-04",
+      "month": "2017-04",
+      "trades": 67,
+      "wins": 36,
+      "win_rate": 53.7,
+      "win_rate_pct": 53.7,
+      "gross_pnl": 6345.0,
+      "charges": 24684.0,
+      "net_pnl": -18339.0,
+      "pnl_inr": -18339.0,
+      "roi_pct": -5.6,
+      "return_pct": -5.6
+    },
+    {
+      "period": "2017-05",
+      "month": "2017-05",
+      "trades": 68,
+      "wins": 32,
+      "win_rate": 47.1,
+      "win_rate_pct": 47.1,
+      "gross_pnl": -39415.0,
+      "charges": 21512.0,
+      "net_pnl": -60927.0,
+      "pnl_inr": -60927.0,
+      "roi_pct": -19.7,
+      "return_pct": -19.7
+    },
+    {
+      "period": "2017-06",
+      "month": "2017-06",
+      "trades": 38,
+      "wins": 26,
+      "win_rate": 68.4,
+      "win_rate_pct": 68.4,
+      "gross_pnl": 41472.0,
+      "charges": 10822.0,
+      "net_pnl": 30651.0,
+      "pnl_inr": 30651.0,
+      "roi_pct": 10.2,
+      "return_pct": 10.2
+    },
+    {
+      "period": "2017-07",
+      "month": "2017-07",
+      "trades": 63,
+      "wins": 35,
+      "win_rate": 55.6,
+      "win_rate_pct": 55.6,
+      "gross_pnl": 92333.0,
+      "charges": 21741.0,
+      "net_pnl": 70592.0,
+      "pnl_inr": 70592.0,
+      "roi_pct": 23.5,
+      "return_pct": 23.5
+    },
+    {
+      "period": "2017-08",
+      "month": "2017-08",
+      "trades": 59,
+      "wins": 32,
+      "win_rate": 54.2,
+      "win_rate_pct": 54.2,
+      "gross_pnl": -66496.0,
+      "charges": 22157.0,
+      "net_pnl": -88653.0,
+      "pnl_inr": -88653.0,
+      "roi_pct": -25.4,
+      "return_pct": -25.4
+    },
+    {
+      "period": "2017-09",
+      "month": "2017-09",
+      "trades": 95,
+      "wins": 51,
+      "win_rate": 53.7,
+      "win_rate_pct": 53.7,
+      "gross_pnl": 21439.0,
+      "charges": 27705.0,
+      "net_pnl": -6266.0,
+      "pnl_inr": -6266.0,
+      "roi_pct": -2.1,
+      "return_pct": -2.1
+    },
+    {
+      "period": "2017-10",
+      "month": "2017-10",
+      "trades": 94,
+      "wins": 53,
+      "win_rate": 56.4,
+      "win_rate_pct": 56.4,
+      "gross_pnl": 116223.0,
+      "charges": 28613.0,
+      "net_pnl": 87610.0,
+      "pnl_inr": 87610.0,
+      "roi_pct": 29.2,
+      "return_pct": 29.2
+    },
+    {
+      "period": "2017-11",
+      "month": "2017-11",
+      "trades": 115,
+      "wins": 64,
+      "win_rate": 55.7,
+      "win_rate_pct": 55.7,
+      "gross_pnl": 168411.0,
+      "charges": 50379.0,
+      "net_pnl": 118032.0,
+      "pnl_inr": 118032.0,
+      "roi_pct": 34.5,
+      "return_pct": 34.5
+    },
+    {
+      "period": "2017-12",
+      "month": "2017-12",
+      "trades": 93,
+      "wins": 46,
+      "win_rate": 49.5,
+      "win_rate_pct": 49.5,
+      "gross_pnl": -11688.0,
+      "charges": 48875.0,
+      "net_pnl": -60563.0,
+      "pnl_inr": -60563.0,
+      "roi_pct": -13.2,
+      "return_pct": -13.2
+    },
+    {
+      "period": "2018-01",
+      "month": "2018-01",
+      "trades": 117,
+      "wins": 74,
+      "win_rate": 63.2,
+      "win_rate_pct": 63.2,
+      "gross_pnl": 184375.0,
+      "charges": 54341.0,
+      "net_pnl": 130034.0,
+      "pnl_inr": 130034.0,
+      "roi_pct": 32.6,
+      "return_pct": 32.6
+    },
+    {
+      "period": "2018-02",
+      "month": "2018-02",
+      "trades": 46,
+      "wins": 20,
+      "win_rate": 43.5,
+      "win_rate_pct": 43.5,
+      "gross_pnl": -63945.0,
+      "charges": 25190.0,
+      "net_pnl": -89136.0,
+      "pnl_inr": -89136.0,
+      "roi_pct": -16.8,
+      "return_pct": -16.8
+    },
+    {
+      "period": "2018-03",
+      "month": "2018-03",
+      "trades": 10,
+      "wins": 6,
+      "win_rate": 60.0,
+      "win_rate_pct": 60.0,
+      "gross_pnl": 30734.0,
+      "charges": 5337.0,
+      "net_pnl": 25398.0,
+      "pnl_inr": 25398.0,
+      "roi_pct": 5.8,
+      "return_pct": 5.8
+    },
+    {
+      "period": "2018-04",
+      "month": "2018-04",
+      "trades": 54,
+      "wins": 37,
+      "win_rate": 68.5,
+      "win_rate_pct": 68.5,
+      "gross_pnl": 226597.0,
+      "charges": 35084.0,
+      "net_pnl": 191512.0,
+      "pnl_inr": 191512.0,
+      "roi_pct": 41.1,
+      "return_pct": 41.1
+    },
+    {
+      "period": "2018-05",
+      "month": "2018-05",
+      "trades": 42,
+      "wins": 19,
+      "win_rate": 45.2,
+      "win_rate_pct": 45.2,
+      "gross_pnl": 43510.0,
+      "charges": 33522.0,
+      "net_pnl": 9988.0,
+      "pnl_inr": 9988.0,
+      "roi_pct": 1.5,
+      "return_pct": 1.5
+    },
+    {
+      "period": "2018-06",
+      "month": "2018-06",
+      "trades": 21,
+      "wins": 9,
+      "win_rate": 42.9,
+      "win_rate_pct": 42.9,
+      "gross_pnl": -9444.0,
+      "charges": 16114.0,
+      "net_pnl": -25558.0,
+      "pnl_inr": -25558.0,
+      "roi_pct": -3.8,
+      "return_pct": -3.8
+    },
+    {
+      "period": "2018-07",
+      "month": "2018-07",
+      "trades": 33,
+      "wins": 18,
+      "win_rate": 54.5,
+      "win_rate_pct": 54.5,
+      "gross_pnl": 20191.0,
+      "charges": 25120.0,
+      "net_pnl": -4929.0,
+      "pnl_inr": -4929.0,
+      "roi_pct": -0.8,
+      "return_pct": -0.8
+    },
+    {
+      "period": "2018-08",
+      "month": "2018-08",
+      "trades": 63,
+      "wins": 34,
+      "win_rate": 54.0,
+      "win_rate_pct": 54.0,
+      "gross_pnl": 62609.0,
+      "charges": 48907.0,
+      "net_pnl": 13702.0,
+      "pnl_inr": 13702.0,
+      "roi_pct": 2.2,
+      "return_pct": 2.2
+    },
+    {
+      "period": "2018-09",
+      "month": "2018-09",
+      "trades": 37,
+      "wins": 21,
+      "win_rate": 56.8,
+      "win_rate_pct": 56.8,
+      "gross_pnl": 202081.0,
+      "charges": 28498.0,
+      "net_pnl": 173583.0,
+      "pnl_inr": 173583.0,
+      "roi_pct": 26.7,
+      "return_pct": 26.7
+    },
+    {
+      "period": "2018-10",
+      "month": "2018-10",
+      "trades": 17,
+      "wins": 13,
+      "win_rate": 76.5,
+      "win_rate_pct": 76.5,
+      "gross_pnl": 282940.0,
+      "charges": 20076.0,
+      "net_pnl": 262863.0,
+      "pnl_inr": 262863.0,
+      "roi_pct": 31.9,
+      "return_pct": 31.9
+    },
+    {
+      "period": "2018-11",
+      "month": "2018-11",
+      "trades": 31,
+      "wins": 19,
+      "win_rate": 61.3,
+      "win_rate_pct": 61.3,
+      "gross_pnl": 95834.0,
+      "charges": 37346.0,
+      "net_pnl": 58488.0,
+      "pnl_inr": 58488.0,
+      "roi_pct": 5.4,
+      "return_pct": 5.4
+    },
+    {
+      "period": "2018-12",
+      "month": "2018-12",
+      "trades": 51,
+      "wins": 30,
+      "win_rate": 58.8,
+      "win_rate_pct": 58.8,
+      "gross_pnl": 354202.0,
+      "charges": 70903.0,
+      "net_pnl": 283299.0,
+      "pnl_inr": 283299.0,
+      "roi_pct": 24.7,
+      "return_pct": 24.7
+    },
+    {
+      "period": "2019-01",
+      "month": "2019-01",
+      "trades": 22,
+      "wins": 9,
+      "win_rate": 40.9,
+      "win_rate_pct": 40.9,
+      "gross_pnl": 63295.0,
+      "charges": 36959.0,
+      "net_pnl": 26337.0,
+      "pnl_inr": 26337.0,
+      "roi_pct": 1.8,
+      "return_pct": 1.8
+    },
+    {
+      "period": "2019-02",
+      "month": "2019-02",
+      "trades": 6,
+      "wins": 4,
+      "win_rate": 66.7,
+      "win_rate_pct": 66.7,
+      "gross_pnl": 77284.0,
+      "charges": 10427.0,
+      "net_pnl": 66857.0,
+      "pnl_inr": 66857.0,
+      "roi_pct": 4.6,
+      "return_pct": 4.6
+    },
+    {
+      "period": "2019-03",
+      "month": "2019-03",
+      "trades": 72,
+      "wins": 41,
+      "win_rate": 56.9,
+      "win_rate_pct": 56.9,
+      "gross_pnl": 517801.0,
+      "charges": 141712.0,
+      "net_pnl": 376089.0,
+      "pnl_inr": 376089.0,
+      "roi_pct": 24.7,
+      "return_pct": 24.7
+    },
+    {
+      "period": "2019-04",
+      "month": "2019-04",
+      "trades": 40,
+      "wins": 23,
+      "win_rate": 57.5,
+      "win_rate_pct": 57.5,
+      "gross_pnl": 110861.0,
+      "charges": 91662.0,
+      "net_pnl": 19200.0,
+      "pnl_inr": 19200.0,
+      "roi_pct": 1.0,
+      "return_pct": 1.0
+    },
+    {
+      "period": "2019-05",
+      "month": "2019-05",
+      "trades": 54,
+      "wins": 32,
+      "win_rate": 59.3,
+      "win_rate_pct": 59.3,
+      "gross_pnl": 129569.0,
+      "charges": 120827.0,
+      "net_pnl": 8742.0,
+      "pnl_inr": 8742.0,
+      "roi_pct": 0.5,
+      "return_pct": 0.5
+    },
+    {
+      "period": "2019-06",
+      "month": "2019-06",
+      "trades": 18,
+      "wins": 9,
+      "win_rate": 50.0,
+      "win_rate_pct": 50.0,
+      "gross_pnl": -167427.0,
+      "charges": 39056.0,
+      "net_pnl": -206484.0,
+      "pnl_inr": -206484.0,
+      "roi_pct": -10.7,
+      "return_pct": -10.7
+    },
+    {
+      "period": "2019-07",
+      "month": "2019-07",
+      "trades": 16,
+      "wins": 9,
+      "win_rate": 56.2,
+      "win_rate_pct": 56.2,
+      "gross_pnl": 128663.0,
+      "charges": 31908.0,
+      "net_pnl": 96755.0,
+      "pnl_inr": 96755.0,
+      "roi_pct": 5.6,
+      "return_pct": 5.6
+    },
+    {
+      "period": "2019-08",
+      "month": "2019-08",
+      "trades": 10,
+      "wins": 5,
+      "win_rate": 50.0,
+      "win_rate_pct": 50.0,
+      "gross_pnl": -11361.0,
+      "charges": 22052.0,
+      "net_pnl": -33413.0,
+      "pnl_inr": -33413.0,
+      "roi_pct": -1.8,
+      "return_pct": -1.8
+    },
+    {
+      "period": "2019-09",
+      "month": "2019-09",
+      "trades": 36,
+      "wins": 15,
+      "win_rate": 41.7,
+      "win_rate_pct": 41.7,
+      "gross_pnl": -479888.0,
+      "charges": 57990.0,
+      "net_pnl": -537879.0,
+      "pnl_inr": -537879.0,
+      "roi_pct": -30.2,
+      "return_pct": -30.2
+    },
+    {
+      "period": "2019-10",
+      "month": "2019-10",
+      "trades": 33,
+      "wins": 18,
+      "win_rate": 54.5,
+      "win_rate_pct": 54.5,
+      "gross_pnl": 34747.0,
+      "charges": 50303.0,
+      "net_pnl": -15556.0,
+      "pnl_inr": -15556.0,
+      "roi_pct": -1.2,
+      "return_pct": -1.2
+    },
+    {
+      "period": "2019-11",
+      "month": "2019-11",
+      "trades": 64,
+      "wins": 41,
+      "win_rate": 64.1,
+      "win_rate_pct": 64.1,
+      "gross_pnl": 539128.0,
+      "charges": 107760.0,
+      "net_pnl": 431368.0,
+      "pnl_inr": 431368.0,
+      "roi_pct": 35.1,
+      "return_pct": 35.1
+    },
+    {
+      "period": "2019-12",
+      "month": "2019-12",
+      "trades": 26,
+      "wins": 18,
+      "win_rate": 69.2,
+      "win_rate_pct": 69.2,
+      "gross_pnl": 444172.0,
+      "charges": 56941.0,
+      "net_pnl": 387231.0,
+      "pnl_inr": 387231.0,
+      "roi_pct": 23.3,
+      "return_pct": 23.3
+    },
+    {
+      "period": "2020-01",
+      "month": "2020-01",
+      "trades": 57,
+      "wins": 30,
+      "win_rate": 52.6,
+      "win_rate_pct": 52.6,
+      "gross_pnl": 75394.0,
+      "charges": 128373.0,
+      "net_pnl": -52979.0,
+      "pnl_inr": -52979.0,
+      "roi_pct": -2.6,
+      "return_pct": -2.6
+    },
+    {
+      "period": "2020-02",
+      "month": "2020-02",
+      "trades": 75,
+      "wins": 34,
+      "win_rate": 45.3,
+      "win_rate_pct": 45.3,
+      "gross_pnl": -436244.0,
+      "charges": 144784.0,
+      "net_pnl": -581028.0,
+      "pnl_inr": -581028.0,
+      "roi_pct": -29.1,
+      "return_pct": -29.1
+    },
+    {
+      "period": "2020-03",
+      "month": "2020-03",
+      "trades": 8,
+      "wins": 6,
+      "win_rate": 75.0,
+      "win_rate_pct": 75.0,
+      "gross_pnl": 291287.0,
+      "charges": 13931.0,
+      "net_pnl": 277356.0,
+      "pnl_inr": 277356.0,
+      "roi_pct": 19.6,
+      "return_pct": 19.6
+    },
+    {
+      "period": "2020-04",
+      "month": "2020-04",
+      "trades": 69,
+      "wins": 40,
+      "win_rate": 58.0,
+      "win_rate_pct": 58.0,
+      "gross_pnl": 312268.0,
+      "charges": 129474.0,
+      "net_pnl": 182794.0,
+      "pnl_inr": 182794.0,
+      "roi_pct": 10.8,
+      "return_pct": 10.8
+    },
+    {
+      "period": "2020-05",
+      "month": "2020-05",
+      "trades": 54,
+      "wins": 36,
+      "win_rate": 66.7,
+      "win_rate_pct": 66.7,
+      "gross_pnl": 783506.0,
+      "charges": 143066.0,
+      "net_pnl": 640440.0,
+      "pnl_inr": 640440.0,
+      "roi_pct": 34.2,
+      "return_pct": 34.2
+    },
+    {
+      "period": "2020-06",
+      "month": "2020-06",
+      "trades": 140,
+      "wins": 91,
+      "win_rate": 65.0,
+      "win_rate_pct": 65.0,
+      "gross_pnl": 5050503.0,
+      "charges": 632904.0,
+      "net_pnl": 4417600.0,
+      "pnl_inr": 4417600.0,
+      "roi_pct": 175.7,
+      "return_pct": 175.7
+    },
+    {
+      "period": "2020-07",
+      "month": "2020-07",
+      "trades": 127,
+      "wins": 69,
+      "win_rate": 54.3,
+      "win_rate_pct": 54.3,
+      "gross_pnl": 970775.0,
+      "charges": 1084874.0,
+      "net_pnl": -114100.0,
+      "pnl_inr": -114100.0,
+      "roi_pct": -1.6,
+      "return_pct": -1.6
+    },
+    {
+      "period": "2020-08",
+      "month": "2020-08",
+      "trades": 133,
+      "wins": 77,
+      "win_rate": 57.9,
+      "win_rate_pct": 57.9,
+      "gross_pnl": 5188641.0,
+      "charges": 1122640.0,
+      "net_pnl": 4066000.0,
+      "pnl_inr": 4066000.0,
+      "roi_pct": 59.6,
+      "return_pct": 59.6
+    },
+    {
+      "period": "2020-09",
+      "month": "2020-09",
+      "trades": 100,
+      "wins": 51,
+      "win_rate": 51.0,
+      "win_rate_pct": 51.0,
+      "gross_pnl": -1013437.0,
+      "charges": 1147612.0,
+      "net_pnl": -2161049.0,
+      "pnl_inr": -2161049.0,
+      "roi_pct": -19.9,
+      "return_pct": -19.9
+    },
+    {
+      "period": "2020-10",
+      "month": "2020-10",
+      "trades": 62,
+      "wins": 33,
+      "win_rate": 53.2,
+      "win_rate_pct": 53.2,
+      "gross_pnl": 476541.0,
+      "charges": 615069.0,
+      "net_pnl": -138528.0,
+      "pnl_inr": -138528.0,
+      "roi_pct": -1.6,
+      "return_pct": -1.6
+    },
+    {
+      "period": "2020-11",
+      "month": "2020-11",
+      "trades": 85,
+      "wins": 43,
+      "win_rate": 50.6,
+      "win_rate_pct": 50.6,
+      "gross_pnl": 408661.0,
+      "charges": 759898.0,
+      "net_pnl": -351237.0,
+      "pnl_inr": -351237.0,
+      "roi_pct": -4.1,
+      "return_pct": -4.1
+    },
+    {
+      "period": "2020-12",
+      "month": "2020-12",
+      "trades": 120,
+      "wins": 71,
+      "win_rate": 59.2,
+      "win_rate_pct": 59.2,
+      "gross_pnl": 901048.0,
+      "charges": 1155735.0,
+      "net_pnl": -254687.0,
+      "pnl_inr": -254687.0,
+      "roi_pct": -3.1,
+      "return_pct": -3.1
+    },
+    {
+      "period": "2021-01",
+      "month": "2021-01",
+      "trades": 112,
+      "wins": 58,
+      "win_rate": 51.8,
+      "win_rate_pct": 51.8,
+      "gross_pnl": 967922.0,
+      "charges": 943274.0,
+      "net_pnl": 24648.0,
+      "pnl_inr": 24648.0,
+      "roi_pct": 0.3,
+      "return_pct": 0.3
+    },
+    {
+      "period": "2021-02",
+      "month": "2021-02",
+      "trades": 129,
+      "wins": 73,
+      "win_rate": 56.6,
+      "win_rate_pct": 56.6,
+      "gross_pnl": 235597.0,
+      "charges": 1158142.0,
+      "net_pnl": -922545.0,
+      "pnl_inr": -922545.0,
+      "roi_pct": -11.5,
+      "return_pct": -11.5
+    },
+    {
+      "period": "2021-03",
+      "month": "2021-03",
+      "trades": 124,
+      "wins": 70,
+      "win_rate": 56.5,
+      "win_rate_pct": 56.5,
+      "gross_pnl": 8389774.0,
+      "charges": 1570686.0,
+      "net_pnl": 6819088.0,
+      "pnl_inr": 6819088.0,
+      "roi_pct": 96.3,
+      "return_pct": 96.3
+    },
+    {
+      "period": "2021-04",
+      "month": "2021-04",
+      "trades": 119,
+      "wins": 62,
+      "win_rate": 52.1,
+      "win_rate_pct": 52.1,
+      "gross_pnl": -2151826.0,
+      "charges": 1382190.0,
+      "net_pnl": -3534016.0,
+      "pnl_inr": -3534016.0,
+      "roi_pct": -25.4,
+      "return_pct": -25.4
+    },
+    {
+      "period": "2021-05",
+      "month": "2021-05",
+      "trades": 140,
+      "wins": 80,
+      "win_rate": 57.1,
+      "win_rate_pct": 57.1,
+      "gross_pnl": 5952359.0,
+      "charges": 2001429.0,
+      "net_pnl": 3950930.0,
+      "pnl_inr": 3950930.0,
+      "roi_pct": 38.1,
+      "return_pct": 38.1
+    },
+    {
+      "period": "2021-06",
+      "month": "2021-06",
+      "trades": 161,
+      "wins": 101,
+      "win_rate": 62.7,
+      "win_rate_pct": 62.7,
+      "gross_pnl": 10218228.0,
+      "charges": 3043384.0,
+      "net_pnl": 7174844.0,
+      "pnl_inr": 7174844.0,
+      "roi_pct": 50.1,
+      "return_pct": 50.1
+    },
+    {
+      "period": "2021-07",
+      "month": "2021-07",
+      "trades": 169,
+      "wins": 105,
+      "win_rate": 62.1,
+      "win_rate_pct": 62.1,
+      "gross_pnl": 14839699.0,
+      "charges": 3981130.0,
+      "net_pnl": 10858568.0,
+      "pnl_inr": 10858568.0,
+      "roi_pct": 50.5,
+      "return_pct": 50.5
+    },
+    {
+      "period": "2021-08",
+      "month": "2021-08",
+      "trades": 146,
+      "wins": 80,
+      "win_rate": 54.8,
+      "win_rate_pct": 54.8,
+      "gross_pnl": 7031608.0,
+      "charges": 4385012.0,
+      "net_pnl": 2646597.0,
+      "pnl_inr": 2646597.0,
+      "roi_pct": 8.2,
+      "return_pct": 8.2
+    },
+    {
+      "period": "2021-09",
+      "month": "2021-09",
+      "trades": 153,
+      "wins": 78,
+      "win_rate": 51.0,
+      "win_rate_pct": 51.0,
+      "gross_pnl": 4049690.0,
+      "charges": 4818409.0,
+      "net_pnl": -768719.0,
+      "pnl_inr": -768719.0,
+      "roi_pct": -2.2,
+      "return_pct": -2.2
+    },
+    {
+      "period": "2021-10",
+      "month": "2021-10",
+      "trades": 149,
+      "wins": 75,
+      "win_rate": 50.3,
+      "win_rate_pct": 50.3,
+      "gross_pnl": -1229536.0,
+      "charges": 4752265.0,
+      "net_pnl": -5981801.0,
+      "pnl_inr": -5981801.0,
+      "roi_pct": -17.5,
+      "return_pct": -17.5
+    },
+    {
+      "period": "2021-11",
+      "month": "2021-11",
+      "trades": 128,
+      "wins": 68,
+      "win_rate": 53.1,
+      "win_rate_pct": 53.1,
+      "gross_pnl": 1365187.0,
+      "charges": 3529571.0,
+      "net_pnl": -2164384.0,
+      "pnl_inr": -2164384.0,
+      "roi_pct": -7.7,
+      "return_pct": -7.7
+    },
+    {
+      "period": "2021-12",
+      "month": "2021-12",
+      "trades": 101,
+      "wins": 55,
+      "win_rate": 54.5,
+      "win_rate_pct": 54.5,
+      "gross_pnl": 2887298.0,
+      "charges": 2572425.0,
+      "net_pnl": 314873.0,
+      "pnl_inr": 314873.0,
+      "roi_pct": 1.2,
+      "return_pct": 1.2
+    },
+    {
+      "period": "2022-01",
+      "month": "2022-01",
+      "trades": 140,
+      "wins": 75,
+      "win_rate": 53.6,
+      "win_rate_pct": 53.6,
+      "gross_pnl": 12295313.0,
+      "charges": 3650945.0,
+      "net_pnl": 8644369.0,
+      "pnl_inr": 8644369.0,
+      "roi_pct": 32.7,
+      "return_pct": 32.7
+    },
+    {
+      "period": "2022-02",
+      "month": "2022-02",
+      "trades": 79,
+      "wins": 35,
+      "win_rate": 44.3,
+      "win_rate_pct": 44.3,
+      "gross_pnl": -8141308.0,
+      "charges": 2161954.0,
+      "net_pnl": -10303262.0,
+      "pnl_inr": -10303262.0,
+      "roi_pct": -29.4,
+      "return_pct": -29.4
+    },
+    {
+      "period": "2022-03",
+      "month": "2022-03",
+      "trades": 102,
+      "wins": 69,
+      "win_rate": 67.6,
+      "win_rate_pct": 67.6,
+      "gross_pnl": 259303.0,
+      "charges": 2409427.0,
+      "net_pnl": -2150124.0,
+      "pnl_inr": -2150124.0,
+      "roi_pct": -8.7,
+      "return_pct": -8.7
+    },
+    {
+      "period": "2022-04",
+      "month": "2022-04",
+      "trades": 136,
+      "wins": 64,
+      "win_rate": 47.1,
+      "win_rate_pct": 47.1,
+      "gross_pnl": 619541.0,
+      "charges": 2723329.0,
+      "net_pnl": -2103789.0,
+      "pnl_inr": -2103789.0,
+      "roi_pct": -9.3,
+      "return_pct": -9.3
+    },
+    {
+      "period": "2022-05",
+      "month": "2022-05",
+      "trades": 70,
+      "wins": 38,
+      "win_rate": 54.3,
+      "win_rate_pct": 54.3,
+      "gross_pnl": 683766.0,
+      "charges": 1526632.0,
+      "net_pnl": -842866.0,
+      "pnl_inr": -842866.0,
+      "roi_pct": -4.1,
+      "return_pct": -4.1
+    },
+    {
+      "period": "2022-06",
+      "month": "2022-06",
+      "trades": 53,
+      "wins": 32,
+      "win_rate": 60.4,
+      "win_rate_pct": 60.4,
+      "gross_pnl": 7975552.0,
+      "charges": 1119352.0,
+      "net_pnl": 6856201.0,
+      "pnl_inr": 6856201.0,
+      "roi_pct": 34.9,
+      "return_pct": 34.9
+    },
+    {
+      "period": "2022-07",
+      "month": "2022-07",
+      "trades": 67,
+      "wins": 39,
+      "win_rate": 58.2,
+      "win_rate_pct": 58.2,
+      "gross_pnl": 9640481.0,
+      "charges": 1931200.0,
+      "net_pnl": 7709281.0,
+      "pnl_inr": 7709281.0,
+      "roi_pct": 29.1,
+      "return_pct": 29.1
+    },
+    {
+      "period": "2022-08",
+      "month": "2022-08",
+      "trades": 130,
+      "wins": 73,
+      "win_rate": 56.2,
+      "win_rate_pct": 56.2,
+      "gross_pnl": 6236340.0,
+      "charges": 3748938.0,
+      "net_pnl": 2487402.0,
+      "pnl_inr": 2487402.0,
+      "roi_pct": 7.3,
+      "return_pct": 7.3
+    },
+    {
+      "period": "2022-09",
+      "month": "2022-09",
+      "trades": 161,
+      "wins": 94,
+      "win_rate": 58.4,
+      "win_rate_pct": 58.4,
+      "gross_pnl": 15303928.0,
+      "charges": 5509180.0,
+      "net_pnl": 9794747.0,
+      "pnl_inr": 9794747.0,
+      "roi_pct": 26.7,
+      "return_pct": 26.7
+    },
+    {
+      "period": "2022-10",
+      "month": "2022-10",
+      "trades": 106,
+      "wins": 57,
+      "win_rate": 53.8,
+      "win_rate_pct": 53.8,
+      "gross_pnl": 5769205.0,
+      "charges": 3231510.0,
+      "net_pnl": 2537695.0,
+      "pnl_inr": 2537695.0,
+      "roi_pct": 5.5,
+      "return_pct": 5.5
+    },
+    {
+      "period": "2022-11",
+      "month": "2022-11",
+      "trades": 93,
+      "wins": 44,
+      "win_rate": 47.3,
+      "win_rate_pct": 47.3,
+      "gross_pnl": -10141369.0,
+      "charges": 3362763.0,
+      "net_pnl": -13504132.0,
+      "pnl_inr": -13504132.0,
+      "roi_pct": -27.5,
+      "return_pct": -27.5
+    },
+    {
+      "period": "2022-12",
+      "month": "2022-12",
+      "trades": 73,
+      "wins": 40,
+      "win_rate": 54.8,
+      "win_rate_pct": 54.8,
+      "gross_pnl": -1897365.0,
+      "charges": 2365516.0,
+      "net_pnl": -4262882.0,
+      "pnl_inr": -4262882.0,
+      "roi_pct": -12.0,
+      "return_pct": -12.0
+    },
+    {
+      "period": "2023-01",
+      "month": "2023-01",
+      "trades": 43,
+      "wins": 23,
+      "win_rate": 53.5,
+      "win_rate_pct": 53.5,
+      "gross_pnl": 3893919.0,
+      "charges": 1054066.0,
+      "net_pnl": 2839854.0,
+      "pnl_inr": 2839854.0,
+      "roi_pct": 9.1,
+      "return_pct": 9.1
+    },
+    {
+      "period": "2023-02",
+      "month": "2023-02",
+      "trades": 32,
+      "wins": 20,
+      "win_rate": 62.5,
+      "win_rate_pct": 62.5,
+      "gross_pnl": 8879476.0,
+      "charges": 915302.0,
+      "net_pnl": 7964174.0,
+      "pnl_inr": 7964174.0,
+      "roi_pct": 23.4,
+      "return_pct": 23.4
+    },
+    {
+      "period": "2023-03",
+      "month": "2023-03",
+      "trades": 39,
+      "wins": 20,
+      "win_rate": 51.3,
+      "win_rate_pct": 51.3,
+      "gross_pnl": 9238774.0,
+      "charges": 1282344.0,
+      "net_pnl": 7956430.0,
+      "pnl_inr": 7956430.0,
+      "roi_pct": 18.9,
+      "return_pct": 18.9
+    },
+    {
+      "period": "2023-04",
+      "month": "2023-04",
+      "trades": 56,
+      "wins": 29,
+      "win_rate": 51.8,
+      "win_rate_pct": 51.8,
+      "gross_pnl": -2112821.0,
+      "charges": 1697600.0,
+      "net_pnl": -3810422.0,
+      "pnl_inr": -3810422.0,
+      "roi_pct": -7.6,
+      "return_pct": -7.6
+    },
+    {
+      "period": "2023-05",
+      "month": "2023-05",
+      "trades": 120,
+      "wins": 78,
+      "win_rate": 65.0,
+      "win_rate_pct": 65.0,
+      "gross_pnl": 15512782.0,
+      "charges": 4041243.0,
+      "net_pnl": 11471539.0,
+      "pnl_inr": 11471539.0,
+      "roi_pct": 24.8,
+      "return_pct": 24.8
+    },
+    {
+      "period": "2023-06",
+      "month": "2023-06",
+      "trades": 156,
+      "wins": 97,
+      "win_rate": 62.2,
+      "win_rate_pct": 62.2,
+      "gross_pnl": 17964929.0,
+      "charges": 5064277.0,
+      "net_pnl": 12900652.0,
+      "pnl_inr": 12900652.0,
+      "roi_pct": 25.8,
+      "return_pct": 25.8
+    },
+    {
+      "period": "2023-07",
+      "month": "2023-07",
+      "trades": 172,
+      "wins": 97,
+      "win_rate": 56.4,
+      "win_rate_pct": 56.4,
+      "gross_pnl": 13286539.0,
+      "charges": 6867059.0,
+      "net_pnl": 6419480.0,
+      "pnl_inr": 6419480.0,
+      "roi_pct": 12.8,
+      "return_pct": 12.8
+    },
+    {
+      "period": "2023-08",
+      "month": "2023-08",
+      "trades": 258,
+      "wins": 148,
+      "win_rate": 57.4,
+      "win_rate_pct": 57.4,
+      "gross_pnl": 35831342.0,
+      "charges": 10281566.0,
+      "net_pnl": 25549775.0,
+      "pnl_inr": 25549775.0,
+      "roi_pct": 51.1,
+      "return_pct": 51.1
+    },
+    {
+      "period": "2023-09",
+      "month": "2023-09",
+      "trades": 233,
+      "wins": 147,
+      "win_rate": 63.1,
+      "win_rate_pct": 63.1,
+      "gross_pnl": 61552713.0,
+      "charges": 12051613.0,
+      "net_pnl": 49501100.0,
+      "pnl_inr": 49501100.0,
+      "roi_pct": 99.0,
+      "return_pct": 99.0
+    },
+    {
+      "period": "2023-10",
+      "month": "2023-10",
+      "trades": 161,
+      "wins": 81,
+      "win_rate": 50.3,
+      "win_rate_pct": 50.3,
+      "gross_pnl": 17703489.0,
+      "charges": 7981755.0,
+      "net_pnl": 9721734.0,
+      "pnl_inr": 9721734.0,
+      "roi_pct": 19.4,
+      "return_pct": 19.4
+    },
+    {
+      "period": "2023-11",
+      "month": "2023-11",
+      "trades": 184,
+      "wins": 106,
+      "win_rate": 57.6,
+      "win_rate_pct": 57.6,
+      "gross_pnl": 24556789.0,
+      "charges": 9509144.0,
+      "net_pnl": 15047645.0,
+      "pnl_inr": 15047645.0,
+      "roi_pct": 30.1,
+      "return_pct": 30.1
+    },
+    {
+      "period": "2023-12",
+      "month": "2023-12",
+      "trades": 272,
+      "wins": 175,
+      "win_rate": 64.3,
+      "win_rate_pct": 64.3,
+      "gross_pnl": 173235657.0,
+      "charges": 22403347.0,
+      "net_pnl": 150832310.0,
+      "pnl_inr": 150832310.0,
+      "roi_pct": 301.7,
+      "return_pct": 301.7
+    },
+    {
+      "period": "2024-01",
+      "month": "2024-01",
+      "trades": 413,
+      "wins": 237,
+      "win_rate": 57.4,
+      "win_rate_pct": 57.4,
+      "gross_pnl": 208139052.0,
+      "charges": 35358607.0,
+      "net_pnl": 172780445.0,
+      "pnl_inr": 172780445.0,
+      "roi_pct": 345.6,
+      "return_pct": 345.6
+    },
+    {
+      "period": "2024-02",
+      "month": "2024-02",
+      "trades": 356,
+      "wins": 196,
+      "win_rate": 55.1,
+      "win_rate_pct": 55.1,
+      "gross_pnl": 48406212.0,
+      "charges": 36718337.0,
+      "net_pnl": 11687875.0,
+      "pnl_inr": 11687875.0,
+      "roi_pct": 23.4,
+      "return_pct": 23.4
+    },
+    {
+      "period": "2024-03",
+      "month": "2024-03",
+      "trades": 97,
+      "wins": 43,
+      "win_rate": 44.3,
+      "win_rate_pct": 44.3,
+      "gross_pnl": 21843981.0,
+      "charges": 7395960.0,
+      "net_pnl": 14448022.0,
+      "pnl_inr": 14448022.0,
+      "roi_pct": 28.9,
+      "return_pct": 28.9
+    },
+    {
+      "period": "2024-04",
+      "month": "2024-04",
+      "trades": 365,
+      "wins": 235,
+      "win_rate": 64.4,
+      "win_rate_pct": 64.4,
+      "gross_pnl": 159521330.0,
+      "charges": 28545853.0,
+      "net_pnl": 130975477.0,
+      "pnl_inr": 130975477.0,
+      "roi_pct": 262.0,
+      "return_pct": 262.0
+    },
+    {
+      "period": "2024-05",
+      "month": "2024-05",
+      "trades": 295,
+      "wins": 170,
+      "win_rate": 57.6,
+      "win_rate_pct": 57.6,
+      "gross_pnl": 144932461.0,
+      "charges": 29797205.0,
+      "net_pnl": 115135256.0,
+      "pnl_inr": 115135256.0,
+      "roi_pct": 230.3,
+      "return_pct": 230.3
+    },
+    {
+      "period": "2024-06",
+      "month": "2024-06",
+      "trades": 386,
+      "wins": 219,
+      "win_rate": 56.7,
+      "win_rate_pct": 56.7,
+      "gross_pnl": 38338236.0,
+      "charges": 30656299.0,
+      "net_pnl": 7681936.0,
+      "pnl_inr": 7681936.0,
+      "roi_pct": 15.4,
+      "return_pct": 15.4
+    },
+    {
+      "period": "2024-07",
+      "month": "2024-07",
+      "trades": 433,
+      "wins": 253,
+      "win_rate": 58.4,
+      "win_rate_pct": 58.4,
+      "gross_pnl": 203254919.0,
+      "charges": 55515640.0,
+      "net_pnl": 147739279.0,
+      "pnl_inr": 147739279.0,
+      "roi_pct": 295.5,
+      "return_pct": 295.5
+    },
+    {
+      "period": "2024-08",
+      "month": "2024-08",
+      "trades": 359,
+      "wins": 194,
+      "win_rate": 54.0,
+      "win_rate_pct": 54.0,
+      "gross_pnl": 7010239.0,
+      "charges": 33063672.0,
+      "net_pnl": -26053433.0,
+      "pnl_inr": -26053433.0,
+      "roi_pct": -52.1,
+      "return_pct": -52.1
+    },
+    {
+      "period": "2024-09",
+      "month": "2024-09",
+      "trades": 311,
+      "wins": 178,
+      "win_rate": 57.2,
+      "win_rate_pct": 57.2,
+      "gross_pnl": 109967327.0,
+      "charges": 20651910.0,
+      "net_pnl": 89315417.0,
+      "pnl_inr": 89315417.0,
+      "roi_pct": 178.6,
+      "return_pct": 178.6
+    },
+    {
+      "period": "2024-10",
+      "month": "2024-10",
+      "trades": 263,
+      "wins": 133,
+      "win_rate": 50.6,
+      "win_rate_pct": 50.6,
+      "gross_pnl": 163086339.0,
+      "charges": 24490454.0,
+      "net_pnl": 138595885.0,
+      "pnl_inr": 138595885.0,
+      "roi_pct": 277.2,
+      "return_pct": 277.2
+    },
+    {
+      "period": "2024-11",
+      "month": "2024-11",
+      "trades": 133,
+      "wins": 67,
+      "win_rate": 50.4,
+      "win_rate_pct": 50.4,
+      "gross_pnl": 18418293.0,
+      "charges": 6148074.0,
+      "net_pnl": 12270219.0,
+      "pnl_inr": 12270219.0,
+      "roi_pct": 24.5,
+      "return_pct": 24.5
+    },
+    {
+      "period": "2024-12",
+      "month": "2024-12",
+      "trades": 276,
+      "wins": 179,
+      "win_rate": 64.9,
+      "win_rate_pct": 64.9,
+      "gross_pnl": 92770197.0,
+      "charges": 19765690.0,
+      "net_pnl": 73004506.0,
+      "pnl_inr": 73004506.0,
+      "roi_pct": 146.0,
+      "return_pct": 146.0
+    },
+    {
+      "period": "2025-01",
+      "month": "2025-01",
+      "trades": 88,
+      "wins": 42,
+      "win_rate": 47.7,
+      "win_rate_pct": 47.7,
+      "gross_pnl": 950556.0,
+      "charges": 5775128.0,
+      "net_pnl": -4824572.0,
+      "pnl_inr": -4824572.0,
+      "roi_pct": -9.6,
+      "return_pct": -9.6
+    },
+    {
+      "period": "2025-02",
+      "month": "2025-02",
+      "trades": 42,
+      "wins": 32,
+      "win_rate": 76.2,
+      "win_rate_pct": 76.2,
+      "gross_pnl": 35309942.0,
+      "charges": 4505045.0,
+      "net_pnl": 30804896.0,
+      "pnl_inr": 30804896.0,
+      "roi_pct": 61.6,
+      "return_pct": 61.6
+    },
+    {
+      "period": "2025-03",
+      "month": "2025-03",
+      "trades": 167,
+      "wins": 97,
+      "win_rate": 58.1,
+      "win_rate_pct": 58.1,
+      "gross_pnl": 39843485.0,
+      "charges": 11583625.0,
+      "net_pnl": 28259859.0,
+      "pnl_inr": 28259859.0,
+      "roi_pct": 56.5,
+      "return_pct": 56.5
+    },
+    {
+      "period": "2025-04",
+      "month": "2025-04",
+      "trades": 188,
+      "wins": 109,
+      "win_rate": 58.0,
+      "win_rate_pct": 58.0,
+      "gross_pnl": 38819661.0,
+      "charges": 16180386.0,
+      "net_pnl": 22639274.0,
+      "pnl_inr": 22639274.0,
+      "roi_pct": 45.3,
+      "return_pct": 45.3
+    },
+    {
+      "period": "2025-05",
+      "month": "2025-05",
+      "trades": 411,
+      "wins": 277,
+      "win_rate": 67.4,
+      "win_rate_pct": 67.4,
+      "gross_pnl": 296626321.0,
+      "charges": 40816070.0,
+      "net_pnl": 255810251.0,
+      "pnl_inr": 255810251.0,
+      "roi_pct": 511.6,
+      "return_pct": 511.6
+    },
+    {
+      "period": "2025-06",
+      "month": "2025-06",
+      "trades": 372,
+      "wins": 220,
+      "win_rate": 59.1,
+      "win_rate_pct": 59.1,
+      "gross_pnl": 239815778.0,
+      "charges": 38124099.0,
+      "net_pnl": 201691678.0,
+      "pnl_inr": 201691678.0,
+      "roi_pct": 403.4,
+      "return_pct": 403.4
+    },
+    {
+      "period": "2025-07",
+      "month": "2025-07",
+      "trades": 201,
+      "wins": 114,
+      "win_rate": 56.7,
+      "win_rate_pct": 56.7,
+      "gross_pnl": 53286595.0,
+      "charges": 11368868.0,
+      "net_pnl": 41917727.0,
+      "pnl_inr": 41917727.0,
+      "roi_pct": 83.8,
+      "return_pct": 83.8
+    },
+    {
+      "period": "2025-08",
+      "month": "2025-08",
+      "trades": 128,
+      "wins": 77,
+      "win_rate": 60.2,
+      "win_rate_pct": 60.2,
+      "gross_pnl": 13601916.0,
+      "charges": 7585953.0,
+      "net_pnl": 6015964.0,
+      "pnl_inr": 6015964.0,
+      "roi_pct": 12.0,
+      "return_pct": 12.0
+    },
+    {
+      "period": "2025-09",
+      "month": "2025-09",
+      "trades": 160,
+      "wins": 78,
+      "win_rate": 48.8,
+      "win_rate_pct": 48.8,
+      "gross_pnl": 7123162.0,
+      "charges": 14723453.0,
+      "net_pnl": -7600290.0,
+      "pnl_inr": -7600290.0,
+      "roi_pct": -15.2,
+      "return_pct": -15.2
+    },
+    {
+      "period": "2025-10",
+      "month": "2025-10",
+      "trades": 138,
+      "wins": 70,
+      "win_rate": 50.7,
+      "win_rate_pct": 50.7,
+      "gross_pnl": 4034934.0,
+      "charges": 8074086.0,
+      "net_pnl": -4039152.0,
+      "pnl_inr": -4039152.0,
+      "roi_pct": -8.1,
+      "return_pct": -8.1
+    },
+    {
+      "period": "2025-11",
+      "month": "2025-11",
+      "trades": 93,
+      "wins": 54,
+      "win_rate": 58.1,
+      "win_rate_pct": 58.1,
+      "gross_pnl": 26776169.0,
+      "charges": 4456903.0,
+      "net_pnl": 22319266.0,
+      "pnl_inr": 22319266.0,
+      "roi_pct": 44.6,
+      "return_pct": 44.6
+    },
+    {
+      "period": "2025-12",
+      "month": "2025-12",
+      "trades": 59,
+      "wins": 28,
+      "win_rate": 47.5,
+      "win_rate_pct": 47.5,
+      "gross_pnl": -15391574.0,
+      "charges": 3999820.0,
+      "net_pnl": -19391394.0,
+      "pnl_inr": -19391394.0,
+      "roi_pct": -38.8,
+      "return_pct": -38.8
+    },
+    {
+      "period": "2026-01",
+      "month": "2026-01",
+      "trades": 70,
+      "wins": 34,
+      "win_rate": 48.6,
+      "win_rate_pct": 48.6,
+      "gross_pnl": -18470321.0,
+      "charges": 7403351.0,
+      "net_pnl": -25873672.0,
+      "pnl_inr": -25873672.0,
+      "roi_pct": -51.7,
+      "return_pct": -51.7
+    },
+    {
+      "period": "2026-02",
+      "month": "2026-02",
+      "trades": 154,
+      "wins": 83,
+      "win_rate": 53.9,
+      "win_rate_pct": 53.9,
+      "gross_pnl": 14028652.0,
+      "charges": 15975923.0,
+      "net_pnl": -1947270.0,
+      "pnl_inr": -1947270.0,
+      "roi_pct": -3.9,
+      "return_pct": -3.9
+    },
+    {
+      "period": "2026-03",
+      "month": "2026-03",
+      "trades": 50,
+      "wins": 32,
+      "win_rate": 64.0,
+      "win_rate_pct": 64.0,
+      "gross_pnl": 40157161.0,
+      "charges": 3714301.0,
+      "net_pnl": 36442860.0,
+      "pnl_inr": 36442860.0,
+      "roi_pct": 72.9,
+      "return_pct": 72.9
+    },
+    {
+      "period": "2026-04",
+      "month": "2026-04",
+      "trades": 252,
+      "wins": 120,
+      "win_rate": 47.6,
+      "win_rate_pct": 47.6,
+      "gross_pnl": -13603990.0,
+      "charges": 18688714.0,
+      "net_pnl": -32292704.0,
+      "pnl_inr": -32292704.0,
+      "roi_pct": -64.6,
+      "return_pct": -64.6
+    },
+    {
+      "period": "2026-05",
+      "month": "2026-05",
+      "trades": 492,
+      "wins": 242,
+      "win_rate": 49.2,
+      "win_rate_pct": 49.2,
+      "gross_pnl": 23395170.0,
+      "charges": 37205711.0,
+      "net_pnl": -13810541.0,
+      "pnl_inr": -13810541.0,
+      "roi_pct": -27.6,
+      "return_pct": -27.6
+    },
+    {
+      "period": "2026-06",
+      "month": "2026-06",
+      "trades": 489,
+      "wins": 267,
+      "win_rate": 54.6,
+      "win_rate_pct": 54.6,
+      "gross_pnl": 61925528.0,
+      "charges": 38926578.0,
+      "net_pnl": 22998950.0,
+      "pnl_inr": 22998950.0,
+      "roi_pct": 46.0,
+      "return_pct": 46.0
+    },
+    {
+      "period": "2026-07",
+      "month": "2026-07",
+      "trades": 415,
+      "wins": 229,
+      "win_rate": 55.2,
+      "win_rate_pct": 55.2,
+      "gross_pnl": 110857120.0,
+      "charges": 32283125.0,
+      "net_pnl": 78573996.0,
+      "pnl_inr": 78573996.0,
+      "roi_pct": 157.1,
+      "return_pct": 157.1
+    },
+    {
+      "period": "2026-08",
+      "month": "2026-08",
+      "trades": 222,
+      "wins": 112,
+      "win_rate": 50.5,
+      "win_rate_pct": 50.5,
+      "gross_pnl": 25048566.0,
+      "charges": 15846547.0,
+      "net_pnl": 9202019.0,
+      "pnl_inr": 9202019.0,
+      "roi_pct": 18.4,
+      "return_pct": 18.4
+    },
+    {
+      "period": "2026-09",
+      "month": "2026-09",
+      "trades": 286,
+      "wins": 166,
+      "win_rate": 58.0,
+      "win_rate_pct": 58.0,
+      "gross_pnl": 64070433.0,
+      "charges": 17608184.0,
+      "net_pnl": 46462249.0,
+      "pnl_inr": 46462249.0,
+      "roi_pct": 92.9,
+      "return_pct": 92.9
+    },
+    {
+      "period": "2026-10",
+      "month": "2026-10",
+      "trades": 18,
+      "wins": 6,
+      "win_rate": 33.3,
+      "win_rate_pct": 33.3,
+      "gross_pnl": -4577463.0,
+      "charges": 1153934.0,
+      "net_pnl": -5731397.0,
+      "pnl_inr": -5731397.0,
+      "roi_pct": -11.5,
+      "return_pct": -11.5
+    }
+  ],
+  "equity_curve": [
+    {
+      "date": "2017-03-28",
+      "equity": 327204.42,
+      "net_pnl": 27204.42,
+      "trades": 41,
+      "win_rate": 63.4,
+      "deployed_capital": 300000.0,
+      "roi_pct": 9.1
+    },
+    {
+      "date": "2017-04-28",
+      "equity": 308865.41,
+      "net_pnl": -18339.01,
+      "trades": 67,
+      "win_rate": 53.7,
+      "deployed_capital": 327204.42,
+      "roi_pct": -5.6
+    },
+    {
+      "date": "2017-05-28",
+      "equity": 247938.88,
+      "net_pnl": -60926.53,
+      "trades": 68,
+      "win_rate": 47.1,
+      "deployed_capital": 308865.41,
+      "roi_pct": -19.7
+    },
+    {
+      "date": "2017-06-28",
+      "equity": 278589.57,
+      "net_pnl": 30650.69,
+      "trades": 38,
+      "win_rate": 68.4,
+      "deployed_capital": 300000.0,
+      "roi_pct": 10.2
+    },
+    {
+      "date": "2017-07-28",
+      "equity": 349181.8,
+      "net_pnl": 70592.23,
+      "trades": 63,
+      "win_rate": 55.6,
+      "deployed_capital": 300000.0,
+      "roi_pct": 23.5
+    },
+    {
+      "date": "2017-08-28",
+      "equity": 260528.55,
+      "net_pnl": -88653.25,
+      "trades": 59,
+      "win_rate": 54.2,
+      "deployed_capital": 349181.8,
+      "roi_pct": -25.4
+    },
+    {
+      "date": "2017-09-28",
+      "equity": 254262.94,
+      "net_pnl": -6265.6,
+      "trades": 95,
+      "win_rate": 53.7,
+      "deployed_capital": 300000.0,
+      "roi_pct": -2.1
+    },
+    {
+      "date": "2017-10-28",
+      "equity": 341873.05,
+      "net_pnl": 87610.1,
+      "trades": 94,
+      "win_rate": 56.4,
+      "deployed_capital": 300000.0,
+      "roi_pct": 29.2
+    },
+    {
+      "date": "2017-11-28",
+      "equity": 459904.93,
+      "net_pnl": 118031.89,
+      "trades": 115,
+      "win_rate": 55.7,
+      "deployed_capital": 341873.05,
+      "roi_pct": 34.5
+    },
+    {
+      "date": "2017-12-28",
+      "equity": 399341.98,
+      "net_pnl": -60562.96,
+      "trades": 93,
+      "win_rate": 49.5,
+      "deployed_capital": 459904.93,
+      "roi_pct": -13.2
+    },
+    {
+      "date": "2018-01-28",
+      "equity": 529376.44,
+      "net_pnl": 130034.47,
+      "trades": 117,
+      "win_rate": 63.2,
+      "deployed_capital": 399341.98,
+      "roi_pct": 32.6
+    },
+    {
+      "date": "2018-02-28",
+      "equity": 440240.89,
+      "net_pnl": -89135.56,
+      "trades": 46,
+      "win_rate": 43.5,
+      "deployed_capital": 529376.44,
+      "roi_pct": -16.8
+    },
+    {
+      "date": "2018-03-28",
+      "equity": 465638.4,
+      "net_pnl": 25397.51,
+      "trades": 10,
+      "win_rate": 60.0,
+      "deployed_capital": 440240.89,
+      "roi_pct": 5.8
+    },
+    {
+      "date": "2018-04-28",
+      "equity": 657150.79,
+      "net_pnl": 191512.39,
+      "trades": 54,
+      "win_rate": 68.5,
+      "deployed_capital": 465638.4,
+      "roi_pct": 41.1
+    },
+    {
+      "date": "2018-05-28",
+      "equity": 667138.4,
+      "net_pnl": 9987.61,
+      "trades": 42,
+      "win_rate": 45.2,
+      "deployed_capital": 657150.79,
+      "roi_pct": 1.5
+    },
+    {
+      "date": "2018-06-28",
+      "equity": 641580.39,
+      "net_pnl": -25558.01,
+      "trades": 21,
+      "win_rate": 42.9,
+      "deployed_capital": 667138.4,
+      "roi_pct": -3.8
+    },
+    {
+      "date": "2018-07-28",
+      "equity": 636651.54,
+      "net_pnl": -4928.85,
+      "trades": 33,
+      "win_rate": 54.5,
+      "deployed_capital": 641580.39,
+      "roi_pct": -0.8
+    },
+    {
+      "date": "2018-08-28",
+      "equity": 650353.83,
+      "net_pnl": 13702.29,
+      "trades": 63,
+      "win_rate": 54.0,
+      "deployed_capital": 636651.54,
+      "roi_pct": 2.2
+    },
+    {
+      "date": "2018-09-28",
+      "equity": 823936.39,
+      "net_pnl": 173582.56,
+      "trades": 37,
+      "win_rate": 56.8,
+      "deployed_capital": 650353.83,
+      "roi_pct": 26.7
+    },
+    {
+      "date": "2018-10-28",
+      "equity": 1086799.6,
+      "net_pnl": 262863.21,
+      "trades": 17,
+      "win_rate": 76.5,
+      "deployed_capital": 823936.39,
+      "roi_pct": 31.9
+    },
+    {
+      "date": "2018-11-28",
+      "equity": 1145287.77,
+      "net_pnl": 58488.16,
+      "trades": 31,
+      "win_rate": 61.3,
+      "deployed_capital": 1086799.6,
+      "roi_pct": 5.4
+    },
+    {
+      "date": "2018-12-28",
+      "equity": 1428586.31,
+      "net_pnl": 283298.54,
+      "trades": 51,
+      "win_rate": 58.8,
+      "deployed_capital": 1145287.77,
+      "roi_pct": 24.7
+    },
+    {
+      "date": "2019-01-28",
+      "equity": 1454922.82,
+      "net_pnl": 26336.51,
+      "trades": 22,
+      "win_rate": 40.9,
+      "deployed_capital": 1428586.31,
+      "roi_pct": 1.8
+    },
+    {
+      "date": "2019-02-28",
+      "equity": 1521779.62,
+      "net_pnl": 66856.8,
+      "trades": 6,
+      "win_rate": 66.7,
+      "deployed_capital": 1454922.82,
+      "roi_pct": 4.6
+    },
+    {
+      "date": "2019-03-28",
+      "equity": 1897868.65,
+      "net_pnl": 376089.03,
+      "trades": 72,
+      "win_rate": 56.9,
+      "deployed_capital": 1521779.62,
+      "roi_pct": 24.7
+    },
+    {
+      "date": "2019-04-28",
+      "equity": 1917068.5,
+      "net_pnl": 19199.85,
+      "trades": 40,
+      "win_rate": 57.5,
+      "deployed_capital": 1897868.65,
+      "roi_pct": 1.0
+    },
+    {
+      "date": "2019-05-28",
+      "equity": 1925810.24,
+      "net_pnl": 8741.74,
+      "trades": 54,
+      "win_rate": 59.3,
+      "deployed_capital": 1917068.5,
+      "roi_pct": 0.5
+    },
+    {
+      "date": "2019-06-28",
+      "equity": 1719326.74,
+      "net_pnl": -206483.5,
+      "trades": 18,
+      "win_rate": 50.0,
+      "deployed_capital": 1925810.24,
+      "roi_pct": -10.7
+    },
+    {
+      "date": "2019-07-28",
+      "equity": 1816081.73,
+      "net_pnl": 96754.99,
+      "trades": 16,
+      "win_rate": 56.2,
+      "deployed_capital": 1719326.74,
+      "roi_pct": 5.6
+    },
+    {
+      "date": "2019-08-28",
+      "equity": 1782668.8,
+      "net_pnl": -33412.93,
+      "trades": 10,
+      "win_rate": 50.0,
+      "deployed_capital": 1816081.73,
+      "roi_pct": -1.8
+    },
+    {
+      "date": "2019-09-28",
+      "equity": 1244790.04,
+      "net_pnl": -537878.76,
+      "trades": 36,
+      "win_rate": 41.7,
+      "deployed_capital": 1782668.8,
+      "roi_pct": -30.2
+    },
+    {
+      "date": "2019-10-28",
+      "equity": 1229234.04,
+      "net_pnl": -15556.0,
+      "trades": 33,
+      "win_rate": 54.5,
+      "deployed_capital": 1244790.04,
+      "roi_pct": -1.2
+    },
+    {
+      "date": "2019-11-28",
+      "equity": 1660601.99,
+      "net_pnl": 431367.95,
+      "trades": 64,
+      "win_rate": 64.1,
+      "deployed_capital": 1229234.04,
+      "roi_pct": 35.1
+    },
+    {
+      "date": "2019-12-28",
+      "equity": 2047833.17,
+      "net_pnl": 387231.17,
+      "trades": 26,
+      "win_rate": 69.2,
+      "deployed_capital": 1660601.99,
+      "roi_pct": 23.3
+    },
+    {
+      "date": "2020-01-28",
+      "equity": 1994853.93,
+      "net_pnl": -52979.24,
+      "trades": 57,
+      "win_rate": 52.6,
+      "deployed_capital": 2047833.17,
+      "roi_pct": -2.6
+    },
+    {
+      "date": "2020-02-28",
+      "equity": 1413825.88,
+      "net_pnl": -581028.05,
+      "trades": 75,
+      "win_rate": 45.3,
+      "deployed_capital": 1994853.93,
+      "roi_pct": -29.1
+    },
+    {
+      "date": "2020-03-28",
+      "equity": 1691181.67,
+      "net_pnl": 277355.79,
+      "trades": 8,
+      "win_rate": 75.0,
+      "deployed_capital": 1413825.88,
+      "roi_pct": 19.6
+    },
+    {
+      "date": "2020-04-28",
+      "equity": 1873975.91,
+      "net_pnl": 182794.23,
+      "trades": 69,
+      "win_rate": 58.0,
+      "deployed_capital": 1691181.67,
+      "roi_pct": 10.8
+    },
+    {
+      "date": "2020-05-28",
+      "equity": 2514415.62,
+      "net_pnl": 640439.71,
+      "trades": 54,
+      "win_rate": 66.7,
+      "deployed_capital": 1873975.91,
+      "roi_pct": 34.2
+    },
+    {
+      "date": "2020-06-28",
+      "equity": 6932015.23,
+      "net_pnl": 4417599.61,
+      "trades": 140,
+      "win_rate": 65.0,
+      "deployed_capital": 2514415.62,
+      "roi_pct": 175.7
+    },
+    {
+      "date": "2020-07-28",
+      "equity": 6817915.45,
+      "net_pnl": -114099.78,
+      "trades": 127,
+      "win_rate": 54.3,
+      "deployed_capital": 6932015.23,
+      "roi_pct": -1.6
+    },
+    {
+      "date": "2020-08-28",
+      "equity": 10883915.53,
+      "net_pnl": 4066000.08,
+      "trades": 133,
+      "win_rate": 57.9,
+      "deployed_capital": 6817915.45,
+      "roi_pct": 59.6
+    },
+    {
+      "date": "2020-09-28",
+      "equity": 8722866.98,
+      "net_pnl": -2161048.56,
+      "trades": 100,
+      "win_rate": 51.0,
+      "deployed_capital": 10883915.53,
+      "roi_pct": -19.9
+    },
+    {
+      "date": "2020-10-28",
+      "equity": 8584338.87,
+      "net_pnl": -138528.1,
+      "trades": 62,
+      "win_rate": 53.2,
+      "deployed_capital": 8722866.98,
+      "roi_pct": -1.6
+    },
+    {
+      "date": "2020-11-28",
+      "equity": 8233101.72,
+      "net_pnl": -351237.15,
+      "trades": 85,
+      "win_rate": 50.6,
+      "deployed_capital": 8584338.87,
+      "roi_pct": -4.1
+    },
+    {
+      "date": "2020-12-28",
+      "equity": 7978414.64,
+      "net_pnl": -254687.09,
+      "trades": 120,
+      "win_rate": 59.2,
+      "deployed_capital": 8233101.72,
+      "roi_pct": -3.1
+    },
+    {
+      "date": "2021-01-28",
+      "equity": 8003062.67,
+      "net_pnl": 24648.03,
+      "trades": 112,
+      "win_rate": 51.8,
+      "deployed_capital": 7978414.64,
+      "roi_pct": 0.3
+    },
+    {
+      "date": "2021-02-28",
+      "equity": 7080517.33,
+      "net_pnl": -922545.34,
+      "trades": 129,
+      "win_rate": 56.6,
+      "deployed_capital": 8003062.67,
+      "roi_pct": -11.5
+    },
+    {
+      "date": "2021-03-28",
+      "equity": 13899605.44,
+      "net_pnl": 6819088.11,
+      "trades": 124,
+      "win_rate": 56.5,
+      "deployed_capital": 7080517.33,
+      "roi_pct": 96.3
+    },
+    {
+      "date": "2021-04-28",
+      "equity": 10365589.23,
+      "net_pnl": -3534016.21,
+      "trades": 119,
+      "win_rate": 52.1,
+      "deployed_capital": 13899605.44,
+      "roi_pct": -25.4
+    },
+    {
+      "date": "2021-05-28",
+      "equity": 14316519.53,
+      "net_pnl": 3950930.29,
+      "trades": 140,
+      "win_rate": 57.1,
+      "deployed_capital": 10365589.23,
+      "roi_pct": 38.1
+    },
+    {
+      "date": "2021-06-28",
+      "equity": 21491363.26,
+      "net_pnl": 7174843.73,
+      "trades": 161,
+      "win_rate": 62.7,
+      "deployed_capital": 14316519.53,
+      "roi_pct": 50.1
+    },
+    {
+      "date": "2021-07-28",
+      "equity": 32349931.66,
+      "net_pnl": 10858568.4,
+      "trades": 169,
+      "win_rate": 62.1,
+      "deployed_capital": 21491363.26,
+      "roi_pct": 50.5
+    },
+    {
+      "date": "2021-08-28",
+      "equity": 34996528.29,
+      "net_pnl": 2646596.63,
+      "trades": 146,
+      "win_rate": 54.8,
+      "deployed_capital": 32349931.66,
+      "roi_pct": 8.2
+    },
+    {
+      "date": "2021-09-28",
+      "equity": 34227808.79,
+      "net_pnl": -768719.5,
+      "trades": 153,
+      "win_rate": 51.0,
+      "deployed_capital": 34996528.29,
+      "roi_pct": -2.2
+    },
+    {
+      "date": "2021-10-28",
+      "equity": 28246007.53,
+      "net_pnl": -5981801.26,
+      "trades": 149,
+      "win_rate": 50.3,
+      "deployed_capital": 34227808.79,
+      "roi_pct": -17.5
+    },
+    {
+      "date": "2021-11-28",
+      "equity": 26081623.42,
+      "net_pnl": -2164384.11,
+      "trades": 128,
+      "win_rate": 53.1,
+      "deployed_capital": 28246007.53,
+      "roi_pct": -7.7
+    },
+    {
+      "date": "2021-12-28",
+      "equity": 26396496.66,
+      "net_pnl": 314873.24,
+      "trades": 101,
+      "win_rate": 54.5,
+      "deployed_capital": 26081623.42,
+      "roi_pct": 1.2
+    },
+    {
+      "date": "2022-01-28",
+      "equity": 35040865.4,
+      "net_pnl": 8644368.73,
+      "trades": 140,
+      "win_rate": 53.6,
+      "deployed_capital": 26396496.66,
+      "roi_pct": 32.7
+    },
+    {
+      "date": "2022-02-28",
+      "equity": 24737603.81,
+      "net_pnl": -10303261.59,
+      "trades": 79,
+      "win_rate": 44.3,
+      "deployed_capital": 35040865.4,
+      "roi_pct": -29.4
+    },
+    {
+      "date": "2022-03-28",
+      "equity": 22587479.68,
+      "net_pnl": -2150124.13,
+      "trades": 102,
+      "win_rate": 67.6,
+      "deployed_capital": 24737603.81,
+      "roi_pct": -8.7
+    },
+    {
+      "date": "2022-04-28",
+      "equity": 20483690.96,
+      "net_pnl": -2103788.73,
+      "trades": 136,
+      "win_rate": 47.1,
+      "deployed_capital": 22587479.68,
+      "roi_pct": -9.3
+    },
+    {
+      "date": "2022-05-28",
+      "equity": 19640825.06,
+      "net_pnl": -842865.89,
+      "trades": 70,
+      "win_rate": 54.3,
+      "deployed_capital": 20483690.96,
+      "roi_pct": -4.1
+    },
+    {
+      "date": "2022-06-28",
+      "equity": 26497025.83,
+      "net_pnl": 6856200.77,
+      "trades": 53,
+      "win_rate": 60.4,
+      "deployed_capital": 19640825.06,
+      "roi_pct": 34.9
+    },
+    {
+      "date": "2022-07-28",
+      "equity": 34206306.85,
+      "net_pnl": 7709281.02,
+      "trades": 67,
+      "win_rate": 58.2,
+      "deployed_capital": 26497025.83,
+      "roi_pct": 29.1
+    },
+    {
+      "date": "2022-08-28",
+      "equity": 36693708.63,
+      "net_pnl": 2487401.78,
+      "trades": 130,
+      "win_rate": 56.2,
+      "deployed_capital": 34206306.85,
+      "roi_pct": 7.3
+    },
+    {
+      "date": "2022-09-28",
+      "equity": 46488455.98,
+      "net_pnl": 9794747.35,
+      "trades": 161,
+      "win_rate": 58.4,
+      "deployed_capital": 36693708.63,
+      "roi_pct": 26.7
+    },
+    {
+      "date": "2022-10-28",
+      "equity": 49026151.18,
+      "net_pnl": 2537695.2,
+      "trades": 106,
+      "win_rate": 53.8,
+      "deployed_capital": 46488455.98,
+      "roi_pct": 5.5
+    },
+    {
+      "date": "2022-11-28",
+      "equity": 35522019.24,
+      "net_pnl": -13504131.94,
+      "trades": 93,
+      "win_rate": 47.3,
+      "deployed_capital": 49026151.18,
+      "roi_pct": -27.5
+    },
+    {
+      "date": "2022-12-28",
+      "equity": 31259137.61,
+      "net_pnl": -4262881.64,
+      "trades": 73,
+      "win_rate": 54.8,
+      "deployed_capital": 35522019.24,
+      "roi_pct": -12.0
+    },
+    {
+      "date": "2023-01-28",
+      "equity": 34098991.15,
+      "net_pnl": 2839853.55,
+      "trades": 43,
+      "win_rate": 53.5,
+      "deployed_capital": 31259137.61,
+      "roi_pct": 9.1
+    },
+    {
+      "date": "2023-02-28",
+      "equity": 42063164.74,
+      "net_pnl": 7964173.59,
+      "trades": 32,
+      "win_rate": 62.5,
+      "deployed_capital": 34098991.15,
+      "roi_pct": 23.4
+    },
+    {
+      "date": "2023-03-28",
+      "equity": 50019594.81,
+      "net_pnl": 7956430.07,
+      "trades": 39,
+      "win_rate": 51.3,
+      "deployed_capital": 42063164.74,
+      "roi_pct": 18.9
+    },
+    {
+      "date": "2023-04-28",
+      "equity": 46209173.07,
+      "net_pnl": -3810421.74,
+      "trades": 56,
+      "win_rate": 51.8,
+      "deployed_capital": 50000000.0,
+      "roi_pct": -7.6
+    },
+    {
+      "date": "2023-05-28",
+      "equity": 57680712.02,
+      "net_pnl": 11471538.95,
+      "trades": 120,
+      "win_rate": 65.0,
+      "deployed_capital": 46209173.07,
+      "roi_pct": 24.8
+    },
+    {
+      "date": "2023-06-28",
+      "equity": 70581364.13,
+      "net_pnl": 12900652.11,
+      "trades": 156,
+      "win_rate": 62.2,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 25.8
+    },
+    {
+      "date": "2023-07-28",
+      "equity": 77000843.99,
+      "net_pnl": 6419479.86,
+      "trades": 172,
+      "win_rate": 56.4,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 12.8
+    },
+    {
+      "date": "2023-08-28",
+      "equity": 102550619.45,
+      "net_pnl": 25549775.46,
+      "trades": 258,
+      "win_rate": 57.4,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 51.1
+    },
+    {
+      "date": "2023-09-28",
+      "equity": 152051719.85,
+      "net_pnl": 49501100.39,
+      "trades": 233,
+      "win_rate": 63.1,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 99.0
+    },
+    {
+      "date": "2023-10-28",
+      "equity": 161773453.44,
+      "net_pnl": 9721733.59,
+      "trades": 161,
+      "win_rate": 50.3,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 19.4
+    },
+    {
+      "date": "2023-11-28",
+      "equity": 176821098.42,
+      "net_pnl": 15047644.98,
+      "trades": 184,
+      "win_rate": 57.6,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 30.1
+    },
+    {
+      "date": "2023-12-28",
+      "equity": 327653408.48,
+      "net_pnl": 150832310.06,
+      "trades": 272,
+      "win_rate": 64.3,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 301.7
+    },
+    {
+      "date": "2024-01-28",
+      "equity": 500433853.75,
+      "net_pnl": 172780445.28,
+      "trades": 413,
+      "win_rate": 57.4,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 345.6
+    },
+    {
+      "date": "2024-02-28",
+      "equity": 512121728.86,
+      "net_pnl": 11687875.11,
+      "trades": 356,
+      "win_rate": 55.1,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 23.4
+    },
+    {
+      "date": "2024-03-28",
+      "equity": 526569750.6,
+      "net_pnl": 14448021.73,
+      "trades": 97,
+      "win_rate": 44.3,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 28.9
+    },
+    {
+      "date": "2024-04-28",
+      "equity": 657545227.59,
+      "net_pnl": 130975476.99,
+      "trades": 365,
+      "win_rate": 64.4,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 262.0
+    },
+    {
+      "date": "2024-05-28",
+      "equity": 772680483.87,
+      "net_pnl": 115135256.28,
+      "trades": 295,
+      "win_rate": 57.6,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 230.3
+    },
+    {
+      "date": "2024-06-28",
+      "equity": 780362420.31,
+      "net_pnl": 7681936.45,
+      "trades": 386,
+      "win_rate": 56.7,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 15.4
+    },
+    {
+      "date": "2024-07-28",
+      "equity": 928101699.69,
+      "net_pnl": 147739279.38,
+      "trades": 433,
+      "win_rate": 58.4,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 295.5
+    },
+    {
+      "date": "2024-08-28",
+      "equity": 902048266.63,
+      "net_pnl": -26053433.06,
+      "trades": 359,
+      "win_rate": 54.0,
+      "deployed_capital": 50000000.0,
+      "roi_pct": -52.1
+    },
+    {
+      "date": "2024-09-28",
+      "equity": 991363683.9,
+      "net_pnl": 89315417.27,
+      "trades": 311,
+      "win_rate": 57.2,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 178.6
+    },
+    {
+      "date": "2024-10-28",
+      "equity": 1129959569.12,
+      "net_pnl": 138595885.22,
+      "trades": 263,
+      "win_rate": 50.6,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 277.2
+    },
+    {
+      "date": "2024-11-28",
+      "equity": 1142229788.29,
+      "net_pnl": 12270219.17,
+      "trades": 133,
+      "win_rate": 50.4,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 24.5
+    },
+    {
+      "date": "2024-12-28",
+      "equity": 1215234294.66,
+      "net_pnl": 73004506.37,
+      "trades": 276,
+      "win_rate": 64.9,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 146.0
+    },
+    {
+      "date": "2025-01-28",
+      "equity": 1210409723.12,
+      "net_pnl": -4824571.54,
+      "trades": 88,
+      "win_rate": 47.7,
+      "deployed_capital": 50000000.0,
+      "roi_pct": -9.6
+    },
+    {
+      "date": "2025-02-28",
+      "equity": 1241214619.43,
+      "net_pnl": 30804896.31,
+      "trades": 42,
+      "win_rate": 76.2,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 61.6
+    },
+    {
+      "date": "2025-03-28",
+      "equity": 1269474478.57,
+      "net_pnl": 28259859.14,
+      "trades": 167,
+      "win_rate": 58.1,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 56.5
+    },
+    {
+      "date": "2025-04-28",
+      "equity": 1292113753.05,
+      "net_pnl": 22639274.48,
+      "trades": 188,
+      "win_rate": 58.0,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 45.3
+    },
+    {
+      "date": "2025-05-28",
+      "equity": 1547924004.09,
+      "net_pnl": 255810251.04,
+      "trades": 411,
+      "win_rate": 67.4,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 511.6
+    },
+    {
+      "date": "2025-06-28",
+      "equity": 1749615682.44,
+      "net_pnl": 201691678.35,
+      "trades": 372,
+      "win_rate": 59.1,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 403.4
+    },
+    {
+      "date": "2025-07-28",
+      "equity": 1791533409.71,
+      "net_pnl": 41917727.27,
+      "trades": 201,
+      "win_rate": 56.7,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 83.8
+    },
+    {
+      "date": "2025-08-28",
+      "equity": 1797549373.37,
+      "net_pnl": 6015963.66,
+      "trades": 128,
+      "win_rate": 60.2,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 12.0
+    },
+    {
+      "date": "2025-09-28",
+      "equity": 1789949083.08,
+      "net_pnl": -7600290.3,
+      "trades": 160,
+      "win_rate": 48.8,
+      "deployed_capital": 50000000.0,
+      "roi_pct": -15.2
+    },
+    {
+      "date": "2025-10-28",
+      "equity": 1785909931.44,
+      "net_pnl": -4039151.63,
+      "trades": 138,
+      "win_rate": 50.7,
+      "deployed_capital": 50000000.0,
+      "roi_pct": -8.1
+    },
+    {
+      "date": "2025-11-28",
+      "equity": 1808229197.09,
+      "net_pnl": 22319265.65,
+      "trades": 93,
+      "win_rate": 58.1,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 44.6
+    },
+    {
+      "date": "2025-12-28",
+      "equity": 1788837803.14,
+      "net_pnl": -19391393.96,
+      "trades": 59,
+      "win_rate": 47.5,
+      "deployed_capital": 50000000.0,
+      "roi_pct": -38.8
+    },
+    {
+      "date": "2026-01-28",
+      "equity": 1762964131.28,
+      "net_pnl": -25873671.86,
+      "trades": 70,
+      "win_rate": 48.6,
+      "deployed_capital": 50000000.0,
+      "roi_pct": -51.7
+    },
+    {
+      "date": "2026-02-28",
+      "equity": 1761016860.79,
+      "net_pnl": -1947270.49,
+      "trades": 154,
+      "win_rate": 53.9,
+      "deployed_capital": 50000000.0,
+      "roi_pct": -3.9
+    },
+    {
+      "date": "2026-03-28",
+      "equity": 1797459721.0,
+      "net_pnl": 36442860.21,
+      "trades": 50,
+      "win_rate": 64.0,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 72.9
+    },
+    {
+      "date": "2026-04-28",
+      "equity": 1765167016.73,
+      "net_pnl": -32292704.28,
+      "trades": 252,
+      "win_rate": 47.6,
+      "deployed_capital": 50000000.0,
+      "roi_pct": -64.6
+    },
+    {
+      "date": "2026-05-28",
+      "equity": 1751356475.32,
+      "net_pnl": -13810541.4,
+      "trades": 492,
+      "win_rate": 49.2,
+      "deployed_capital": 50000000.0,
+      "roi_pct": -27.6
+    },
+    {
+      "date": "2026-06-28",
+      "equity": 1774355425.23,
+      "net_pnl": 22998949.9,
+      "trades": 489,
+      "win_rate": 54.6,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 46.0
+    },
+    {
+      "date": "2026-07-28",
+      "equity": 1852929421.12,
+      "net_pnl": 78573995.89,
+      "trades": 415,
+      "win_rate": 55.2,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 157.1
+    },
+    {
+      "date": "2026-08-28",
+      "equity": 1862131439.91,
+      "net_pnl": 9202018.79,
+      "trades": 222,
+      "win_rate": 50.5,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 18.4
+    },
+    {
+      "date": "2026-09-28",
+      "equity": 1908593689.0,
+      "net_pnl": 46462249.09,
+      "trades": 286,
+      "win_rate": 58.0,
+      "deployed_capital": 50000000.0,
+      "roi_pct": 92.9
+    },
+    {
+      "date": "2026-10-28",
+      "equity": 1902862291.79,
+      "net_pnl": -5731397.21,
+      "trades": 18,
+      "win_rate": 33.3,
+      "deployed_capital": 50000000.0,
+      "roi_pct": -11.5
+    }
+  ],
+  "daily_equity_curve": [
+    {
+      "date": "2017-03-01",
+      "equity": 300022.65,
+      "drawdown_pct": 0.0,
+      "net_pnl": 22.65
+    },
+    {
+      "date": "2017-03-08",
+      "equity": 326825.69,
+      "drawdown_pct": 2.3,
+      "net_pnl": 3297.35
+    },
+    {
+      "date": "2017-03-16",
+      "equity": 321877.36,
+      "drawdown_pct": 3.78,
+      "net_pnl": -972.93
+    },
+    {
+      "date": "2017-03-23",
+      "equity": 311881.78,
+      "drawdown_pct": 6.76,
+      "net_pnl": -7452.99
+    },
+    {
+      "date": "2017-03-30",
+      "equity": 325028.21,
+      "drawdown_pct": 2.83,
+      "net_pnl": 2868.25
+    },
+    {
+      "date": "2017-04-07",
+      "equity": 307901.55,
+      "drawdown_pct": 7.95,
+      "net_pnl": -4728.76
+    },
+    {
+      "date": "2017-04-17",
+      "equity": 299427.09,
+      "drawdown_pct": 10.49,
+      "net_pnl": 13308.44
+    },
+    {
+      "date": "2017-04-24",
+      "equity": 334600.1,
+      "drawdown_pct": 0.9,
+      "net_pnl": -3022.32
+    },
+    {
+      "date": "2017-05-02",
+      "equity": 302688.12,
+      "drawdown_pct": 10.35,
+      "net_pnl": -6177.29
+    },
+    {
+      "date": "2017-05-09",
+      "equity": 272267.51,
+      "drawdown_pct": 19.36,
+      "net_pnl": -3062.72
+    },
+    {
+      "date": "2017-05-16",
+      "equity": 304227.3,
+      "drawdown_pct": 9.89,
+      "net_pnl": 11060.45
+    },
+    {
+      "date": "2017-05-23",
+      "equity": 212401.77,
+      "drawdown_pct": 37.09,
+      "net_pnl": -22130.66
+    },
+    {
+      "date": "2017-05-30",
+      "equity": 235978.65,
+      "drawdown_pct": 30.11,
+      "net_pnl": 20273.65
+    },
+    {
+      "date": "2017-06-06",
+      "equity": 243543.91,
+      "drawdown_pct": 27.87,
+      "net_pnl": -10776.37
+    },
+    {
+      "date": "2017-06-13",
+      "equity": 235241.89,
+      "drawdown_pct": 30.32,
+      "net_pnl": -3449.52
+    },
+    {
+      "date": "2017-06-20",
+      "equity": 232629.11,
+      "drawdown_pct": 31.1,
+      "net_pnl": 548.76
+    },
+    {
+      "date": "2017-06-28",
+      "equity": 257717.73,
+      "drawdown_pct": 23.67,
+      "net_pnl": 15891.27
+    },
+    {
+      "date": "2017-07-05",
+      "equity": 281495.95,
+      "drawdown_pct": 16.62,
+      "net_pnl": -2760.21
+    },
+    {
+      "date": "2017-07-12",
+      "equity": 291349.91,
+      "drawdown_pct": 13.71,
+      "net_pnl": 1248.87
+    },
+    {
+      "date": "2017-07-19",
+      "equity": 276739.87,
+      "drawdown_pct": 18.03,
+      "net_pnl": -2298.01
+    },
+    {
+      "date": "2017-07-26",
+      "equity": 317476.15,
+      "drawdown_pct": 5.97,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2017-08-02",
+      "equity": 367061.5,
+      "drawdown_pct": 0.0,
+      "net_pnl": 4269.62
+    },
+    {
+      "date": "2017-08-09",
+      "equity": 368089.39,
+      "drawdown_pct": 0.0,
+      "net_pnl": 4069.36
+    },
+    {
+      "date": "2017-08-17",
+      "equity": 287991.1,
+      "drawdown_pct": 21.76,
+      "net_pnl": 15681.92
+    },
+    {
+      "date": "2017-08-24",
+      "equity": 280070.2,
+      "drawdown_pct": 23.91,
+      "net_pnl": 1764.05
+    },
+    {
+      "date": "2017-09-01",
+      "equity": 244225.88,
+      "drawdown_pct": 33.65,
+      "net_pnl": -16302.66
+    },
+    {
+      "date": "2017-09-08",
+      "equity": 257100.81,
+      "drawdown_pct": 30.15,
+      "net_pnl": 10703.8
+    },
+    {
+      "date": "2017-09-15",
+      "equity": 296344.39,
+      "drawdown_pct": 19.49,
+      "net_pnl": -2145.55
+    },
+    {
+      "date": "2017-09-22",
+      "equity": 199092.75,
+      "drawdown_pct": 45.91,
+      "net_pnl": -57056.87
+    },
+    {
+      "date": "2017-09-29",
+      "equity": 254262.94,
+      "drawdown_pct": 30.92,
+      "net_pnl": 3002.18
+    },
+    {
+      "date": "2017-10-09",
+      "equity": 243587.96,
+      "drawdown_pct": 33.82,
+      "net_pnl": 1081.51
+    },
+    {
+      "date": "2017-10-16",
+      "equity": 265271.48,
+      "drawdown_pct": 27.93,
+      "net_pnl": -19618.32
+    },
+    {
+      "date": "2017-10-24",
+      "equity": 250581.23,
+      "drawdown_pct": 31.92,
+      "net_pnl": -2059.32
+    },
+    {
+      "date": "2017-10-31",
+      "equity": 341873.05,
+      "drawdown_pct": 7.39,
+      "net_pnl": -27277.06
+    },
+    {
+      "date": "2017-11-07",
+      "equity": 371701.76,
+      "drawdown_pct": 0.0,
+      "net_pnl": 52881.26
+    },
+    {
+      "date": "2017-11-14",
+      "equity": 365463.66,
+      "drawdown_pct": 11.65,
+      "net_pnl": -36759.14
+    },
+    {
+      "date": "2017-11-21",
+      "equity": 354063.08,
+      "drawdown_pct": 14.55,
+      "net_pnl": -32621.94
+    },
+    {
+      "date": "2017-11-28",
+      "equity": 445589.25,
+      "drawdown_pct": 0.0,
+      "net_pnl": 2588.58
+    },
+    {
+      "date": "2017-12-05",
+      "equity": 577954.99,
+      "drawdown_pct": 0.0,
+      "net_pnl": 31948.16
+    },
+    {
+      "date": "2017-12-12",
+      "equity": 591205.39,
+      "drawdown_pct": 0.0,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2017-12-19",
+      "equity": 390896.7,
+      "drawdown_pct": 33.88,
+      "net_pnl": -68825.59
+    },
+    {
+      "date": "2017-12-27",
+      "equity": 379755.74,
+      "drawdown_pct": 35.77,
+      "net_pnl": -3775.85
+    },
+    {
+      "date": "2018-01-03",
+      "equity": 342170.02,
+      "drawdown_pct": 42.12,
+      "net_pnl": -28945.48
+    },
+    {
+      "date": "2018-01-10",
+      "equity": 335065.91,
+      "drawdown_pct": 43.32,
+      "net_pnl": -17307.0
+    },
+    {
+      "date": "2018-01-17",
+      "equity": 413316.02,
+      "drawdown_pct": 30.09,
+      "net_pnl": -216.39
+    },
+    {
+      "date": "2018-01-24",
+      "equity": 472701.62,
+      "drawdown_pct": 20.04,
+      "net_pnl": -10703.39
+    },
+    {
+      "date": "2018-02-01",
+      "equity": 537898.03,
+      "drawdown_pct": 9.02,
+      "net_pnl": 8521.59
+    },
+    {
+      "date": "2018-02-08",
+      "equity": 446832.9,
+      "drawdown_pct": 24.42,
+      "net_pnl": 8798.5
+    },
+    {
+      "date": "2018-02-16",
+      "equity": 475683.76,
+      "drawdown_pct": 19.54,
+      "net_pnl": 18609.06
+    },
+    {
+      "date": "2018-02-23",
+      "equity": 451761.78,
+      "drawdown_pct": 23.59,
+      "net_pnl": -35171.42
+    },
+    {
+      "date": "2018-03-05",
+      "equity": 440240.89,
+      "drawdown_pct": 25.54,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2018-03-12",
+      "equity": 448805.94,
+      "drawdown_pct": 24.09,
+      "net_pnl": -2103.66
+    },
+    {
+      "date": "2018-03-19",
+      "equity": 443386.38,
+      "drawdown_pct": 25.0,
+      "net_pnl": -3656.43
+    },
+    {
+      "date": "2018-03-26",
+      "equity": 443092.16,
+      "drawdown_pct": 25.05,
+      "net_pnl": 9222.69
+    },
+    {
+      "date": "2018-04-04",
+      "equity": 553237.48,
+      "drawdown_pct": 6.42,
+      "net_pnl": 87599.08
+    },
+    {
+      "date": "2018-04-11",
+      "equity": 562290.08,
+      "drawdown_pct": 4.89,
+      "net_pnl": 759.81
+    },
+    {
+      "date": "2018-04-18",
+      "equity": 578239.77,
+      "drawdown_pct": 2.19,
+      "net_pnl": 5012.4
+    },
+    {
+      "date": "2018-04-25",
+      "equity": 546660.53,
+      "drawdown_pct": 7.53,
+      "net_pnl": -4207.86
+    },
+    {
+      "date": "2018-05-03",
+      "equity": 638222.66,
+      "drawdown_pct": 2.88,
+      "net_pnl": -4928.97
+    },
+    {
+      "date": "2018-05-10",
+      "equity": 707584.29,
+      "drawdown_pct": 0.0,
+      "net_pnl": 61148.38
+    },
+    {
+      "date": "2018-05-17",
+      "equity": 706482.05,
+      "drawdown_pct": 0.16,
+      "net_pnl": 13961.23
+    },
+    {
+      "date": "2018-05-24",
+      "equity": 657191.25,
+      "drawdown_pct": 7.12,
+      "net_pnl": -15888.72
+    },
+    {
+      "date": "2018-05-31",
+      "equity": 667138.4,
+      "drawdown_pct": 5.72,
+      "net_pnl": -7236.44
+    },
+    {
+      "date": "2018-06-07",
+      "equity": 626737.89,
+      "drawdown_pct": 11.43,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2018-06-14",
+      "equity": 638094.45,
+      "drawdown_pct": 9.82,
+      "net_pnl": 12611.49
+    },
+    {
+      "date": "2018-06-21",
+      "equity": 659215.38,
+      "drawdown_pct": 6.84,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2018-06-28",
+      "equity": 641580.39,
+      "drawdown_pct": 9.33,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2018-07-05",
+      "equity": 634401.48,
+      "drawdown_pct": 10.34,
+      "net_pnl": 11297.33
+    },
+    {
+      "date": "2018-07-12",
+      "equity": 644663.34,
+      "drawdown_pct": 8.89,
+      "net_pnl": 11942.88
+    },
+    {
+      "date": "2018-07-19",
+      "equity": 660177.05,
+      "drawdown_pct": 6.7,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2018-07-26",
+      "equity": 648830.8,
+      "drawdown_pct": 8.3,
+      "net_pnl": 9225.43
+    },
+    {
+      "date": "2018-08-02",
+      "equity": 639284.04,
+      "drawdown_pct": 9.65,
+      "net_pnl": 1488.87
+    },
+    {
+      "date": "2018-08-09",
+      "equity": 663413.54,
+      "drawdown_pct": 6.24,
+      "net_pnl": 6492.69
+    },
+    {
+      "date": "2018-08-17",
+      "equity": 703352.51,
+      "drawdown_pct": 1.66,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2018-08-27",
+      "equity": 644090.3,
+      "drawdown_pct": 9.94,
+      "net_pnl": 8872.35
+    },
+    {
+      "date": "2018-09-03",
+      "equity": 660029.31,
+      "drawdown_pct": 7.72,
+      "net_pnl": 9675.48
+    },
+    {
+      "date": "2018-09-10",
+      "equity": 646866.59,
+      "drawdown_pct": 9.56,
+      "net_pnl": -4996.59
+    },
+    {
+      "date": "2018-09-18",
+      "equity": 661094.21,
+      "drawdown_pct": 7.57,
+      "net_pnl": 25188.64
+    },
+    {
+      "date": "2018-09-26",
+      "equity": 823936.39,
+      "drawdown_pct": 0.0,
+      "net_pnl": 53937.97
+    },
+    {
+      "date": "2018-10-04",
+      "equity": 823936.39,
+      "drawdown_pct": 0.0,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2018-10-11",
+      "equity": 823936.39,
+      "drawdown_pct": 0.0,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2018-10-19",
+      "equity": 1066885.28,
+      "drawdown_pct": 0.0,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2018-10-26",
+      "equity": 1110176.69,
+      "drawdown_pct": 0.0,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2018-11-02",
+      "equity": 943726.45,
+      "drawdown_pct": 14.99,
+      "net_pnl": -11360.61
+    },
+    {
+      "date": "2018-11-12",
+      "equity": 1056441.65,
+      "drawdown_pct": 4.84,
+      "net_pnl": 28261.53
+    },
+    {
+      "date": "2018-11-19",
+      "equity": 1149816.09,
+      "drawdown_pct": 0.0,
+      "net_pnl": 74845.43
+    },
+    {
+      "date": "2018-11-27",
+      "equity": 1162408.37,
+      "drawdown_pct": 0.0,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2018-12-04",
+      "equity": 1214091.2,
+      "drawdown_pct": 0.0,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2018-12-11",
+      "equity": 1308670.81,
+      "drawdown_pct": 0.0,
+      "net_pnl": 194837.29
+    },
+    {
+      "date": "2018-12-18",
+      "equity": 1245156.87,
+      "drawdown_pct": 4.85,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2018-12-26",
+      "equity": 1383580.04,
+      "drawdown_pct": 0.0,
+      "net_pnl": 92464.85
+    },
+    {
+      "date": "2019-01-02",
+      "equity": 1428586.31,
+      "drawdown_pct": 0.0,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-01-09",
+      "equity": 1443749.17,
+      "drawdown_pct": 0.0,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-01-16",
+      "equity": 1370169.18,
+      "drawdown_pct": 5.1,
+      "net_pnl": -19733.51
+    },
+    {
+      "date": "2019-01-23",
+      "equity": 1385713.22,
+      "drawdown_pct": 4.02,
+      "net_pnl": 90594.09
+    },
+    {
+      "date": "2019-01-30",
+      "equity": 1497720.0,
+      "drawdown_pct": 0.0,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-02-06",
+      "equity": 1446541.07,
+      "drawdown_pct": 3.42,
+      "net_pnl": 29970.28
+    },
+    {
+      "date": "2019-02-13",
+      "equity": 1446541.07,
+      "drawdown_pct": 3.42,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-02-20",
+      "equity": 1457091.67,
+      "drawdown_pct": 2.71,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-02-27",
+      "equity": 1522365.37,
+      "drawdown_pct": 0.0,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-03-07",
+      "equity": 1582123.45,
+      "drawdown_pct": 0.0,
+      "net_pnl": 73382.77
+    },
+    {
+      "date": "2019-03-14",
+      "equity": 1598991.0,
+      "drawdown_pct": 1.57,
+      "net_pnl": 16948.46
+    },
+    {
+      "date": "2019-03-22",
+      "equity": 1742483.78,
+      "drawdown_pct": 3.57,
+      "net_pnl": 8011.58
+    },
+    {
+      "date": "2019-03-29",
+      "equity": 1897868.65,
+      "drawdown_pct": 5.21,
+      "net_pnl": -96741.49
+    },
+    {
+      "date": "2019-04-05",
+      "equity": 1837241.22,
+      "drawdown_pct": 8.24,
+      "net_pnl": -25316.87
+    },
+    {
+      "date": "2019-04-12",
+      "equity": 1901738.52,
+      "drawdown_pct": 5.02,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-04-23",
+      "equity": 1961362.43,
+      "drawdown_pct": 2.59,
+      "net_pnl": 61988.92
+    },
+    {
+      "date": "2019-05-02",
+      "equity": 2036243.16,
+      "drawdown_pct": 0.0,
+      "net_pnl": 119174.67
+    },
+    {
+      "date": "2019-05-09",
+      "equity": 1914838.14,
+      "drawdown_pct": 7.36,
+      "net_pnl": 53734.12
+    },
+    {
+      "date": "2019-05-16",
+      "equity": 1914838.14,
+      "drawdown_pct": 7.36,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-05-23",
+      "equity": 2042335.46,
+      "drawdown_pct": 1.19,
+      "net_pnl": 60070.29
+    },
+    {
+      "date": "2019-05-30",
+      "equity": 1893511.86,
+      "drawdown_pct": 8.39,
+      "net_pnl": 3606.91
+    },
+    {
+      "date": "2019-06-07",
+      "equity": 1827531.57,
+      "drawdown_pct": 11.58,
+      "net_pnl": -10606.54
+    },
+    {
+      "date": "2019-06-14",
+      "equity": 1734257.85,
+      "drawdown_pct": 16.1,
+      "net_pnl": -8912.51
+    },
+    {
+      "date": "2019-06-21",
+      "equity": 1708855.19,
+      "drawdown_pct": 17.32,
+      "net_pnl": -25402.67
+    },
+    {
+      "date": "2019-06-28",
+      "equity": 1719326.74,
+      "drawdown_pct": 16.82,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-07-05",
+      "equity": 1758862.75,
+      "drawdown_pct": 14.91,
+      "net_pnl": 71544.44
+    },
+    {
+      "date": "2019-07-12",
+      "equity": 1765446.81,
+      "drawdown_pct": 14.59,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-07-19",
+      "equity": 1690503.93,
+      "drawdown_pct": 18.21,
+      "net_pnl": -74942.87
+    },
+    {
+      "date": "2019-07-26",
+      "equity": 1816081.73,
+      "drawdown_pct": 12.14,
+      "net_pnl": 90890.84
+    },
+    {
+      "date": "2019-08-02",
+      "equity": 1816081.73,
+      "drawdown_pct": 12.14,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-08-09",
+      "equity": 1800228.0,
+      "drawdown_pct": 12.9,
+      "net_pnl": -39543.96
+    },
+    {
+      "date": "2019-08-20",
+      "equity": 1864908.42,
+      "drawdown_pct": 9.77,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-08-27",
+      "equity": 1782668.8,
+      "drawdown_pct": 13.75,
+      "net_pnl": -79225.43
+    },
+    {
+      "date": "2019-09-04",
+      "equity": 1740567.52,
+      "drawdown_pct": 15.79,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-09-12",
+      "equity": 1730438.84,
+      "drawdown_pct": 16.28,
+      "net_pnl": 4325.8
+    },
+    {
+      "date": "2019-09-19",
+      "equity": 1507025.74,
+      "drawdown_pct": 27.09,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-09-26",
+      "equity": 1296871.31,
+      "drawdown_pct": 37.26,
+      "net_pnl": 130737.75
+    },
+    {
+      "date": "2019-10-04",
+      "equity": 1334228.68,
+      "drawdown_pct": 35.45,
+      "net_pnl": -1386.67
+    },
+    {
+      "date": "2019-10-14",
+      "equity": 1226571.73,
+      "drawdown_pct": 40.66,
+      "net_pnl": 1998.32
+    },
+    {
+      "date": "2019-10-22",
+      "equity": 1241005.02,
+      "drawdown_pct": 39.96,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-10-29",
+      "equity": 1218631.88,
+      "drawdown_pct": 41.04,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-11-05",
+      "equity": 1347699.39,
+      "drawdown_pct": 34.8,
+      "net_pnl": 141555.83
+    },
+    {
+      "date": "2019-11-13",
+      "equity": 1341846.07,
+      "drawdown_pct": 35.08,
+      "net_pnl": -163050.81
+    },
+    {
+      "date": "2019-11-20",
+      "equity": 1595477.71,
+      "drawdown_pct": 22.81,
+      "net_pnl": 220415.01
+    },
+    {
+      "date": "2019-11-27",
+      "equity": 1748359.34,
+      "drawdown_pct": 15.41,
+      "net_pnl": 1970.6
+    },
+    {
+      "date": "2019-12-04",
+      "equity": 2041344.86,
+      "drawdown_pct": 1.24,
+      "net_pnl": 273694.74
+    },
+    {
+      "date": "2019-12-11",
+      "equity": 1983200.92,
+      "drawdown_pct": 4.05,
+      "net_pnl": 91661.92
+    },
+    {
+      "date": "2019-12-18",
+      "equity": 2039892.6,
+      "drawdown_pct": 1.31,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2019-12-26",
+      "equity": 2047833.17,
+      "drawdown_pct": 0.92,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2020-01-02",
+      "equity": 2024740.0,
+      "drawdown_pct": 2.04,
+      "net_pnl": -23093.17
+    },
+    {
+      "date": "2020-01-09",
+      "equity": 1853817.24,
+      "drawdown_pct": 10.31,
+      "net_pnl": 39257.65
+    },
+    {
+      "date": "2020-01-16",
+      "equity": 1737250.96,
+      "drawdown_pct": 15.95,
+      "net_pnl": -86511.79
+    },
+    {
+      "date": "2020-01-23",
+      "equity": 1975340.5,
+      "drawdown_pct": 4.43,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2020-01-30",
+      "equity": 2129807.06,
+      "drawdown_pct": 3.57,
+      "net_pnl": 24042.42
+    },
+    {
+      "date": "2020-02-05",
+      "equity": 1547918.63,
+      "drawdown_pct": 29.91,
+      "net_pnl": -81873.95
+    },
+    {
+      "date": "2020-02-12",
+      "equity": 1752824.32,
+      "drawdown_pct": 20.63,
+      "net_pnl": 133492.43
+    },
+    {
+      "date": "2020-02-19",
+      "equity": 1748163.2,
+      "drawdown_pct": 20.85,
+      "net_pnl": -77484.89
+    },
+    {
+      "date": "2020-02-27",
+      "equity": 1668148.39,
+      "drawdown_pct": 24.47,
+      "net_pnl": 150967.8
+    },
+    {
+      "date": "2020-03-05",
+      "equity": 1451524.74,
+      "drawdown_pct": 34.28,
+      "net_pnl": -31293.68
+    },
+    {
+      "date": "2020-03-13",
+      "equity": 1451524.74,
+      "drawdown_pct": 34.28,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2020-03-20",
+      "equity": 1629705.94,
+      "drawdown_pct": 26.21,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2020-03-27",
+      "equity": 1629705.94,
+      "drawdown_pct": 26.21,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2020-04-07",
+      "equity": 1619427.37,
+      "drawdown_pct": 26.67,
+      "net_pnl": -71754.3
+    },
+    {
+      "date": "2020-04-16",
+      "equity": 1525873.31,
+      "drawdown_pct": 30.91,
+      "net_pnl": -36791.43
+    },
+    {
+      "date": "2020-04-23",
+      "equity": 1872558.44,
+      "drawdown_pct": 15.21,
+      "net_pnl": 10538.02
+    },
+    {
+      "date": "2020-04-30",
+      "equity": 1873975.91,
+      "drawdown_pct": 15.15,
+      "net_pnl": -123535.43
+    },
+    {
+      "date": "2020-05-08",
+      "equity": 2256857.25,
+      "drawdown_pct": 0.0,
+      "net_pnl": 143560.43
+    },
+    {
+      "date": "2020-05-15",
+      "equity": 2448332.73,
+      "drawdown_pct": 0.0,
+      "net_pnl": 54762.96
+    },
+    {
+      "date": "2020-05-22",
+      "equity": 2260720.13,
+      "drawdown_pct": 7.66,
+      "net_pnl": 71369.78
+    },
+    {
+      "date": "2020-06-01",
+      "equity": 2482913.23,
+      "drawdown_pct": 2.09,
+      "net_pnl": -31502.38
+    },
+    {
+      "date": "2020-06-08",
+      "equity": 2942427.42,
+      "drawdown_pct": 0.0,
+      "net_pnl": 427393.73
+    },
+    {
+      "date": "2020-06-15",
+      "equity": 4061077.58,
+      "drawdown_pct": 1.57,
+      "net_pnl": -64939.55
+    },
+    {
+      "date": "2020-06-22",
+      "equity": 4723435.23,
+      "drawdown_pct": 10.7,
+      "net_pnl": -309738.97
+    },
+    {
+      "date": "2020-06-29",
+      "equity": 6195633.89,
+      "drawdown_pct": 6.61,
+      "net_pnl": -438648.9
+    },
+    {
+      "date": "2020-07-06",
+      "equity": 7559784.89,
+      "drawdown_pct": 6.36,
+      "net_pnl": -513776.17
+    },
+    {
+      "date": "2020-07-13",
+      "equity": 7383210.24,
+      "drawdown_pct": 8.55,
+      "net_pnl": -199612.98
+    },
+    {
+      "date": "2020-07-20",
+      "equity": 7510303.39,
+      "drawdown_pct": 6.98,
+      "net_pnl": -48679.65
+    },
+    {
+      "date": "2020-07-27",
+      "equity": 7476969.76,
+      "drawdown_pct": 7.39,
+      "net_pnl": -196863.84
+    },
+    {
+      "date": "2020-08-03",
+      "equity": 6643879.14,
+      "drawdown_pct": 17.71,
+      "net_pnl": -174036.31
+    },
+    {
+      "date": "2020-08-10",
+      "equity": 7057721.07,
+      "drawdown_pct": 12.58,
+      "net_pnl": 10412.4
+    },
+    {
+      "date": "2020-08-17",
+      "equity": 7479865.33,
+      "drawdown_pct": 10.52,
+      "net_pnl": -299386.11
+    },
+    {
+      "date": "2020-08-24",
+      "equity": 7909301.94,
+      "drawdown_pct": 5.38,
+      "net_pnl": 572447.15
+    },
+    {
+      "date": "2020-08-31",
+      "equity": 10883915.53,
+      "drawdown_pct": 0.0,
+      "net_pnl": 2340261.42
+    },
+    {
+      "date": "2020-09-07",
+      "equity": 10511597.62,
+      "drawdown_pct": 5.78,
+      "net_pnl": 19346.47
+    },
+    {
+      "date": "2020-09-14",
+      "equity": 10221201.36,
+      "drawdown_pct": 8.39,
+      "net_pnl": 3913.59
+    },
+    {
+      "date": "2020-09-21",
+      "equity": 10951921.27,
+      "drawdown_pct": 1.84,
+      "net_pnl": 1156647.49
+    },
+    {
+      "date": "2020-09-28",
+      "equity": 8568441.06,
+      "drawdown_pct": 23.2,
+      "net_pnl": -11939.75
+    },
+    {
+      "date": "2020-10-06",
+      "equity": 9100466.66,
+      "drawdown_pct": 18.43,
+      "net_pnl": -298635.06
+    },
+    {
+      "date": "2020-10-13",
+      "equity": 8585940.82,
+      "drawdown_pct": 23.04,
+      "net_pnl": -243545.47
+    },
+    {
+      "date": "2020-10-20",
+      "equity": 8011679.69,
+      "drawdown_pct": 28.19,
+      "net_pnl": 47737.03
+    },
+    {
+      "date": "2020-10-27",
+      "equity": 7538357.56,
+      "drawdown_pct": 32.43,
+      "net_pnl": -641483.35
+    },
+    {
+      "date": "2020-11-03",
+      "equity": 7858164.34,
+      "drawdown_pct": 29.57,
+      "net_pnl": -280489.86
+    },
+    {
+      "date": "2020-11-10",
+      "equity": 7482748.69,
+      "drawdown_pct": 32.93,
+      "net_pnl": 285213.13
+    },
+    {
+      "date": "2020-11-17",
+      "equity": 8182351.1,
+      "drawdown_pct": 26.66,
+      "net_pnl": 320907.06
+    },
+    {
+      "date": "2020-11-24",
+      "equity": 7790206.0,
+      "drawdown_pct": 30.18,
+      "net_pnl": 365632.19
+    },
+    {
+      "date": "2020-12-02",
+      "equity": 8900208.6,
+      "drawdown_pct": 20.23,
+      "net_pnl": -161213.21
+    },
+    {
+      "date": "2020-12-09",
+      "equity": 8735490.52,
+      "drawdown_pct": 21.7,
+      "net_pnl": 517580.73
+    },
+    {
+      "date": "2020-12-16",
+      "equity": 9481912.16,
+      "drawdown_pct": 15.01,
+      "net_pnl": -18100.16
+    },
+    {
+      "date": "2020-12-23",
+      "equity": 8573209.81,
+      "drawdown_pct": 23.16,
+      "net_pnl": -158146.4
+    },
+    {
+      "date": "2020-12-31",
+      "equity": 7978414.64,
+      "drawdown_pct": 28.49,
+      "net_pnl": -72073.35
+    },
+    {
+      "date": "2021-01-07",
+      "equity": 7153175.43,
+      "drawdown_pct": 35.89,
+      "net_pnl": 18650.06
+    },
+    {
+      "date": "2021-01-14",
+      "equity": 7708347.56,
+      "drawdown_pct": 30.91,
+      "net_pnl": -118042.17
+    },
+    {
+      "date": "2021-01-21",
+      "equity": 7610441.4,
+      "drawdown_pct": 31.79,
+      "net_pnl": -13888.5
+    },
+    {
+      "date": "2021-01-29",
+      "equity": 8003062.67,
+      "drawdown_pct": 28.27,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2021-02-05",
+      "equity": 7471080.15,
+      "drawdown_pct": 33.04,
+      "net_pnl": 313035.13
+    },
+    {
+      "date": "2021-02-12",
+      "equity": 11003154.61,
+      "drawdown_pct": 1.38,
+      "net_pnl": 452877.39
+    },
+    {
+      "date": "2021-02-19",
+      "equity": 7993792.77,
+      "drawdown_pct": 28.35,
+      "net_pnl": -317411.48
+    },
+    {
+      "date": "2021-02-26",
+      "equity": 7080517.33,
+      "drawdown_pct": 36.54,
+      "net_pnl": -259425.42
+    },
+    {
+      "date": "2021-03-05",
+      "equity": 9860413.25,
+      "drawdown_pct": 11.62,
+      "net_pnl": 1116828.0
+    },
+    {
+      "date": "2021-03-15",
+      "equity": 10580846.79,
+      "drawdown_pct": 9.26,
+      "net_pnl": -929956.54
+    },
+    {
+      "date": "2021-03-22",
+      "equity": 17318651.33,
+      "drawdown_pct": 0.0,
+      "net_pnl": 2074624.86
+    },
+    {
+      "date": "2021-03-30",
+      "equity": 13639872.07,
+      "drawdown_pct": 21.24,
+      "net_pnl": -829458.79
+    },
+    {
+      "date": "2021-04-07",
+      "equity": 11058762.33,
+      "drawdown_pct": 36.15,
+      "net_pnl": 20782.93
+    },
+    {
+      "date": "2021-04-15",
+      "equity": 9780482.64,
+      "drawdown_pct": 43.53,
+      "net_pnl": 1239379.77
+    },
+    {
+      "date": "2021-04-23",
+      "equity": 12332919.95,
+      "drawdown_pct": 28.79,
+      "net_pnl": 788933.08
+    },
+    {
+      "date": "2021-04-30",
+      "equity": 10365589.23,
+      "drawdown_pct": 40.15,
+      "net_pnl": -350965.0
+    },
+    {
+      "date": "2021-05-07",
+      "equity": 13240463.14,
+      "drawdown_pct": 23.55,
+      "net_pnl": -649399.82
+    },
+    {
+      "date": "2021-05-17",
+      "equity": 14344938.43,
+      "drawdown_pct": 17.17,
+      "net_pnl": 481686.46
+    },
+    {
+      "date": "2021-05-24",
+      "equity": 13363611.92,
+      "drawdown_pct": 22.84,
+      "net_pnl": 405445.36
+    },
+    {
+      "date": "2021-05-31",
+      "equity": 14316519.53,
+      "drawdown_pct": 17.33,
+      "net_pnl": -731099.83
+    },
+    {
+      "date": "2021-06-07",
+      "equity": 16309948.37,
+      "drawdown_pct": 5.82,
+      "net_pnl": 550136.57
+    },
+    {
+      "date": "2021-06-14",
+      "equity": 18927887.65,
+      "drawdown_pct": 0.0,
+      "net_pnl": 1498964.5
+    },
+    {
+      "date": "2021-06-21",
+      "equity": 19627376.64,
+      "drawdown_pct": 1.53,
+      "net_pnl": 2763602.31
+    },
+    {
+      "date": "2021-06-28",
+      "equity": 20706711.98,
+      "drawdown_pct": 7.3,
+      "net_pnl": -1630287.38
+    },
+    {
+      "date": "2021-07-05",
+      "equity": 20662389.91,
+      "drawdown_pct": 7.5,
+      "net_pnl": -442170.05
+    },
+    {
+      "date": "2021-07-12",
+      "equity": 24686422.31,
+      "drawdown_pct": 7.28,
+      "net_pnl": -1937929.25
+    },
+    {
+      "date": "2021-07-19",
+      "equity": 24494470.25,
+      "drawdown_pct": 8.0,
+      "net_pnl": 2097817.38
+    },
+    {
+      "date": "2021-07-27",
+      "equity": 29655641.16,
+      "drawdown_pct": 0.0,
+      "net_pnl": 839229.55
+    },
+    {
+      "date": "2021-08-03",
+      "equity": 34963350.97,
+      "drawdown_pct": 0.65,
+      "net_pnl": -227301.33
+    },
+    {
+      "date": "2021-08-10",
+      "equity": 41978379.93,
+      "drawdown_pct": 3.94,
+      "net_pnl": -1723049.84
+    },
+    {
+      "date": "2021-08-17",
+      "equity": 40783911.12,
+      "drawdown_pct": 6.68,
+      "net_pnl": -7019.98
+    },
+    {
+      "date": "2021-08-25",
+      "equity": 41592440.45,
+      "drawdown_pct": 4.83,
+      "net_pnl": -1965624.35
+    },
+    {
+      "date": "2021-09-01",
+      "equity": 36278028.85,
+      "drawdown_pct": 16.99,
+      "net_pnl": 1281500.57
+    },
+    {
+      "date": "2021-09-08",
+      "equity": 38501713.76,
+      "drawdown_pct": 11.9,
+      "net_pnl": 2102780.55
+    },
+    {
+      "date": "2021-09-16",
+      "equity": 34668374.96,
+      "drawdown_pct": 20.67,
+      "net_pnl": -1330794.85
+    },
+    {
+      "date": "2021-09-23",
+      "equity": 28293021.78,
+      "drawdown_pct": 35.26,
+      "net_pnl": -4660677.18
+    },
+    {
+      "date": "2021-09-30",
+      "equity": 34227808.79,
+      "drawdown_pct": 21.68,
+      "net_pnl": 1307547.8
+    },
+    {
+      "date": "2021-10-07",
+      "equity": 38135816.02,
+      "drawdown_pct": 12.74,
+      "net_pnl": 1637468.92
+    },
+    {
+      "date": "2021-10-14",
+      "equity": 30507093.65,
+      "drawdown_pct": 30.19,
+      "net_pnl": 935809.44
+    },
+    {
+      "date": "2021-10-22",
+      "equity": 25224655.35,
+      "drawdown_pct": 42.28,
+      "net_pnl": -2130116.06
+    },
+    {
+      "date": "2021-10-29",
+      "equity": 28246007.53,
+      "drawdown_pct": 35.37,
+      "net_pnl": 551123.49
+    },
+    {
+      "date": "2021-11-08",
+      "equity": 28739463.76,
+      "drawdown_pct": 34.24,
+      "net_pnl": 1121892.57
+    },
+    {
+      "date": "2021-11-15",
+      "equity": 31540353.38,
+      "drawdown_pct": 27.83,
+      "net_pnl": 2637861.02
+    },
+    {
+      "date": "2021-11-23",
+      "equity": 32070198.83,
+      "drawdown_pct": 26.62,
+      "net_pnl": 3860216.91
+    },
+    {
+      "date": "2021-11-30",
+      "equity": 26081623.42,
+      "drawdown_pct": 40.32,
+      "net_pnl": -289124.13
+    },
+    {
+      "date": "2021-12-07",
+      "equity": 26278404.93,
+      "drawdown_pct": 39.87,
+      "net_pnl": 223309.38
+    },
+    {
+      "date": "2021-12-14",
+      "equity": 29159039.31,
+      "drawdown_pct": 33.28,
+      "net_pnl": 1471704.93
+    },
+    {
+      "date": "2021-12-21",
+      "equity": 27028103.77,
+      "drawdown_pct": 38.15,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2021-12-28",
+      "equity": 25664245.52,
+      "drawdown_pct": 41.27,
+      "net_pnl": -460781.69
+    },
+    {
+      "date": "2022-01-04",
+      "equity": 26914520.73,
+      "drawdown_pct": 38.41,
+      "net_pnl": 618577.44
+    },
+    {
+      "date": "2022-01-11",
+      "equity": 27833479.22,
+      "drawdown_pct": 36.31,
+      "net_pnl": 2391436.81
+    },
+    {
+      "date": "2022-01-18",
+      "equity": 31159636.42,
+      "drawdown_pct": 28.7,
+      "net_pnl": 3218109.29
+    },
+    {
+      "date": "2022-01-25",
+      "equity": 30203358.39,
+      "drawdown_pct": 30.89,
+      "net_pnl": 5588780.94
+    },
+    {
+      "date": "2022-02-02",
+      "equity": 33129809.14,
+      "drawdown_pct": 24.19,
+      "net_pnl": -2723268.73
+    },
+    {
+      "date": "2022-02-09",
+      "equity": 32863427.89,
+      "drawdown_pct": 24.8,
+      "net_pnl": -306360.76
+    },
+    {
+      "date": "2022-02-16",
+      "equity": 25541124.57,
+      "drawdown_pct": 41.56,
+      "net_pnl": -16988.9
+    },
+    {
+      "date": "2022-02-23",
+      "equity": 24737603.81,
+      "drawdown_pct": 43.39,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2022-03-03",
+      "equity": 22690098.43,
+      "drawdown_pct": 48.08,
+      "net_pnl": 52708.07
+    },
+    {
+      "date": "2022-03-10",
+      "equity": 23642215.1,
+      "drawdown_pct": 45.9,
+      "net_pnl": 1237844.45
+    },
+    {
+      "date": "2022-03-17",
+      "equity": 24585396.28,
+      "drawdown_pct": 43.74,
+      "net_pnl": -110608.75
+    },
+    {
+      "date": "2022-03-25",
+      "equity": 25528467.01,
+      "drawdown_pct": 41.58,
+      "net_pnl": -791669.26
+    },
+    {
+      "date": "2022-04-01",
+      "equity": 22289811.86,
+      "drawdown_pct": 49.0,
+      "net_pnl": -297667.82
+    },
+    {
+      "date": "2022-04-08",
+      "equity": 19574857.29,
+      "drawdown_pct": 55.21,
+      "net_pnl": -305463.57
+    },
+    {
+      "date": "2022-04-19",
+      "equity": 19577746.25,
+      "drawdown_pct": 55.2,
+      "net_pnl": 2624599.63
+    },
+    {
+      "date": "2022-04-26",
+      "equity": 19803847.01,
+      "drawdown_pct": 54.68,
+      "net_pnl": 1617969.89
+    },
+    {
+      "date": "2022-05-04",
+      "equity": 21889062.62,
+      "drawdown_pct": 49.91,
+      "net_pnl": 3365974.27
+    },
+    {
+      "date": "2022-05-11",
+      "equity": 20225664.92,
+      "drawdown_pct": 53.72,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2022-05-18",
+      "equity": 20427627.48,
+      "drawdown_pct": 53.26,
+      "net_pnl": 305385.28
+    },
+    {
+      "date": "2022-05-25",
+      "equity": 22062369.03,
+      "drawdown_pct": 49.52,
+      "net_pnl": 1540284.82
+    },
+    {
+      "date": "2022-06-01",
+      "equity": 19103113.14,
+      "drawdown_pct": 56.29,
+      "net_pnl": -537711.92
+    },
+    {
+      "date": "2022-06-08",
+      "equity": 22837877.26,
+      "drawdown_pct": 47.74,
+      "net_pnl": 208076.09
+    },
+    {
+      "date": "2022-06-15",
+      "equity": 21900469.99,
+      "drawdown_pct": 49.89,
+      "net_pnl": 108782.66
+    },
+    {
+      "date": "2022-06-22",
+      "equity": 25631024.39,
+      "drawdown_pct": 41.35,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2022-06-29",
+      "equity": 26497025.83,
+      "drawdown_pct": 39.37,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2022-07-06",
+      "equity": 28099019.41,
+      "drawdown_pct": 35.7,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2022-07-13",
+      "equity": 31031514.54,
+      "drawdown_pct": 28.99,
+      "net_pnl": 3787397.42
+    },
+    {
+      "date": "2022-07-20",
+      "equity": 30960295.88,
+      "drawdown_pct": 29.15,
+      "net_pnl": 2437543.5
+    },
+    {
+      "date": "2022-07-27",
+      "equity": 34739631.47,
+      "drawdown_pct": 20.51,
+      "net_pnl": 2238082.53
+    },
+    {
+      "date": "2022-08-03",
+      "equity": 35310731.52,
+      "drawdown_pct": 19.2,
+      "net_pnl": 378476.21
+    },
+    {
+      "date": "2022-08-11",
+      "equity": 32074994.39,
+      "drawdown_pct": 26.6,
+      "net_pnl": -542695.28
+    },
+    {
+      "date": "2022-08-19",
+      "equity": 31500862.28,
+      "drawdown_pct": 27.92,
+      "net_pnl": 2295449.6
+    },
+    {
+      "date": "2022-08-26",
+      "equity": 34821784.64,
+      "drawdown_pct": 20.32,
+      "net_pnl": 64714.15
+    },
+    {
+      "date": "2022-09-05",
+      "equity": 36665528.64,
+      "drawdown_pct": 16.1,
+      "net_pnl": -1526107.42
+    },
+    {
+      "date": "2022-09-12",
+      "equity": 39853609.06,
+      "drawdown_pct": 8.8,
+      "net_pnl": -1461958.24
+    },
+    {
+      "date": "2022-09-19",
+      "equity": 38947647.29,
+      "drawdown_pct": 10.88,
+      "net_pnl": 649228.97
+    },
+    {
+      "date": "2022-09-26",
+      "equity": 39440352.1,
+      "drawdown_pct": 9.75,
+      "net_pnl": -3727894.25
+    },
+    {
+      "date": "2022-10-03",
+      "equity": 44536981.47,
+      "drawdown_pct": 4.2,
+      "net_pnl": -1951474.51
+    },
+    {
+      "date": "2022-10-11",
+      "equity": 41722871.11,
+      "drawdown_pct": 10.25,
+      "net_pnl": 1362091.06
+    },
+    {
+      "date": "2022-10-18",
+      "equity": 45825860.12,
+      "drawdown_pct": 1.43,
+      "net_pnl": -407445.43
+    },
+    {
+      "date": "2022-10-25",
+      "equity": 50208836.69,
+      "drawdown_pct": 0.0,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2022-11-02",
+      "equity": 49850143.57,
+      "drawdown_pct": 0.71,
+      "net_pnl": 1137597.15
+    },
+    {
+      "date": "2022-11-10",
+      "equity": 41279631.52,
+      "drawdown_pct": 19.88,
+      "net_pnl": -1056995.48
+    },
+    {
+      "date": "2022-11-17",
+      "equity": 38438710.74,
+      "drawdown_pct": 25.4,
+      "net_pnl": 691662.01
+    },
+    {
+      "date": "2022-11-24",
+      "equity": 37054856.95,
+      "drawdown_pct": 28.08,
+      "net_pnl": 83256.19
+    },
+    {
+      "date": "2022-12-01",
+      "equity": 35254286.57,
+      "drawdown_pct": 31.58,
+      "net_pnl": -267732.67
+    },
+    {
+      "date": "2022-12-08",
+      "equity": 32440958.82,
+      "drawdown_pct": 37.04,
+      "net_pnl": -1562674.53
+    },
+    {
+      "date": "2022-12-15",
+      "equity": 37043494.13,
+      "drawdown_pct": 28.11,
+      "net_pnl": 538129.52
+    },
+    {
+      "date": "2022-12-22",
+      "equity": 38628705.2,
+      "drawdown_pct": 25.03,
+      "net_pnl": -1447309.58
+    },
+    {
+      "date": "2022-12-29",
+      "equity": 30912688.42,
+      "drawdown_pct": 40.0,
+      "net_pnl": 148853.98
+    },
+    {
+      "date": "2023-01-05",
+      "equity": 31031200.05,
+      "drawdown_pct": 39.77,
+      "net_pnl": -67727.08
+    },
+    {
+      "date": "2023-01-12",
+      "equity": 32403472.95,
+      "drawdown_pct": 37.11,
+      "net_pnl": 758247.33
+    },
+    {
+      "date": "2023-01-19",
+      "equity": 33058300.91,
+      "drawdown_pct": 35.84,
+      "net_pnl": 148006.79
+    },
+    {
+      "date": "2023-01-27",
+      "equity": 33956680.75,
+      "drawdown_pct": 34.1,
+      "net_pnl": 231015.72
+    },
+    {
+      "date": "2023-02-03",
+      "equity": 40608200.41,
+      "drawdown_pct": 21.19,
+      "net_pnl": 1337172.23
+    },
+    {
+      "date": "2023-02-10",
+      "equity": 41483106.05,
+      "drawdown_pct": 19.49,
+      "net_pnl": 373324.96
+    },
+    {
+      "date": "2023-02-17",
+      "equity": 41425597.14,
+      "drawdown_pct": 19.6,
+      "net_pnl": -127544.11
+    },
+    {
+      "date": "2023-02-24",
+      "equity": 40436511.0,
+      "drawdown_pct": 21.52,
+      "net_pnl": 79538.59
+    },
+    {
+      "date": "2023-03-03",
+      "equity": 40484897.58,
+      "drawdown_pct": 21.43,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2023-03-13",
+      "equity": 43910644.41,
+      "drawdown_pct": 14.78,
+      "net_pnl": 1654953.42
+    },
+    {
+      "date": "2023-03-20",
+      "equity": 43656078.81,
+      "drawdown_pct": 15.27,
+      "net_pnl": 206598.8
+    },
+    {
+      "date": "2023-03-27",
+      "equity": 49387543.05,
+      "drawdown_pct": 4.15,
+      "net_pnl": 6578052.06
+    },
+    {
+      "date": "2023-04-05",
+      "equity": 50599065.12,
+      "drawdown_pct": 1.8,
+      "net_pnl": 277572.07
+    },
+    {
+      "date": "2023-04-13",
+      "equity": 51333954.01,
+      "drawdown_pct": 0.37,
+      "net_pnl": 486930.33
+    },
+    {
+      "date": "2023-04-21",
+      "equity": 51302530.14,
+      "drawdown_pct": 0.43,
+      "net_pnl": 1411850.33
+    },
+    {
+      "date": "2023-04-28",
+      "equity": 46209173.07,
+      "drawdown_pct": 10.32,
+      "net_pnl": -230837.88
+    },
+    {
+      "date": "2023-05-08",
+      "equity": 45606133.65,
+      "drawdown_pct": 11.49,
+      "net_pnl": 427748.03
+    },
+    {
+      "date": "2023-05-15",
+      "equity": 49360307.14,
+      "drawdown_pct": 4.2,
+      "net_pnl": -990345.35
+    },
+    {
+      "date": "2023-05-22",
+      "equity": 45813271.12,
+      "drawdown_pct": 12.7,
+      "net_pnl": -6664100.97
+    },
+    {
+      "date": "2023-05-29",
+      "equity": 59100388.63,
+      "drawdown_pct": 0.0,
+      "net_pnl": 3938069.49
+    },
+    {
+      "date": "2023-06-05",
+      "equity": 58745923.48,
+      "drawdown_pct": 0.6,
+      "net_pnl": 3738768.37
+    },
+    {
+      "date": "2023-06-12",
+      "equity": 61020810.93,
+      "drawdown_pct": 0.56,
+      "net_pnl": 676411.69
+    },
+    {
+      "date": "2023-06-19",
+      "equity": 60004015.15,
+      "drawdown_pct": 4.47,
+      "net_pnl": -2809822.25
+    },
+    {
+      "date": "2023-06-26",
+      "equity": 67716079.0,
+      "drawdown_pct": 0.0,
+      "net_pnl": 5088262.38
+    },
+    {
+      "date": "2023-07-04",
+      "equity": 70358324.41,
+      "drawdown_pct": 0.32,
+      "net_pnl": 47018.77
+    },
+    {
+      "date": "2023-07-11",
+      "equity": 73654205.78,
+      "drawdown_pct": 0.0,
+      "net_pnl": 567182.4
+    },
+    {
+      "date": "2023-07-18",
+      "equity": 77650347.17,
+      "drawdown_pct": 0.84,
+      "net_pnl": 2353552.83
+    },
+    {
+      "date": "2023-07-25",
+      "equity": 78816222.56,
+      "drawdown_pct": 0.0,
+      "net_pnl": 1853714.79
+    },
+    {
+      "date": "2023-08-01",
+      "equity": 75471188.29,
+      "drawdown_pct": 11.41,
+      "net_pnl": -1529655.7
+    },
+    {
+      "date": "2023-08-08",
+      "equity": 82530658.98,
+      "drawdown_pct": 3.12,
+      "net_pnl": 6523406.56
+    },
+    {
+      "date": "2023-08-16",
+      "equity": 88372678.95,
+      "drawdown_pct": 0.0,
+      "net_pnl": 1101601.32
+    },
+    {
+      "date": "2023-08-23",
+      "equity": 91358829.73,
+      "drawdown_pct": 1.96,
+      "net_pnl": 12257872.49
+    },
+    {
+      "date": "2023-08-30",
+      "equity": 100386263.16,
+      "drawdown_pct": 0.0,
+      "net_pnl": 5189801.0
+    },
+    {
+      "date": "2023-09-06",
+      "equity": 107147578.2,
+      "drawdown_pct": 5.83,
+      "net_pnl": 3214377.48
+    },
+    {
+      "date": "2023-09-13",
+      "equity": 137833521.47,
+      "drawdown_pct": 0.0,
+      "net_pnl": 4120390.74
+    },
+    {
+      "date": "2023-09-21",
+      "equity": 151585259.73,
+      "drawdown_pct": 4.27,
+      "net_pnl": -6754732.61
+    },
+    {
+      "date": "2023-09-28",
+      "equity": 152712209.87,
+      "drawdown_pct": 3.55,
+      "net_pnl": 334923.6
+    },
+    {
+      "date": "2023-10-06",
+      "equity": 153281989.2,
+      "drawdown_pct": 3.19,
+      "net_pnl": 2396223.52
+    },
+    {
+      "date": "2023-10-13",
+      "equity": 145863239.91,
+      "drawdown_pct": 7.88,
+      "net_pnl": 293223.2
+    },
+    {
+      "date": "2023-10-20",
+      "equity": 166585930.87,
+      "drawdown_pct": 0.0,
+      "net_pnl": 5234657.86
+    },
+    {
+      "date": "2023-10-30",
+      "equity": 165235773.6,
+      "drawdown_pct": 2.06,
+      "net_pnl": -424618.68
+    },
+    {
+      "date": "2023-11-06",
+      "equity": 157758590.37,
+      "drawdown_pct": 6.49,
+      "net_pnl": -4724205.8
+    },
+    {
+      "date": "2023-11-12",
+      "equity": 153187227.43,
+      "drawdown_pct": 9.2,
+      "net_pnl": -13098920.68
+    },
+    {
+      "date": "2023-11-20",
+      "equity": 162529808.92,
+      "drawdown_pct": 3.66,
+      "net_pnl": 1145142.34
+    },
+    {
+      "date": "2023-11-28",
+      "equity": 167237405.92,
+      "drawdown_pct": 0.87,
+      "net_pnl": 780202.92
+    },
+    {
+      "date": "2023-12-05",
+      "equity": 187464475.26,
+      "drawdown_pct": 0.79,
+      "net_pnl": -297090.88
+    },
+    {
+      "date": "2023-12-12",
+      "equity": 229528377.86,
+      "drawdown_pct": 0.0,
+      "net_pnl": 5771994.71
+    },
+    {
+      "date": "2023-12-19",
+      "equity": 216885813.53,
+      "drawdown_pct": 6.24,
+      "net_pnl": -2958136.31
+    },
+    {
+      "date": "2023-12-27",
+      "equity": 336881625.21,
+      "drawdown_pct": 0.18,
+      "net_pnl": 9255031.6
+    },
+    {
+      "date": "2024-01-03",
+      "equity": 332014187.34,
+      "drawdown_pct": 1.62,
+      "net_pnl": 2036657.59
+    },
+    {
+      "date": "2024-01-10",
+      "equity": 363537910.62,
+      "drawdown_pct": 0.0,
+      "net_pnl": 420350.17
+    },
+    {
+      "date": "2024-01-17",
+      "equity": 373986485.81,
+      "drawdown_pct": 0.71,
+      "net_pnl": 4647199.34
+    },
+    {
+      "date": "2024-01-24",
+      "equity": 489633862.59,
+      "drawdown_pct": 0.0,
+      "net_pnl": 7351854.46
+    },
+    {
+      "date": "2024-02-01",
+      "equity": 501427569.84,
+      "drawdown_pct": 0.0,
+      "net_pnl": 993716.09
+    },
+    {
+      "date": "2024-02-08",
+      "equity": 434892456.5,
+      "drawdown_pct": 13.27,
+      "net_pnl": 14387476.8
+    },
+    {
+      "date": "2024-02-15",
+      "equity": 493896286.23,
+      "drawdown_pct": 3.05,
+      "net_pnl": -15531414.11
+    },
+    {
+      "date": "2024-02-22",
+      "equity": 483061566.6,
+      "drawdown_pct": 5.18,
+      "net_pnl": 1970276.19
+    },
+    {
+      "date": "2024-02-29",
+      "equity": 512121728.86,
+      "drawdown_pct": 0.0,
+      "net_pnl": 21558818.27
+    },
+    {
+      "date": "2024-03-06",
+      "equity": 500020863.79,
+      "drawdown_pct": 2.86,
+      "net_pnl": -9345756.43
+    },
+    {
+      "date": "2024-03-14",
+      "equity": 517609252.12,
+      "drawdown_pct": 0.42,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2024-03-21",
+      "equity": 515719662.21,
+      "drawdown_pct": 0.78,
+      "net_pnl": -3375563.38
+    },
+    {
+      "date": "2024-04-01",
+      "equity": 521366610.33,
+      "drawdown_pct": 0.99,
+      "net_pnl": -5203140.26
+    },
+    {
+      "date": "2024-04-08",
+      "equity": 539366976.33,
+      "drawdown_pct": 0.0,
+      "net_pnl": 9352507.99
+    },
+    {
+      "date": "2024-04-16",
+      "equity": 571322591.73,
+      "drawdown_pct": 0.0,
+      "net_pnl": 42713421.42
+    },
+    {
+      "date": "2024-04-24",
+      "equity": 616151683.05,
+      "drawdown_pct": 0.0,
+      "net_pnl": 13035074.53
+    },
+    {
+      "date": "2024-05-02",
+      "equity": 638458376.05,
+      "drawdown_pct": 2.9,
+      "net_pnl": -19086851.54
+    },
+    {
+      "date": "2024-05-09",
+      "equity": 719625883.48,
+      "drawdown_pct": 2.58,
+      "net_pnl": -19075573.61
+    },
+    {
+      "date": "2024-05-16",
+      "equity": 731753342.23,
+      "drawdown_pct": 0.94,
+      "net_pnl": 1575326.01
+    },
+    {
+      "date": "2024-05-23",
+      "equity": 680189046.27,
+      "drawdown_pct": 7.92,
+      "net_pnl": -14398734.29
+    },
+    {
+      "date": "2024-05-30",
+      "equity": 773294854.76,
+      "drawdown_pct": 0.0,
+      "net_pnl": 2511630.36
+    },
+    {
+      "date": "2024-06-06",
+      "equity": 796765845.36,
+      "drawdown_pct": 3.8,
+      "net_pnl": -6527113.86
+    },
+    {
+      "date": "2024-06-13",
+      "equity": 807948696.12,
+      "drawdown_pct": 2.45,
+      "net_pnl": -6595902.27
+    },
+    {
+      "date": "2024-06-21",
+      "equity": 794100152.58,
+      "drawdown_pct": 4.12,
+      "net_pnl": -16160163.58
+    },
+    {
+      "date": "2024-06-28",
+      "equity": 780362420.31,
+      "drawdown_pct": 5.78,
+      "net_pnl": -2483923.53
+    },
+    {
+      "date": "2024-07-05",
+      "equity": 684830321.99,
+      "drawdown_pct": 17.31,
+      "net_pnl": -27488956.11
+    },
+    {
+      "date": "2024-07-12",
+      "equity": 752851687.89,
+      "drawdown_pct": 9.1,
+      "net_pnl": 11863592.09
+    },
+    {
+      "date": "2024-07-22",
+      "equity": 963407792.84,
+      "drawdown_pct": 0.0,
+      "net_pnl": 166281139.38
+    },
+    {
+      "date": "2024-07-29",
+      "equity": 923418984.39,
+      "drawdown_pct": 7.33,
+      "net_pnl": 4742095.56
+    },
+    {
+      "date": "2024-08-05",
+      "equity": 905446770.72,
+      "drawdown_pct": 10.13,
+      "net_pnl": -102087247.2
+    },
+    {
+      "date": "2024-08-12",
+      "equity": 905995693.07,
+      "drawdown_pct": 10.08,
+      "net_pnl": 32136493.82
+    },
+    {
+      "date": "2024-08-20",
+      "equity": 875021973.79,
+      "drawdown_pct": 13.15,
+      "net_pnl": -19993407.41
+    },
+    {
+      "date": "2024-08-27",
+      "equity": 892872928.83,
+      "drawdown_pct": 11.38,
+      "net_pnl": 3444686.23
+    },
+    {
+      "date": "2024-09-03",
+      "equity": 908535631.48,
+      "drawdown_pct": 9.83,
+      "net_pnl": 2387130.62
+    },
+    {
+      "date": "2024-09-10",
+      "equity": 968972343.2,
+      "drawdown_pct": 3.83,
+      "net_pnl": 855990.07
+    },
+    {
+      "date": "2024-09-17",
+      "equity": 984963108.88,
+      "drawdown_pct": 2.24,
+      "net_pnl": 2345575.18
+    },
+    {
+      "date": "2024-09-24",
+      "equity": 984604002.18,
+      "drawdown_pct": 2.28,
+      "net_pnl": -365668.05
+    },
+    {
+      "date": "2024-10-01",
+      "equity": 983964600.89,
+      "drawdown_pct": 2.34,
+      "net_pnl": -7399083.02
+    },
+    {
+      "date": "2024-10-09",
+      "equity": 1084462195.44,
+      "drawdown_pct": 0.0,
+      "net_pnl": 32103335.08
+    },
+    {
+      "date": "2024-10-16",
+      "equity": 1102301375.95,
+      "drawdown_pct": 0.09,
+      "net_pnl": -1025556.41
+    },
+    {
+      "date": "2024-10-23",
+      "equity": 1131770988.8,
+      "drawdown_pct": 0.43,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2024-10-30",
+      "equity": 1129959569.12,
+      "drawdown_pct": 0.59,
+      "net_pnl": -53916.95
+    },
+    {
+      "date": "2024-11-06",
+      "equity": 1126243015.68,
+      "drawdown_pct": 0.92,
+      "net_pnl": -1969291.85
+    },
+    {
+      "date": "2024-11-13",
+      "equity": 1128800771.75,
+      "drawdown_pct": 0.69,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2024-11-22",
+      "equity": 1131823595.48,
+      "drawdown_pct": 0.43,
+      "net_pnl": 2021969.24
+    },
+    {
+      "date": "2024-11-29",
+      "equity": 1142229788.29,
+      "drawdown_pct": 0.14,
+      "net_pnl": 853060.87
+    },
+    {
+      "date": "2024-12-06",
+      "equity": 1129887721.39,
+      "drawdown_pct": 1.22,
+      "net_pnl": -12122599.13
+    },
+    {
+      "date": "2024-12-13",
+      "equity": 1148186549.83,
+      "drawdown_pct": 0.0,
+      "net_pnl": 20816569.17
+    },
+    {
+      "date": "2024-12-20",
+      "equity": 1214032552.58,
+      "drawdown_pct": 0.0,
+      "net_pnl": 4125111.57
+    },
+    {
+      "date": "2024-12-30",
+      "equity": 1209498217.38,
+      "drawdown_pct": 0.94,
+      "net_pnl": -8794748.85
+    },
+    {
+      "date": "2025-01-06",
+      "equity": 1231195759.84,
+      "drawdown_pct": 0.0,
+      "net_pnl": 14322688.67
+    },
+    {
+      "date": "2025-01-13",
+      "equity": 1207266844.38,
+      "drawdown_pct": 1.94,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2025-01-20",
+      "equity": 1197505320.47,
+      "drawdown_pct": 2.74,
+      "net_pnl": -2285125.24
+    },
+    {
+      "date": "2025-01-27",
+      "equity": 1210794155.95,
+      "drawdown_pct": 1.66,
+      "net_pnl": 3783301.5
+    },
+    {
+      "date": "2025-02-01",
+      "equity": 1248722723.17,
+      "drawdown_pct": 0.0,
+      "net_pnl": 38313000.04
+    },
+    {
+      "date": "2025-02-07",
+      "equity": 1255123386.85,
+      "drawdown_pct": 0.0,
+      "net_pnl": 2430193.37
+    },
+    {
+      "date": "2025-02-14",
+      "equity": 1259957576.43,
+      "drawdown_pct": 0.0,
+      "net_pnl": 4045851.36
+    },
+    {
+      "date": "2025-02-21",
+      "equity": 1241793636.79,
+      "drawdown_pct": 1.44,
+      "net_pnl": 137810.4
+    },
+    {
+      "date": "2025-03-03",
+      "equity": 1243321469.55,
+      "drawdown_pct": 1.32,
+      "net_pnl": 2106850.11
+    },
+    {
+      "date": "2025-03-10",
+      "equity": 1238001995.22,
+      "drawdown_pct": 1.74,
+      "net_pnl": 1836153.3
+    },
+    {
+      "date": "2025-03-18",
+      "equity": 1243632641.62,
+      "drawdown_pct": 1.3,
+      "net_pnl": -267868.09
+    },
+    {
+      "date": "2025-03-25",
+      "equity": 1260919807.96,
+      "drawdown_pct": 0.0,
+      "net_pnl": 39041700.92
+    },
+    {
+      "date": "2025-04-02",
+      "equity": 1261561236.49,
+      "drawdown_pct": 0.66,
+      "net_pnl": -8422280.06
+    },
+    {
+      "date": "2025-04-09",
+      "equity": 1265780208.28,
+      "drawdown_pct": 0.53,
+      "net_pnl": -542674.69
+    },
+    {
+      "date": "2025-04-21",
+      "equity": 1248858516.91,
+      "drawdown_pct": 1.86,
+      "net_pnl": -15657334.98
+    },
+    {
+      "date": "2025-04-28",
+      "equity": 1302412683.55,
+      "drawdown_pct": 0.0,
+      "net_pnl": 28413028.58
+    },
+    {
+      "date": "2025-05-06",
+      "equity": 1289240652.25,
+      "drawdown_pct": 1.01,
+      "net_pnl": 1349701.62
+    },
+    {
+      "date": "2025-05-13",
+      "equity": 1543510204.5,
+      "drawdown_pct": 0.02,
+      "net_pnl": -324719.04
+    },
+    {
+      "date": "2025-05-20",
+      "equity": 1557307412.57,
+      "drawdown_pct": 0.0,
+      "net_pnl": 19318248.52
+    },
+    {
+      "date": "2025-05-27",
+      "equity": 1558665450.54,
+      "drawdown_pct": 0.28,
+      "net_pnl": -1625235.47
+    },
+    {
+      "date": "2025-06-03",
+      "equity": 1545427017.43,
+      "drawdown_pct": 1.13,
+      "net_pnl": 2650310.73
+    },
+    {
+      "date": "2025-06-10",
+      "equity": 1537506618.63,
+      "drawdown_pct": 1.64,
+      "net_pnl": 8430653.02
+    },
+    {
+      "date": "2025-06-17",
+      "equity": 1698409922.33,
+      "drawdown_pct": 1.43,
+      "net_pnl": -24614829.93
+    },
+    {
+      "date": "2025-06-24",
+      "equity": 1752517166.97,
+      "drawdown_pct": 0.0,
+      "net_pnl": 17984297.52
+    },
+    {
+      "date": "2025-07-01",
+      "equity": 1759824190.08,
+      "drawdown_pct": 0.0,
+      "net_pnl": 10208507.64
+    },
+    {
+      "date": "2025-07-08",
+      "equity": 1771955707.48,
+      "drawdown_pct": 0.1,
+      "net_pnl": -440107.98
+    },
+    {
+      "date": "2025-07-15",
+      "equity": 1767382736.52,
+      "drawdown_pct": 0.38,
+      "net_pnl": 1429257.55
+    },
+    {
+      "date": "2025-07-22",
+      "equity": 1767060990.14,
+      "drawdown_pct": 0.4,
+      "net_pnl": -1285970.93
+    },
+    {
+      "date": "2025-07-29",
+      "equity": 1768483694.94,
+      "drawdown_pct": 0.32,
+      "net_pnl": 5496515.63
+    },
+    {
+      "date": "2025-08-05",
+      "equity": 1780145892.62,
+      "drawdown_pct": 0.64,
+      "net_pnl": -5478475.86
+    },
+    {
+      "date": "2025-08-12",
+      "equity": 1809403784.84,
+      "drawdown_pct": 0.16,
+      "net_pnl": 1471869.7
+    },
+    {
+      "date": "2025-08-20",
+      "equity": 1800400936.88,
+      "drawdown_pct": 0.66,
+      "net_pnl": -6356388.69
+    },
+    {
+      "date": "2025-08-28",
+      "equity": 1789391778.65,
+      "drawdown_pct": 1.27,
+      "net_pnl": -8505461.54
+    },
+    {
+      "date": "2025-09-04",
+      "equity": 1818718214.35,
+      "drawdown_pct": 0.0,
+      "net_pnl": 10176186.75
+    },
+    {
+      "date": "2025-09-11",
+      "equity": 1796309240.48,
+      "drawdown_pct": 1.23,
+      "net_pnl": -11177836.71
+    },
+    {
+      "date": "2025-09-18",
+      "equity": 1797461882.48,
+      "drawdown_pct": 1.17,
+      "net_pnl": -164695.9
+    },
+    {
+      "date": "2025-09-25",
+      "equity": 1783613950.49,
+      "drawdown_pct": 1.93,
+      "net_pnl": -1013259.1
+    },
+    {
+      "date": "2025-10-03",
+      "equity": 1791274562.04,
+      "drawdown_pct": 1.51,
+      "net_pnl": -37413.11
+    },
+    {
+      "date": "2025-10-10",
+      "equity": 1788702011.66,
+      "drawdown_pct": 1.65,
+      "net_pnl": -164094.86
+    },
+    {
+      "date": "2025-10-17",
+      "equity": 1791134347.74,
+      "drawdown_pct": 1.52,
+      "net_pnl": 1034092.14
+    },
+    {
+      "date": "2025-10-27",
+      "equity": 1778818138.52,
+      "drawdown_pct": 2.19,
+      "net_pnl": 565350.31
+    },
+    {
+      "date": "2025-11-03",
+      "equity": 1787465346.24,
+      "drawdown_pct": 1.72,
+      "net_pnl": 1555414.8
+    },
+    {
+      "date": "2025-11-11",
+      "equity": 1806247413.61,
+      "drawdown_pct": 0.69,
+      "net_pnl": 328573.69
+    },
+    {
+      "date": "2025-11-18",
+      "equity": 1804627973.76,
+      "drawdown_pct": 0.77,
+      "net_pnl": -60699.23
+    },
+    {
+      "date": "2025-11-25",
+      "equity": 1807082472.55,
+      "drawdown_pct": 0.64,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2025-12-02",
+      "equity": 1805627310.45,
+      "drawdown_pct": 0.72,
+      "net_pnl": -2600886.04
+    },
+    {
+      "date": "2025-12-09",
+      "equity": 1804429331.06,
+      "drawdown_pct": 0.79,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2025-12-16",
+      "equity": 1796930895.12,
+      "drawdown_pct": 1.2,
+      "net_pnl": -1030944.58
+    },
+    {
+      "date": "2025-12-23",
+      "equity": 1795557896.47,
+      "drawdown_pct": 1.27,
+      "net_pnl": 20504.26
+    },
+    {
+      "date": "2025-12-31",
+      "equity": 1788837803.14,
+      "drawdown_pct": 1.64,
+      "net_pnl": -911059.89
+    },
+    {
+      "date": "2026-01-07",
+      "equity": 1786619955.99,
+      "drawdown_pct": 1.76,
+      "net_pnl": -983876.9
+    },
+    {
+      "date": "2026-01-14",
+      "equity": 1786262569.35,
+      "drawdown_pct": 1.78,
+      "net_pnl": 414407.09
+    },
+    {
+      "date": "2026-01-22",
+      "equity": 1784566605.52,
+      "drawdown_pct": 1.88,
+      "net_pnl": 1057924.53
+    },
+    {
+      "date": "2026-01-30",
+      "equity": 1762964131.28,
+      "drawdown_pct": 3.07,
+      "net_pnl": -117084.84
+    },
+    {
+      "date": "2026-02-05",
+      "equity": 1747169514.21,
+      "drawdown_pct": 3.93,
+      "net_pnl": -12541910.49
+    },
+    {
+      "date": "2026-02-12",
+      "equity": 1733770672.64,
+      "drawdown_pct": 4.67,
+      "net_pnl": 4891365.01
+    },
+    {
+      "date": "2026-02-19",
+      "equity": 1754579510.26,
+      "drawdown_pct": 3.53,
+      "net_pnl": 1135549.38
+    },
+    {
+      "date": "2026-02-26",
+      "equity": 1759593490.91,
+      "drawdown_pct": 3.25,
+      "net_pnl": -1167622.12
+    },
+    {
+      "date": "2026-03-06",
+      "equity": 1767155636.97,
+      "drawdown_pct": 2.84,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2026-03-13",
+      "equity": 1791737780.95,
+      "drawdown_pct": 1.48,
+      "net_pnl": 4633598.04
+    },
+    {
+      "date": "2026-03-20",
+      "equity": 1798539812.13,
+      "drawdown_pct": 1.11,
+      "net_pnl": 6156018.55
+    },
+    {
+      "date": "2026-03-30",
+      "equity": 1797459721.0,
+      "drawdown_pct": 1.17,
+      "net_pnl": 0.0
+    },
+    {
+      "date": "2026-04-08",
+      "equity": 1802737473.76,
+      "drawdown_pct": 0.88,
+      "net_pnl": 10671070.69
+    },
+    {
+      "date": "2026-04-16",
+      "equity": 1782661325.37,
+      "drawdown_pct": 1.98,
+      "net_pnl": 4378550.74
+    },
+    {
+      "date": "2026-04-23",
+      "equity": 1763214344.58,
+      "drawdown_pct": 3.05,
+      "net_pnl": 2314591.05
+    },
+    {
+      "date": "2026-04-30",
+      "equity": 1765167016.73,
+      "drawdown_pct": 2.94,
+      "net_pnl": 2478784.89
+    },
+    {
+      "date": "2026-05-08",
+      "equity": 1756695452.72,
+      "drawdown_pct": 3.41,
+      "net_pnl": -3041146.23
+    },
+    {
+      "date": "2026-05-15",
+      "equity": 1749516890.54,
+      "drawdown_pct": 3.8,
+      "net_pnl": 12354992.32
+    },
+    {
+      "date": "2026-05-22",
+      "equity": 1740348682.37,
+      "drawdown_pct": 4.31,
+      "net_pnl": -3526837.71
+    },
+    {
+      "date": "2026-06-01",
+      "equity": 1756542865.96,
+      "drawdown_pct": 3.42,
+      "net_pnl": 5186390.63
+    },
+    {
+      "date": "2026-06-08",
+      "equity": 1807075001.81,
+      "drawdown_pct": 1.73,
+      "net_pnl": -31804374.27
+    },
+    {
+      "date": "2026-06-15",
+      "equity": 1785818625.1,
+      "drawdown_pct": 2.89,
+      "net_pnl": -1335749.67
+    },
+    {
+      "date": "2026-06-22",
+      "equity": 1784508446.35,
+      "drawdown_pct": 2.96,
+      "net_pnl": 2481013.2
+    },
+    {
+      "date": "2026-06-30",
+      "equity": 1774355425.23,
+      "drawdown_pct": 3.51,
+      "net_pnl": -7718710.86
+    },
+    {
+      "date": "2026-07-07",
+      "equity": 1798322290.64,
+      "drawdown_pct": 2.21,
+      "net_pnl": 8448975.24
+    },
+    {
+      "date": "2026-07-14",
+      "equity": 1785251221.19,
+      "drawdown_pct": 2.92,
+      "net_pnl": -8153619.06
+    },
+    {
+      "date": "2026-07-21",
+      "equity": 1825087511.61,
+      "drawdown_pct": 0.75,
+      "net_pnl": -438063.63
+    },
+    {
+      "date": "2026-07-28",
+      "equity": 1870184018.56,
+      "drawdown_pct": 0.38,
+      "net_pnl": 238258.86
+    },
+    {
+      "date": "2026-08-04",
+      "equity": 1866416773.84,
+      "drawdown_pct": 0.58,
+      "net_pnl": 4539457.51
+    },
+    {
+      "date": "2026-08-11",
+      "equity": 1831584932.03,
+      "drawdown_pct": 2.44,
+      "net_pnl": -6318367.53
+    },
+    {
+      "date": "2026-08-18",
+      "equity": 1839918169.0,
+      "drawdown_pct": 2.0,
+      "net_pnl": 6112531.71
+    },
+    {
+      "date": "2026-08-25",
+      "equity": 1846470565.94,
+      "drawdown_pct": 1.65,
+      "net_pnl": -994042.92
+    },
+    {
+      "date": "2026-09-01",
+      "equity": 1863417099.46,
+      "drawdown_pct": 0.74,
+      "net_pnl": 1285659.56
+    },
+    {
+      "date": "2026-09-08",
+      "equity": 1871355551.8,
+      "drawdown_pct": 0.32,
+      "net_pnl": -2198782.75
+    },
+    {
+      "date": "2026-09-16",
+      "equity": 1879440028.14,
+      "drawdown_pct": 0.18,
+      "net_pnl": -3343124.9
+    },
+    {
+      "date": "2026-09-23",
+      "equity": 1890622491.84,
+      "drawdown_pct": 0.0,
+      "net_pnl": 7770865.79
+    },
+    {
+      "date": "2026-09-30",
+      "equity": 1908593689.0,
+      "drawdown_pct": 0.19,
+      "net_pnl": -3601307.4
+    },
+    {
+      "date": "2026-10-01",
+      "equity": 1902862291.79,
+      "drawdown_pct": 0.49,
+      "net_pnl": -5731397.21
+    }
+  ],
+  "top_winners": [
+    {
+      "date": "2024-07-19",
+      "symbol": "IREDA",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 2227029,
+      "entry_price": 253.5,
+      "exit_price": 277.58,
+      "exit_reason": "Target Hit (+9.5%)",
+      "net_ret_pct": 9.34,
+      "net_pnl": 52729142.93,
+      "charges": 903282.96,
+      "entry_date": "2024-07-19",
+      "exit_date": "2024-07-19",
+      "entry": 253.5,
+      "exit": 277.58,
+      "pnl": 52729142.93,
+      "pnl_pct": 9.34,
+      "r_mult": 5.19,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (Target Hit (+9.5%))"
+    },
+    {
+      "date": "2024-10-07",
+      "symbol": "BSE",
+      "side": "SHORT",
+      "setup": "Parabolic Exhaustion Fade",
+      "qty": 403148,
+      "entry_price": 1396.5,
+      "exit_price": 1263.83,
+      "exit_reason": "Target Hit (-9.5%)",
+      "net_ret_pct": 9.34,
+      "net_pnl": 52583843.4,
+      "charges": 900793.89,
+      "entry_date": "2024-10-07",
+      "exit_date": "2024-10-07",
+      "entry": 1396.5,
+      "exit": 1263.83,
+      "pnl": 52583843.4,
+      "pnl_pct": 9.34,
+      "r_mult": 5.19,
+      "bars_held": 1,
+      "reason": "Parabolic Exhaustion Fade (Target Hit (-9.5%))"
+    },
+    {
+      "date": "2025-06-18",
+      "symbol": "RPOWER",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 8254420,
+      "entry_price": 62.02,
+      "exit_price": 66.8,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 7.55,
+      "net_pnl": 38637024.99,
+      "charges": 819102.61,
+      "entry_date": "2025-06-18",
+      "exit_date": "2025-06-18",
+      "entry": 62.02,
+      "exit": 66.8,
+      "pnl": 38637024.99,
+      "pnl_pct": 7.55,
+      "r_mult": 4.19,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2025-06-13",
+      "symbol": "GRSE",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 211546,
+      "entry_price": 2900.0,
+      "exit_price": 3069.3,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 5.68,
+      "net_pnl": 34833164.36,
+      "charges": 981573.44,
+      "entry_date": "2025-06-13",
+      "exit_date": "2025-06-13",
+      "entry": 2900.0,
+      "exit": 3069.3,
+      "pnl": 34833164.36,
+      "pnl_pct": 5.68,
+      "r_mult": 3.16,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2024-07-22",
+      "symbol": "MAZDOCK",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 236536,
+      "entry_price": 2527.5,
+      "exit_price": 2662.6,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 5.19,
+      "net_pnl": 30999462.02,
+      "charges": 956551.58,
+      "entry_date": "2024-07-22",
+      "exit_date": "2024-07-22",
+      "entry": 2527.5,
+      "exit": 2662.6,
+      "pnl": 30999462.02,
+      "pnl_pct": 5.19,
+      "r_mult": 2.88,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2024-07-22",
+      "symbol": "GRSE",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 222088,
+      "entry_price": 2425.0,
+      "exit_price": 2568.25,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 5.75,
+      "net_pnl": 30952404.56,
+      "charges": 861701.44,
+      "entry_date": "2024-07-22",
+      "exit_date": "2024-07-22",
+      "entry": 2425.0,
+      "exit": 2568.25,
+      "pnl": 30952404.56,
+      "pnl_pct": 5.75,
+      "r_mult": 3.19,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2025-05-19",
+      "symbol": "MAZDOCK",
+      "side": "SHORT",
+      "setup": "Parabolic Exhaustion Fade",
+      "qty": 212521,
+      "entry_price": 3559.8,
+      "exit_price": 3409.9,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 4.05,
+      "net_pnl": 30646446.29,
+      "charges": 1210451.61,
+      "entry_date": "2025-05-19",
+      "exit_date": "2025-05-19",
+      "entry": 3559.8,
+      "exit": 3409.9,
+      "pnl": 30646446.29,
+      "pnl_pct": 4.05,
+      "r_mult": 2.25,
+      "bars_held": 1,
+      "reason": "Parabolic Exhaustion Fade (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2024-05-29",
+      "symbol": "MAZDOCK",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 205694,
+      "entry_price": 1507.45,
+      "exit_price": 1650.66,
+      "exit_reason": "Target Hit (+9.5%)",
+      "net_ret_pct": 9.34,
+      "net_pnl": 28960857.46,
+      "charges": 496117.47,
+      "entry_date": "2024-05-29",
+      "exit_date": "2024-05-29",
+      "entry": 1507.45,
+      "exit": 1650.66,
+      "pnl": 28960857.46,
+      "pnl_pct": 9.34,
+      "r_mult": 5.19,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (Target Hit (+9.5%))"
+    },
+    {
+      "date": "2024-07-22",
+      "symbol": "COCHINSHIP",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 176696,
+      "entry_price": 2505.0,
+      "exit_price": 2670.35,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 6.44,
+      "net_pnl": 28508486.03,
+      "charges": 708197.57,
+      "entry_date": "2024-07-22",
+      "exit_date": "2024-07-22",
+      "entry": 2505.0,
+      "exit": 2670.35,
+      "pnl": 28508486.03,
+      "pnl_pct": 6.44,
+      "r_mult": 3.58,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2024-02-14",
+      "symbol": "HUDCO",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 1693879,
+      "entry_price": 175.4,
+      "exit_price": 192.06,
+      "exit_reason": "Target Hit (+9.5%)",
+      "net_ret_pct": 9.34,
+      "net_pnl": 27749735.57,
+      "charges": 475370.2,
+      "entry_date": "2024-02-14",
+      "exit_date": "2024-02-14",
+      "entry": 175.4,
+      "exit": 192.06,
+      "pnl": 27749735.57,
+      "pnl_pct": 9.34,
+      "r_mult": 5.19,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (Target Hit (+9.5%))"
+    },
+    {
+      "date": "2025-06-13",
+      "symbol": "COCHINSHIP",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 381777,
+      "entry_price": 2087.0,
+      "exit_price": 2161.6,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 3.41,
+      "net_pnl": 27205734.44,
+      "charges": 1274829.76,
+      "entry_date": "2025-06-13",
+      "exit_date": "2025-06-13",
+      "entry": 2087.0,
+      "exit": 2161.6,
+      "pnl": 27205734.44,
+      "pnl_pct": 3.41,
+      "r_mult": 1.89,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2024-06-19",
+      "symbol": "HAL",
+      "side": "SHORT",
+      "setup": "Parabolic Exhaustion Fade",
+      "qty": 103311,
+      "entry_price": 5580.0,
+      "exit_price": 5311.95,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 4.64,
+      "net_pnl": 26770152.94,
+      "charges": 922360.61,
+      "entry_date": "2024-06-19",
+      "exit_date": "2024-06-19",
+      "entry": 5580.0,
+      "exit": 5311.95,
+      "pnl": 26770152.94,
+      "pnl_pct": 4.64,
+      "r_mult": 2.58,
+      "bars_held": 1,
+      "reason": "Parabolic Exhaustion Fade (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2024-01-18",
+      "symbol": "IRFC",
+      "side": "SHORT",
+      "setup": "Parabolic Exhaustion Fade",
+      "qty": 1833267,
+      "entry_price": 153.0,
+      "exit_price": 138.47,
+      "exit_reason": "Target Hit (-9.5%)",
+      "net_ret_pct": 9.34,
+      "net_pnl": 26197752.08,
+      "charges": 448783.76,
+      "entry_date": "2024-01-18",
+      "exit_date": "2024-01-18",
+      "entry": 153.0,
+      "exit": 138.47,
+      "pnl": 26197752.08,
+      "pnl_pct": 9.34,
+      "r_mult": 5.19,
+      "bars_held": 1,
+      "reason": "Parabolic Exhaustion Fade (Target Hit (-9.5%))"
+    },
+    {
+      "date": "2024-01-23",
+      "symbol": "HUDCO",
+      "side": "SHORT",
+      "setup": "Parabolic Exhaustion Fade",
+      "qty": 1520337,
+      "entry_price": 169.45,
+      "exit_price": 153.35,
+      "exit_reason": "Target Hit (-9.5%)",
+      "net_ret_pct": 9.34,
+      "net_pnl": 24061811.17,
+      "charges": 412193.77,
+      "entry_date": "2024-01-23",
+      "exit_date": "2024-01-23",
+      "entry": 169.45,
+      "exit": 153.35,
+      "pnl": 24061811.17,
+      "pnl_pct": 9.34,
+      "r_mult": 5.19,
+      "bars_held": 1,
+      "reason": "Parabolic Exhaustion Fade (Target Hit (-9.5%))"
+    },
+    {
+      "date": "2024-01-23",
+      "symbol": "IRCTC",
+      "side": "SHORT",
+      "setup": "Parabolic Exhaustion Fade",
+      "qty": 244854,
+      "entry_price": 1045.05,
+      "exit_price": 945.77,
+      "exit_reason": "Target Hit (-9.5%)",
+      "net_ret_pct": 9.34,
+      "net_pnl": 23899628.43,
+      "charges": 409415.48,
+      "entry_date": "2024-01-23",
+      "exit_date": "2024-01-23",
+      "entry": 1045.05,
+      "exit": 945.77,
+      "pnl": 23899628.43,
+      "pnl_pct": 9.34,
+      "r_mult": 5.19,
+      "bars_held": 1,
+      "reason": "Parabolic Exhaustion Fade (Target Hit (-9.5%))"
+    },
+    {
+      "date": "2024-09-05",
+      "symbol": "MAZDOCK",
+      "side": "SHORT",
+      "setup": "Parabolic Exhaustion Fade",
+      "qty": 198853,
+      "entry_price": 2411.0,
+      "exit_price": 2289.55,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 4.88,
+      "net_pnl": 23383601.52,
+      "charges": 767095.33,
+      "entry_date": "2024-09-05",
+      "exit_date": "2024-09-05",
+      "entry": 2411.0,
+      "exit": 2289.55,
+      "pnl": 23383601.52,
+      "pnl_pct": 4.88,
+      "r_mult": 2.71,
+      "bars_held": 1,
+      "reason": "Parabolic Exhaustion Fade (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2026-07-22",
+      "symbol": "HSCL",
+      "side": "SHORT",
+      "setup": "Parabolic Exhaustion Fade",
+      "qty": 447696,
+      "entry_price": 819.0,
+      "exit_price": 768.25,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 6.04,
+      "net_pnl": 22133911.16,
+      "charges": 586660.84,
+      "entry_date": "2026-07-22",
+      "exit_date": "2026-07-22",
+      "entry": 819.0,
+      "exit": 768.25,
+      "pnl": 22133911.16,
+      "pnl_pct": 6.04,
+      "r_mult": 3.36,
+      "bars_held": 1,
+      "reason": "Parabolic Exhaustion Fade (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2024-07-22",
+      "symbol": "NBCC",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 2028925,
+      "entry_price": 113.34,
+      "exit_price": 124.11,
+      "exit_reason": "Target Hit (+9.5%)",
+      "net_ret_pct": 9.34,
+      "net_pnl": 21478110.78,
+      "charges": 367933.38,
+      "entry_date": "2024-07-22",
+      "exit_date": "2024-07-22",
+      "entry": 113.34,
+      "exit": 124.11,
+      "pnl": 21478110.78,
+      "pnl_pct": 9.34,
+      "r_mult": 5.19,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (Target Hit (+9.5%))"
+    },
+    {
+      "date": "2024-07-09",
+      "symbol": "IRFC",
+      "side": "SHORT",
+      "setup": "Parabolic Exhaustion Fade",
+      "qty": 1574259,
+      "entry_price": 209.8,
+      "exit_price": 195.85,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 6.49,
+      "net_pnl": 21432465.79,
+      "charges": 528447.26,
+      "entry_date": "2024-07-09",
+      "exit_date": "2024-07-09",
+      "entry": 209.8,
+      "exit": 195.85,
+      "pnl": 21432465.79,
+      "pnl_pct": 6.49,
+      "r_mult": 3.61,
+      "bars_held": 1,
+      "reason": "Parabolic Exhaustion Fade (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2024-02-14",
+      "symbol": "IRCON",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 1432528,
+      "entry_price": 207.4,
+      "exit_price": 222.65,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 7.19,
+      "net_pnl": 21370681.91,
+      "charges": 475370.09,
+      "entry_date": "2024-02-14",
+      "exit_date": "2024-02-14",
+      "entry": 207.4,
+      "exit": 222.65,
+      "pnl": 21370681.91,
+      "pnl_pct": 7.19,
+      "r_mult": 3.99,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2025-05-12",
+      "symbol": "MAZDOCK",
+      "side": "SHORT",
+      "setup": "Parabolic Exhaustion Fade",
+      "qty": 174577,
+      "entry_price": 3024.9,
+      "exit_price": 2904.4,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 3.82,
+      "net_pnl": 20191603.75,
+      "charges": 844924.75,
+      "entry_date": "2025-05-12",
+      "exit_date": "2025-05-12",
+      "entry": 3024.9,
+      "exit": 2904.4,
+      "pnl": 20191603.75,
+      "pnl_pct": 3.82,
+      "r_mult": 2.12,
+      "bars_held": 1,
+      "reason": "Parabolic Exhaustion Fade (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2024-05-28",
+      "symbol": "COCHINSHIP",
+      "side": "SHORT",
+      "setup": "Parabolic Exhaustion Fade",
+      "qty": 238814,
+      "entry_price": 1994.05,
+      "exit_price": 1909.4,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 4.09,
+      "net_pnl": 19453673.81,
+      "charges": 761931.29,
+      "entry_date": "2024-05-28",
+      "exit_date": "2024-05-28",
+      "entry": 1994.05,
+      "exit": 1909.4,
+      "pnl": 19453673.81,
+      "pnl_pct": 4.09,
+      "r_mult": 2.27,
+      "bars_held": 1,
+      "reason": "Parabolic Exhaustion Fade (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2025-06-13",
+      "symbol": "BSE",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 346471,
+      "entry_price": 2653.0,
+      "exit_price": 2711.2,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 2.03,
+      "net_pnl": 18693912.1,
+      "charges": 1470700.1,
+      "entry_date": "2025-06-13",
+      "exit_date": "2025-06-13",
+      "entry": 2653.0,
+      "exit": 2711.2,
+      "pnl": 18693912.1,
+      "pnl_pct": 2.03,
+      "r_mult": 1.2,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2024-10-09",
+      "symbol": "BSE",
+      "side": "SHORT",
+      "setup": "Parabolic Exhaustion Fade",
+      "qty": 464603,
+      "entry_price": 1435.5,
+      "exit_price": 1393.5,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 2.77,
+      "net_pnl": 18446225.83,
+      "charges": 1067100.17,
+      "entry_date": "2024-10-09",
+      "exit_date": "2024-10-09",
+      "entry": 1435.5,
+      "exit": 1393.5,
+      "pnl": 18446225.83,
+      "pnl_pct": 2.77,
+      "r_mult": 1.54,
+      "bars_held": 1,
+      "reason": "Parabolic Exhaustion Fade (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2023-12-21",
+      "symbol": "IRFC",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 2166617,
+      "entry_price": 90.9,
+      "exit_price": 99.54,
+      "exit_reason": "Target Hit (+9.5%)",
+      "net_ret_pct": 9.34,
+      "net_pnl": 18394708.33,
+      "charges": 315112.78,
+      "entry_date": "2023-12-21",
+      "exit_date": "2023-12-21",
+      "entry": 90.9,
+      "exit": 99.54,
+      "pnl": 18394708.33,
+      "pnl_pct": 9.34,
+      "r_mult": 5.19,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (Target Hit (+9.5%))"
+    },
+    {
+      "date": "2024-08-12",
+      "symbol": "IFCI",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 2821231,
+      "entry_price": 68.11,
+      "exit_price": 74.58,
+      "exit_reason": "Target Hit (+9.5%)",
+      "net_ret_pct": 9.34,
+      "net_pnl": 17947187.65,
+      "charges": 307446.47,
+      "entry_date": "2024-08-12",
+      "exit_date": "2024-08-12",
+      "entry": 68.11,
+      "exit": 74.58,
+      "pnl": 17947187.65,
+      "pnl_pct": 9.34,
+      "r_mult": 5.19,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (Target Hit (+9.5%))"
+    },
+    {
+      "date": "2024-12-13",
+      "symbol": "ETERNAL",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 2011958,
+      "entry_price": 279.0,
+      "exit_price": 288.25,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 3.16,
+      "net_pnl": 17712473.45,
+      "charges": 898138.05,
+      "entry_date": "2024-12-13",
+      "exit_date": "2024-12-13",
+      "entry": 279.0,
+      "exit": 288.25,
+      "pnl": 17712473.45,
+      "pnl_pct": 3.16,
+      "r_mult": 1.76,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2026-08-31",
+      "symbol": "PAYTM",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 189361,
+      "entry_price": 1622.5,
+      "exit_price": 1717.1,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 5.67,
+      "net_pnl": 17421969.44,
+      "charges": 491581.16,
+      "entry_date": "2026-08-31",
+      "exit_date": "2026-08-31",
+      "entry": 1622.5,
+      "exit": 1717.1,
+      "pnl": 17421969.44,
+      "pnl_pct": 5.67,
+      "r_mult": 3.15,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2024-10-04",
+      "symbol": "ETERNAL",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 2178207,
+      "entry_price": 267.0,
+      "exit_price": 275.3,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 2.95,
+      "net_pnl": 17148588.07,
+      "charges": 930530.03,
+      "entry_date": "2024-10-04",
+      "exit_date": "2024-10-04",
+      "entry": 267.0,
+      "exit": 275.3,
+      "pnl": 17148588.07,
+      "pnl_pct": 2.95,
+      "r_mult": 1.64,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "MEESHO",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 1508018,
+      "entry_price": 180.0,
+      "exit_price": 191.5,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 6.23,
+      "net_pnl": 16907897.82,
+      "charges": 434309.18,
+      "entry_date": "2026-05-13",
+      "exit_date": "2026-05-13",
+      "entry": 180.0,
+      "exit": 191.5,
+      "pnl": 16907897.82,
+      "pnl_pct": 6.23,
+      "r_mult": 3.46,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2025-05-19",
+      "symbol": "COCHINSHIP",
+      "side": "SHORT",
+      "setup": "Parabolic Exhaustion Fade",
+      "qty": 161328,
+      "entry_price": 2090.0,
+      "exit_price": 1982.2,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 5.0,
+      "net_pnl": 16851677.57,
+      "charges": 539480.83,
+      "entry_date": "2025-05-19",
+      "exit_date": "2025-05-19",
+      "entry": 2090.0,
+      "exit": 1982.2,
+      "pnl": 16851677.57,
+      "pnl_pct": 5.0,
+      "r_mult": 2.78,
+      "bars_held": 1,
+      "reason": "Parabolic Exhaustion Fade (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2024-10-15",
+      "symbol": "BSE",
+      "side": "SHORT",
+      "setup": "Parabolic Exhaustion Fade",
+      "qty": 501834,
+      "entry_price": 1620.0,
+      "exit_price": 1584.0,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 2.06,
+      "net_pnl": 16765270.27,
+      "charges": 1300753.73,
+      "entry_date": "2024-10-15",
+      "exit_date": "2024-10-15",
+      "entry": 1620.0,
+      "exit": 1584.0,
+      "pnl": 16765270.27,
+      "pnl_pct": 2.06,
+      "r_mult": 1.2,
+      "bars_held": 1,
+      "reason": "Parabolic Exhaustion Fade (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2025-06-13",
+      "symbol": "CDSL",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 266857,
+      "entry_price": 1595.0,
+      "exit_price": 1659.7,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 3.9,
+      "net_pnl": 16584628.84,
+      "charges": 681019.06,
+      "entry_date": "2025-06-13",
+      "exit_date": "2025-06-13",
+      "entry": 1595.0,
+      "exit": 1659.7,
+      "pnl": 16584628.84,
+      "pnl_pct": 3.9,
+      "r_mult": 2.17,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "BSE",
+      "side": "LONG",
+      "setup": "Sync Pullback Rebound",
+      "qty": 165527,
+      "entry_price": 3812.5,
+      "exit_price": 3916.8,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 2.58,
+      "net_pnl": 16254751.4,
+      "charges": 1009714.7,
+      "entry_date": "2026-06-08",
+      "exit_date": "2026-06-08",
+      "entry": 3812.5,
+      "exit": 3916.8,
+      "pnl": 16254751.4,
+      "pnl_pct": 2.58,
+      "r_mult": 1.43,
+      "bars_held": 1,
+      "reason": "Sync Pullback Rebound (15:20 MIS EOD Close)"
+    },
+    {
+      "date": "2024-02-06",
+      "symbol": "NHPC",
+      "side": "SHORT",
+      "setup": "Parabolic Exhaustion Fade",
+      "qty": 2847597,
+      "entry_price": 107.05,
+      "exit_price": 101.25,
+      "exit_reason": "15:20 MIS EOD Close",
+      "net_ret_pct": 5.26,
+      "net_pnl": 16028326.19,
+      "charges": 487736.41,
+      "entry_date": "2024-02-06",
+      "exit_date": "2024-02-06",
+      "entry": 107.05,
+      "exit": 101.25,
+      "pnl": 16028326.19,
+      "pnl_pct": 5.26,
+      "r_mult": 2.92,
+      "bars_held": 1,
+      "reason": "Parabolic Exhaustion Fade (15:20 MIS EOD Close)"
+    }
+  ]
+}
