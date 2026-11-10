@@ -2246,9 +2246,6 @@
     <!-- 5-Point Institutional Survival & Torture Audit Card (Shown when strategy includes 10Y Walk-Forward / MC Audit) -->
     <div class="card pad" id="bt-torture-card" style="display:none;margin-bottom:16px"></div>
 
-    <!-- 5-Point Institutional Survival & Torture Audit Card (Shown when strategy includes 10Y Walk-Forward / MC Audit) -->
-    <div class="card pad" id="bt-torture-card" style="display:none;margin-bottom:16px"></div>
-
     <!-- Selected Strategy Hero & Equity Curve -->
 
     <div class="card pad" style="margin-bottom:16px">
@@ -3542,49 +3539,6 @@ function renderBacktest(){
     }
   }
 
-  const tc=$('bt-torture-card');
-  if(tc){
-    if(bt.torture_audit){
-      const wf=bt.torture_audit.walk_forward_70_30||{};
-      const mc=bt.torture_audit.monte_carlo_5000_runs||{};
-      const nb=bt.torture_audit.neighbor_parameter_stability||[];
-      const la=bt.liquidity_audit||{};
-      tc.style.display='block';
-      tc.innerHTML=`
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px">
-          <div>
-            <h3 style="font-size:15px;font-weight:600">5-Point Institutional Torture Audit — ${bt.title}</h3>
-            <span class="faint" style="font-size:12px">Zero Look-Ahead (${la.zero_lookahead_verified?'PASS':'—'}) · Pessimistic Stop-First (${la.pessimistic_stop_first_ohlc?'PASS':'—'}) · Min ADT ≥ ₹${la.min_adt_crore||10} Cr · Max Order ≤ ${la.max_adt_participation_pct||3.5}% ADT · ${la.round_trip_friction||''}</span>
-          </div>
-          <span class="pill g" style="font-size:11.5px">Sharpe ${s.sharpe_ratio||'—'} · PF ${s.profit_factor||'—'} · 5/5 PASSED</span>
-        </div>
-        <div class="grid3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
-          <div style="background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px">
-            <b style="font-size:12.5px;display:block;margin-bottom:6px">1. 70/30 Out-of-Sample Walk-Forward</b>
-            <div style="font-size:12px;color:var(--ink2);line-height:1.55">
-              In-Sample (${wf.in_sample_period||'2016-2023'}): <b>${wf.in_sample_cagr_pct}% CAGR</b> · ${wf.in_sample_win_rate_pct}% WR · Sharpe ${wf.in_sample_sharpe}<br>
-              Unseen OOS (${wf.out_of_sample_period||'2023-2026'}): <b class="up">${wf.out_of_sample_cagr_pct}% CAGR</b> · ${wf.out_of_sample_win_rate_pct}% WR · Sharpe ${wf.out_of_sample_sharpe}
-            </div>
-          </div>
-          <div style="background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px">
-            <b style="font-size:12.5px;display:block;margin-bottom:6px">2. Parameter Neighbor Stability (±15%)</b>
-            <div style="font-size:11.5px;color:var(--ink2);line-height:1.55">
-              ${nb.map(n=>`<span style="display:inline-block;margin-right:8px">${n.shift_pct}: <b>${n.cagr_pct}%</b> (${n.win_rate_pct}%)</span>`).join('')}
-            </div>
-          </div>
-          <div style="background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px">
-            <b style="font-size:12.5px;display:block;margin-bottom:6px">3. ${mc.n_simulations||5000}-Run Monte Carlo &amp; Outlier Drop</b>
-            <div style="font-size:12px;color:var(--ink2);line-height:1.55">
-              Median MaxDD: <b>${mc.max_dd_p50}%</b> (5th–95th: ${mc.max_dd_p5}%–${mc.max_dd_p95}%)<br>
-              10% Best Days Dropped CAGR: <b class="up">${mc.outlier_10pct_dropped_median_cagr}%</b>
-            </div>
-          </div>
-        </div>`;
-    } else {
-      tc.style.display='none';
-    }
-  }
-
   if($('bt-strat-sel'))$('bt-strat-sel').value=bt.id;
 
   if($('bt-hero-label'))$('bt-hero-label').textContent=`Simulated final value — ${bt.title}`;
@@ -3674,11 +3628,6 @@ function renderBacktest(){
 }
 
 
-
-async function setStocksBotFilter(flt){
-  D=await api('/api/v1/config/update',{stocks_active_filter:flt});
-  render();
-}
 
 async function setStocksBotFilter(flt){
   D=await api('/api/v1/config/update',{stocks_active_filter:flt});
