@@ -996,15 +996,23 @@ class TradingAppState:
                     item["trigger_price"] = 25.00
 
         sepa_flt = alloc.get("engine_sepa_swing", {}).get("params", {}).get("active_filter", "adaptive_hybrid_v2")
-        sepa_rows = [
-            s for s in screener_payload.get("setups", [])
-            if (s.get("strategy") == sepa_flt or (sepa_flt in ("adaptive_hybrid_v2", "institutional_fortress_swing", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal", "afzal_b3", "afzal_tranche", "afzal_50sma") and s.get("strategy") in ("afzal", sepa_flt, "adaptive_hybrid")))
-            and (s.get("top_focus") or s.get("stage") == 2 or s.get("rs_percentile", 0) >= 70)
-        ][:3]
+        if sepa_flt == "institutional_fortress_swing":
+            sepa_rows = [
+                s for s in screener_payload.get("setups", [])
+                if s.get("strategy") == "institutional_fortress_swing"
+            ][:3]
+        else:
+            sepa_rows = [
+                s for s in screener_payload.get("setups", [])
+                if (s.get("strategy") == sepa_flt or (sepa_flt in ("adaptive_hybrid_v2", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal", "afzal_b3", "afzal_tranche", "afzal_50sma") and s.get("strategy") in ("afzal", sepa_flt, "adaptive_hybrid")))
+                and (s.get("top_focus") or s.get("stage") == 2 or s.get("rs_percentile", 0) >= 70)
+            ][:3]
         for s in sepa_rows:
             d_sym = s.get("display_symbol", s["symbol"]).upper()
             live_px = live_q.get(d_sym) or live_q.get(f"{d_sym}.NS") or live_q.get(f"{d_sym}.BO") or float(s.get("price", 0.0))
             ai_verdict = (s.get("ai_decisions", {}).get(sepa_flt) or s.get("ai_decision") or {}).get("decision")
+            sig_up = str(s.get("signal", "")).upper()
+            is_ready = (sig_up in ("BUY ALERT", "SHORT ALERT")) if sepa_flt == "institutional_fortress_swing" else (s.get("top_focus") or ai_verdict == "ENTER")
             upcoming.insert(0, {
                 "symbol": f"{d_sym} ({sepa_flt.upper()})",
                 "engine": "SEPA SWING",
@@ -1013,7 +1021,7 @@ class TradingAppState:
                 "direction": "SHORT" if s.get("side") == "SHORT" else "LONG",
                 "ltp": round(float(live_px), 2),
                 "trigger_price": float(s.get("pivot", 0.0)),
-                "status": "ARMED" if e3_on and (s.get("top_focus") or ai_verdict == "ENTER") else ("ENGINE_OFF" if not e3_on else "WATCHING_RS"),
+                "status": "ARMED" if (e3_on and is_ready) else ("ENGINE_OFF" if not e3_on else "WATCHING_RS"),
             })
 
         # Prioritize ACTIVE engines so enabled Intraday (Alpha-Surge 2.0 / Quantum-Apex 3.0) & Swing setups appear BEFORE disabled ENGINE_OFF rows

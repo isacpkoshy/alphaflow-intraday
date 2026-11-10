@@ -1305,7 +1305,7 @@
 
           </div>
 
-          <div class="soft" style="font-size:12.5px;margin-top:3px">Automatically invoked using the selected strategy prompt (Minervini / Afzal Strike-4 / Hybrid) — zero API-key form needed.</div>
+          <div class="soft" style="font-size:12.5px;margin-top:3px">Automatically invoked using the selected strategy prompt (Institutional Fortress / Adaptive Swing / Afzal / Minervini) — zero API-key form needed.</div>
 
         </div>
 
@@ -4407,6 +4407,8 @@ function renderSepa(){
     if(s===strat)return true;
 
     if(strat==='afzal_b3'&&s==='afzal')return true;
+
+    if(strat==='institutional_fortress_swing'&&s==='institutional_fortress_swing')return true;
 
     if(strat==='adaptive_hybrid_v2'&&(s==='adaptive_hybrid_v2'||s==='adaptive_hybrid'||s==='afzal'))return true;
     if(strat==='adaptive_hybrid'&&(s==='adaptive_hybrid'||s==='afzal'))return true;

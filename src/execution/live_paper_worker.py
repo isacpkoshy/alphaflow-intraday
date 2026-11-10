@@ -666,11 +666,14 @@ class LivePaperTradingWorker:
 
         open_syms = {p.get("raw_symbol", "").replace(".NS", "").replace(".BO", "").upper() for p in open_sepa}
         payload = self.app.screener.get_universe_payload()
-        all_setups = [
-            s for s in payload.get("setups", [])
-            if s.get("strategy") == active_flt
-            or (active_flt in ("afzal", "afzal_b3", "adaptive_hybrid_v2", "institutional_fortress_swing", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal_tranche", "afzal_50sma") and s.get("strategy") in ("afzal", active_flt))
-        ]
+        if active_flt == "institutional_fortress_swing":
+            all_setups = [s for s in payload.get("setups", []) if s.get("strategy") == "institutional_fortress_swing"]
+        else:
+            all_setups = [
+                s for s in payload.get("setups", [])
+                if s.get("strategy") == active_flt
+                or (active_flt in ("afzal", "afzal_b3", "adaptive_hybrid_v2", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal_tranche", "afzal_50sma") and s.get("strategy") in ("afzal", active_flt))
+            ]
         if active_flt in ("explosive_velocity", "afzal_super"):
             all_setups = [s for s in all_setups if (s.get("rs_percentile") or 0) >= 80]
 
