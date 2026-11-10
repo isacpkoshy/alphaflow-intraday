@@ -96,6 +96,12 @@ STRATEGY_META = [
         "badge": "81.58% CAGR · 3-STATE TRAFFIC LIGHT",
         "description": "3-State Regime: Green Light (+3.0R Sprint) · Yellow Light (+1.85R Lock & Top 10% RS) · Red Light (Capital Preservation & Intraday MIS · +29.4% in 2026).",
     },
+    {
+        "id": "institutional_fortress_swing",
+        "name": "Strategy (NEW): Institutional Fortress Swing (10Y Zero-Lookahead · 105.29% CAGR · 61.54% WR)",
+        "badge": "105.29% 10Y CAGR · 61.54% WR · 1.77 SHARPE",
+        "description": "10-Year Zero-Lookahead Multi-Pillar Swing: Stage-2 3-Day Washout Springs, Prev-Low Undercut Reclaims, MA Pocket Pullbacks & Capped Parabolic Shorts (MaxDD 36.61%).",
+    },
 
     {
 
@@ -284,6 +290,12 @@ CHAMPIONSHIP_BACKTEST_SUMMARY = {
 }
 
 STRATEGY_AI_PROFILES: Dict[str, Dict[str, Any]] = {
+    "institutional_fortress_swing": {
+        "title": "Institutional Fortress Swing (10Y Zero-Lookahead - 105.29% CAGR / 61.54% WR)",
+        "rules": "1. 100% Zero Look-Ahead t-1 EOD + Open[t] entry discipline with Pessimistic Stop-First OHLC rules. 2. Long Pillars (Breadth >= 34-42%): Stage-2 3-Red-Bar Washout Springs, RS Leader Prev-Low Undercut Reclaims, SMA20/SMA50 Pocket Pullbacks, and Synchronized Flush Clusters (>=5 stocks). 3. Short Pillar: Capped (<=3/day) Parabolic Climax Exhaustions with Day-0 Squeeze Guard (1.020) and Strength Reclaim Harvest.",
+        "target_rr": 3.20,
+        "max_risk_pct": 6.0,
+    },
     "adaptive_hybrid_v2": {
         "title": "Next-Gen Adaptive Hybrid 2.0 (3-State Traffic Light - 81.6% CAGR)",
         "rules": "1. 3-State Traffic Light: Green Light (Breadth >= 50% and Nifty > 50-SMA) -> Target +3.0R with Chandelier PDL trail on RVOL >= 2.5x; Yellow Light (Breadth 30-50% or Nifty <= 50-SMA) -> Quick harvest at +1.85R to +2.0R, rapid breakeven ratchet at +1.35R, and strict RS >= 90th percentile leaders; Red Light (Breadth < 30% and Nifty < 200-SMA) -> 100% Cash preservation or rotate capital into Intraday MIS. 2. Stop Loss: Initial stop strictly at or under 5.0% below pivot. 3. Verdict: Mark ENTER only for Top 10% RS leaders aligned with active traffic light regime.",
@@ -380,7 +392,7 @@ class SEPAAnalystBrain:
                 r for r in rows
                 if r.get("strategy") in ("afzal", strat_key) and (float(r.get("volume_ratio") or 1.0) >= 1.15 or r.get("top_focus"))
             ]
-        elif strat_key in ("adaptive_hybrid_v2", "adaptive_hybrid", "afzal", "afzal_b3", "afzal_tranche", "afzal_50sma"):
+        elif strat_key in ("adaptive_hybrid_v2", "institutional_fortress_swing", "adaptive_hybrid", "afzal", "afzal_b3", "afzal_tranche", "afzal_50sma"):
             filtered = [
                 r for r in rows
                 if r.get("strategy") in ("afzal", strat_key)
@@ -504,6 +516,13 @@ class SEPAAnalystBrain:
         max_allowed_risk = float(profile.get("max_risk_pct", 5.0))
 
         regime_info = {
+            "institutional_fortress_swing": {
+                "market_regime": f"Institutional Fortress Swing (10Y Zero-Lookahead) · {len(rows)} Qualified Candidates (105.29% CAGR · 61.54% WR)",
+                "market_summary": (
+                    f"10-Year Zero-Lookahead Multi-Pillar Swing Engine audited over 2016-2026 (1.77 Sharpe, 36.61% MaxDD, OOS 95.37% CAGR). "
+                    f"Combines Stage-2 3-Red-Bar Washout Springs, Prev-Low Undercut Reclaims, and Capped Parabolic Climax Reversions."
+                ),
+            },
             "adaptive_hybrid_v2": {
                 "market_regime": f"Next-Gen Adaptive Hybrid 2.0 · {len(rows)} Setups Active (3-State Traffic Light · 81.6% CAGR)",
                 "market_summary": (
@@ -733,7 +752,12 @@ class SEPAAnalystBrain:
 
                 two_r = round(price + 2.0 * max(0.0, price - stop), 2)
 
-                if strat_key == "adaptive_hybrid_v2":
+                if strat_key == "institutional_fortress_swing":
+                    entry_plan = (
+                        f"Institutional Fortress Swing: Execute at Open[t] near ₹{pivot:,.2f}; harvest strength reclaim on Day 0..4 (+2.2% / Prev High close) "
+                        f"with hard stop at ₹{stop:,.2f} (105.29% 10Y CAGR · 61.54% WR)."
+                    )
+                elif strat_key == "adaptive_hybrid_v2":
                     entry_plan = (
                         f"Next-Gen Hybrid 2.0: Enter at pivot ₹{pivot:,.2f}; Green sprint +3.0R (₹{t_price:,.2f}) / Yellow lock +1.85R; "
                         f"ratchet stop to cost at +1.35R with 3-State Traffic Light cash protection."
@@ -942,7 +966,7 @@ class SEPAAnalystBrain:
 
             rs_str = f" (RS {rs:.1f})" if rs is not None else ""
 
-            if strat_key in ("adaptive_hybrid_v2", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal_tranche", "afzal_b3", "afzal_50sma", "afzal"):
+            if strat_key in ("adaptive_hybrid_v2", "institutional_fortress_swing", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal_tranche", "afzal_b3", "afzal_50sma", "afzal"):
 
                 afzal_stack = price >= sma44_v and sma10_v >= sma20_v * 0.995 and sma20_v >= sma44_v * 0.995 and price >= sma200_v
 
@@ -964,6 +988,16 @@ class SEPAAnalystBrain:
 
                         reasoning = f"[{strat_disp}] Broken fast momentum below 20-SMA (₹{sma20_v:,.2f}){rs_str}. Exit to lock profits."
 
+                elif strat_key == "institutional_fortress_swing":
+                    if trend_ok and setup_ok:
+                        decision = "HOLD"
+                        reasoning = f"[INSTITUTIONAL FORTRESS · 105.29% 10Y CAGR] Strength structure intact{rs_str}: Close ₹{price:,.2f} > 20-SMA ₹{sma20_v:,.2f}. Hold for Strength Reclaim or Day-4 Exit."
+                    elif afzal_stack or price >= sma50_v:
+                        decision = "HOLD"
+                        reasoning = f"[INSTITUTIONAL FORTRESS] Trend floor active{rs_str}: Close ₹{price:,.2f} above 50-SMA ₹{sma50_v:,.2f}; trail Pessimistic Stop."
+                    else:
+                        decision = "EXIT"
+                        reasoning = f"[INSTITUTIONAL FORTRESS] Violated trend support below 50-SMA ₹{sma50_v:,.2f}{rs_str}. Rotate back to cash."
                 elif strat_key == "adaptive_hybrid_v2":
                     regime_bull = price >= sma50_v
                     if trend_ok and setup_ok:
@@ -1171,6 +1205,7 @@ class AIScreenerDiscoveryEngine:
 
         for strat in (
             "adaptive_hybrid_v2",
+            "institutional_fortress_swing",
             "adaptive_hybrid",
             "explosive_velocity",
             "explosive_chandelier",
@@ -1393,7 +1428,7 @@ class AIScreenerDiscoveryEngine:
 
                     }
 
-                elif base_s == "afzal" and strat_k in ("adaptive_hybrid_v2", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal_tranche", "afzal_50sma", "afzal_b3"):
+                elif base_s == "afzal" and strat_k in ("adaptive_hybrid_v2", "institutional_fortress_swing", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal_tranche", "afzal_50sma", "afzal_b3"):
 
                     # Inherit base afzal verdict if specialized variant not explicitly reviewed
 
@@ -2149,7 +2184,7 @@ class AIScreenerDiscoveryEngine:
 
             stage_num = st_info.get("stage", 0)
 
-            if strat_key in ("adaptive_hybrid_v2", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal_tranche", "afzal_b3", "afzal_50sma", "afzal"):
+            if strat_key in ("adaptive_hybrid_v2", "institutional_fortress_swing", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal_tranche", "afzal_b3", "afzal_50sma", "afzal"):
 
                 if strat_key == "explosive_chandelier":
 

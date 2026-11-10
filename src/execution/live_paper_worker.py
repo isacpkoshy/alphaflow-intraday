@@ -372,8 +372,10 @@ class LivePaperTradingWorker:
 
     def _scan_and_enter_live_stocks(self, today_str: str, e1: Dict[str, Any], n_ret_prev: float, n_intraday_chg: float, is_hybrid_v2: bool = False) -> None:
         params1 = e1.get("params", {})
-        # Alpha-Surge 2.0 Intraday Institutional Parameters (163.36% 10Y CAGR · 53.8% Win Rate)
-        rvol_min = float(params1.get("rvol_min", 2.2))
+        stocks_flt = str(params1.get("active_filter", "alpha_surge_100")).lower()
+        is_quantum_apex = (stocks_flt == "quantum_apex_intraday")
+        # Alpha-Surge 2.0 Intraday Institutional Parameters OR Quantum-Apex 3.0 Intraday (151.13% 10Y CAGR · 56.28% WR)
+        rvol_min = 1.55 if is_quantum_apex else float(params1.get("rvol_min", 2.2))
         rs_min = float(params1.get("relative_strength_min_pct", 0.35))
         sl_pct = float(params1.get("stop_loss_pct", 1.75))
         tp1_rr = float(params1.get("tranche1_rr", 1.25))
@@ -513,8 +515,8 @@ class LivePaperTradingWorker:
                 "execution_mode": exec_res.get("mode", "PAPER"),
                 "date": today_str,
                 "engine_id": "engine_stocks_mis",
-                "strategy_origin": "alpha_surge_100",
-                "engine": "NEXT-GEN HYBRID (MIS)" if (is_hybrid_v2 and not e1.get("enabled")) else "ALPHA-SURGE 100+ MIS",
+                "strategy_origin": "quantum_apex_intraday" if is_quantum_apex else "alpha_surge_100",
+                "engine": "QUANTUM-APEX 3.0 MIS" if is_quantum_apex else ("NEXT-GEN HYBRID (MIS)" if (is_hybrid_v2 and not e1.get("enabled")) else "ALPHA-SURGE 100+ MIS"),
                 "raw_symbol": s,
                 "symbol": f"{sym_clean} (MIS)",
                 "side": side,
@@ -637,7 +639,9 @@ class LivePaperTradingWorker:
         max_pos = int(params.get("max_open_positions", 2))
         
         # Strategy-specific target R:R
-        if active_flt == "adaptive_hybrid_v2":
+        if active_flt == "institutional_fortress_swing":
+            target_rr = 3.20
+        elif active_flt == "adaptive_hybrid_v2":
             target_rr = 3.00
         elif active_flt == "adaptive_hybrid":
             target_rr = 2.75
@@ -662,7 +666,7 @@ class LivePaperTradingWorker:
         all_setups = [
             s for s in payload.get("setups", [])
             if s.get("strategy") == active_flt
-            or (active_flt in ("afzal", "afzal_b3", "adaptive_hybrid_v2", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal_tranche", "afzal_50sma") and s.get("strategy") in ("afzal", active_flt))
+            or (active_flt in ("afzal", "afzal_b3", "adaptive_hybrid_v2", "institutional_fortress_swing", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal_tranche", "afzal_50sma") and s.get("strategy") in ("afzal", active_flt))
         ]
         if active_flt in ("explosive_velocity", "afzal_super"):
             all_setups = [s for s in all_setups if (s.get("rs_percentile") or 0) >= 80]
@@ -769,6 +773,7 @@ class LivePaperTradingWorker:
                 "pos_id": swing_pos_id,
                 "date": today_str,
                 "engine_id": "engine_sepa_swing",
+                "strategy_origin": active_flt,
                 "engine": "SEPA SWING",
                 "raw_symbol": raw_sym,
                 "symbol": f"{sym} ({active_flt.upper()})",

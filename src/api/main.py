@@ -248,9 +248,9 @@ class TradingAppState:
             "trades_count": len(trades),
             "win_rate_pct": round(wins / len(trades) * 100.0, 1) if trades else 0.0,
             "charges": round(sum(t.get("charges", 0.0) for t in trades), 2),
-            "stocks_pnl": round(sum(t.get("net_pnl", 0.0) for t in trades if t.get("engine") in ("STOCKS MIS", "ALPHA-SURGE 100+ MIS", "Alpha-Surge 100+ MIS") or t.get("strategy_origin") == "alpha_surge_100"), 2),
+            "stocks_pnl": round(sum(t.get("net_pnl", 0.0) for t in trades if t.get("engine") in ("STOCKS MIS", "ALPHA-SURGE 100+ MIS", "Alpha-Surge 100+ MIS", "QUANTUM-APEX 3.0 MIS") or t.get("strategy_origin") in ("alpha_surge_100", "quantum_apex_intraday")), 2),
             "fo_pnl": round(sum(t.get("net_pnl", 0.0) for t in trades if t.get("engine") == "NIFTY F&O"), 2),
-            "sepa_pnl": round(sum(t.get("net_pnl", 0.0) for t in trades if t.get("engine") in ("SEPA SWING", "NEXT-GEN HYBRID (MIS)") or t.get("strategy_origin") == "adaptive_hybrid_v2"), 2),
+            "sepa_pnl": round(sum(t.get("net_pnl", 0.0) for t in trades if t.get("engine") in ("SEPA SWING", "NEXT-GEN HYBRID (MIS)") or t.get("strategy_origin") in ("adaptive_hybrid_v2", "institutional_fortress_swing")), 2),
             "trades": list(reversed(trades)),
             "broker_connected": False,
         }
@@ -454,12 +454,15 @@ class TradingAppState:
                 "reason": w.get("reason", "Target / Trail Exit"),
             })
 
-        is_as10y = strat_id in ("stocks_mis", "alpha_surge_100")
-        horizon_str = (
-            "10-Year Real NSE/BSE Intraday MIS (Oct 2016 – Oct 2026 · 2,332 Stocks · 2,477 Sessions)"
-            if is_as10y
-            else "5-Year Real NSE/BSE Daily Swing (Apr 2021 – Mar 2026 · 5,590 Stocks)"
-        )
+        is_as10y = strat_id in ("stocks_mis", "alpha_surge_100", "quantum_apex_intraday", "institutional_fortress_swing")
+        if strat_id in ("stocks_mis", "alpha_surge_100"):
+            horizon_str = "10-Year Real NSE/BSE Intraday MIS (Oct 2016 – Oct 2026 · 2,332 Stocks · 2,477 Sessions)"
+        elif strat_id == "quantum_apex_intraday":
+            horizon_str = "10-Year Real NSE Zero-Lookahead Intraday (2016 – 2026 · 2,213 Stocks · 2,377 Sessions)"
+        elif strat_id == "institutional_fortress_swing":
+            horizon_str = "10-Year Real NSE Zero-Lookahead Swing (2016 – 2026 · 2,213 Stocks · 2,267 Sessions)"
+        else:
+            horizon_str = "5-Year Real NSE/BSE Daily Swing (Apr 2021 – Mar 2026 · 5,590 Stocks)"
         return {
             "id": strat_id,
             "title": title,
@@ -475,6 +478,7 @@ class TradingAppState:
                 "win_rate_pct": round(win_rate, 1),
                 "max_drawdown_pct": -abs(round(max_dd_pct, 2)),
                 "profit_factor": round(pf, 2),
+                "sharpe_ratio": raw_model.get("sharpe_ratio"),
                 "total_trades": trades_cnt,
                 "total_charges_inr": est_charges,
                 "avg_win_pct": round(avg_win_pct, 2),
@@ -500,6 +504,8 @@ class TradingAppState:
             "daily_reports": [],
             "top_winners": top_winners_scaled,
             "exit_reasons": raw_model.get("exit_reasons", {}),
+            "torture_audit": raw_model.get("torture_audit"),
+            "liquidity_audit": raw_model.get("liquidity_audit"),
         }
 
     def _build_options_backtest(
@@ -747,6 +753,30 @@ class TradingAppState:
         }
 
         try:
+            qa_path = os.path.join(BASE_DIR, "data", "quantum_apex_intraday_10y_report.json")
+            if os.path.exists(qa_path):
+                with open(qa_path, "r", encoding="utf-8") as f:
+                    qa_data = json.load(f)
+                self.strategy_backtests["quantum_apex_intraday"] = self._build_sepa_5y_backtest(
+                    qa_data,
+                    "quantum_apex_intraday",
+                    f"Engine 1B (NEW): Quantum-Apex 3.0 Intraday (10Y Zero-Lookahead · {qa_data.get('cagr_pct', 151.13)}% CAGR · {qa_data.get('win_rate_pct', 56.28)}% WR)",
+                    f"100% Zero-Lookahead t-1 EOD + Open[t] · Uptrend Flush + Parabolic Exhaustion · 5,000-Run MC & 70/30 WF Verified ({qa_data.get('sharpe_ratio', 1.58)} Sharpe)",
+                    cap,
+                )
+
+            ifs_path = os.path.join(BASE_DIR, "data", "institutional_fortress_swing_10y_report.json")
+            if os.path.exists(ifs_path):
+                with open(ifs_path, "r", encoding="utf-8") as f:
+                    ifs_data = json.load(f)
+                self.strategy_backtests["institutional_fortress_swing"] = self._build_sepa_5y_backtest(
+                    ifs_data,
+                    "institutional_fortress_swing",
+                    f"Engine 3B (NEW): Institutional Fortress Swing (10Y Zero-Lookahead · {ifs_data.get('cagr_pct', 105.29)}% CAGR · {ifs_data.get('win_rate_pct', 61.54)}% WR)",
+                    f"100% Zero-Lookahead · 5-Pillar Stage-2 Washout & Climax Reversion · Pessimistic Stop-First · {ifs_data.get('max_drawdown_pct', 36.61)}% MaxDD ({ifs_data.get('sharpe_ratio', 1.77)} Sharpe)",
+                    cap,
+                )
+
             opt10_path = os.path.join(BASE_DIR, "data", "options_10y_meta_report.json")
             if os.path.exists(opt10_path):
                 with open(opt10_path, "r", encoding="utf-8") as f:
@@ -958,7 +988,7 @@ class TradingAppState:
         sepa_flt = alloc.get("engine_sepa_swing", {}).get("params", {}).get("active_filter", "adaptive_hybrid_v2")
         sepa_rows = [
             s for s in screener_payload.get("setups", [])
-            if (s.get("strategy") == sepa_flt or (sepa_flt in ("adaptive_hybrid_v2", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal", "afzal_b3", "afzal_tranche", "afzal_50sma") and s.get("strategy") in ("afzal", sepa_flt, "adaptive_hybrid")))
+            if (s.get("strategy") == sepa_flt or (sepa_flt in ("adaptive_hybrid_v2", "institutional_fortress_swing", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal", "afzal_b3", "afzal_tranche", "afzal_50sma") and s.get("strategy") in ("afzal", sepa_flt, "adaptive_hybrid")))
             and (s.get("top_focus") or s.get("stage") == 2 or s.get("rs_percentile", 0) >= 70)
         ][:3]
         for s in sepa_rows:

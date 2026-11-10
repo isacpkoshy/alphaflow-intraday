@@ -168,10 +168,15 @@ class EngineSwitchboard:
         elif "sepa_share_pct" in payload:
             sepa_pct = max(0.0, min(100.0, float(payload["sepa_share_pct"])))
             self.config["engines"]["engine_sepa_swing"]["capital_share_pct"] = sepa_pct
+        if "stocks_active_filter" in payload:
+            sflt = str(payload["stocks_active_filter"]).lower()
+            if sflt in ("alpha_surge_100", "quantum_apex_intraday"):
+                self.config["engines"]["engine_stocks_mis"]["params"]["active_filter"] = sflt
         if "sepa_active_filter" in payload:
             flt = str(payload["sepa_active_filter"]).lower()
             valid_filters = (
                 "adaptive_hybrid_v2",
+                "institutional_fortress_swing",
                 "adaptive_hybrid",
                 "explosive_velocity",
                 "explosive_chandelier",
