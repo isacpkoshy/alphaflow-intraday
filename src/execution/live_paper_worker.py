@@ -153,8 +153,7 @@ class LivePaperTradingWorker:
             self.market_state = "POST_MARKET_CLOSED (Next Auto-Start: Tomorrow 09:15 AM IST)"
             return {"status": self.market_state, "last_poll": self.last_poll_ist}
 
-        # Market is OPEN! Pull live 5m bars
-        self.market_state = "LIVE_MARKET_POLLING (Every 30s)"
+        # Pull live 5m bars to verify whether NSE is actively trading today (excludes exchange holidays)
         try:
             nifty_days = self._fetch_today_5m("^NSEI")
             vix_days = self._fetch_today_5m("^INDIAVIX")
@@ -163,7 +162,15 @@ class LivePaperTradingWorker:
             return {"status": self.market_state, "last_poll": self.last_poll_ist}
 
         if today_str not in nifty_days or len(nifty_days[today_str]) < 1:
-            return {"status": "WAITING_FOR_FIRST_CANDLE", "last_poll": self.last_poll_ist}
+            last_sess = max(nifty_days.keys()) if nifty_days else "N/A"
+            if hhmm >= 920:
+                self.market_state = f"NSE_HOLIDAY_CLOSED (No Session Today · Last Session: {last_sess})"
+            else:
+                self.market_state = "WAITING_FOR_FIRST_CANDLE (09:15 AM IST)"
+            return {"status": self.market_state, "last_poll": self.last_poll_ist}
+
+        # Market is genuinely OPEN with today's live NSE candles!
+        self.market_state = "LIVE_MARKET_POLLING (Every 30s)"
 
         n_bars = nifty_days[today_str]
         n_dates = sorted(list(nifty_days.keys()))
