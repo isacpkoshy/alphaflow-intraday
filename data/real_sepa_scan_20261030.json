@@ -1,5 +1,5 @@
 {
-  "scan_date": "2026-11-08",
+  "scan_date": "2026-11-09",
   "universe_scanned": 6110,
   "rs_universe_count": 4239,
   "setups": [
@@ -14,11 +14,11 @@
       "stage": 2,
       "stage_label": "STAGE 2 - ADVANCE",
       "side": "LONG",
-      "price": 405.45,
+      "price": 407.9,
       "pivot": 426.55,
       "stop": 382.73,
-      "risk_pct": 5.6,
-      "volume_ratio": 0.34,
+      "risk_pct": 6.17,
+      "volume_ratio": 0.68,
       "avg_volume20": 1647916.0,
       "rs_percentile": 93.3,
       "sma50": 385.28,
@@ -37,7 +37,7 @@
       "setup_type": "SETUP",
       "top_focus": false,
       "rank_score": 31.73,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "PTCIL",
@@ -50,11 +50,11 @@
       "stage": 2,
       "stage_label": "STAGE 2 - ADVANCE",
       "side": "LONG",
-      "price": 24415.0,
+      "price": 24745.0,
       "pivot": 24900.0,
       "stop": 23042.25,
-      "risk_pct": 5.62,
-      "volume_ratio": 0.12,
+      "risk_pct": 6.88,
+      "volume_ratio": 0.55,
       "avg_volume20": 22495.0,
       "rs_percentile": 92.4,
       "sma50": 23458.72,
@@ -73,7 +73,7 @@
       "setup_type": "SETUP",
       "top_focus": false,
       "rank_score": 11.09,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "GABRIEL",
@@ -86,11 +86,11 @@
       "stage": 2,
       "stage_label": "STAGE 2 - ADVANCE",
       "side": "LONG",
-      "price": 1395.5,
+      "price": 1420.2,
       "pivot": 1468.0,
       "stop": 1336.5,
-      "risk_pct": 4.23,
-      "volume_ratio": 0.1,
+      "risk_pct": 5.89,
+      "volume_ratio": 0.41,
       "avg_volume20": 299723.0,
       "rs_percentile": 84.2,
       "sma50": 1379.6,
@@ -109,7 +109,7 @@
       "setup_type": "SETUP",
       "top_focus": false,
       "rank_score": 8.42,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "DCI",
@@ -122,11 +122,11 @@
       "stage": 2,
       "stage_label": "STAGE 2 - ADVANCE",
       "side": "LONG",
-      "price": 330.4,
+      "price": 330.35,
       "pivot": 349.6,
       "stop": 316.9,
-      "risk_pct": 4.09,
-      "volume_ratio": 0.1,
+      "risk_pct": 4.07,
+      "volume_ratio": 0.12,
       "avg_volume20": 53102.0,
       "rs_percentile": 81.3,
       "sma50": 325.25,
@@ -145,7 +145,7 @@
       "setup_type": "SETUP",
       "top_focus": false,
       "rank_score": 8.13,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "GLOBAL",
@@ -158,11 +158,11 @@
       "stage": 2,
       "stage_label": "STAGE 2 - ADVANCE",
       "side": "LONG",
-      "price": 145.09,
+      "price": 144.28,
       "pivot": 151.09,
       "stop": 139.44,
-      "risk_pct": 3.89,
-      "volume_ratio": 0.09,
+      "risk_pct": 3.35,
+      "volume_ratio": 0.4,
       "avg_volume20": 88120.0,
       "rs_percentile": 83.1,
       "sma50": 134.2,
@@ -181,7 +181,7 @@
       "setup_type": "SETUP",
       "top_focus": false,
       "rank_score": 7.48,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "PASUPTAC",
@@ -194,11 +194,11 @@
       "stage": 2,
       "stage_label": "STAGE 2 - ADVANCE",
       "side": "LONG",
-      "price": 71.94,
+      "price": 70.2,
       "pivot": 74.94,
       "stop": 66.87,
-      "risk_pct": 7.05,
-      "volume_ratio": 0.07,
+      "risk_pct": 4.74,
+      "volume_ratio": 0.16,
       "avg_volume20": 597480.0,
       "rs_percentile": 87.5,
       "sma50": 70.84,
@@ -218,7 +218,7 @@
       "setup_type": "SETUP",
       "top_focus": false,
       "rank_score": 6.12,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "TECHM",
@@ -231,11 +231,11 @@
       "stage": 2,
       "stage_label": "STAGE 2 - ADVANCE",
       "side": "LONG",
-      "price": 1829.9,
+      "price": 1805.0,
       "pivot": 1860.0,
       "stop": 1715.87,
-      "risk_pct": 6.23,
-      "volume_ratio": 0.03,
+      "risk_pct": 4.94,
+      "volume_ratio": 0.67,
       "avg_volume20": 4178722.0,
       "rs_percentile": 84.9,
       "sma50": 1633.96,
@@ -255,7 +255,7 @@
       "setup_type": "SETUP",
       "top_focus": false,
       "rank_score": 2.55,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "SIEMENS",
@@ -268,11 +268,11 @@
       "stage": 3,
       "stage_label": "STAGE 3 \u00b7 TOPPING WATCH",
       "side": "WATCH",
-      "price": 3669.0,
+      "price": 3655.0,
       "pivot": 3180.6,
       "stop": 3815.76,
-      "risk_pct": 4.0,
-      "volume_ratio": 0.71,
+      "risk_pct": 4.4,
+      "volume_ratio": 1.41,
       "avg_volume20": 238910.0,
       "rs_percentile": 54.3,
       "sma50": 3718.01,
@@ -292,7 +292,7 @@
       "setup_type": "STAGE3",
       "top_focus": false,
       "rank_score": 32.46,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "INDUSINDBK",
@@ -305,11 +305,11 @@
       "stage": 3,
       "stage_label": "STAGE 3 \u00b7 TOPPING WATCH",
       "side": "WATCH",
-      "price": 903.0,
+      "price": 895.0,
       "pivot": 827.5,
       "stop": 939.12,
-      "risk_pct": 4.0,
-      "volume_ratio": 0.11,
+      "risk_pct": 4.93,
+      "volume_ratio": 0.91,
       "avg_volume20": 2874932.0,
       "rs_percentile": 52.6,
       "sma50": 914.88,
@@ -329,7 +329,7 @@
       "setup_type": "STAGE3",
       "top_focus": false,
       "rank_score": 5.21,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "SAIL",
@@ -342,11 +342,11 @@
       "stage": 3,
       "stage_label": "STAGE 3 \u00b7 TOPPING WATCH",
       "side": "WATCH",
-      "price": 171.2,
+      "price": 169.59,
       "pivot": 159.0,
       "stop": 178.05,
-      "risk_pct": 4.0,
-      "volume_ratio": 0.12,
+      "risk_pct": 4.99,
+      "volume_ratio": 1.04,
       "avg_volume20": 13828104.0,
       "rs_percentile": 48.1,
       "sma50": 177.18,
@@ -366,7 +366,7 @@
       "setup_type": "STAGE3",
       "top_focus": false,
       "rank_score": 6.23,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "ABB",
@@ -379,11 +379,11 @@
       "stage": 3,
       "stage_label": "STAGE 3 \u00b7 TOPPING WATCH",
       "side": "WATCH",
-      "price": 6859.5,
+      "price": 6915.0,
       "pivot": 6064.0,
       "stop": 7133.88,
-      "risk_pct": 4.0,
-      "volume_ratio": 0.2,
+      "risk_pct": 3.17,
+      "volume_ratio": 1.38,
       "avg_volume20": 307208.0,
       "rs_percentile": 57.4,
       "sma50": 6965.06,
@@ -403,7 +403,7 @@
       "setup_type": "STAGE3",
       "top_focus": false,
       "rank_score": 8.52,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "GVT&D",
@@ -416,11 +416,11 @@
       "stage": 3,
       "stage_label": "STAGE 3 \u00b7 TOPPING WATCH",
       "side": "WATCH",
-      "price": 4055.0,
+      "price": 4106.0,
       "pivot": 3533.4,
       "stop": 4217.2,
-      "risk_pct": 4.0,
-      "volume_ratio": 0.1,
+      "risk_pct": 2.71,
+      "volume_ratio": 0.5,
       "avg_volume20": 844122.0,
       "rs_percentile": 38.7,
       "sma50": 4212.15,
@@ -440,7 +440,7 @@
       "setup_type": "STAGE3",
       "top_focus": false,
       "rank_score": 6.13,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "NESTLEIND",
@@ -453,11 +453,11 @@
       "stage": 3,
       "stage_label": "STAGE 3 \u00b7 TOPPING WATCH",
       "side": "WATCH",
-      "price": 1273.5,
+      "price": 1297.8,
       "pivot": 1147.4,
       "stop": 1324.44,
-      "risk_pct": 4.0,
-      "volume_ratio": 0.07,
+      "risk_pct": 2.05,
+      "volume_ratio": 0.87,
       "avg_volume20": 2227503.0,
       "rs_percentile": 36.0,
       "sma50": 1322.25,
@@ -477,7 +477,7 @@
       "setup_type": "STAGE3",
       "top_focus": false,
       "rank_score": 4.48,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "OIL",
@@ -490,11 +490,11 @@
       "stage": 3,
       "stage_label": "STAGE 3 \u00b7 TOPPING WATCH",
       "side": "WATCH",
-      "price": 444.5,
+      "price": 439.0,
       "pivot": 427.7,
       "stop": 462.28,
-      "risk_pct": 4.0,
-      "volume_ratio": 0.14,
+      "risk_pct": 5.3,
+      "volume_ratio": 0.69,
       "avg_volume20": 1529090.0,
       "rs_percentile": 57.5,
       "sma50": 464.65,
@@ -514,7 +514,7 @@
       "setup_type": "STAGE3",
       "top_focus": false,
       "rank_score": 5.95,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "NAM-INDIA",
@@ -527,11 +527,11 @@
       "stage": 3,
       "stage_label": "STAGE 3 \u00b7 TOPPING WATCH",
       "side": "WATCH",
-      "price": 1075.0,
+      "price": 1073.5,
       "pivot": 881.6,
       "stop": 1118.0,
-      "risk_pct": 4.0,
-      "volume_ratio": 0.06,
+      "risk_pct": 4.15,
+      "volume_ratio": 1.16,
       "avg_volume20": 1105143.0,
       "rs_percentile": 56.9,
       "sma50": 1081.46,
@@ -551,7 +551,7 @@
       "setup_type": "STAGE3",
       "top_focus": false,
       "rank_score": 2.59,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "UJJIVANSFB",
@@ -564,11 +564,11 @@
       "stage": 3,
       "stage_label": "STAGE 3 \u00b7 TOPPING WATCH",
       "side": "WATCH",
-      "price": 60.47,
+      "price": 60.3,
       "pivot": 53.0,
       "stop": 62.89,
-      "risk_pct": 4.0,
-      "volume_ratio": 0.21,
+      "risk_pct": 4.3,
+      "volume_ratio": 0.49,
       "avg_volume20": 19589879.0,
       "rs_percentile": 55.9,
       "sma50": 62.74,
@@ -588,7 +588,7 @@
       "setup_type": "STAGE3",
       "top_focus": false,
       "rank_score": 9.25,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "TORNTPHARM",
@@ -601,11 +601,11 @@
       "stage": 3,
       "stage_label": "STAGE 3 \u00b7 TOPPING WATCH",
       "side": "WATCH",
-      "price": 4773.0,
+      "price": 4780.0,
       "pivot": 4466.8,
       "stop": 4963.92,
-      "risk_pct": 4.0,
-      "volume_ratio": 0.04,
+      "risk_pct": 3.85,
+      "volume_ratio": 1.28,
       "avg_volume20": 315218.0,
       "rs_percentile": 74.4,
       "sma50": 4780.91,
@@ -625,7 +625,7 @@
       "setup_type": "STAGE3",
       "top_focus": false,
       "rank_score": 1.03,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "AUBANK",
@@ -642,7 +642,7 @@
       "pivot": 845.1,
       "stop": 966.16,
       "risk_pct": 4.0,
-      "volume_ratio": 0.1,
+      "volume_ratio": 0.53,
       "avg_volume20": 2403186.0,
       "rs_percentile": 40.1,
       "sma50": 994.98,
@@ -662,7 +662,7 @@
       "setup_type": "STAGE3",
       "top_focus": false,
       "rank_score": 5.99,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "VOLTAS",
@@ -675,11 +675,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 1056.5,
+      "price": 1090.1,
       "pivot": 930.5,
       "stop": 1122.3,
-      "risk_pct": 6.23,
-      "volume_ratio": 0.72,
+      "risk_pct": 2.95,
+      "volume_ratio": 2.83,
       "avg_volume20": 900666.0,
       "rs_percentile": 25.4,
       "sma50": 1086.95,
@@ -703,7 +703,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 53.74,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "ASTRAL",
@@ -716,11 +716,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 1260.0,
+      "price": 1272.8,
       "pivot": 1215.5,
       "stop": 1438.0,
-      "risk_pct": 14.13,
-      "volume_ratio": 0.56,
+      "risk_pct": 12.98,
+      "volume_ratio": 1.67,
       "avg_volume20": 590892.0,
       "rs_percentile": 26.2,
       "sma50": 1411.06,
@@ -744,7 +744,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 41.31,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "AMBER",
@@ -757,11 +757,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 6354.0,
+      "price": 6230.0,
       "pivot": 5855.5,
       "stop": 6611.0,
-      "risk_pct": 4.04,
-      "volume_ratio": 0.4,
+      "risk_pct": 6.12,
+      "volume_ratio": 2.29,
       "avg_volume20": 155304.0,
       "rs_percentile": 14.2,
       "sma50": 6786.41,
@@ -784,7 +784,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 34.33,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "NBCC",
@@ -797,11 +797,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 78.25,
+      "price": 80.4,
       "pivot": 67.02,
       "stop": 81.15,
-      "risk_pct": 3.71,
-      "volume_ratio": 0.36,
+      "risk_pct": 0.93,
+      "volume_ratio": 1.32,
       "avg_volume20": 7996799.0,
       "rs_percentile": 22.2,
       "sma50": 78.83,
@@ -824,7 +824,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 27.99,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "CONCOR",
@@ -837,11 +837,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 441.6,
+      "price": 446.0,
       "pivot": 404.25,
       "stop": 446.35,
-      "risk_pct": 1.08,
-      "volume_ratio": 0.36,
+      "risk_pct": 0.08,
+      "volume_ratio": 0.58,
       "avg_volume20": 1067833.0,
       "rs_percentile": 30.2,
       "sma50": 459.8,
@@ -864,7 +864,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 25.12,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "MAZDOCK",
@@ -877,11 +877,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 1859.0,
+      "price": 1878.0,
       "pivot": 1687.5,
       "stop": 1935.6,
-      "risk_pct": 4.12,
-      "volume_ratio": 0.31,
+      "risk_pct": 3.07,
+      "volume_ratio": 0.52,
       "avg_volume20": 1063751.0,
       "rs_percentile": 12.2,
       "sma50": 2124.68,
@@ -904,7 +904,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 27.2,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "YESBANK",
@@ -917,11 +917,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 17.3,
+      "price": 17.03,
       "pivot": 15.1,
       "stop": 17.55,
-      "risk_pct": 1.45,
-      "volume_ratio": 0.25,
+      "risk_pct": 3.05,
+      "volume_ratio": 0.75,
       "avg_volume20": 184606828.0,
       "rs_percentile": 18.7,
       "sma50": 20.05,
@@ -944,7 +944,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 20.32,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "NMDC",
@@ -957,11 +957,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 71.0,
+      "price": 71.5,
       "pivot": 65.15,
       "stop": 71.35,
-      "risk_pct": 0.49,
-      "volume_ratio": 0.25,
+      "risk_pct": 0.21,
+      "volume_ratio": 1.83,
       "avg_volume20": 14638101.0,
       "rs_percentile": 25.7,
       "sma50": 76.03,
@@ -984,7 +984,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 18.57,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "RVNL",
@@ -997,11 +997,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 194.24,
+      "price": 201.7,
       "pivot": 177.86,
       "stop": 196.1,
-      "risk_pct": 0.96,
-      "volume_ratio": 0.23,
+      "risk_pct": 2.78,
+      "volume_ratio": 2.29,
       "avg_volume20": 4185536.0,
       "rs_percentile": 7.4,
       "sma50": 198.58,
@@ -1024,7 +1024,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 21.31,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "BDL",
@@ -1037,11 +1037,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 1069.0,
+      "price": 1109.65,
       "pivot": 974.0,
       "stop": 1100.8,
-      "risk_pct": 2.97,
-      "volume_ratio": 0.21,
+      "risk_pct": 0.8,
+      "volume_ratio": 1.57,
       "avg_volume20": 914828.0,
       "rs_percentile": 16.6,
       "sma50": 1127.53,
@@ -1064,7 +1064,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 17.51,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "TATAPOWER",
@@ -1077,11 +1077,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 353.4,
+      "price": 360.0,
       "pivot": 333.2,
       "stop": 366.9,
-      "risk_pct": 3.82,
-      "volume_ratio": 0.21,
+      "risk_pct": 1.92,
+      "volume_ratio": 1.02,
       "avg_volume20": 4352142.0,
       "rs_percentile": 27.6,
       "sma50": 355.71,
@@ -1104,7 +1104,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 15.2,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "COCHINSHIP",
@@ -1117,11 +1117,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 1236.5,
+      "price": 1290.0,
       "pivot": 1101.2,
       "stop": 1260.0,
-      "risk_pct": 1.9,
-      "volume_ratio": 0.21,
+      "risk_pct": 2.33,
+      "volume_ratio": 2.37,
       "avg_volume20": 736539.0,
       "rs_percentile": 11.9,
       "sma50": 1314.31,
@@ -1144,7 +1144,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 18.49,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "INOXWIND",
@@ -1157,11 +1157,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 65.38,
+      "price": 66.69,
       "pivot": 55.1,
       "stop": 66.35,
-      "risk_pct": 1.48,
-      "volume_ratio": 0.2,
+      "risk_pct": 0.51,
+      "volume_ratio": 1.02,
       "avg_volume20": 10925889.0,
       "rs_percentile": 7.0,
       "sma50": 68.74,
@@ -1184,7 +1184,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 18.59,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "SUPREMEIND",
@@ -1197,11 +1197,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 3220.0,
+      "price": 3296.6,
       "pivot": 3078.5,
       "stop": 3385.0,
-      "risk_pct": 5.12,
-      "volume_ratio": 0.2,
+      "risk_pct": 2.68,
+      "volume_ratio": 1.14,
       "avg_volume20": 225047.0,
       "rs_percentile": 39.5,
       "sma50": 3442.41,
@@ -1225,7 +1225,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 12.09,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "GODFRYPHLP",
@@ -1238,11 +1238,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 1798.8,
+      "price": 1774.8,
       "pivot": 1641.2,
       "stop": 1826.6,
-      "risk_pct": 1.55,
-      "volume_ratio": 0.2,
+      "risk_pct": 2.92,
+      "volume_ratio": 0.71,
       "avg_volume20": 271301.0,
       "rs_percentile": 17.1,
       "sma50": 1884.26,
@@ -1265,7 +1265,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 16.58,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "SUZLON",
@@ -1278,11 +1278,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 39.0,
+      "price": 38.91,
       "pivot": 33.15,
       "stop": 39.45,
-      "risk_pct": 1.15,
-      "volume_ratio": 0.19,
+      "risk_pct": 1.39,
+      "volume_ratio": 0.55,
       "avg_volume20": 92489967.0,
       "rs_percentile": 13.1,
       "sma50": 40.89,
@@ -1305,7 +1305,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 16.51,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "COALINDIA",
@@ -1318,11 +1318,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 401.0,
+      "price": 401.5,
       "pivot": 380.4,
       "stop": 411.0,
-      "risk_pct": 2.49,
-      "volume_ratio": 0.19,
+      "risk_pct": 2.37,
+      "volume_ratio": 0.98,
       "avg_volume20": 7503743.0,
       "rs_percentile": 39.0,
       "sma50": 412.17,
@@ -1345,7 +1345,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 11.58,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "BANDHANBNK",
@@ -1358,11 +1358,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 165.4,
+      "price": 168.6,
       "pivot": 143.69,
       "stop": 167.53,
-      "risk_pct": 1.29,
-      "volume_ratio": 0.18,
+      "risk_pct": 0.63,
+      "volume_ratio": 1.03,
       "avg_volume20": 11432075.0,
       "rs_percentile": 26.2,
       "sma50": 167.25,
@@ -1385,7 +1385,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 13.28,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "BRITANNIA",
@@ -1398,11 +1398,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 4781.0,
+      "price": 4790.0,
       "pivot": 4499.9,
       "stop": 5098.3,
-      "risk_pct": 6.64,
-      "volume_ratio": 0.15,
+      "risk_pct": 6.44,
+      "volume_ratio": 1.04,
       "avg_volume20": 258073.0,
       "rs_percentile": 37.0,
       "sma50": 4886.35,
@@ -1426,7 +1426,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 9.46,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "BIOCON",
@@ -1439,11 +1439,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 367.25,
+      "price": 368.5,
       "pivot": 318.4,
       "stop": 368.05,
-      "risk_pct": 0.22,
-      "volume_ratio": 0.15,
+      "risk_pct": 0.12,
+      "volume_ratio": 0.9,
       "avg_volume20": 3288345.0,
       "rs_percentile": 55.2,
       "sma50": 369.92,
@@ -1466,7 +1466,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 6.73,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "SBICARD",
@@ -1479,11 +1479,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 582.5,
+      "price": 590.15,
       "pivot": 519.05,
       "stop": 591.0,
-      "risk_pct": 1.46,
-      "volume_ratio": 0.14,
+      "risk_pct": 0.14,
+      "volume_ratio": 0.75,
       "avg_volume20": 1093972.0,
       "rs_percentile": 44.0,
       "sma50": 594.7,
@@ -1506,7 +1506,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 7.84,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "PFC",
@@ -1519,11 +1519,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 330.6,
+      "price": 338.3,
       "pivot": 310.3,
       "stop": 331.8,
-      "risk_pct": 0.36,
-      "volume_ratio": 0.14,
+      "risk_pct": 1.92,
+      "volume_ratio": 0.86,
       "avg_volume20": 8484408.0,
       "rs_percentile": 13.9,
       "sma50": 335.02,
@@ -1546,7 +1546,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 12.06,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "COROMANDEL",
@@ -1559,11 +1559,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 1827.1,
+      "price": 1879.2,
       "pivot": 1651.1,
       "stop": 1915.0,
-      "risk_pct": 4.81,
-      "volume_ratio": 0.14,
+      "risk_pct": 1.91,
+      "volume_ratio": 1.63,
       "avg_volume20": 175609.0,
       "rs_percentile": 52.3,
       "sma50": 1839.7,
@@ -1586,7 +1586,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 6.68,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "TIINDIA",
@@ -1599,11 +1599,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 2175.4,
+      "price": 2209.5,
       "pivot": 2005.2,
       "stop": 2332.0,
-      "risk_pct": 7.2,
-      "volume_ratio": 0.14,
+      "risk_pct": 5.54,
+      "volume_ratio": 0.49,
       "avg_volume20": 590798.0,
       "rs_percentile": 13.3,
       "sma50": 2406.63,
@@ -1627,7 +1627,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 12.14,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "CUMMINSIND",
@@ -1640,11 +1640,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 4115.0,
+      "price": 4135.2,
       "pivot": 3902.1,
       "stop": 4755.0,
-      "risk_pct": 15.55,
-      "volume_ratio": 0.13,
+      "risk_pct": 14.99,
+      "volume_ratio": 0.85,
       "avg_volume20": 832258.0,
       "rs_percentile": 19.8,
       "sma50": 4796.32,
@@ -1668,7 +1668,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 10.43,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "PIIND",
@@ -1681,11 +1681,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 1750.7,
+      "price": 1712.9,
       "pivot": 1716.4,
       "stop": 2215.0,
-      "risk_pct": 26.52,
-      "volume_ratio": 0.13,
+      "risk_pct": 29.31,
+      "volume_ratio": 1.8,
       "avg_volume20": 891456.0,
       "rs_percentile": 4.2,
       "sma50": 2227.69,
@@ -1698,7 +1698,7 @@
       "futures_contract": "PIIND FUT 23 NOV 26",
       "lot_size": 175,
       "futures_expiry": "2026-11-23",
-      "signal": "NO ENTRY",
+      "signal": "SHORT WATCH",
       "reasons": [
         "Price below falling, bearishly aligned 50/150/200-day averages",
         "Review the Stage 4 chart before enabling a short alert",
@@ -1709,7 +1709,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 12.45,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "FORTIS",
@@ -1722,11 +1722,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 773.65,
+      "price": 774.55,
       "pivot": 704.95,
       "stop": 822.55,
-      "risk_pct": 6.32,
-      "volume_ratio": 0.12,
+      "risk_pct": 6.2,
+      "volume_ratio": 0.52,
       "avg_volume20": 1380666.0,
       "rs_percentile": 27.9,
       "sma50": 820.3,
@@ -1750,7 +1750,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 8.65,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "WAAREEENER",
@@ -1763,11 +1763,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 2439.0,
+      "price": 2444.0,
       "pivot": 2161.5,
       "stop": 2473.8,
-      "risk_pct": 1.43,
-      "volume_ratio": 0.12,
+      "risk_pct": 1.22,
+      "volume_ratio": 0.62,
       "avg_volume20": 832411.0,
       "rs_percentile": 18.8,
       "sma50": 2459.24,
@@ -1790,7 +1790,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 9.74,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "SWIGGY",
@@ -1803,11 +1803,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 192.3,
+      "price": 188.0,
       "pivot": 174.2,
       "stop": 193.9,
-      "risk_pct": 0.83,
-      "volume_ratio": 0.11,
+      "risk_pct": 3.14,
+      "volume_ratio": 0.51,
       "avg_volume20": 22814668.0,
       "rs_percentile": 11.0,
       "sma50": 240.18,
@@ -1830,7 +1830,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 9.79,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "COLPAL",
@@ -1843,11 +1843,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 1692.8,
+      "price": 1695.0,
       "pivot": 1563.9,
       "stop": 1699.9,
-      "risk_pct": 0.42,
-      "volume_ratio": 0.11,
+      "risk_pct": 0.29,
+      "volume_ratio": 0.38,
       "avg_volume20": 543895.0,
       "rs_percentile": 20.9,
       "sma50": 1770.04,
@@ -1870,7 +1870,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 8.7,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "SHRIRAMFIN",
@@ -1883,11 +1883,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 960.05,
+      "price": 965.0,
       "pivot": 810.1,
       "stop": 974.7,
-      "risk_pct": 1.53,
-      "volume_ratio": 0.11,
+      "risk_pct": 1.01,
+      "volume_ratio": 0.86,
       "avg_volume20": 5842714.0,
       "rs_percentile": 53.0,
       "sma50": 965.62,
@@ -1910,7 +1910,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 5.17,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "KAYNES",
@@ -1923,11 +1923,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 3263.0,
+      "price": 3300.0,
       "pivot": 3112.0,
       "stop": 3557.0,
-      "risk_pct": 9.01,
-      "volume_ratio": 0.11,
+      "risk_pct": 7.79,
+      "volume_ratio": 0.64,
       "avg_volume20": 615332.0,
       "rs_percentile": 14.7,
       "sma50": 3418.41,
@@ -1951,7 +1951,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 9.39,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "NATIONALUM",
@@ -1964,11 +1964,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 325.9,
+      "price": 329.0,
       "pivot": 293.0,
       "stop": 333.2,
-      "risk_pct": 2.24,
-      "volume_ratio": 0.1,
+      "risk_pct": 1.28,
+      "volume_ratio": 0.8,
       "avg_volume20": 5019108.0,
       "rs_percentile": 27.6,
       "sma50": 341.58,
@@ -1991,7 +1991,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 7.24,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "LTF",
@@ -2004,11 +2004,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 272.27,
+      "price": 273.7,
       "pivot": 229.2,
       "stop": 280.9,
-      "risk_pct": 3.17,
-      "volume_ratio": 0.1,
+      "risk_pct": 2.63,
+      "volume_ratio": 0.39,
       "avg_volume20": 5461641.0,
       "rs_percentile": 43.2,
       "sma50": 279.02,
@@ -2031,7 +2031,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 5.68,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "RECLTD",
@@ -2044,11 +2044,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 297.25,
+      "price": 305.15,
       "pivot": 281.9,
       "stop": 300.9,
-      "risk_pct": 1.23,
-      "volume_ratio": 0.09,
+      "risk_pct": 1.39,
+      "volume_ratio": 0.74,
       "avg_volume20": 5663682.0,
       "rs_percentile": 30.5,
       "sma50": 304.13,
@@ -2071,7 +2071,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 6.26,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "LICI",
@@ -2084,11 +2084,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 396.85,
+      "price": 399.0,
       "pivot": 377.1,
       "stop": 417.35,
-      "risk_pct": 5.17,
-      "volume_ratio": 0.09,
+      "risk_pct": 4.6,
+      "volume_ratio": 0.86,
       "avg_volume20": 6954573.0,
       "rs_percentile": 59.0,
       "sma50": 398.81,
@@ -2112,7 +2112,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 3.69,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "VMM",
@@ -2125,11 +2125,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 94.0,
+      "price": 92.62,
       "pivot": 84.16,
       "stop": 95.44,
-      "risk_pct": 1.53,
-      "volume_ratio": 0.07,
+      "risk_pct": 3.04,
+      "volume_ratio": 0.6,
       "avg_volume20": 10506996.0,
       "rs_percentile": 19.4,
       "sma50": 98.51,
@@ -2152,7 +2152,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 5.64,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "LUPIN",
@@ -2165,11 +2165,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 1997.0,
+      "price": 2025.0,
       "pivot": 1892.9,
       "stop": 2062.1,
-      "risk_pct": 3.26,
-      "volume_ratio": 0.07,
+      "risk_pct": 1.83,
+      "volume_ratio": 1.08,
       "avg_volume20": 693453.0,
       "rs_percentile": 32.6,
       "sma50": 2038.7,
@@ -2192,7 +2192,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 4.72,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "UPL",
@@ -2205,11 +2205,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 533.8,
+      "price": 541.5,
       "pivot": 481.9,
       "stop": 547.95,
-      "risk_pct": 2.65,
-      "volume_ratio": 0.07,
+      "risk_pct": 1.19,
+      "volume_ratio": 0.87,
       "avg_volume20": 2263425.0,
       "rs_percentile": 30.3,
       "sma50": 540.57,
@@ -2232,7 +2232,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 4.88,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "KEI",
@@ -2245,11 +2245,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 4010.0,
+      "price": 4002.7,
       "pivot": 3666.1,
       "stop": 4108.5,
-      "risk_pct": 2.46,
-      "volume_ratio": 0.07,
+      "risk_pct": 2.64,
+      "volume_ratio": 0.37,
       "avg_volume20": 590194.0,
       "rs_percentile": 23.5,
       "sma50": 4510.16,
@@ -2272,7 +2272,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 5.35,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "ICICILIFE",
@@ -2285,11 +2285,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 437.6,
+      "price": 438.4,
       "pivot": 401.65,
       "stop": 441.0,
-      "risk_pct": 0.78,
-      "volume_ratio": 0.06,
+      "risk_pct": 0.59,
+      "volume_ratio": 1.45,
       "avg_volume20": 1679487.0,
       "rs_percentile": 21.1,
       "sma50": 456.43,
@@ -2312,7 +2312,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 4.73,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "DMART",
@@ -2325,11 +2325,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 3425.0,
+      "price": 3466.9,
       "pivot": 3102.3,
       "stop": 3465.8,
-      "risk_pct": 1.19,
-      "volume_ratio": 0.05,
+      "risk_pct": 0.03,
+      "volume_ratio": 0.36,
       "avg_volume20": 725739.0,
       "rs_percentile": 22.3,
       "sma50": 3562.68,
@@ -2352,7 +2352,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 3.89,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "POLICYBZR",
@@ -2365,11 +2365,11 @@
       "stage": 4,
       "stage_label": "STAGE 4 \u00b7 DECLINE",
       "side": "SHORT",
-      "price": 967.0,
+      "price": 953.8,
       "pivot": 916.0,
       "stop": 1041.9,
-      "risk_pct": 7.75,
-      "volume_ratio": 0.05,
+      "risk_pct": 9.24,
+      "volume_ratio": 0.88,
       "avg_volume20": 2610691.0,
       "rs_percentile": 5.1,
       "sma50": 1327.55,
@@ -2393,7 +2393,7 @@
       "setup_type": "STAGE4",
       "top_focus": false,
       "rank_score": 4.75,
-      "candle_date": "2026-11-08"
+      "candle_date": "2026-11-09"
     },
     {
       "symbol": "SRF",

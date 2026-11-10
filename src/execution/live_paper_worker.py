@@ -51,6 +51,8 @@ class LivePaperTradingWorker:
         self.squared_off_dates = set()
         self.daily_circuit_tripped = set()
         self.live_quotes: Dict[str, float] = {}
+        self.live_upcoming_stocks: List[Dict[str, Any]] = []
+        self._last_upcoming_refresh: float = 0.0
         self._restore_daily_state()
         self.thread = threading.Thread(target=self._run_loop, daemon=True)
         self.thread.start()
@@ -167,10 +169,12 @@ class LivePaperTradingWorker:
                 self.market_state = f"NSE_HOLIDAY_CLOSED (No Session Today · Last Session: {last_sess})"
             else:
                 self.market_state = "WAITING_FOR_FIRST_CANDLE (09:15 AM IST)"
+            self._refresh_live_upcoming_stocks(nifty_days, last_sess)
             return {"status": self.market_state, "last_poll": self.last_poll_ist}
 
         # Market is genuinely OPEN with today's live NSE candles!
         self.market_state = "LIVE_MARKET_POLLING (Every 30s)"
+        self._refresh_live_upcoming_stocks(nifty_days, today_str)
 
         n_bars = nifty_days[today_str]
         n_dates = sorted(list(nifty_days.keys()))
@@ -245,6 +249,92 @@ class LivePaperTradingWorker:
                 self._scan_and_enter_live_sepa_swing(today_str, e3)
 
         return {"status": self.market_state, "last_poll": self.last_poll_ist}
+
+    def _refresh_live_upcoming_stocks(self, nifty_days: Dict[str, Any], target_sess: str) -> None:
+        """Dynamically scores all 30 liquid NSE leaders on `target_sess` (never hardcoded) for the Upcoming queue."""
+        now_ts = time.time()
+        if (now_ts - self._last_upcoming_refresh) < 120.0 and self.live_upcoming_stocks:
+            return
+        try:
+            n_bars = nifty_days.get(target_sess, [])
+            if len(n_bars) < 3:
+                return
+            n_dates = sorted(list(nifty_days.keys()))
+            prev_n_idx = n_dates.index(target_sess) - 1 if target_sess in n_dates else -2
+            prev_n_close = nifty_days[n_dates[prev_n_idx]][-1]["c"] if prev_n_idx >= 0 else n_bars[0]["o"]
+            n_ret_prev = (n_bars[2]["c"] - prev_n_close) / prev_n_close * 100.0 if prev_n_close > 0 else 0.0
+
+            alloc = self.app.switchboard.compute_effective_allocations(self.app.account.get("starting_capital", 300000.0))
+            e1 = alloc.get("engine_stocks_mis", {})
+            enable_stocks = bool(e1.get("enabled", True))
+            p1 = e1.get("params", {})
+            rvol_min = float(p1.get("rvol_min", 2.2))
+            rs_min = float(p1.get("relative_strength_min_pct", 0.35))
+
+            scored = []
+            for s in STOCKS_LIST:
+                try:
+                    s_days = self._fetch_today_5m(s)
+                    bars = s_days.get(target_sess, [])
+                    if len(bars) < 3:
+                        continue
+                    ltp = round(float(bars[-1]["c"]), 2)
+                    self.live_quotes[s] = ltp
+                    self.live_quotes[s.replace(".NS", "")] = ltp
+
+                    s_dates = sorted(list(s_days.keys()))
+                    p_idx = s_dates.index(target_sess) - 1 if target_sess in s_dates else -2
+                    prev_c = s_days[s_dates[p_idx]][-1]["c"] if p_idx >= 0 else bars[0]["o"]
+
+                    orb_h = max(b["h"] for b in bars[:3])
+                    orb_l = min(b["l"] for b in bars[:3])
+                    orb_c = bars[2]["c"]
+                    orb_v = sum(b["v"] for b in bars[:3])
+                    past_v = [sum(b["v"] for b in s_days[d][:3]) for d in s_dates if d < target_sess and len(s_days[d]) >= 3]
+                    avg_v = (sum(past_v) / len(past_v)) if past_v else (orb_v or 1.0)
+                    rvol = round((orb_v / avg_v) if avg_v > 0 else 1.0, 2)
+                    rs = round(((orb_c - prev_c) / prev_c * 100.0) - n_ret_prev, 2) if prev_c > 0 else 0.0
+                    score = abs(rs) * math.sqrt(max(0.1, rvol))
+                    scored.append((score, s, ltp, orb_h, orb_l, rvol, rs))
+                except Exception:
+                    continue
+
+            scored.sort(key=lambda x: x[0], reverse=True)
+            out = []
+            for score, s, ltp, orb_h, orb_l, rvol, rs in scored[:12]:
+                ticker = s.replace(".NS", "")
+                is_bull = rs >= 0
+                trig = round(orb_h if is_bull else orb_l, 2)
+                if not enable_stocks:
+                    st = "ENGINE_OFF"
+                    note = "Stocks MIS Engine Switched OFF"
+                elif rvol >= rvol_min and abs(rs) >= rs_min:
+                    st = "ARMED"
+                    note = f"Live Scanner Qualified ({target_sess} · RVOL {rvol}x · RS {rs:+.2f}%)"
+                elif rvol < rvol_min:
+                    st = "WAITING_RVOL"
+                    note = f"Needs RVOL >= {rvol_min}x (Current {rvol}x)"
+                else:
+                    st = "WATCHING_RS"
+                    note = f"Needs |RS| >= {rs_min}% (Current {rs:+.2f}%)"
+
+                out.append({
+                    "symbol": f"{ticker} (MIS)",
+                    "engine": "STOCKS MIS",
+                    "engine_id": "engine_stocks_mis",
+                    "direction": "LONG" if is_bull else "SHORT",
+                    "ltp": ltp,
+                    "trigger_price": trig,
+                    "rvol": rvol,
+                    "rs_vs_nifty": rs,
+                    "status": st,
+                    "qualification": note,
+                })
+            if out:
+                self.live_upcoming_stocks = out
+                self._last_upcoming_refresh = now_ts
+        except Exception as e:
+            logger.debug("Failed live upcoming refresh: %s", e)
 
     def _poll_sepa_and_watchlist_quotes(self, today_str: str) -> None:
         """Fetches real-time tick prices for open positions, screener leaders, and upcoming watch setups."""
