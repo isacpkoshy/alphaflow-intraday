@@ -268,8 +268,10 @@ class LivePaperTradingWorker:
             e1 = alloc.get("engine_stocks_mis", {})
             enable_stocks = bool(e1.get("enabled", True))
             p1 = e1.get("params", {})
-            rvol_min = float(p1.get("rvol_min", 2.2))
-            rs_min = float(p1.get("relative_strength_min_pct", 0.35))
+            stocks_flt = str(p1.get("active_filter", "alpha_surge_100")).lower()
+            is_qa = (stocks_flt == "quantum_apex_intraday")
+            rvol_min = 1.55 if is_qa else float(p1.get("rvol_min", 2.2))
+            rs_min = 0.25 if is_qa else float(p1.get("relative_strength_min_pct", 0.35))
 
             scored = []
             for s in STOCKS_LIST:
@@ -310,7 +312,7 @@ class LivePaperTradingWorker:
                     note = "Stocks MIS Engine Switched OFF"
                 elif rvol >= rvol_min and abs(rs) >= rs_min:
                     st = "ARMED"
-                    note = f"Live Scanner Qualified ({target_sess} · RVOL {rvol}x · RS {rs:+.2f}%)"
+                    note = f"{'Quantum-Apex 3.0' if is_qa else 'Live Scanner'} Qualified ({target_sess} · RVOL {rvol}x · RS {rs:+.2f}%)"
                 elif rvol < rvol_min:
                     st = "WAITING_RVOL"
                     note = f"Needs RVOL >= {rvol_min}x (Current {rvol}x)"
@@ -320,7 +322,8 @@ class LivePaperTradingWorker:
 
                 out.append({
                     "symbol": f"{ticker} (MIS)",
-                    "engine": "STOCKS MIS",
+                    "engine": "QUANTUM-APEX 3.0 MIS" if is_qa else "STOCKS MIS",
+                    "strategy_origin": "quantum_apex_intraday" if is_qa else "alpha_surge_100",
                     "engine_id": "engine_stocks_mis",
                     "direction": "LONG" if is_bull else "SHORT",
                     "ltp": ltp,

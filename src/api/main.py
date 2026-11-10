@@ -948,12 +948,22 @@ class TradingAppState:
         live_q = self.live_worker.live_quotes or {}
 
         # Enrich upcoming_signals: prefer dynamically scored live_upcoming_stocks over offline cache
+        stocks_flt = str(alloc.get("engine_stocks_mis", {}).get("params", {}).get("active_filter", "alpha_surge_100")).lower()
+        is_qa_active = (stocks_flt == "quantum_apex_intraday")
         upcoming = []
         live_stocks_list = getattr(self.live_worker, "live_upcoming_stocks", None) or []
-        cached_non_stocks = [sig for sig in self.cached_sim.get("upcoming_signals", []) if sig.get("engine") != "STOCKS MIS"]
+        cached_non_stocks = [sig for sig in self.cached_sim.get("upcoming_signals", []) if sig.get("engine") not in ("STOCKS MIS", "QUANTUM-APEX 3.0 MIS")]
         source_signals = (live_stocks_list + cached_non_stocks) if live_stocks_list else self.cached_sim.get("upcoming_signals", [])
         for sig in source_signals:
             item = dict(sig)
+            if item.get("engine") in ("STOCKS MIS", "ALPHA-SURGE 2.0 MIS", "QUANTUM-APEX 3.0 MIS"):
+                item["engine"] = "QUANTUM-APEX 3.0 MIS" if is_qa_active else "STOCKS MIS"
+                item["strategy_origin"] = stocks_flt
+                if is_qa_active and e1_on and item.get("status") != "ENGINE_OFF":
+                    rv = float(item.get("rvol") or 0.0)
+                    rs_v = abs(float(item.get("rs_vs_nifty") or 0.0))
+                    if rv >= 1.55 and rs_v >= 0.25:
+                        item["status"] = "ARMED"
             sym_clean = str(item.get("symbol", "")).replace(" (MIS)", "").strip()
             if sym_clean in live_q:
                 item["ltp"] = round(float(live_q[sym_clean]), 2)
@@ -998,6 +1008,7 @@ class TradingAppState:
             upcoming.insert(0, {
                 "symbol": f"{d_sym} ({sepa_flt.upper()})",
                 "engine": "SEPA SWING",
+                "strategy_origin": sepa_flt,
                 "engine_id": "engine_sepa_swing",
                 "direction": "SHORT" if s.get("side") == "SHORT" else "LONG",
                 "ltp": round(float(live_px), 2),
@@ -1005,8 +1016,8 @@ class TradingAppState:
                 "status": "ARMED" if e3_on and (s.get("top_focus") or ai_verdict == "ENTER") else ("ENGINE_OFF" if not e3_on else "WATCHING_RS"),
             })
 
-        # Prioritize ACTIVE engines so enabled Intraday (Alpha-Surge 2.0 MIS) & Swing setups appear BEFORE disabled ENGINE_OFF rows
-        stocks_rows = [u for u in upcoming if u.get("engine") in ("STOCKS MIS", "ALPHA-SURGE 2.0 MIS") and u.get("status") != "ENGINE_OFF"]
+        # Prioritize ACTIVE engines so enabled Intraday (Alpha-Surge 2.0 / Quantum-Apex 3.0) & Swing setups appear BEFORE disabled ENGINE_OFF rows
+        stocks_rows = [u for u in upcoming if u.get("engine") in ("STOCKS MIS", "ALPHA-SURGE 2.0 MIS", "QUANTUM-APEX 3.0 MIS") and u.get("status") != "ENGINE_OFF"]
         fo_rows = [u for u in upcoming if u.get("engine") == "NIFTY F&O" and u.get("status") != "ENGINE_OFF"]
         sepa_active = [u for u in upcoming if u.get("engine") == "SEPA SWING" and u.get("status") != "ENGINE_OFF"]
         off_rows = [u for u in upcoming if u.get("status") == "ENGINE_OFF"]
@@ -1296,6 +1307,8 @@ class AlphaFlowRequestHandler(BaseHTTPRequestHandler):
             from datetime import datetime, timezone, timedelta
             ist = timezone(timedelta(hours=5, minutes=30))
             today_str = datetime.now(ist).strftime("%Y-%m-%d")
+            APP_STATE.live_worker._last_upcoming_refresh = 0.0
+            APP_STATE.live_worker.live_upcoming_stocks = []
             if today_str not in getattr(APP_STATE.live_worker, "daily_circuit_tripped", set()):
                 APP_STATE.live_worker.traded_dates_stocks.discard(today_str)
                 try:

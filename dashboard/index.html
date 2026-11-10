@@ -470,25 +470,29 @@
 
   /* Strategy cards */
 
-  .strats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px}
+  .strats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:16px;align-items:stretch}
 
-  .strat{padding:18px 20px;transition:opacity .2s}
+  .strat{padding:18px 20px;transition:opacity .2s;display:flex;flex-direction:column;justify-content:space-between;min-width:0}
 
   .strat.off{opacity:.55}
 
   .strat-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 
+  .strat-top>div{min-width:0;flex:1}
+
+  .strat .sc-sel{max-width:100%;width:100%;text-overflow:ellipsis}
+
   .strat h3{font-size:15px;font-weight:600}
 
   .strat p{color:var(--ink2);font-size:12.5px;margin-top:3px;line-height:1.4}
 
-  .strat-row{display:flex;gap:20px;margin-top:16px;flex-wrap:wrap}
+  .strat-row{display:flex;gap:16px;margin-top:auto;padding-top:16px;flex-wrap:wrap}
 
   .strat-row div span{display:block;font-size:12px;color:var(--ink3)}
 
   .strat-row div b{font-size:15px;font-weight:600}
 
-  .strat-foot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:12px;border-top:1px solid var(--line2)}
+  .strat-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--line2)}
 
   .seg{display:inline-flex;background:var(--line2);border-radius:8px;padding:3px}
 
@@ -763,7 +767,7 @@
 
           <span class="sb-dot g" id="sb-e1-dot"></span>
 
-          <span class="sb-strat-name">Alpha-Surge 100+ MIS</span>
+          <span class="sb-strat-name" id="sb-e1-name">Alpha-Surge 100+ MIS</span>
 
           <span class="sb-strat-val" id="sb-e1-val">&#8377;90,000</span>
 
@@ -783,7 +787,7 @@
 
           <span class="sb-dot g" id="sb-e3-dot"></span>
 
-          <span class="sb-strat-name">Next-Gen Adaptive Swing</span>
+          <span class="sb-strat-name" id="sb-e3-name">Next-Gen Adaptive Swing</span>
 
           <span class="sb-strat-val" id="sb-e3-val">&#8377;75,000</span>
 
@@ -3306,6 +3310,8 @@ function renderProfileAndSidebar(a, A, t){
 
   if($('sb-e1-val') && a.engine_stocks_mis) {
     const on1 = Boolean(a.engine_stocks_mis.enabled);
+    const flt1 = (a.engine_stocks_mis.params && a.engine_stocks_mis.params.active_filter) || 'alpha_surge_100';
+    if($('sb-e1-name')) $('sb-e1-name').textContent = flt1 === 'quantum_apex_intraday' ? 'Quantum-Apex 3.0 MIS' : 'Alpha-Surge 100+ MIS';
     $('sb-e1-val').textContent = on1 ? inr(a.engine_stocks_mis.allocated_capital_inr) : 'OFF';
     if($('sb-e1-dot')) $('sb-e1-dot').className = on1 ? 'sb-dot g' : 'sb-dot';
   }
@@ -3316,6 +3322,21 @@ function renderProfileAndSidebar(a, A, t){
   }
   if($('sb-e3-val') && e3) {
     const on3 = Boolean(e3.enabled);
+    const flt3 = (e3.params && e3.params.active_filter) || 'adaptive_hybrid_v2';
+    const sb3Names = {
+      'institutional_fortress_swing': 'Institutional Fortress',
+      'adaptive_hybrid_v2': 'Next-Gen Adaptive Swing',
+      'adaptive_hybrid': 'All-Weather Adaptive',
+      'explosive_velocity': 'Explosive Velocity',
+      'explosive_chandelier': 'Explosive Chandelier',
+      'afzal_super': 'Super-Charged Afzal',
+      'afzal': 'Afzal Strike-4',
+      'afzal_b3': 'Afzal Strike-4',
+      'afzal_tranche': 'Afzal 3-Tranche',
+      'minervini': 'Minervini SEPA VCP',
+      'afzal_50sma': 'Afzal 50-SMA Runner',
+    };
+    if($('sb-e3-name')) $('sb-e3-name').textContent = sb3Names[flt3] || 'SEPA & Afzal Swing';
     $('sb-e3-val').textContent = on3 ? inr(e3.allocated_capital_inr) : 'OFF';
     if($('sb-e3-dot')) $('sb-e3-dot').className = on3 ? 'sb-dot g' : 'sb-dot';
   }
@@ -3684,9 +3705,13 @@ function strats(a,A,t){
 
       e: e1,
 
-      title: 'Alpha-Surge 100+ Intraday',
+      title: (e1.params && e1.params.active_filter)==='quantum_apex_intraday'
+        ? 'Quantum-Apex 3.0 Intraday (NEW)'
+        : 'Alpha-Surge 100+ Intraday',
 
-      desc: '50/50 Tranche Lock (+1.25R / +3.5R) · RVOL >= 2.2x · 1.75% SL · 56.4% WR (163.4% 10Y CAGR)',
+      desc: (e1.params && e1.params.active_filter)==='quantum_apex_intraday'
+        ? '10Y Zero-Lookahead t-1 EOD + Open[t] · Uptrend Flush + Parabolic Short · RVOL >= 1.55x (151.13% 10Y CAGR · 56.28% WR)'
+        : '50/50 Tranche Lock (+1.25R / +3.5R) · RVOL >= 2.2x · 1.75% SL · 56.4% WR (150.75% 10Y CAGR)',
 
       pnl: A.stocks_pnl,
 
@@ -3896,7 +3921,30 @@ function badge(st, time){
 
 const nice=s=>s.replace(' (MIS)','');
 
-const strat=e=>e==='NIFTY F&O'?'Nifty options':e==='SEPA SWING'?'Next-Gen Adaptive Swing':(e==='NEXT-GEN HYBRID (MIS)'||e==='Next-Gen Hybrid (MIS)'?'Alpha-Surge 100+ MIS':'Alpha-Surge 100+ MIS');
+const SEPA_LABELS={
+  'institutional_fortress_swing':'Institutional Fortress Swing',
+  'adaptive_hybrid_v2':'Next-Gen Adaptive Swing',
+  'adaptive_hybrid':'All-Weather Adaptive Hybrid',
+  'explosive_velocity':'Explosive Velocity Sprint',
+  'explosive_chandelier':'Explosive Chandelier Trail',
+  'afzal_super':'Super-Charged Afzal Strike-4',
+  'afzal':'Afzal Strike-4 Championship',
+  'afzal_b3':'Afzal Strike-4 Championship',
+  'afzal_tranche':'Afzal 3-Tranche Scaling',
+  'minervini':'Minervini Stage 2 VCP',
+  'afzal_50sma':'Afzal 50-SMA Position Runner',
+};
+function strat(e, orig){
+  if(e==='NIFTY F&O') return 'Nifty options';
+  if(e==='QUANTUM-APEX 3.0 MIS' || orig==='quantum_apex_intraday') return 'Quantum-Apex 3.0 MIS';
+  if(e==='NEXT-GEN HYBRID (MIS)' || e==='Next-Gen Hybrid (MIS)') return 'Next-Gen Hybrid (MIS)';
+  if(e==='SEPA SWING'){
+    const act = (orig && SEPA_LABELS[orig]) ? orig : ((D&&D.allocations&&D.allocations.engine_sepa_swing&&D.allocations.engine_sepa_swing.params&&D.allocations.engine_sepa_swing.params.active_filter)||'adaptive_hybrid_v2');
+    return SEPA_LABELS[act] || 'Next-Gen Adaptive Swing';
+  }
+  const stAct = orig || (D&&D.allocations&&D.allocations.engine_stocks_mis&&D.allocations.engine_stocks_mis.params&&D.allocations.engine_stocks_mis.params.active_filter)||'alpha_surge_100';
+  return stAct==='quantum_apex_intraday' ? 'Quantum-Apex 3.0 MIS' : 'Alpha-Surge 100+ MIS';
+}
 
 
 
@@ -3908,7 +3956,7 @@ function recent(){
 
     const dStr=x.entry_date&&x.entry_date!==x.date?`${x.date} (held since ${x.entry_date})`:x.date;
 
-    return `<tr><td class="sym">${nice(x.symbol)}<small>${dStr}</small></td><td class="soft">${strat(x.engine)}</td><td>${badge(x.status, x.exit_time || x.time)}</td><td class="r num ${cls(x.net_pnl)}"><b>${inr(x.net_pnl,true)}</b></td></tr>`;
+    return `<tr><td class="sym">${nice(x.symbol)}<small>${dStr}</small></td><td class="soft">${strat(x.engine, x.strategy_origin)}</td><td>${badge(x.status, x.exit_time || x.time)}</td><td class="r num ${cls(x.net_pnl)}"><b>${inr(x.net_pnl,true)}</b></td></tr>`;
 
   }).join('')
 
@@ -3944,7 +3992,7 @@ function open_(){
 
       <td class="sym">${nice(x.symbol)} ${marginBadge}
 
-        <small>${(!D.allocations?.engine_stocks_mis?.enabled && D.allocations?.engine_sepa_swing?.enabled && (D.allocations?.engine_sepa_swing?.params?.active_filter==='adaptive_hybrid_v2') && x.engine_id==='engine_stocks_mis') ? 'Next-Gen Hybrid (MIS)' : strat(x.engine)} · ${x.side.toLowerCase()} · since ${x.date||'today'} · <b>Margin: ${inr(marginUsed)}</b> (Notional: ${inr(notional)})</small>
+        <small>${(!D.allocations?.engine_stocks_mis?.enabled && D.allocations?.engine_sepa_swing?.enabled && (D.allocations?.engine_sepa_swing?.params?.active_filter==='adaptive_hybrid_v2') && x.engine_id==='engine_stocks_mis') ? 'Next-Gen Hybrid (MIS)' : strat(x.engine, x.strategy_origin)} · ${x.side.toLowerCase()} · since ${x.date||'today'} · <b>Margin: ${inr(marginUsed)}</b> (Notional: ${inr(notional)})</small>
 
       </td>
 
@@ -3984,7 +4032,7 @@ function upcoming(){
 
   const u=D.simulation.upcoming_signals.slice(0,12);
 
-  $('upcoming').innerHTML=u.map(x=>`<tr><td class="sym">${nice(x.symbol)}<small>${(!D.allocations?.engine_stocks_mis?.enabled && D.allocations?.engine_sepa_swing?.enabled && (D.allocations?.engine_sepa_swing?.params?.active_filter==='adaptive_hybrid_v2') && x.engine_id==='engine_stocks_mis') ? 'Next-Gen Hybrid (MIS)' : strat(x.engine)}</small></td><td class="soft">${x.direction.includes('SHORT')||x.direction.includes('SELL')?'Sell':'Buy'} ${x.engine==='NIFTY F&O'?'':'on breakout'}</td>
+  $('upcoming').innerHTML=u.map(x=>`<tr><td class="sym">${nice(x.symbol)}<small>${(!D.allocations?.engine_stocks_mis?.enabled && D.allocations?.engine_sepa_swing?.enabled && (D.allocations?.engine_sepa_swing?.params?.active_filter==='adaptive_hybrid_v2') && x.engine_id==='engine_stocks_mis') ? 'Next-Gen Hybrid (MIS)' : strat(x.engine, x.strategy_origin)}</small></td><td class="soft">${x.direction.includes('SHORT')||x.direction.includes('SELL')?'Sell':'Buy'} ${x.engine==='NIFTY F&O'?'':'on breakout'}</td>
 
    <td class="r num">₹${x.ltp.toFixed(2)}</td><td class="r num">₹${x.trigger_price.toFixed(2)}</td><td>${badge(x.status, x.exit_time || x.time)}</td></tr>`).join('');
 
@@ -3996,7 +4044,7 @@ function history_(){
 
   let rows=F==='all'?[...ex,...rj].sort((a,b)=>(b.date+b.time).localeCompare(a.date+a.time)):F==='win'?ex.filter(x=>x.net_pnl>0):F==='loss'?ex.filter(x=>x.net_pnl<=0):rj;
 
-  $('history').innerHTML=rows.length?rows.slice(0,200).map(x=>`<tr><td class="soft num">${x.date}</td><td class="sym">${nice(x.symbol)}<small>${x.status==='FILTERED_OUT'||x.status==='RMS_REGIME_BLOCK'?x.reason:strat(x.engine)+(x.entry_date&&x.entry_date!==x.date?' · held since '+x.entry_date:'')}</small></td>
+  $('history').innerHTML=rows.length?rows.slice(0,200).map(x=>`<tr><td class="soft num">${x.date}</td><td class="sym">${nice(x.symbol)}<small>${x.status==='FILTERED_OUT'||x.status==='RMS_REGIME_BLOCK'?x.reason:strat(x.engine, x.strategy_origin)+(x.entry_date&&x.entry_date!==x.date?' · held since '+x.entry_date:'')}</small></td>
 
    <td class="soft">${x.side.includes('BUY')?'Buy':'Sell'}</td><td class="r num soft">${x.qty?`₹${x.entry_price.toFixed(2)} → ₹${x.exit_price.toFixed(2)}`:'—'}</td><td>${badge(x.status, x.exit_time || x.time)}</td>
 
