@@ -933,7 +933,7 @@
 
     <div class="note" id="broker-note" style="background:var(--green-soft);color:#095c3a">
 
-      <b>Auto-Paper Trading Engine is ARMED for Monday 09:15 AM IST:</b> <span id="worker-status-text">Checking live NSE feed…</span>
+      <b id="worker-status-title">Auto-Paper Trading Engine Status:</b> <span id="worker-status-text">Checking live NSE feed…</span>
 
     </div>
 
@@ -3175,7 +3175,31 @@ function render(){
 
   if($('trades-feed-pill'))$('trades-feed-pill').textContent=w.last_poll_ist?`● Live NSE Tick Feed Active (${w.last_poll_ist.split(' ')[1]} IST)`:'● Live NSE Feed Active';
 
-  if($('worker-status-text'))$('worker-status-text').textContent=`${w.market_state||'STANDBY'} — Live NSE tick quotes polling every 8s, auto-entering intraday & SEPA Swing paper trades, trailing stop-losses (+1R/+2R), and squaring off intraday legs at 15:15 PM.`;
+  const ms=String(w.market_state||'STANDBY');
+  const bn=$('broker-note'), bt=$('worker-status-title'), bx=$('worker-status-text');
+  if(bn && bt && bx){
+    if(ms.includes('NSE_HOLIDAY_CLOSED')){
+      bn.style.background='#fff8e6'; bn.style.color='#7a4f01'; bn.style.border='1px solid #f5d061';
+      bt.textContent='NSE / BSE Market Holiday Today:';
+      bx.textContent=`${ms}. Live intraday entries are paused for today's exchange holiday and will auto-resume at 09:15 AM IST on the next trading day.`;
+    } else if(ms.includes('WEEKEND_CLOSED')){
+      bn.style.background='#f4f4f5'; bn.style.color='#3f3f46'; bn.style.border='1px solid #e4e4e7';
+      bt.textContent='Market Closed (Weekend):';
+      bx.textContent=`${ms} — Auto-Paper Trading Engine will resume scanning at Monday 09:15 AM IST.`;
+    } else if(ms.includes('RMS_CIRCUIT_BREAKER')){
+      bn.style.background='#fef2f2'; bn.style.color='#991b1b'; bn.style.border='1px solid #fecaca';
+      bt.textContent='Daily Loss Circuit Breaker Active:';
+      bx.textContent=`${ms} — Intraday entries halted for today; overnight SEPA Swing stops remain protected.`;
+    } else if(ms.includes('POST_MARKET') || ms.includes('PRE_MARKET') || ms.includes('EOD_INTRADAY')){
+      bn.style.background='#f0f9ff'; bn.style.color='#075985'; bn.style.border='1px solid #bae6fd';
+      bt.textContent='Auto-Paper Trading Engine Armed:';
+      bx.textContent=`${ms} — Ready for next live 09:15 AM – 15:30 PM IST NSE session.`;
+    } else {
+      bn.style.background='var(--green-soft)'; bn.style.color='#095c3a'; bn.style.border='1px solid #bbf7d0';
+      bt.textContent='Auto-Paper Trading Engine LIVE:';
+      bx.textContent=`${ms} — Live NSE tick quotes polling, auto-entering intraday & SEPA Swing trades, trailing stop-losses, and squaring off intraday legs at 15:15 PM.`;
+    }
+  }
 
 
 

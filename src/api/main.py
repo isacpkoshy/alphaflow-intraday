@@ -917,9 +917,12 @@ class TradingAppState:
         sim_payload = dict(self.cached_sim)
         live_q = self.live_worker.live_quotes or {}
 
-        # Enrich upcoming_signals with live prices + top SEPA/Afzal Swing setups
+        # Enrich upcoming_signals: prefer dynamically scored live_upcoming_stocks over offline cache
         upcoming = []
-        for sig in self.cached_sim.get("upcoming_signals", []):
+        live_stocks_list = getattr(self.live_worker, "live_upcoming_stocks", None) or []
+        cached_non_stocks = [sig for sig in self.cached_sim.get("upcoming_signals", []) if sig.get("engine") != "STOCKS MIS"]
+        source_signals = (live_stocks_list + cached_non_stocks) if live_stocks_list else self.cached_sim.get("upcoming_signals", [])
+        for sig in source_signals:
             item = dict(sig)
             sym_clean = str(item.get("symbol", "")).replace(" (MIS)", "").strip()
             if sym_clean in live_q:
