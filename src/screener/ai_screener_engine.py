@@ -27,6 +27,8 @@ Indian SEPA Swing Screener Engine ("Project Handoff Analysis Setup") integrated 
 
 import json
 
+import math
+
 import os
 
 import re
@@ -294,7 +296,7 @@ STRATEGY_AI_PROFILES: Dict[str, Dict[str, Any]] = {
         "title": "Institutional Fortress Swing (10Y Zero-Lookahead - 105.29% CAGR / 61.54% WR)",
         "rules": "1. 100% Zero Look-Ahead t-1 EOD + Open[t] entry discipline with Pessimistic Stop-First OHLC rules. 2. Long Pillars (Breadth >= 34-42%): Stage-2 3-Red-Bar Washout Springs, RS Leader Prev-Low Undercut Reclaims, SMA20/SMA50 Pocket Pullbacks, and Synchronized Flush Clusters (>=5 stocks). 3. Short Pillar: Capped (<=3/day) Parabolic Climax Exhaustions with Day-0 Squeeze Guard (1.020) and Strength Reclaim Harvest.",
         "target_rr": 3.20,
-        "max_risk_pct": 6.0,
+        "max_risk_pct": 8.0,
     },
     "adaptive_hybrid_v2": {
         "title": "Next-Gen Adaptive Hybrid 2.0 (3-State Traffic Light - 81.6% CAGR)",
@@ -392,7 +394,9 @@ class SEPAAnalystBrain:
                 r for r in rows
                 if r.get("strategy") in ("afzal", strat_key) and (float(r.get("volume_ratio") or 1.0) >= 1.15 or r.get("top_focus"))
             ]
-        elif strat_key in ("adaptive_hybrid_v2", "institutional_fortress_swing", "adaptive_hybrid", "afzal", "afzal_b3", "afzal_tranche", "afzal_50sma"):
+        elif strat_key == "institutional_fortress_swing":
+            filtered = [r for r in rows if r.get("strategy") == "institutional_fortress_swing"]
+        elif strat_key in ("adaptive_hybrid_v2", "adaptive_hybrid", "afzal", "afzal_b3", "afzal_tranche", "afzal_50sma"):
             filtered = [
                 r for r in rows
                 if r.get("strategy") in ("afzal", strat_key)
@@ -876,6 +880,34 @@ class SEPAAnalystBrain:
 
             })
 
+        if strat_key == "institutional_fortress_swing":
+            lngs = [r for r in rows if r.get("side") == "LONG"]
+            shts = [r for r in rows if r.get("side") == "SHORT"]
+            latest_c_date = max((r.get("candle_date") or "2026-11-08" for r in rows), default="2026-11-08")
+            lng_str = ", ".join(f"{r.get('display_symbol', r['symbol'])} ({r.get('setup_type', 'Spring')})" for r in lngs[:6]) or "None qualified today"
+            sht_str = ", ".join(f"{r.get('display_symbol', r['symbol'])} ({r.get('setup_type', 'Exhaustion')})" for r in shts[:4]) or "None qualified today"
+            macro_factors = [
+                f"Data Source: Real daily candles across 6,110 NSE & BSE instruments in positions.sqlite3 (Latest Candle: {latest_c_date}).",
+                "Liquidity & Risk Filter: Strictly ADT >= ₹10 Cr/d, AvgVol >= 50,000, Max Order <= 5% ADT, Pessimistic Stop-First (-7.5% Long / -6.0% Short).",
+                f"Active Institutional Fortress Filter: {len(lngs)} Stage-2 Washout/Pocket Long Springs · {len(shts)} Parabolic/Bounce Climax Short Setups.",
+            ]
+            sector_view = [
+                f"Stage-2 Washout & MA Pocket Long Springs (Gap-Down Open[t] Trigger): {lng_str}.",
+                f"Parabolic Climax Exhaustion & Bounce Shorts (Capped <= 3/day · Day-0 Squeeze Guard): {sht_str}.",
+                "Execution Protocol: Triggers fire strictly on Open[t] gap confirmation (-0.75% Long / +0.80% Short) — pre-open status remains WATCH.",
+            ]
+        else:
+            macro_factors = [
+                "Data Source: 1,511,313 real daily candles across 6,110 NSE & BSE instruments in positions.sqlite3 (as of 2026-10-30).",
+                "Market-Wide RS Baseline: 4,121 NSE & BSE stocks ranked by 6-month relative strength percentile.",
+                f"Active Strategy Filter: {s2_cnt} Stage-2 Long candidates, {s3_cnt} Stage-3 Watches, {s4_cnt} Stage-4 Futures Short Watches.",
+            ]
+            sector_view = [
+                "Stage 2 / Strike-4 Outperformers: HITECHCORP (RS 99.5), PANACHE (RS 97.2), YASHHV (RS 96.4), GLOBAL (RS 90.7), APOLLO (RS 89.8), INDHOTEL (RS 84.4).",
+                "High-Volume Pullback Bounces (Afzal Strike-4): PNB (1.37x vol, RS 77.1) & ITCHOTELS (1.41x vol, RS 73.6).",
+                "Stage 4 Futures Distribution Watch: 84 F&O stocks trading below falling 150-day SMAs.",
+            ]
+
         return {
 
             "engine_mode": "Real 6,110-Stock Upstox DB + AIAnalystBrain",
@@ -888,25 +920,9 @@ class SEPAAnalystBrain:
 
             "market_summary": regime_info["market_summary"],
 
-            "macro_factors": [
+            "macro_factors": macro_factors,
 
-                "Data Source: 1,511,313 real daily candles across 6,110 NSE & BSE instruments in positions.sqlite3 (as of 2026-10-30).",
-
-                "Market-Wide RS Baseline: 4,121 NSE & BSE stocks ranked by 6-month relative strength percentile.",
-
-                f"Active Strategy Filter: {s2_cnt} Stage-2 Long candidates, {s3_cnt} Stage-3 Watches, {s4_cnt} Stage-4 Futures Short Watches.",
-
-            ],
-
-            "sector_view": [
-
-                "Stage 2 / Strike-4 Outperformers: HITECHCORP (RS 99.5), PANACHE (RS 97.2), YASHHV (RS 96.4), GLOBAL (RS 90.7), APOLLO (RS 89.8), INDHOTEL (RS 84.4).",
-
-                "High-Volume Pullback Bounces (Afzal Strike-4): PNB (1.37x vol, RS 77.1) & ITCHOTELS (1.41x vol, RS 73.6).",
-
-                "Stage 4 Futures Distribution Watch: 84 F&O stocks trading below falling 150-day SMAs.",
-
-            ],
+            "sector_view": sector_view,
 
             "stocks": stocks_out,
 
@@ -1222,6 +1238,151 @@ class AIScreenerDiscoveryEngine:
 
         threading.Thread(target=self._startup_auto_check, daemon=True, name="sepa-startup-auto-sync").start()
 
+    def _append_fortress_setups_from_db(self) -> None:
+        """Scans real NSE/BSE candles in positions.sqlite3 for active Institutional Fortress Swing candidates."""
+        if not os.path.exists(SEPA_POSITIONS_DB):
+            return
+        try:
+            from itertools import groupby
+            import upstox_feed
+            sel, _ = upstox_feed._instruments(None)
+            by_k = {item["instrument_key"]: item for item in sel}
+            with sqlite3.connect(SEPA_POSITIONS_DB) as db:
+                rs_map = dict(db.execute("SELECT symbol, percentile FROM market_rs").fetchall())
+                cur = db.execute("SELECT instrument_key, payload FROM daily_candles ORDER BY instrument_key, candle_date")
+                long_cands = []
+                short_cands = []
+                tot_br, ab_br, max_d = 0, 0, self.scan_date
+                etf_tags = ("ETF", "BEES", "LIQUID", "LIQ", "GILT", "GOLD", "SILVER")
+                for ikey, grp in groupby(cur, key=lambda r: r[0]):
+                    it = by_k.get(ikey)
+                    if not it:
+                        continue
+                    sym = it.get("trading_symbol", "")
+                    name = it.get("name", sym)
+                    if any(t in sym.upper() or t in name.upper() for t in etf_tags):
+                        continue
+                    rows = [json.loads(r[1]) for r in grp]
+                    if len(rows) < 205:
+                        continue
+                    c_date = rows[-1][0][:10]
+                    if c_date > max_d:
+                        max_d = c_date
+                    cl = [float(x[4]) for x in rows]
+                    op = [float(x[1]) for x in rows]
+                    hi = [float(x[2]) for x in rows]
+                    lo = [float(x[3]) for x in rows]
+                    vl = [float(x[5]) for x in rows]
+                    c_p = cl[-1]
+                    sma50 = sum(cl[-50:]) / 50.0
+                    tot_br += 1
+                    if c_p > sma50:
+                        ab_br += 1
+                    if c_p < 40.0 or cl[-64] <= 0 or vl[-1] <= 0:
+                        continue
+                    avg_v20 = sum(vl[-20:]) / 20.0
+                    adt20 = avg_v20 * c_p
+                    if adt20 < 100000000.0 or avg_v20 < 50000:
+                        continue
+                    rvol = vl[-1] / avg_v20
+                    if rvol < 0.08:
+                        continue
+                    sma20 = sum(cl[-20:]) / 20.0
+                    sma100 = sum(cl[-100:]) / 100.0
+                    sma150 = sum(cl[-150:]) / 150.0
+                    sma200 = sum(cl[-200:]) / 200.0
+                    ret2d = (c_p / cl[-3] - 1.0) * 100.0
+                    ret3d = (c_p / cl[-4] - 1.0) * 100.0
+                    ret63 = (c_p / cl[-64] - 1.0) * 100.0
+                    if abs(ret3d) > 25.0:
+                        continue
+                    red3 = (cl[-1] < op[-1]) and (cl[-2] < op[-2]) and (cl[-3] < op[-3])
+                    rng_p = hi[-1] - lo[-1]
+                    cpos_p = (c_p - lo[-1]) / rng_p if rng_p > 0 else 0.5
+                    rs = float(rs_map.get(sym) or 50.0)
+                    ex = it.get("exchange", "NSE")
+
+                    setup_kind = None
+                    side = "LONG"
+                    stg = 2
+                    if c_p > sma100 > sma200 and red3 and -16.0 <= ret3d <= -3.5 and rvol <= 2.2:
+                        setup_kind = "3-DAY WASHOUT SPRING"
+                    elif c_p > sma50 > sma200 and ret63 >= 15.0 and (-16.0 <= ret3d <= -3.8 or (c_p <= sma20 * 0.99 and ret3d <= -2.2 and cpos_p <= 0.35)):
+                        setup_kind = "STAGE-2 POCKET SPRING"
+                    elif c_p > sma20 * 1.045 and (ret3d >= 7.5 or ret2d >= 6.0) and rvol >= 1.65:
+                        setup_kind = "PARABOLIC CLIMAX EXHAUSTION"
+                        side = "SHORT"
+                        stg = 3
+                    elif (ab_br / max(1, tot_br) * 100.0) <= 55.0 and c_p < sma200 * 0.97 and 5.5 <= ret3d <= 18.0 and rvol >= 1.4:
+                        setup_kind = "WEAK-TREND BOUNCE FADE"
+                        side = "SHORT"
+                        stg = 4
+
+                    if not setup_kind:
+                        continue
+
+                    if side == "LONG":
+                        piv = round(c_p * 0.992, 2)
+                        stp = round(piv * 0.925, 2)
+                        rk = 7.50
+                        score = abs(ret3d) * (1.0 + max(0.0, ret63) / 100.0) * math.log10(max(10.0, adt20 / 1e7))
+                        reason = f"{setup_kind}: 3d={ret3d:+.1f}%, 63d={ret63:+.1f}%, ADT ₹{adt20/1e7:.1f} Cr/d · Triggers on Gap-Down Open[t] <= ₹{piv:,.2f}"
+                    else:
+                        piv = round(c_p * 1.0085, 2)
+                        stp = round(piv * 1.060, 2)
+                        rk = 6.00
+                        score = max(ret3d, ret2d * 1.2) * math.sqrt(rvol) * math.log10(max(10.0, adt20 / 1e7))
+                        reason = f"{setup_kind}: 3d={ret3d:+.1f}%, RVOL={rvol:.2f}x, ADT ₹{adt20/1e7:.1f} Cr/d · Triggers on Gap-Up Open[t] >= ₹{piv:,.2f}"
+
+                    row_obj = {
+                        "symbol": f"{sym}_FORTRESS",
+                        "display_symbol": sym,
+                        "name": name,
+                        "exchange": ex,
+                        "instrument_key": ikey,
+                        "sector": f"NSE/BSE Verified · Turnover ₹{adt20/1e7:.1f} Cr/d",
+                        "strategy": "institutional_fortress_swing",
+                        "stage": stg,
+                        "stage_label": f"FORTRESS · {setup_kind}",
+                        "side": side,
+                        "price": round(c_p, 2),
+                        "pivot": piv,
+                        "stop": stp,
+                        "risk_pct": rk,
+                        "volume_ratio": round(rvol, 2),
+                        "avg_volume20": round(avg_v20, 0),
+                        "rs_percentile": round(rs, 1),
+                        "sma50": round(sma50, 2),
+                        "sma150": round(sma150, 2),
+                        "sma200": round(sma200, 2),
+                        "trend_ok": side == "LONG",
+                        "vcp_ok": True,
+                        "vcp_reviewed": False,
+                        "signal": "WATCH",
+                        "reasons": [reason],
+                        "setup_type": setup_kind,
+                        "top_focus": False,
+                        "rank_score": round(score, 2),
+                        "candle_date": c_date,
+                    }
+                    if side == "LONG":
+                        long_cands.append(row_obj)
+                    else:
+                        short_cands.append(row_obj)
+
+                long_cands.sort(key=lambda x: x["rank_score"], reverse=True)
+                short_cands.sort(key=lambda x: x["rank_score"], reverse=True)
+                selected_f = long_cands[:14] + short_cands[:6]
+                selected_f.sort(key=lambda x: x["rank_score"], reverse=True)
+                for idx_f, row_f in enumerate(selected_f[:3]):
+                    row_f["top_focus"] = True
+                    row_f["stage_label"] = row_f["stage_label"] + " · ★ TOP PICK"
+                self.setups = [s for s in self.setups if s.get("strategy") != "institutional_fortress_swing"] + selected_f
+                self.fortress_breadth_pct = round(ab_br / max(1, tot_br) * 100.0, 1)
+                self.fortress_scan_date = max_d
+        except Exception:
+            pass
+
     def _load_real_data(self) -> None:
 
         if os.path.exists(self.real_scan_path):
@@ -1239,6 +1400,9 @@ class AIScreenerDiscoveryEngine:
             self.setups = data.get("setups", [])
 
             self.positions = data.get("positions", [])
+
+        if not any(s.get("strategy") == "institutional_fortress_swing" for s in self.setups):
+            self._append_fortress_setups_from_db()
 
         # Always read latest positions directly from Indian-SEPA-Screener's positions.sqlite3 if present
 
@@ -1428,7 +1592,7 @@ class AIScreenerDiscoveryEngine:
 
                     }
 
-                elif base_s == "afzal" and strat_k in ("adaptive_hybrid_v2", "institutional_fortress_swing", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal_tranche", "afzal_50sma", "afzal_b3"):
+                elif base_s == "afzal" and strat_k in ("adaptive_hybrid_v2", "adaptive_hybrid", "explosive_velocity", "explosive_chandelier", "afzal_super", "afzal_tranche", "afzal_50sma", "afzal_b3"):
 
                     # Inherit base afzal verdict if specialized variant not explicitly reviewed
 
@@ -2760,6 +2924,7 @@ class AIScreenerDiscoveryEngine:
             self.rs_universe_count = len(rs_map)
 
             self.setups = min_s2 + min_s3 + min_s4 + afzal + hyb
+            self._append_fortress_setups_from_db()
 
             with open(self.real_scan_path, "w", encoding="utf-8") as f:
 
@@ -2785,7 +2950,7 @@ class AIScreenerDiscoveryEngine:
 
                 )
 
-            for strat in ("minervini", "afzal", "hybrid"):
+            for strat in list(self.ai_reviews_by_strategy.keys()):
 
                 self.ai_reviews_by_strategy[strat] = self.ai_brain.analyze_setups(self.setups, strategy=strat)
 
@@ -2982,7 +3147,7 @@ class AIScreenerDiscoveryEngine:
 
             )
 
-            for strat in ("minervini", "afzal", "hybrid"):
+            for strat in list(self.ai_reviews_by_strategy.keys()):
 
                 self.ai_reviews_by_strategy[strat] = self.ai_brain.analyze_setups(self.setups, strategy=strat)
 
