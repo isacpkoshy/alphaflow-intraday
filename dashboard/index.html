@@ -1085,7 +1085,7 @@
 
         <select id="sepa-strategy" class="sc-sel" style="font-weight:600" onchange="setSepaStrategy(this.value)">
           <option value="adaptive_hybrid_v2" selected>Strategy: Next-Gen Adaptive Swing (Pure Swing · 76.99% CAGR)</option>
-          <option value="institutional_fortress_swing">Strategy (NEW): Institutional Fortress Swing (10Y Option A · 99.04% CAGR · 59.07% WR)</option>
+          <option value="institutional_fortress_swing">Strategy (NEW): Institutional Fortress 2.0 (10Y True-MTM · 20.13% CAGR · 46.28% WR)</option>
 
           <option value="adaptive_hybrid">Strategy: All-Weather Adaptive Hybrid (Regime-Switch + 2.75R · 63.5% CAGR)</option>
 
@@ -1617,7 +1617,7 @@
 
         <select id="pf-strategy-sel" class="sc-sel" style="font-weight:600;padding:8px 12px" onchange="setSepaStrategy(this.value);runSepaPortfolioAnalyze()">
           <option value="adaptive_hybrid_v2" selected>Next-Gen Adaptive Swing (Pure Swing · 76.99% CAGR)</option>
-          <option value="institutional_fortress_swing">Institutional Fortress Swing (NEW Option A · 99.04% CAGR · 59.07% WR)</option>
+          <option value="institutional_fortress_swing">Institutional Fortress 2.0 (10Y Real-Friction CNC · 20.13% CAGR · 46.28% WR)</option>
 
           <option value="adaptive_hybrid">All-Weather Adaptive Hybrid (Regime-Switch + 2.75R · 63.5% CAGR)</option>
 
@@ -2153,7 +2153,7 @@
 
           <option value="quantum_apex_intraday">Strategy (NEW): Engine 1B — Quantum-Apex 3.0 Intraday (10Y Zero-Lookahead · 151.13% CAGR · 56.28% WR)</option>
 
-          <option value="institutional_fortress_swing">Strategy (NEW): Engine 3B — Institutional Fortress Swing (10Y Option A · 99.04% CAGR · 59.07% WR)</option>
+          <option value="institutional_fortress_swing">Strategy (NEW): Engine 3B — Institutional Fortress 2.0 (10Y True-MTM CNC · 20.13% CAGR · 1.52 PF)</option>
 
           <option value="sepa_adaptive_hybrid_v2" selected>Strategy: Engine 3 — Next-Gen Adaptive Swing (Pure Swing · 76.99% CAGR · 5Y)</option>
 
@@ -2499,7 +2499,7 @@
         </label>
         <select id="i-sepa-flt" class="sc-sel" style="width:260px;font-weight:600">
           <option value="adaptive_hybrid_v2" selected>Next-Gen Adaptive 2.0 (76.99% CAGR · Champion)</option>
-          <option value="institutional_fortress_swing">Institutional Fortress Swing (NEW Option A · 99.04% 10Y CAGR · 59.07% WR)</option>
+          <option value="institutional_fortress_swing">Institutional Fortress 2.0 (10Y Real-Friction CNC · 20.13% CAGR · 1.52 PF)</option>
           <option value="adaptive_hybrid">Next-Gen Adaptive 1.0 (63.5% CAGR)</option>
           <option value="explosive_velocity">Explosive Velocity (57.1% CAGR)</option>
           <option value="explosive_chandelier">Explosive Chandelier (44.0% CAGR)</option>
@@ -3782,7 +3782,7 @@ function strats(a,A,t){
       e: e3,
 
       title: ({
-        'institutional_fortress_swing': 'Institutional Fortress Swing (NEW · 10Y)',
+        'institutional_fortress_swing': 'Institutional Fortress 2.0 (10Y Real-Friction CNC)',
         'adaptive_hybrid_v2': 'Next-Gen Adaptive Swing (Pure Swing)',
         'adaptive_hybrid': 'All-Weather Adaptive Hybrid',
         'explosive_velocity': 'Explosive Velocity Sprint',
@@ -3797,7 +3797,7 @@ function strats(a,A,t){
 
       desc: ({
 
-        'institutional_fortress_swing': '100% India-Compliant Option A: 1–4d CNC/MTF Longs + Same-Day MIS Climax Shorts (99.04% 10Y CAGR · 59.07% WR · 1.73 Sharpe)',
+        'institutional_fortress_swing': '100% Pure 1x Cash CNC: 15:25 Close[t] Stage-2 50d Breakouts · 0.60% RT Friction (20.13% 10Y CAGR · 46.28% WR · 1.52 PF)',
         'adaptive_hybrid_v2': '3-State Traffic Light: Bull +3.0R Sprint · Yellow +2.0R Quick Lock & Top 10% RS · Red 100% Cash Defense (Pure Swing · 76.99% 5Y CAGR · 20.9% MaxDD)',
         'adaptive_hybrid': 'Bull: +2.75R Sprint · Defense: +2.20R Lock · Monster RVOL Chandelier (63.5% CAGR)',
 
@@ -3840,7 +3840,7 @@ function strats(a,A,t){
           <select class="sc-sel" style="padding:3px 7px;font-size:11.5px;font-weight:600" onchange="setSepaBotFilter(this.value)">
 
             <option value="adaptive_hybrid_v2" ${flt==='adaptive_hybrid_v2'?'selected':''}>Filter: Next-Gen Adaptive Swing (Pure Swing · 76.99% CAGR)</option>
-            <option value="institutional_fortress_swing" ${flt==='institutional_fortress_swing'?'selected':''}>Filter (NEW Option A): Institutional Fortress (99.04% 10Y CAGR · 59.07% WR)</option>
+            <option value="institutional_fortress_swing" ${flt==='institutional_fortress_swing'?'selected':''}>Filter (NEW 2.0): Institutional Fortress 2.0 (20.13% 10Y CAGR · 1.52 PF)</option>
             <option value="adaptive_hybrid" ${flt==='adaptive_hybrid'?'selected':''}>Filter: All-Weather Adaptive Hybrid (63.5% CAGR)</option>
 
             <option value="explosive_velocity" ${flt==='explosive_velocity'?'selected':''}>Filter: Explosive Velocity Sprint (57.1% CAGR)</option>
@@ -4066,7 +4066,7 @@ function upcoming(){
 
   const u=D.simulation.upcoming_signals.slice(0,12);
 
-  $('upcoming').innerHTML=u.map(x=>{const isS=x.direction.includes('SHORT')||x.direction.includes('SELL');const isMisSw=x.strategy_origin==='institutional_fortress_swing'&&isS;const isQaInt=(x.strategy_origin==='quantum_apex_intraday');const idea=x.engine==='NIFTY F&O'?(isS?'Sell':'Buy'):(isMisSw?'Sell Short (MIS 09:15→15:20)':(x.strategy_origin==='institutional_fortress_swing'?'Buy Swing (1–4d CNC/MTF)':(isQaInt?(isS?'Parabolic Gap-Up Short':'Flush Gap-Down Long'):(isS?'Sell on breakout':'Buy on breakout'))));return `<tr><td class="sym">${nice(x.symbol)}<small>${(!D.allocations?.engine_stocks_mis?.enabled && D.allocations?.engine_sepa_swing?.enabled && (D.allocations?.engine_sepa_swing?.params?.active_filter==='adaptive_hybrid_v2') && x.engine_id==='engine_stocks_mis') ? 'Next-Gen Hybrid (MIS)' : strat(x.engine, x.strategy_origin)}</small></td><td class="soft">${idea}</td>
+  $('upcoming').innerHTML=u.map(x=>{const isS=x.direction.includes('SHORT')||x.direction.includes('SELL');const isMisSw=x.strategy_origin==='institutional_fortress_swing'&&isS;const isQaInt=(x.strategy_origin==='quantum_apex_intraday');const idea=x.engine==='NIFTY F&O'?(isS?'Sell':'Buy'):(isMisSw?'Sell Short (MIS 09:15→15:20)':(x.strategy_origin==='institutional_fortress_swing'?'Buy Trend CNC (15:25 Close)':(isQaInt?(isS?'Parabolic Gap-Up Short':'Flush Gap-Down Long'):(isS?'Sell on breakout':'Buy on breakout'))));return `<tr><td class="sym">${nice(x.symbol)}<small>${(!D.allocations?.engine_stocks_mis?.enabled && D.allocations?.engine_sepa_swing?.enabled && (D.allocations?.engine_sepa_swing?.params?.active_filter==='adaptive_hybrid_v2') && x.engine_id==='engine_stocks_mis') ? 'Next-Gen Hybrid (MIS)' : strat(x.engine, x.strategy_origin)}</small></td><td class="soft">${idea}</td>
    <td class="r num">₹${x.ltp.toFixed(2)}</td><td class="r num">₹${x.trigger_price.toFixed(2)}</td><td>${badge(x.status, x.exit_time || x.time)}</td></tr>`}).join('');
 
 }
@@ -4778,14 +4778,14 @@ function renderSepaRules(strat){
   const tag=$('sepa-rules-tag'),grid=$('sepa-rules-grid');
   if(!tag||!grid)return;
   if(strat==='institutional_fortress_swing'){
-    tag.textContent='INSTITUTIONAL FORTRESS SWING OPTION A (99.04% 10Y CAGR · 59.07% WR · SEBI COMPLIANT)';
+    tag.textContent='INSTITUTIONAL FORTRESS 2.0 (20.13% 10Y CAGR · 46.28% WR · 1.52 PF · 0.60% REAL-COST CNC)';
     grid.innerHTML=`
-      <div class="rule-box"><b>1 · 100% SEBI/NSE Cash-Legal (Option A)</b><p>Longs run 1–4d CNC/MTF delivery swing. Cash shorts execute strictly as Same-Day MIS (09:15 AM → 15:20 PM auto-squareoff) with zero overnight cash shorting.</p></div>
-      <div class="rule-box"><b>2 · Stage-2 3-Day Washout & Undercut Springs</b><p>High-PF long mean-reversion into Stage-2 uptrends (Breadth ≥ 40–50%): 3 red bars + gap down, yesterday low undercut, or SMA20/50 pullback (-7.5% SL).</p></div>
-      <div class="rule-box"><b>3 · Same-Day MIS Parabolic Exhaustion Short</b><p>Sells overextended 2d/3d climax surges (+0.90% gap-up, RVOL ≥ 1.70×, capped ≤3/day) with -6.5% target / +5.5% stop and mandatory 15:20 PM close.</p></div>
-      <div class="rule-box"><b>4 · Pessimistic Stop-First OHLC Check</b><p>Every bar checks full stop-loss breach (o ≤ sl or l ≤ sl) BEFORE target or Strength Reclaim checks, eliminating intra-bar optimism bias.</p></div>
-      <div class="rule-box"><b>5 · Strength Reclaim Rapid Harvest</b><p>Books Long strength on Day 0 (+2.2%) or Day 1..4 above prior high/close across 5,964 audited trades (1.73 Sharpe, 40.79% MaxDD).</p></div>
-      <div class="rule-box"><b>6 · Liquidity &amp; Friction Torture Verified</b><p>Requires ADT ≥ ₹10 Cr, order ≤ 5.0% ADT, 0.40% Long / 0.16% MIS Short friction inside loop. 70/30 Walk-Forward: 124.09% IS / 57.11% OOS CAGR.</p></div>`;
+      <div class="rule-box"><b>1 · 100% Real-Execution 1x Cash CNC (15:25 Close[t])</b><p>Zero 09:15 auction chase, zero MTF interest, zero illegal overnight shorts. Executes purely in 15:18–15:28 PM live CNC closing window with Next-Open (+0.10% slip) surviving at +11.35% CAGR.</p></div>
+      <div class="rule-box"><b>2 · Minervini Stage-2 Fan + 50d Leadership Breakout</b><p>Requires Breadth ≥ 40%, Close &gt; SMA20 &gt; SMA50 &gt; SMA150 &gt; rising SMA200, ≥ 82% of 250d High, Close &gt; prev 50d High, RVOL ≥ 1.25×, ret63 ≥ +15%, cpos ≥ 0.55, ATR5 ≤ 1.25×ATR20.</p></div>
+      <div class="rule-box"><b>3 · 2.4% Volatility-Risk-Parity &amp; ₹25 Cr Liquidity Floor</b><p>Max 4 concurrent slots (25% eq cap each), dynamically scaled by 2.4% equity / eff_SL across ₹25+ Cr ADT20 leaders (≤ 4% ADT participation, 0.0% idle cash yield).</p></div>
+      <div class="rule-box"><b>4 · ATR-Scaled GTT Stop &amp; Pessimistic OHLC Check</b><p>Initial GTT Stop = clamp(3.0×ATR20, 6%, 10%). Every session checks stop breach (Open ≤ SL or Low ≤ SL) before ratchets or trailing MAs.</p></div>
+      <div class="rule-box"><b>5 · Breakeven +1% &amp; Asymmetric SMA20/SMA50 Trail</b><p>Ratchets SL to Entry×1.01 at +10% peak and Peak×0.88 at +20% peak; exits below SMA20 (&lt;+12% peak) or SMA50 (≥+12% peak) after Day 5 (120d max hold).</p></div>
+      <div class="rule-box"><b>6 · Full 10Y Institutional Survival Verified</b><p>0.60% RT delivery cost inside compounding loop (0.65% RT: +18.16% CAGR). 70/30 Walk-Forward: +22.58% IS / +20.60% OOS (20.99% OOS MaxDD, 0.94 Sharpe, 1.52 PF).</p></div>`;
   } else if(strat==='adaptive_hybrid_v2'){
     tag.textContent='NEXT-GEN ADAPTIVE SWING (76.99% CAGR · PURE SWING · +26.7% IN 2026)';
     grid.innerHTML=`
@@ -5139,7 +5139,7 @@ function setSepaStrategy(strat){
   if($('pf-strategy-sel')) $('pf-strategy-sel').value = strat;
   if($('pf-strat-badge')){
     const names = {
-      'institutional_fortress_swing': 'Active Rules: Institutional Fortress Swing Option A (99.04% 10Y CAGR · 59.07% WR · 1.73 Sharpe)',
+      'institutional_fortress_swing': 'Active Rules: Institutional Fortress 2.0 (20.13% 10Y CAGR · 46.28% WR · 1.52 PF · 0.60% RT CNC)',
       'adaptive_hybrid_v2': 'Active Rules: Next-Gen Adaptive Swing (Pure Swing · 76.99% CAGR · +26.7% in 2026)',
       'adaptive_hybrid': 'Active Rules: All-Weather Adaptive Hybrid (Regime-Switch + 2.75R · 63.5% CAGR)',
       'explosive_velocity': 'Active Rules: Explosive Velocity Sprint (RS ≥ 80th · 2.7R · 57.1% CAGR)',

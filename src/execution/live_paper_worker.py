@@ -269,9 +269,9 @@ class LivePaperTradingWorker:
 
             # 3C: Auto-Enter Engine 3 — SEPA & Afzal Swing Bot (see end-of-day window below)
 
-        # Step 4: SEPA / Afzal / Hybrid swing entries are EOD-only (same as the Handoff project):
-        # signals are confirmed near the close (15:00–15:25 IST) and orders are placed at that closing price.
-        if 1500 <= hhmm <= 1525 and len(n_bars) >= 3:
+        # Step 4: SEPA / Afzal / Hybrid / Fortress 2.0 swing entries are EOD-only:
+        # signals are confirmed near the close (15:00–15:28 IST; Fortress 2.0 at 15:18–15:28 Close[t]).
+        if 1500 <= hhmm <= 1528 and len(n_bars) >= 3:
             e3 = self.app.switchboard.compute_effective_allocations(self.app.account["starting_capital"]).get("engine_sepa_swing", {})
             if e3.get("enabled"):
                 self._scan_and_enter_live_sepa_swing(today_str, e3)
@@ -448,9 +448,9 @@ class LivePaperTradingWorker:
         return None
 
     @staticmethod
-    def _fetch_daily_bars_yahoo(symbol: str, exclude_date: str) -> List[tuple]:
+    def _fetch_daily_bars_yahoo(symbol: str, exclude_date: str, range_str: str = "6mo", include_today: bool = False) -> List[tuple]:
         try:
-            url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.request.quote(symbol)}?range=6mo&interval=1d"
+            url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.request.quote(symbol)}?range={range_str}&interval=1d"
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
             with urllib.request.urlopen(req, timeout=6) as resp:
                 res = json.loads(resp.read().decode("utf-8"))["chart"]["result"][0]
@@ -462,7 +462,7 @@ class LivePaperTradingWorker:
                     if o is None or h is None or l is None or c is None or v is None:
                         continue
                     d_str = datetime.fromtimestamp(t, IST).strftime("%Y-%m-%d")
-                    if d_str >= exclude_date or d_str in seen:
+                    if (not include_today and d_str >= exclude_date) or (include_today and d_str > exclude_date) or d_str in seen:
                         continue
                     seen.add(d_str)
                     out.append((d_str, float(o), float(h), float(l), float(c), float(v)))
@@ -1124,9 +1124,13 @@ class LivePaperTradingWorker:
         active_flt = str(params.get("active_filter", "adaptive_hybrid")).lower()
         max_pos = int(params.get("max_open_positions", 2))
         
+        if active_flt == "institutional_fortress_swing":
+            self._enter_fortress_2_0_live(today_str, e3)
+            return
+
         # Strategy-specific target R:R
         if active_flt == "institutional_fortress_swing":
-            target_rr = 3.20
+            target_rr = 2.50
         elif active_flt == "adaptive_hybrid_v2":
             target_rr = 3.00
         elif active_flt == "adaptive_hybrid":
@@ -1299,6 +1303,193 @@ class LivePaperTradingWorker:
                     pass
         self.app._save_open_positions()
 
+    def _enter_fortress_2_0_live(self, today_str: str, e3: Dict[str, Any]) -> None:
+        """
+        Executes Institutional Fortress 2.0 (20.13% 10Y CAGR · 46.28% WR · 1.52 PF · 0.60% RT friction):
+        - Enters strictly near close (15:18–15:28 IST) as Pure 1x Cash CNC Long-Only.
+        - Verifies live daily OHLCV via Yahoo Finance (15mo range) so SMA20/50/150/200, hh50_prev, hh250, RVOL, ATR20 reflect today's live session.
+        - Sizes up to 4 concurrent slots (25% eq max) with 2.4% Volatility-Risk-Parity cap & <= 4% ADT20.
+        """
+        now_ist = datetime.now(IST)
+        hhmm = now_ist.hour * 100 + now_ist.minute
+        if hhmm < 1518:
+            return
+        if today_str in getattr(self, "_fortress_entered_dates", set()):
+            return
+
+        breadth_pct = float(getattr(self.app.screener, "fortress_breadth_pct", 50.0) or 50.0)
+        if breadth_pct < 40.0:
+            logger.info("Fortress 2.0 paused: Breadth %.1f%% < 40.0%% floor.", breadth_pct)
+            return
+
+        open_sepa = [
+            p for p in self.app.open_positions
+            if p.get("engine_id") == "engine_sepa_swing" and p.get("status") == "OPEN"
+        ]
+        max_slots = 4
+        if len(open_sepa) >= max_slots:
+            return
+
+        open_syms = {p.get("raw_symbol", "").replace(".NS", "").replace(".BO", "").upper() for p in open_sepa}
+        alloc_cap = float(e3.get("allocated_capital_inr", 50000.0))
+        used_notional = sum(float(p.get("notional") or (p["entry_price"] * p["qty"])) for p in open_sepa)
+        avail_cash = max(0.0, alloc_cap - used_notional)
+        if avail_cash < 5000.0:
+            return
+
+        payload = self.app.screener.get_universe_payload()
+        fortress_rows = [s for s in payload.get("setups", []) if s.get("strategy") == "institutional_fortress_swing"][:25]
+        if not fortress_rows:
+            return
+
+        from concurrent.futures import ThreadPoolExecutor
+
+        def _eval_live(row: Dict[str, Any]):
+            sym = str(row.get("display_symbol", row["symbol"])).upper()
+            if sym in open_syms:
+                return None
+            ex_suf = ".BO" if row.get("exchange") == "BSE" else ".NS"
+            raw_sym = f"{sym}{ex_suf}"
+            bars = self._fetch_daily_bars_yahoo(raw_sym, today_str, range_str="15mo", include_today=True)
+            if len(bars) < 252:
+                return None
+            cl = [b[4] for b in bars]
+            hi = [b[2] for b in bars]
+            lo = [b[3] for b in bars]
+            vl = [b[5] for b in bars]
+            c_t = cl[-1]
+            if c_t < 40.0 or cl[-127] <= 0 or cl[-64] <= 0 or vl[-1] <= 0:
+                return None
+            avg_v20 = sum(vl[-20:]) / 20.0
+            adt20 = avg_v20 * c_t
+            if adt20 < 250000000.0 or avg_v20 < 60000:
+                return None
+            sma20 = sum(cl[-20:]) / 20.0
+            sma50 = sum(cl[-50:]) / 50.0
+            sma150 = sum(cl[-150:]) / 150.0
+            sma200 = sum(cl[-200:]) / 200.0
+            sma200_20ago = sum(cl[-220:-20]) / 200.0
+            if not (c_t > sma20 > sma50 > sma150 > sma200 and sma200 > sma200_20ago):
+                return None
+            hh250 = max(hi[-250:])
+            hh50_prev = max(hi[-51:-1])
+            rvol = vl[-1] / avg_v20
+            ret1 = (c_t / cl[-2] - 1.0) * 100.0
+            ret63 = (c_t / cl[-64] - 1.0) * 100.0
+            ret126 = (c_t / cl[-127] - 1.0) * 100.0
+            rng_t = hi[-1] - lo[-1]
+            cpos_t = (c_t - lo[-1]) / rng_t if rng_t > 0 else 0.5
+            tr_vals = [
+                max(hi[k] - lo[k], abs(hi[k] - cl[k - 1]), abs(lo[k] - cl[k - 1])) / max(1.0, cl[k - 1])
+                for k in range(len(cl) - 20, len(cl))
+            ]
+            atr20 = sum(tr_vals) / 20.0 * 100.0
+            atr5 = sum(tr_vals[-5:]) / 5.0 * 100.0
+            if not (c_t >= hh250 * 0.82 and c_t > hh50_prev and rvol >= 1.25 and ret63 >= 15.0 and atr5 <= atr20 * 1.25 and cpos_t >= 0.55 and 0.4 <= ret1 <= 8.5):
+                return None
+            score = (ret126 * 0.4 + ret63 * 0.6) * math.log10(max(10.0, adt20 / 1e7))
+            return {
+                "sym": sym, "raw_sym": raw_sym, "c_t": c_t, "atr20": atr20, "adt20": adt20,
+                "score": score, "sma20": sma20, "sma50": sma50, "rvol": rvol,
+            }
+
+        qualified = []
+        with ThreadPoolExecutor(max_workers=6) as pool:
+            for res in pool.map(_eval_live, fortress_rows):
+                if res:
+                    qualified.append(res)
+
+        if not qualified:
+            return
+        qualified.sort(key=lambda x: x["score"], reverse=True)
+        slots_left = max_slots - len(open_sepa)
+        max_slot_inr = alloc_cap * 0.25
+        entered = False
+
+        for cand in qualified[:slots_left]:
+            if avail_cash < 5000.0:
+                break
+            sym = cand["sym"]
+            entry_p = round(cand["c_t"], 2)
+            eff_sl = min(0.10, max(0.06, 3.0 * cand["atr20"] / 100.0))
+            stop_p = round(entry_p * (1.0 - eff_sl), 2)
+            risk_lim = (alloc_cap * 0.024) / eff_sl
+            alloc = min(avail_cash, max_slot_inr, risk_lim, cand["adt20"] * 0.04)
+            qty = int(alloc // entry_p)
+            if qty <= 0:
+                continue
+            notional = round(entry_p * qty, 2)
+            risk_err = self.app.broker_manager.validate_pre_trade_risk(
+                symbol=sym, price=entry_p, quantity=qty, order_val=notional, available_cash=alloc_cap
+            )
+            if risk_err:
+                logger.warning("Fortress 2.0 Order rejected by Security Guardrail: %s", risk_err)
+                continue
+
+            exec_res = self.app.broker_manager.execute_order(
+                symbol=sym, transaction_type="LONG", quantity=qty, price=entry_p,
+                order_type="MARKETABLE_LIMIT", product_type="CNC",
+                sl_price=stop_p, target_price=0.0, slippage_buffer_pct=0.20, timeout_sec=8.0,
+            )
+            if exec_res.get("status") in ("CANCELLED_UNFILLED", "ERROR", "REJECTED") or int(exec_res.get("filled_qty", qty)) <= 0:
+                logger.warning("Skipped Fortress 2.0 %s: %s", sym, exec_res.get("message", "Unfilled / Rejected"))
+                continue
+
+            qty = int(exec_res.get("filled_qty", qty))
+            entry_p = round(float(exec_res.get("avg_fill_price", entry_p)), 2)
+            stop_p = round(entry_p * (1.0 - eff_sl), 2)
+            notional = round(entry_p * qty, 2)
+            avail_cash -= notional
+            pos_id = exec_res.get("broker_order_id") or exec_res.get("order_id") or f"FORT2-{int(time.time()*1000) % 100000}-{sym[:4]}"
+            pos_dict = {
+                "pos_id": pos_id,
+                "date": today_str,
+                "entry_date": today_str,
+                "last_bar_date": today_str,
+                "bars_held": 0,
+                "peak_price": entry_p,
+                "entry_time": datetime.now(IST).strftime("%H:%M:%S"),
+                "engine_id": "engine_sepa_swing",
+                "strategy_origin": "institutional_fortress_swing",
+                "engine": "SEPA SWING",
+                "raw_symbol": cand["raw_sym"],
+                "symbol": f"{sym} (FORTRESS 2.0)",
+                "side": "LONG",
+                "qty": qty,
+                "entry_price": entry_p,
+                "ltp": entry_p,
+                "sl_price": stop_p,
+                "initial_sl_dist": round(entry_p - stop_p, 2),
+                "target_price": 0.0,
+                "leverage": 1.0,
+                "margin_used": notional,
+                "notional": notional,
+                "product_type": "CNC",
+                "trail_status": f"FORTRESS 2.0 ({eff_sl*100:.1f}% GTT · BE+1% @ +10%)",
+                "delta": f"{qty} sh",
+                "theta": "1x CNC Trend (SMA20/50)",
+                "gross_mtm": 0.0,
+                "est_charges": round(notional * 0.0060, 2),
+                "net_mtm": round(-notional * 0.0060, 2),
+                "status": "OPEN",
+            }
+            self.app.open_positions.append(pos_dict)
+            entered = True
+            try:
+                TELEGRAM_NOTIFIER.send_entry_alert(pos_dict, self.app.switchboard.config)
+            except Exception as e_tg:
+                logger.error("Failed to send telegram entry alert: %s", e_tg)
+            try:
+                self.app.screener.manage_position("add", sym, entry_p, stop_p)
+            except Exception:
+                pass
+
+        if entered:
+            if not hasattr(self, "_fortress_entered_dates"):
+                self._fortress_entered_dates = set()
+            self._fortress_entered_dates.add(today_str)
+            self.app._save_open_positions()
+
     def _update_open_positions_live(self, today_str: str, nifty_spot: float, live_vix: float) -> None:
         for p in self.app.open_positions:
             if p["status"] != "OPEN":
@@ -1350,6 +1541,55 @@ class LivePaperTradingWorker:
             else:
                 ratchet_mult = 1.0
             ratchet_dist = p.get("initial_sl_dist", 999999) * ratchet_mult
+
+            if p.get("strategy_origin") == "institutional_fortress_swing" and is_long:
+                if p.get("last_bar_date") != today_str:
+                    p["bars_held"] = int(p.get("bars_held") or 0) + 1
+                    p["last_bar_date"] = today_str
+                pk_p = max(float(p.get("peak_price") or p["entry_price"]), ltp)
+                p["peak_price"] = pk_p
+
+                if ltp <= p["sl_price"]:
+                    self._close_and_record_position(p, ltp, "SL_HIT", today_str)
+                    continue
+                if pk_p >= p["entry_price"] * 1.10:
+                    be_sl = round(p["entry_price"] * 1.01, 2)
+                    if be_sl > p["sl_price"]:
+                        p["sl_price"] = be_sl
+                        p["trail_status"] = "FORTRESS 2.0 · BE +1.0% LOCKED (+10% Hit)"
+                if pk_p >= p["entry_price"] * 1.20:
+                    pk_sl = round(pk_p * 0.88, 2)
+                    if pk_sl > p["sl_price"]:
+                        p["sl_price"] = pk_sl
+                        p["trail_status"] = f"FORTRESS 2.0 · PEAK×0.88 TRAIL (₹{pk_sl:,.2f})"
+
+                now_f = datetime.now(IST)
+                hhmm_f = now_f.hour * 100 + now_f.minute
+                bars_h = int(p.get("bars_held") or 0)
+                if hhmm_f >= 1518 and bars_h >= 120:
+                    self._close_and_record_position(p, ltp, "MAX_HOLD_120D", today_str)
+                    continue
+                if hhmm_f >= 1518 and bars_h >= 5 and raw_sym:
+                    if not hasattr(self, "_fortress_ma_cache"):
+                        self._fortress_ma_cache = {}
+                    ck = (raw_sym, today_str)
+                    if ck not in self._fortress_ma_cache:
+                        fbars = self._fetch_daily_bars_yahoo(raw_sym, today_str, range_str="6mo", include_today=True)
+                        if len(fbars) >= 50:
+                            fcl = [b[4] for b in fbars]
+                            self._fortress_ma_cache[ck] = (sum(fcl[-20:]) / 20.0, sum(fcl[-50:]) / 50.0)
+                        else:
+                            self._fortress_ma_cache[ck] = None
+                    mas = self._fortress_ma_cache.get(ck)
+                    if mas:
+                        sma20_f, sma50_f = mas
+                        if pk_p < p["entry_price"] * 1.12 and ltp < sma20_f:
+                            self._close_and_record_position(p, ltp, "SMA20_TRAIL", today_str)
+                            continue
+                        if ltp < sma50_f:
+                            self._close_and_record_position(p, ltp, "SMA50_TRAIL", today_str)
+                            continue
+                continue
 
             if is_long:
                 if ltp <= p["sl_price"]:

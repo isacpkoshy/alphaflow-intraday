@@ -772,8 +772,8 @@ class TradingAppState:
                 self.strategy_backtests["institutional_fortress_swing"] = self._build_sepa_5y_backtest(
                     ifs_data,
                     "institutional_fortress_swing",
-                    f"Engine 3B (NEW): Institutional Fortress Swing (10Y Option A · {ifs_data.get('cagr_pct', 99.04)}% CAGR · {ifs_data.get('win_rate_pct', 59.07)}% WR)",
-                    f"100% India/SEBI Legal · 1–4d CNC/MTF Longs + Same-Day MIS Climax Shorts · {ifs_data.get('max_drawdown_pct', 40.79)}% MaxDD ({ifs_data.get('sharpe_ratio', 1.73)} Sharpe)",
+                    f"Engine 3B (NEW): Institutional Fortress 2.0 (10Y Real-Friction CNC · {ifs_data.get('cagr_pct', 20.13)}% CAGR · {ifs_data.get('win_rate_pct', 46.28)}% WR)",
+                    f"100% Pure 1x Cash CNC · 15:25 Close[t] Stage-2 50d Breakouts · 0.60% RT Friction · {ifs_data.get('max_drawdown_pct', 32.94)}% MaxDD ({ifs_data.get('sharpe_ratio', 0.94)} Sharpe)",
                     cap,
                 )
 
