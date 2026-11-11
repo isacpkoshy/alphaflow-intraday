@@ -751,13 +751,14 @@ class LivePaperTradingWorker:
                 logger.warning("Swing Order rejected by Security Guardrail: %s", risk_err)
                 continue
 
+            swing_prod = "MIS" if is_short else ("MTF" if swing_lev > 1.0 else "CNC")
             exec_res = self.app.broker_manager.execute_order(
                 symbol=sym,
                 transaction_type="SHORT" if is_short else "LONG",
                 quantity=qty,
                 price=entry_p,
                 order_type="MARKETABLE_LIMIT",
-                product_type="CNC",
+                product_type=swing_prod,
                 sl_price=stop_p,
                 target_price=tp_p,
                 slippage_buffer_pct=0.20,
@@ -793,10 +794,10 @@ class LivePaperTradingWorker:
                 "leverage": swing_lev,
                 "margin_used": margin_used,
                 "notional": notional,
-                "product_type": "MTF" if swing_lev > 1.0 else "CNC",
-                "trail_status": f"SEPA {active_flt.upper()} (+2R Ratchet Armed)",
+                "product_type": "MIS" if is_short else ("MTF" if swing_lev > 1.0 else "CNC"),
+                "trail_status": f"SEPA {active_flt.upper()} ({'Same-Day MIS Short' if is_short else '+2R Ratchet Armed'})",
                 "delta": f"{qty} sh",
-                "theta": "Swing",
+                "theta": "MIS Short (15:20)" if is_short else "Swing (1-4d)",
                 "gross_mtm": 0.0,
                 "est_charges": 65.0,
                 "net_mtm": -65.0,
@@ -946,10 +947,10 @@ class LivePaperTradingWorker:
             logger.error("Failed to dispatch Telegram exit alert: %s", ex)
 
     def _auto_square_off_intraday(self, today_str: str, reason: str) -> None:
-        """Squares off intraday MIS and F&O positions; keeps SEPA SWING positions open."""
+        """Squares off intraday MIS and F&O positions (including Option A SEPA MIS shorts); keeps CNC/MTF Swing longs open."""
         outcome = "RMS_CIRCUIT_BREAKER" if ("Circuit Breaker" in reason or "RMS" in reason or "Daily Loss" in reason) else "EOD_SQUARE_OFF"
         for p in self.app.open_positions:
-            if p["status"] == "OPEN" and p.get("engine_id") != "engine_sepa_swing":
+            if p["status"] == "OPEN" and (p.get("engine_id") != "engine_sepa_swing" or p.get("product_type") == "MIS"):
                 self._close_and_record_position(p, p["ltp"], outcome, today_str)
 
     def _auto_square_off_all(self, today_str: str, reason: str) -> None:

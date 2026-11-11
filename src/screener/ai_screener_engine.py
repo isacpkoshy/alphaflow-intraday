@@ -100,9 +100,9 @@ STRATEGY_META = [
     },
     {
         "id": "institutional_fortress_swing",
-        "name": "Strategy (NEW): Institutional Fortress Swing (10Y Zero-Lookahead · 105.29% CAGR · 61.54% WR)",
-        "badge": "105.29% 10Y CAGR · 61.54% WR · 1.77 SHARPE",
-        "description": "10-Year Zero-Lookahead Multi-Pillar Swing: Stage-2 3-Day Washout Springs, Prev-Low Undercut Reclaims, MA Pocket Pullbacks & Capped Parabolic Shorts (MaxDD 36.61%).",
+        "name": "Strategy (NEW): Institutional Fortress Swing (10Y Option A · 99.04% CAGR · 59.07% WR)",
+        "badge": "99.04% 10Y CAGR · 59.07% WR · 1.73 SHARPE · SEBI COMPLIANT",
+        "description": "100% India-Compliant Zero-Lookahead Hybrid: 1–4d CNC/MTF Stage-2 Long Washout & Pocket Springs + Same-Day MIS (09:15→15:20) Parabolic Exhaustion Shorts.",
     },
 
     {
@@ -293,8 +293,8 @@ CHAMPIONSHIP_BACKTEST_SUMMARY = {
 
 STRATEGY_AI_PROFILES: Dict[str, Dict[str, Any]] = {
     "institutional_fortress_swing": {
-        "title": "Institutional Fortress Swing (10Y Zero-Lookahead - 105.29% CAGR / 61.54% WR)",
-        "rules": "1. 100% Zero Look-Ahead t-1 EOD + Open[t] entry discipline with Pessimistic Stop-First OHLC rules. 2. Long Pillars (Breadth >= 34-42%): Stage-2 3-Red-Bar Washout Springs, RS Leader Prev-Low Undercut Reclaims, SMA20/SMA50 Pocket Pullbacks, and Synchronized Flush Clusters (>=5 stocks). 3. Short Pillar: Capped (<=3/day) Parabolic Climax Exhaustions with Day-0 Squeeze Guard (1.020) and Strength Reclaim Harvest.",
+        "title": "Institutional Fortress Swing (10Y India-Compliant Option A - 99.04% CAGR / 59.07% WR)",
+        "rules": "1. 100% Zero Look-Ahead t-1 EOD + Open[t] entry discipline with Pessimistic Stop-First OHLC rules. 2. Long Pillars (1-4d CNC/MTF Delivery Swing): Stage-2 3-Red-Bar Washout Springs, RS Leader Prev-Low Undercut Reclaims, SMA20/SMA50 Pocket Pullbacks, and Synchronized Flush Clusters. 3. Short Pillar (Same-Day MIS 09:15 -> 15:20 Auto-Squareoff · Zero Overnight Cash Shorting): Capped (<=3/day) Parabolic Climax Exhaustions.",
         "target_rr": 3.20,
         "max_risk_pct": 8.0,
     },
@@ -521,10 +521,10 @@ class SEPAAnalystBrain:
 
         regime_info = {
             "institutional_fortress_swing": {
-                "market_regime": f"Institutional Fortress Swing (10Y Zero-Lookahead) · {len(rows)} Qualified Candidates (105.29% CAGR · 61.54% WR)",
+                "market_regime": f"Institutional Fortress Swing (Option A India-Compliant) · {len(rows)} Qualified Candidates (99.04% CAGR · 59.07% WR)",
                 "market_summary": (
-                    f"10-Year Zero-Lookahead Multi-Pillar Swing Engine audited over 2016-2026 (1.77 Sharpe, 36.61% MaxDD, OOS 95.37% CAGR). "
-                    f"Combines Stage-2 3-Red-Bar Washout Springs, Prev-Low Undercut Reclaims, and Capped Parabolic Climax Reversions."
+                    f"100% SEBI/NSE-Compliant 10-Year Swing Engine audited over 2016-2026 (1.73 Sharpe, 40.79% MaxDD). "
+                    f"Long Stage-2 Washout & Pocket Springs hold 1-4 days (CNC/MTF), while Parabolic Climax Exhaustion Shorts execute strictly Same-Day MIS (09:15 -> 15:20 Auto-Squareoff)."
                 ),
             },
             "adaptive_hybrid_v2": {
@@ -729,18 +729,20 @@ class SEPAAnalystBrain:
                 conf = min(84, int(68 + min(14, vol * 6)))
 
             if side == "SHORT":
-
-                entry_plan = (
-
-                    f"Short {r.get('futures_contract', r['display_symbol'] + ' FUT')} (Lot {r.get('lot_size', 1)}) "
-
-                    f"only on confirmed close <= ₹{pivot:,.2f} with >= 1.5x volume (current {vol:.2f}x)."
-
-                )
-
-                stop_plan = f"₹{stop:,.2f} ({risk:.2f}% risk above 10-day high)"
-
-                context_impact = f"Real Stage-4 downtrend (RS {rs:.1f}); Price ₹{price:,.2f} below falling 150-SMA (₹{float(r.get('sma150') or 0):,.1f})."
+                if strat_key == "institutional_fortress_swing":
+                    entry_plan = (
+                        f"Same-Day MIS Short (09:15 -> 15:20 Auto-Squareoff): Sell {r.get('display_symbol', r['symbol'])} on Gap-Up Open[t] >= ₹{pivot:,.2f}; "
+                        f"target -6.5% / EOD close with hard SL ₹{stop:,.2f} (100% NSE Cash-Legal)."
+                    )
+                    stop_plan = f"₹{stop:,.2f} (+{risk:.2f}% MIS stop above Open[t])"
+                    context_impact = f"{r.get('setup_type', 'Parabolic Climax')} exhaustion (Vol {vol:.2f}x · RS {rs:.1f}); closed same day by 15:20 PM."
+                else:
+                    entry_plan = (
+                        f"Short {r.get('futures_contract', r['display_symbol'] + ' FUT')} (Lot {r.get('lot_size', 1)}) "
+                        f"only on confirmed close <= ₹{pivot:,.2f} with >= 1.5x volume (current {vol:.2f}x)."
+                    )
+                    stop_plan = f"₹{stop:,.2f} ({risk:.2f}% risk above 10-day high)"
+                    context_impact = f"Real Stage-4 downtrend (RS {rs:.1f}); Price ₹{price:,.2f} below falling 150-SMA (₹{float(r.get('sma150') or 0):,.1f})."
 
             elif stage == 3:
 
@@ -758,8 +760,8 @@ class SEPAAnalystBrain:
 
                 if strat_key == "institutional_fortress_swing":
                     entry_plan = (
-                        f"Institutional Fortress Swing: Execute at Open[t] near ₹{pivot:,.2f}; harvest strength reclaim on Day 0..4 (+2.2% / Prev High close) "
-                        f"with hard stop at ₹{stop:,.2f} (105.29% 10Y CAGR · 61.54% WR)."
+                        f"Swing Long (1-4d CNC/MTF): Buy on Gap-Down Open[t] <= ₹{pivot:,.2f}; harvest strength reclaim on Day 0..4 (+2.2% / Prev High close) "
+                        f"with hard SL ₹{stop:,.2f} (99.04% 10Y CAGR · 59.07% WR)."
                     )
                 elif strat_key == "adaptive_hybrid_v2":
                     entry_plan = (
@@ -888,13 +890,13 @@ class SEPAAnalystBrain:
             sht_str = ", ".join(f"{r.get('display_symbol', r['symbol'])} ({r.get('setup_type', 'Exhaustion')})" for r in shts[:4]) or "None qualified today"
             macro_factors = [
                 f"Data Source: Real daily candles across 6,110 NSE & BSE instruments in positions.sqlite3 (Latest Candle: {latest_c_date}).",
-                "Liquidity & Risk Filter: Strictly ADT >= ₹10 Cr/d, AvgVol >= 50,000, Max Order <= 5% ADT, Pessimistic Stop-First (-7.5% Long / -6.0% Short).",
-                f"Active Institutional Fortress Filter: {len(lngs)} Stage-2 Washout/Pocket Long Springs · {len(shts)} Parabolic/Bounce Climax Short Setups.",
+                "SEBI / NSE Compliance (Option A): Longs execute 1-4d CNC/MTF Delivery (-7.5% SL); Shorts execute strictly Same-Day MIS (09:15 -> 15:20 Auto-Squareoff, -5.5% SL).",
+                f"Active Option A Filter: {len(lngs)} Buy Long Swing Springs (CNC/MTF) · {len(shts)} Sell Short Exhaustions (Same-Day MIS).",
             ]
             sector_view = [
-                f"Stage-2 Washout & MA Pocket Long Springs (Gap-Down Open[t] Trigger): {lng_str}.",
-                f"Parabolic Climax Exhaustion & Bounce Shorts (Capped <= 3/day · Day-0 Squeeze Guard): {sht_str}.",
-                "Execution Protocol: Triggers fire strictly on Open[t] gap confirmation (-0.75% Long / +0.80% Short) — pre-open status remains WATCH.",
+                f"Buy Long Swing (1-4d CNC/MTF · Gap-Down Open[t] Trigger): {lng_str}.",
+                f"Sell Short Intraday (Same-Day MIS 09:15->15:20 · Capped <= 3/day): {sht_str}.",
+                "Execution Protocol: Triggers fire strictly on Open[t] gap confirmation (-0.75% Long / +0.90% Short) — pre-open status remains WATCH.",
             ]
         else:
             macro_factors = [
@@ -1007,7 +1009,7 @@ class SEPAAnalystBrain:
                 elif strat_key == "institutional_fortress_swing":
                     if trend_ok and setup_ok:
                         decision = "HOLD"
-                        reasoning = f"[INSTITUTIONAL FORTRESS · 105.29% 10Y CAGR] Strength structure intact{rs_str}: Close ₹{price:,.2f} > 20-SMA ₹{sma20_v:,.2f}. Hold for Strength Reclaim or Day-4 Exit."
+                        reasoning = f"[INSTITUTIONAL FORTRESS · 99.04% 10Y CAGR] Strength structure intact{rs_str}: Close ₹{price:,.2f} > 20-SMA ₹{sma20_v:,.2f}. Hold for Strength Reclaim or Day-4 Exit."
                     elif afzal_stack or price >= sma50_v:
                         decision = "HOLD"
                         reasoning = f"[INSTITUTIONAL FORTRESS] Trend floor active{rs_str}: Close ₹{price:,.2f} above 50-SMA ₹{sma50_v:,.2f}; trail Pessimistic Stop."
@@ -1329,8 +1331,8 @@ class AIScreenerDiscoveryEngine:
                         reason = f"{setup_kind}: 3d={ret3d:+.1f}%, 63d={ret63:+.1f}%, ADT ₹{adt20/1e7:.1f} Cr/d · Triggers on Gap-Down Open[t] <= ₹{piv:,.2f}"
                     else:
                         piv = round(c_p * 1.0085, 2)
-                        stp = round(piv * 1.060, 2)
-                        rk = 6.00
+                        stp = round(piv * 1.055, 2)
+                        rk = 5.50
                         score = max(ret3d, ret2d * 1.2) * math.sqrt(rvol) * math.log10(max(10.0, adt20 / 1e7))
                         reason = f"{setup_kind}: 3d={ret3d:+.1f}%, RVOL={rvol:.2f}x, ADT ₹{adt20/1e7:.1f} Cr/d · Triggers on Gap-Up Open[t] >= ₹{piv:,.2f}"
 
@@ -1343,7 +1345,7 @@ class AIScreenerDiscoveryEngine:
                         "sector": f"NSE/BSE Verified · Turnover ₹{adt20/1e7:.1f} Cr/d",
                         "strategy": "institutional_fortress_swing",
                         "stage": stg,
-                        "stage_label": f"FORTRESS · {setup_kind}",
+                        "stage_label": f"{'SELL SHORT (MIS 09:15→15:20)' if side == 'SHORT' else 'BUY LONG (SWING 1–4d)'} · {setup_kind}",
                         "side": side,
                         "price": round(c_p, 2),
                         "pivot": piv,

@@ -10,8 +10,8 @@ Both strategies were built as **standalone, non-destructive additions** (existin
 - **Zero Look-Ahead Architecture:** Every filter (`SMA20`, `SMA65`, `2d/3d/5d Returns`, `RVOL`, `20d ADT`, `Market Breadth % > SMA50`) is computed strictly on `t-1` EOD data plus the live `09:15 AM` opening gap `Open[t]`.
 - **Execution Discipline:** Pessimistic Stop-First OHLC checking (`Low[t] <= SL` for longs / `High[t] >= SL` for shorts takes priority before target/close checks).
 - **Two Orthogonal Intraday Legs:**
-  1. **Uptrend Flush Gap-Down Long (`Breadth >= 26%`, `Close[t-1] > SMA65`):** Enters Stage-2/uptrend leaders after multi-day pullbacks (`ret3d <= -3.8%` or `ret2d <= -3.4%` or `ret5d <= -5.2%`) opening on a flush gap (`-4.0% <= Gap <= -0.70%`), ranked by institutional liquidity weight (`ADT^1.05`).
-  2. **Overbought Parabolic Exhaustion Gap-Up Short (`Close[t-1] > 1.015 * SMA20`, `RVOL >= 1.55x`):** Fades parabolic exhaustion surges (`ret1d >= +2.9%` or `ret2d >= +5.0%` or `ret3d >= +6.8%`) gapping up `+0.75%` to `+4.2%`.
+  1. **Uptrend Flush Gap-Down Long (`Breadth >= 26%`, `Close[t-1] > SMA65`):** Enters uptrend leaders after multi-day pullbacks (`ret3d <= -3.8%` / `ret2d <= -3.4%` / `ret5d <= -5.2%`) opening on a flush gap (`-4.0% <= Gap <= -0.70%`), ranked by institutional liquidity weight (`ADT^1.05`).
+  2. **Overbought Parabolic Exhaustion Gap-Up Short (`Close[t-1] > 1.015 * SMA20`, `RVOL >= 1.55x`):** Fades parabolic exhaustion surges (`ret1d >= +2.9%` / `ret2d >= +5.0%` / `ret3d >= +6.8%`) gapping up `+0.75%` to `+4.2%`.
 - **Liquidity & Friction:** `ADT >= ₹20 Cr`, `AvgVol >= 100,000 shares`, max order `<= 3.5% of ADT`, **`0.16%` round-trip friction** deducted directly inside the compounding loop.
 
 ### 10-Year Verified Audit Results (₹3,00,000 Starting Capital)
@@ -30,28 +30,30 @@ Both strategies were built as **standalone, non-destructive additions** (existin
 
 ---
 
-## Strategy 2: Institutional Fortress Swing (`institutional_fortress_swing`)
+## Strategy 2: Institutional Fortress Swing (`institutional_fortress_swing` — Option A India-Compliant)
 
-- **Holding Period:** 1 to 4 Trading Days (Strength Reclaim Harvest + Pessimistic Stop-First). Idle cash earns **0.0% interest**.
-- **Zero Look-Ahead & Pessimistic Bar Check:** Entries trigger strictly at `Open[t]` using `t-1` EOD metrics and `Open[t]` gap. On every bar `0..3`, `Open <= SL` or `Low/High <= SL` is checked **before** target or Strength Reclaim checks.
+- **SEBI / NSE Compliance (Option A):** Zero illegal overnight cash-stock shorting.
+  - **Long Pillars (`CNC` / `MTF`, 1–4 Trading Days):** Holds across 1–4 sessions via Strength Reclaim Harvest (`+2.2%` Day 0 or `Day 1..4` reclaim above prior high/close); **idle cash earns `0.0%` interest**.
+  - **Short Pillar (`MIS` Intraday, `09:15 AM -> 15:20 PM` Auto-Squareoff):** Executes strictly as Intraday MIS and closes same day by `15:20 PM IST`.
+- **Zero Look-Ahead & Pessimistic Bar Check:** Entries trigger strictly at `Open[t]` using `t-1` EOD metrics and `Open[t]` gap. On every bar, `Open <= SL` or `Low/High <= SL` is checked **before** target or Strength Reclaim checks.
 - **5-Pillar Architecture:**
-  1. **P8 — Stage-2 3-Day Washout Spring (`Breadth >= 40%`, `C > SMA100 > SMA200`):** 3 consecutive red candles (`ret3d <= -4.0%`, `Gap <= -0.75%`).
+  1. **P8 — Stage-2 3-Day Washout Spring (`Breadth >= 40%`, `C > SMA100 > SMA200`):** 3 red bars, `ret3d <= -4.0%`, `Gap <= -0.75%` (`-7.5%` SL, `+8.0%` TP).
   2. **P12 — RS Leader Prev-Low Undercut Reclaim (`Breadth >= 40%`, `ret63 >= +15%`):** High-RS leader gapping below `Low[t-1] * 0.996`.
   3. **P7 + P9 — Stage-2 Moving-Average Pocket Spring (`ret63 >= +15–25%`):** Pullbacks into `SMA20` or `SMA50` opening down `-0.75%` to `-4.0%`.
-  4. **P4 + P1 — Synchronized Institutional Flush (`Cluster >= 5` or `cpos <= 0.25`):** Broad-based synchronized pullbacks filtering out 1–2 stock idiosyncratic drops.
-  5. **P10 + P11 — Capped Parabolic Climax & Bear-Rally Fade Short (`max <= 3/day`):** Overextended `2d/3d` climax surges (`> 1.045 * SMA20`, `RVOL >= 1.65x`, `Gap >= +0.80%`) with Day-0 Squeeze Guard (`1.020`).
-- **Liquidity & Friction:** `ADT >= ₹10 Cr`, `AvgVol >= 50,000 shares`, max order `<= 5.0% of ADT`, **`0.40%` Long / `0.22%` Short round-trip friction** deducted inside the compounding loop, `2.0x` MTF buying power (`0.20x` max slot).
+  4. **P4 + P1 — Synchronized Institutional Flush (`Cluster >= 5` or `cpos <= 0.25`):** Filters out 1–2 stock idiosyncratic news drops.
+  5. **P10 + P11 — Same-Day MIS Parabolic Exhaustion Short (`<= 3/day`):** Overextended `2d/3d` climax surges (`> 1.045 * SMA20`, `RVOL >= 1.70x`, `Gap >= +0.90%`) with `-6.5%` target / `+5.5%` SL / `15:20 PM` close.
+- **Liquidity & Friction:** `ADT >= ₹10 Cr`, `AvgVol >= 50,000 shares`, max order `<= 5.0% of ADT`, **`0.40%` Long / `0.16%` MIS Short friction** deducted inside the compounding loop, `2.2x` MTF buying power (`0.20x` max slot).
 
 ### 10-Year Verified Audit Results (₹3,00,000 Starting Capital)
 | Metric | Result |
 |---|---|
-| **10-Year CAGR** | **105.29%** |
-| **Win Rate** | **61.54%** |
-| **Sharpe Ratio** | **1.77** |
-| **Profit Factor** | **1.18** |
-| **Max Drawdown** | **36.61%** |
-| **Total Trades** | **6,167** |
-| **70% In-Sample (`2016–2023`)** | **118.73% CAGR · 61.42% WR · 1.85 Sharpe** |
-| **30% Unseen OOS (`2023–2026`)** | **95.37% CAGR · 61.00% WR · 1.52 Sharpe** |
-| **Neighbor Stability (`-15%` to `+15%`)** | **51.39% – 118.03% CAGR (59.06% – 62.90% WR)** |
-| **5,000-Run Monte Carlo & 10% Outlier Drop** | **Median MaxDD 45.26% · 10% Best Days Dropped: 52.74% CAGR** |
+| **10-Year CAGR** | **99.04%** |
+| **Win Rate** | **59.07%** |
+| **Sharpe Ratio** | **1.73** |
+| **Profit Factor** | **1.14** |
+| **Max Drawdown** | **40.79%** |
+| **Total Trades** | **5,964** |
+| **70% In-Sample (`2016–2023`)** | **124.09% CAGR · 59.43% WR · 1.93 Sharpe** |
+| **30% Unseen OOS (`2023–2026`)** | **57.11% CAGR · 57.52% WR · 1.10 Sharpe** |
+| **Neighbor Stability (`-15%` to `+15%`)** | **42.61% – 99.04% CAGR (56.80% – 59.55% WR)** |
+| **5,000-Run Monte Carlo & 10% Outlier Drop** | **Median MaxDD 45.66% · 10% Best Days Dropped: 49.93% CAGR** |

@@ -772,8 +772,8 @@ class TradingAppState:
                 self.strategy_backtests["institutional_fortress_swing"] = self._build_sepa_5y_backtest(
                     ifs_data,
                     "institutional_fortress_swing",
-                    f"Engine 3B (NEW): Institutional Fortress Swing (10Y Zero-Lookahead · {ifs_data.get('cagr_pct', 105.29)}% CAGR · {ifs_data.get('win_rate_pct', 61.54)}% WR)",
-                    f"100% Zero-Lookahead · 5-Pillar Stage-2 Washout & Climax Reversion · Pessimistic Stop-First · {ifs_data.get('max_drawdown_pct', 36.61)}% MaxDD ({ifs_data.get('sharpe_ratio', 1.77)} Sharpe)",
+                    f"Engine 3B (NEW): Institutional Fortress Swing (10Y Option A · {ifs_data.get('cagr_pct', 99.04)}% CAGR · {ifs_data.get('win_rate_pct', 59.07)}% WR)",
+                    f"100% India/SEBI Legal · 1–4d CNC/MTF Longs + Same-Day MIS Climax Shorts · {ifs_data.get('max_drawdown_pct', 40.79)}% MaxDD ({ifs_data.get('sharpe_ratio', 1.73)} Sharpe)",
                     cap,
                 )
 
@@ -1019,6 +1019,7 @@ class TradingAppState:
                 "strategy_origin": sepa_flt,
                 "engine_id": "engine_sepa_swing",
                 "direction": "SHORT" if s.get("side") == "SHORT" else "LONG",
+                "product_type": "MIS" if s.get("side") == "SHORT" else "CNC/MTF",
                 "ltp": round(float(live_px), 2),
                 "trigger_price": float(s.get("pivot", 0.0)),
                 "status": "ARMED" if (e3_on and is_ready) else ("ENGINE_OFF" if not e3_on else "WATCHING_RS"),
