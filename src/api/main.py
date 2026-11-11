@@ -959,11 +959,6 @@ class TradingAppState:
             if item.get("engine") in ("STOCKS MIS", "ALPHA-SURGE 2.0 MIS", "QUANTUM-APEX 3.0 MIS"):
                 item["engine"] = "QUANTUM-APEX 3.0 MIS" if is_qa_active else "STOCKS MIS"
                 item["strategy_origin"] = stocks_flt
-                if is_qa_active and e1_on and item.get("status") != "ENGINE_OFF":
-                    rv = float(item.get("rvol") or 0.0)
-                    rs_v = abs(float(item.get("rs_vs_nifty") or 0.0))
-                    if rv >= 1.55 and rs_v >= 0.25:
-                        item["status"] = "ARMED"
             sym_clean = str(item.get("symbol", "")).replace(" (MIS)", "").strip()
             if sym_clean in live_q:
                 item["ltp"] = round(float(live_q[sym_clean]), 2)
@@ -1319,6 +1314,7 @@ class AlphaFlowRequestHandler(BaseHTTPRequestHandler):
             today_str = datetime.now(ist).strftime("%Y-%m-%d")
             APP_STATE.live_worker._last_upcoming_refresh = 0.0
             APP_STATE.live_worker.live_upcoming_stocks = []
+            APP_STATE.live_worker._qa_watchlist_cache = None
             if today_str not in getattr(APP_STATE.live_worker, "daily_circuit_tripped", set()):
                 APP_STATE.live_worker.traded_dates_stocks.discard(today_str)
                 try:
