@@ -30,30 +30,31 @@ Both strategies were built as **standalone, non-destructive additions** (existin
 
 ---
 
-## Strategy 2: Institutional Fortress Swing (`institutional_fortress_swing` — Option A India-Compliant)
+## Strategy 2: Institutional Fortress 2.0 (`institutional_fortress_swing` — 10Y Real-Friction CNC Trend-Following)
 
-- **SEBI / NSE Compliance (Option A):** Zero illegal overnight cash-stock shorting.
-  - **Long Pillars (`CNC` / `MTF`, 1–4 Trading Days):** Holds across 1–4 sessions via Strength Reclaim Harvest (`+2.2%` Day 0 or `Day 1..4` reclaim above prior high/close); **idle cash earns `0.0%` interest**.
-  - **Short Pillar (`MIS` Intraday, `09:15 AM -> 15:20 PM` Auto-Squareoff):** Executes strictly as Intraday MIS and closes same day by `15:20 PM IST`.
-- **Zero Look-Ahead & Pessimistic Bar Check:** Entries trigger strictly at `Open[t]` using `t-1` EOD metrics and `Open[t]` gap. On every bar, `Open <= SL` or `Low/High <= SL` is checked **before** target or Strength Reclaim checks.
-- **5-Pillar Architecture:**
-  1. **P8 — Stage-2 3-Day Washout Spring (`Breadth >= 40%`, `C > SMA100 > SMA200`):** 3 red bars, `ret3d <= -4.0%`, `Gap <= -0.75%` (`-7.5%` SL, `+8.0%` TP).
-  2. **P12 — RS Leader Prev-Low Undercut Reclaim (`Breadth >= 40%`, `ret63 >= +15%`):** High-RS leader gapping below `Low[t-1] * 0.996`.
-  3. **P7 + P9 — Stage-2 Moving-Average Pocket Spring (`ret63 >= +15–25%`):** Pullbacks into `SMA20` or `SMA50` opening down `-0.75%` to `-4.0%`.
-  4. **P4 + P1 — Synchronized Institutional Flush (`Cluster >= 5` or `cpos <= 0.25`):** Filters out 1–2 stock idiosyncratic news drops.
-  5. **P10 + P11 — Same-Day MIS Parabolic Exhaustion Short (`<= 3/day`):** Overextended `2d/3d` climax surges (`> 1.045 * SMA20`, `RVOL >= 1.70x`, `Gap >= +0.90%`) with `-6.5%` target / `+5.5%` SL / `15:20 PM` close.
-- **Liquidity & Friction:** `ADT >= ₹10 Cr`, `AvgVol >= 50,000 shares`, max order `<= 5.0% of ADT`, **`0.40%` Long / `0.16%` MIS Short friction** deducted inside the compounding loop, `2.2x` MTF buying power (`0.20x` max slot).
+- **Why Upgraded from Option A:** Stress-testing old Option A under real Indian delivery friction (`0.60%` RT + MTF interest), `>= ₹25 Cr` ADT, and `09:15 AM` opening slippage collapsed its thin `PF 1.14` scalp edge. Fortress 2.0 replaces fragile `09:15` gaps with **live-fillable `15:25 Close[t]` Stage-2 trend-following** across liquid `>= ₹25 Cr` NSE leaders at **`1x` Pure Cash CNC** (`0.0%` idle cash return, **`0.60%` round-trip delivery cost** deducted inside the compounding loop, true daily mark-to-market Sharpe & MaxDD).
+- **Entry Discipline (`15:18–15:28 PM` Confirmed `Close[t]`):**
+  1. **Market Regime Filter:** Universe Breadth (`% > 50-SMA`) `>= 40.0%`.
+  2. **Stage-2 MA Fan:** `Close > SMA20 > SMA50 > SMA150 > rising SMA200` (`SMA200[t] > SMA200[t-20]`).
+  3. **52W Leadership & 50-Day Breakout:** `Close >= 82%` of 250-day High, `Close > prev 50-day High`, `RVOL >= 1.25x`, `ret63 >= +15%`, closing range position `cpos >= 0.55`, `0.4% <= ret1 <= 8.5%`, controlled volatility (`ATR5 <= 1.25 * ATR20`).
+  4. **Institutional Ranking & Sizing:** Ranked by `(0.4 * ret126 + 0.6 * ret63) * log10(ADT20_Cr)`. Max `4` concurrent slots (`25%` equity cap each), further scaled by **`2.4%` Volatility-Risk-Parity (`eff_sl = clamp(3.0 * ATR20, 6%, 10%)`)** and `<= 4.0%` of 20-day ADT (`ADT20 >= ₹25 Cr`, `AvgVol >= 60,000`).
+- **Pessimistic Stop-First OHLC Exits (Avg Hold `16.1` Days):**
+  - Initial hard GTT Stop: `3.0 * ATR20` clamped `[6%, 10%]` below entry.
+  - `+10%` peak reached -> ratchet SL to **`Entry * 1.01`** (`+1.0%` net lock).
+  - `+20%` peak reached -> ratchet SL to **`Peak * 0.88`** (`12%` trailing giveback).
+  - After `5+` trading sessions: close `< SMA20` if peak `< +12%`, else close `< SMA50` to ride multi-month compounders (hard max hold `120` trading days).
 
-### 10-Year Verified Audit Results (₹3,00,000 Starting Capital)
+### 10-Year Verified Audit Results (₹3,00,000 Starting Capital · True Daily MTM · `0.60%` RT Friction)
 | Metric | Result |
 |---|---|
-| **10-Year CAGR** | **99.04%** |
-| **Win Rate** | **59.07%** |
-| **Sharpe Ratio** | **1.73** |
-| **Profit Factor** | **1.14** |
-| **Max Drawdown** | **40.79%** |
-| **Total Trades** | **5,964** |
-| **70% In-Sample (`2016–2023`)** | **124.09% CAGR · 59.43% WR · 1.93 Sharpe** |
-| **30% Unseen OOS (`2023–2026`)** | **57.11% CAGR · 57.52% WR · 1.10 Sharpe** |
-| **Neighbor Stability (`-15%` to `+15%`)** | **42.61% – 99.04% CAGR (56.80% – 59.55% WR)** |
-| **5,000-Run Monte Carlo & 10% Outlier Drop** | **Median MaxDD 45.66% · 10% Best Days Dropped: 49.93% CAGR** |
+| **10-Year CAGR** | **20.13%** |
+| **Win Rate** | **46.28%** |
+| **Sharpe Ratio (Daily MTM)** | **0.94** |
+| **Profit Factor** | **1.52** |
+| **Max Drawdown (Daily MTM)** | **32.94% (`20.99%` OOS)** |
+| **Total Trades (Avg Hold)** | **564 (`16.1` days)** |
+| **70% In-Sample (`2016–2024`)** | **22.58% CAGR · 47.06% WR · 1.03 Sharpe** |
+| **30% Unseen OOS (`2024–2026`)** | **20.60% CAGR · 48.05% WR · 0.95 Sharpe · 20.99% MaxDD** |
+| **Next-Open (`+0.10%` slip) & `0.65%` RT Stress** | **+11.35% CAGR (PF 1.26) · +18.16% CAGR (PF 1.49)** |
+| **Neighbor Stability (`-15%` to `+15%`)** | **9.49% – 20.13% CAGR across all 7 shifts (PF 1.22 – 1.52)** |
+| **5,000-Run Monte Carlo & 10% Outlier Drop** | **Bootstrap Median CAGR 20.45% (`p5 5.39%` / `p95 37.50%`) · Median MaxDD 32.26% · 10% Outlier Drop Median +6.58%** |

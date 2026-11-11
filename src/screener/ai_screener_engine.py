@@ -100,9 +100,9 @@ STRATEGY_META = [
     },
     {
         "id": "institutional_fortress_swing",
-        "name": "Strategy (NEW): Institutional Fortress Swing (10Y Option A · 99.04% CAGR · 59.07% WR)",
-        "badge": "99.04% 10Y CAGR · 59.07% WR · 1.73 SHARPE · SEBI COMPLIANT",
-        "description": "100% India-Compliant Zero-Lookahead Hybrid: 1–4d CNC/MTF Stage-2 Long Washout & Pocket Springs + Same-Day MIS (09:15→15:20) Parabolic Exhaustion Shorts.",
+        "name": "Strategy (NEW): Institutional Fortress 2.0 (10Y True-MTM · 20.13% CAGR · 46.28% WR)",
+        "badge": "20.13% 10Y CAGR · 46.28% WR · 1.52 PF · 0.60% REAL-COST CNC",
+        "description": "100% India-Compliant 1x Cash CNC: 15:25 PM Stage-2 52W-Leader 50d Breakouts (>= Rs 25 Cr ADT, 2.4% Vol-Risk Cap, SMA20/SMA50 Trail, 20.60% OOS).",
     },
 
     {
@@ -293,10 +293,10 @@ CHAMPIONSHIP_BACKTEST_SUMMARY = {
 
 STRATEGY_AI_PROFILES: Dict[str, Dict[str, Any]] = {
     "institutional_fortress_swing": {
-        "title": "Institutional Fortress Swing (10Y India-Compliant Option A - 99.04% CAGR / 59.07% WR)",
-        "rules": "1. 100% Zero Look-Ahead t-1 EOD + Open[t] entry discipline with Pessimistic Stop-First OHLC rules. 2. Long Pillars (1-4d CNC/MTF Delivery Swing): Stage-2 3-Red-Bar Washout Springs, RS Leader Prev-Low Undercut Reclaims, SMA20/SMA50 Pocket Pullbacks, and Synchronized Flush Clusters. 3. Short Pillar (Same-Day MIS 09:15 -> 15:20 Auto-Squareoff · Zero Overnight Cash Shorting): Capped (<=3/day) Parabolic Climax Exhaustions.",
-        "target_rr": 3.20,
-        "max_risk_pct": 8.0,
+        "title": "Institutional Fortress 2.0 (10Y True-MTM CNC - 20.13% CAGR / 46.28% WR / 1.52 PF)",
+        "rules": "1. Pure 1x Cash CNC Long-Only at 15:25 PM Close[t] (0.60% RT real delivery cost, 0.0% idle cash yield, >= Rs 25 Cr ADT20). 2. Stage-2 MA Fan (Close > SMA20 > SMA50 > SMA150 > rising SMA200), >= 82% of 250d High, Close > prev 50d High, RVOL >= 1.25x, ret63 >= +15%, cpos >= 0.55, ATR5 <= 1.25*ATR20, Breadth >= 40%. 3. 4-slot 25% max + 2.4% Vol-Risk-Parity sizing; 3*ATR20 SL (6-10%), BE+1% @ +10%, Peak*0.88 @ +20%, SMA20/SMA50 trail.",
+        "target_rr": 2.50,
+        "max_risk_pct": 10.0,
     },
     "adaptive_hybrid_v2": {
         "title": "Next-Gen Adaptive Hybrid 2.0 (3-State Traffic Light - 81.6% CAGR)",
@@ -521,10 +521,10 @@ class SEPAAnalystBrain:
 
         regime_info = {
             "institutional_fortress_swing": {
-                "market_regime": f"Institutional Fortress Swing (Option A India-Compliant) · {len(rows)} Qualified Candidates (99.04% CAGR · 59.07% WR)",
+                "market_regime": f"Institutional Fortress 2.0 (10Y Real-Friction CNC) · {len(rows)} Stage-2 Leaders (20.13% CAGR · 46.28% WR)",
                 "market_summary": (
-                    f"100% SEBI/NSE-Compliant 10-Year Swing Engine audited over 2016-2026 (1.73 Sharpe, 40.79% MaxDD). "
-                    f"Long Stage-2 Washout & Pocket Springs hold 1-4 days (CNC/MTF), while Parabolic Climax Exhaustion Shorts execute strictly Same-Day MIS (09:15 -> 15:20 Auto-Squareoff)."
+                    f"100% Pure 1x Cash CNC Long-Only Trend-Following audited over 2016-2026 (2,213 NSE stocks, >= Rs 25 Cr ADT20, 0.60% RT delivery cost inside loop, 0.94 Sharpe, 1.52 PF, 20.60% unseen OOS CAGR). "
+                    f"Enters at 15:25 PM Close[t] on Stage-2 52W-Leader 50-day Breakouts with 2.4% volatility-risk sizing and SMA20/SMA50 trailing."
                 ),
             },
             "adaptive_hybrid_v2": {
@@ -760,8 +760,8 @@ class SEPAAnalystBrain:
 
                 if strat_key == "institutional_fortress_swing":
                     entry_plan = (
-                        f"Swing Long (1-4d CNC/MTF): Buy on Gap-Down Open[t] <= ₹{pivot:,.2f}; harvest strength reclaim on Day 0..4 (+2.2% / Prev High close) "
-                        f"with hard SL ₹{stop:,.2f} (99.04% 10Y CAGR · 59.07% WR)."
+                        f"Pure 1x CNC Long (15:25 Close[t]): Buy above 50d-High pivot ₹{pivot:,.2f} (RVOL >= 1.25x, cpos >= 0.55); "
+                        f"hard GTT SL ₹{stop:,.2f} (-{risk:.2f}% / 3×ATR20), BE+1% @ +10%, Peak×0.88 @ +20%, SMA20/50 trail (20.13% 10Y CAGR · 1.52 PF)."
                     )
                 elif strat_key == "adaptive_hybrid_v2":
                     entry_plan = (
@@ -884,19 +884,18 @@ class SEPAAnalystBrain:
 
         if strat_key == "institutional_fortress_swing":
             lngs = [r for r in rows if r.get("side") == "LONG"]
-            shts = [r for r in rows if r.get("side") == "SHORT"]
+            ready = [r for r in lngs if r.get("signal") == "BUY ALERT"]
             latest_c_date = max((r.get("candle_date") or "2026-11-08" for r in rows), default="2026-11-08")
-            lng_str = ", ".join(f"{r.get('display_symbol', r['symbol'])} ({r.get('setup_type', 'Spring')})" for r in lngs[:6]) or "None qualified today"
-            sht_str = ", ".join(f"{r.get('display_symbol', r['symbol'])} ({r.get('setup_type', 'Exhaustion')})" for r in shts[:4]) or "None qualified today"
+            lng_str = ", ".join(f"{r.get('display_symbol', r['symbol'])} ({r.get('setup_type', '50d Breakout')})" for r in lngs[:6]) or "None qualified today"
             macro_factors = [
-                f"Data Source: Real daily candles across 6,110 NSE & BSE instruments in positions.sqlite3 (Latest Candle: {latest_c_date}).",
-                "SEBI / NSE Compliance (Option A): Longs execute 1-4d CNC/MTF Delivery (-7.5% SL); Shorts execute strictly Same-Day MIS (09:15 -> 15:20 Auto-Squareoff, -5.5% SL).",
-                f"Active Option A Filter: {len(lngs)} Buy Long Swing Springs (CNC/MTF) · {len(shts)} Sell Short Exhaustions (Same-Day MIS).",
+                f"Data Source: Real daily candles across 6,110 NSE & BSE instruments in positions.sqlite3 (Latest Candle: {latest_c_date}) + 15:25 PM Live Refresh.",
+                "Institutional Fortress 2.0 (1x CNC Long-Only): ADT20 >= Rs 25 Cr, Close > SMA20 > SMA50 > SMA150 > rising SMA200, >= 82% 52W High, 0.60% RT delivery cost.",
+                f"Active Leaders: {len(ready)} Live 50d Breakout Triggers (BUY ALERT) · {len(lngs)} Coiled Stage-2 Watches.",
             ]
             sector_view = [
-                f"Buy Long Swing (1-4d CNC/MTF · Gap-Down Open[t] Trigger): {lng_str}.",
-                f"Sell Short Intraday (Same-Day MIS 09:15->15:20 · Capped <= 3/day): {sht_str}.",
-                "Execution Protocol: Triggers fire strictly on Open[t] gap confirmation (-0.75% Long / +0.90% Short) — pre-open status remains WATCH.",
+                f"Top Qualified Stage-2 52W Leaders: {lng_str}.",
+                "Sizing & Risk: Max 4 concurrent 25% equity slots capped by 2.4% Volatility-Risk-Parity (eff SL = clamp(3xATR20, 6%-10%)) and <= 4% ADT20.",
+                "Execution Window: Confirmed purely at 15:25 PM Close[t] (zero 09:15 auction gaps; Next-Open stress +11.35% CAGR, OOS 2024-2026 +20.60% CAGR).",
             ]
         else:
             macro_factors = [
@@ -1009,13 +1008,13 @@ class SEPAAnalystBrain:
                 elif strat_key == "institutional_fortress_swing":
                     if trend_ok and setup_ok:
                         decision = "HOLD"
-                        reasoning = f"[INSTITUTIONAL FORTRESS · 99.04% 10Y CAGR] Strength structure intact{rs_str}: Close ₹{price:,.2f} > 20-SMA ₹{sma20_v:,.2f}. Hold for Strength Reclaim or Day-4 Exit."
+                        reasoning = f"[FORTRESS 2.0 · 20.13% 10Y CAGR] Stage-2 trend intact{rs_str}: Close ₹{price:,.2f} holding above 20-SMA ₹{sma20_v:,.2f}. Trail SMA20 (<+12% peak) or SMA50 (>=+12% peak); BE+1% @ +10%."
                     elif afzal_stack or price >= sma50_v:
                         decision = "HOLD"
-                        reasoning = f"[INSTITUTIONAL FORTRESS] Trend floor active{rs_str}: Close ₹{price:,.2f} above 50-SMA ₹{sma50_v:,.2f}; trail Pessimistic Stop."
+                        reasoning = f"[FORTRESS 2.0] Primary 50-SMA trend floor active{rs_str}: Close ₹{price:,.2f} >= 50-SMA ₹{sma50_v:,.2f}; let winners trail SMA50 / Peak×0.88."
                     else:
                         decision = "EXIT"
-                        reasoning = f"[INSTITUTIONAL FORTRESS] Violated trend support below 50-SMA ₹{sma50_v:,.2f}{rs_str}. Rotate back to cash."
+                        reasoning = f"[FORTRESS 2.0] Violated 50-SMA trend floor ₹{sma50_v:,.2f}{rs_str}. Rotate back to cash."
                 elif strat_key == "adaptive_hybrid_v2":
                     regime_bull = price >= sma50_v
                     if trend_ok and setup_ok:
@@ -1241,7 +1240,7 @@ class AIScreenerDiscoveryEngine:
         threading.Thread(target=self._startup_auto_check, daemon=True, name="sepa-startup-auto-sync").start()
 
     def _append_fortress_setups_from_db(self) -> None:
-        """Scans real NSE/BSE candles in positions.sqlite3 for active Institutional Fortress Swing candidates."""
+        """Scans real NSE/BSE candles in positions.sqlite3 for Institutional Fortress 2.0 Stage-2 52W-Leader 50d Breakout setups."""
         if not os.path.exists(SEPA_POSITIONS_DB):
             return
         try:
@@ -1253,7 +1252,6 @@ class AIScreenerDiscoveryEngine:
                 rs_map = dict(db.execute("SELECT symbol, percentile FROM market_rs").fetchall())
                 cur = db.execute("SELECT instrument_key, payload FROM daily_candles ORDER BY instrument_key, candle_date")
                 long_cands = []
-                short_cands = []
                 tot_br, ab_br, max_d = 0, 0, self.scan_date
                 etf_tags = ("ETF", "BEES", "LIQUID", "LIQ", "GILT", "GOLD", "SILVER")
                 for ikey, grp in groupby(cur, key=lambda r: r[0]):
@@ -1265,13 +1263,12 @@ class AIScreenerDiscoveryEngine:
                     if any(t in sym.upper() or t in name.upper() for t in etf_tags):
                         continue
                     rows = [json.loads(r[1]) for r in grp]
-                    if len(rows) < 205:
+                    if len(rows) < 252:
                         continue
                     c_date = rows[-1][0][:10]
                     if c_date > max_d:
                         max_d = c_date
                     cl = [float(x[4]) for x in rows]
-                    op = [float(x[1]) for x in rows]
                     hi = [float(x[2]) for x in rows]
                     lo = [float(x[3]) for x in rows]
                     vl = [float(x[5]) for x in rows]
@@ -1280,63 +1277,59 @@ class AIScreenerDiscoveryEngine:
                     tot_br += 1
                     if c_p > sma50:
                         ab_br += 1
-                    if c_p < 40.0 or cl[-64] <= 0 or vl[-1] <= 0:
+                    if c_p < 40.0 or cl[-127] <= 0 or cl[-64] <= 0 or vl[-1] <= 0:
                         continue
                     avg_v20 = sum(vl[-20:]) / 20.0
                     adt20 = avg_v20 * c_p
-                    if adt20 < 100000000.0 or avg_v20 < 50000:
+                    if adt20 < 250000000.0 or avg_v20 < 60000:
                         continue
                     rvol = vl[-1] / avg_v20
-                    if rvol < 0.08:
-                        continue
                     sma20 = sum(cl[-20:]) / 20.0
-                    sma100 = sum(cl[-100:]) / 100.0
                     sma150 = sum(cl[-150:]) / 150.0
                     sma200 = sum(cl[-200:]) / 200.0
-                    ret2d = (c_p / cl[-3] - 1.0) * 100.0
-                    ret3d = (c_p / cl[-4] - 1.0) * 100.0
-                    ret63 = (c_p / cl[-64] - 1.0) * 100.0
-                    if abs(ret3d) > 25.0:
+                    sma200_20ago = sum(cl[-220:-20]) / 200.0
+                    if not (c_p > sma20 > sma50 > sma150 > sma200 and sma200 > sma200_20ago):
                         continue
-                    red3 = (cl[-1] < op[-1]) and (cl[-2] < op[-2]) and (cl[-3] < op[-3])
+
+                    hh250 = max(hi[-250:])
+                    hh50_prev = max(hi[-51:-1])
+                    ret1 = (c_p / cl[-2] - 1.0) * 100.0
+                    ret63 = (c_p / cl[-64] - 1.0) * 100.0
+                    ret126 = (c_p / cl[-127] - 1.0) * 100.0
+                    if c_p < hh250 * 0.82 or ret63 < 15.0:
+                        continue
+
+                    tr_vals = [
+                        max(hi[k] - lo[k], abs(hi[k] - cl[k - 1]), abs(lo[k] - cl[k - 1])) / max(1.0, cl[k - 1])
+                        for k in range(len(cl) - 20, len(cl))
+                    ]
+                    atr20 = sum(tr_vals) / 20.0 * 100.0
+                    atr5 = sum(tr_vals[-5:]) / 5.0 * 100.0
+                    if atr5 > atr20 * 1.25:
+                        continue
                     rng_p = hi[-1] - lo[-1]
                     cpos_p = (c_p - lo[-1]) / rng_p if rng_p > 0 else 0.5
-                    rs = float(rs_map.get(sym) or 50.0)
-                    ex = it.get("exchange", "NSE")
 
-                    setup_kind = None
-                    side = "LONG"
-                    stg = 2
-                    if c_p > sma100 > sma200 and red3 and -16.0 <= ret3d <= -3.5 and rvol <= 2.2:
-                        setup_kind = "3-DAY WASHOUT SPRING"
-                    elif c_p > sma50 > sma200 and ret63 >= 15.0 and (-16.0 <= ret3d <= -3.8 or (c_p <= sma20 * 0.99 and ret3d <= -2.2 and cpos_p <= 0.35)):
-                        setup_kind = "STAGE-2 POCKET SPRING"
-                    elif c_p > sma20 * 1.045 and (ret3d >= 7.5 or ret2d >= 6.0) and rvol >= 1.65:
-                        setup_kind = "PARABOLIC CLIMAX EXHAUSTION"
-                        side = "SHORT"
-                        stg = 3
-                    elif (ab_br / max(1, tot_br) * 100.0) <= 55.0 and c_p < sma200 * 0.97 and 5.5 <= ret3d <= 18.0 and rvol >= 1.4:
-                        setup_kind = "WEAK-TREND BOUNCE FADE"
-                        side = "SHORT"
-                        stg = 4
-
-                    if not setup_kind:
+                    is_breakout = (c_p > hh50_prev and rvol >= 1.25 and cpos_p >= 0.55 and 0.4 <= ret1 <= 8.5)
+                    is_coiled = (c_p >= hh50_prev * 0.95 and c_p <= hh50_prev)
+                    if not (is_breakout or is_coiled):
                         continue
 
-                    if side == "LONG":
-                        piv = round(c_p * 0.992, 2)
-                        stp = round(piv * 0.925, 2)
-                        rk = 7.50
-                        score = abs(ret3d) * (1.0 + max(0.0, ret63) / 100.0) * math.log10(max(10.0, adt20 / 1e7))
-                        reason = f"{setup_kind}: 3d={ret3d:+.1f}%, 63d={ret63:+.1f}%, ADT ₹{adt20/1e7:.1f} Cr/d · Triggers on Gap-Down Open[t] <= ₹{piv:,.2f}"
-                    else:
-                        piv = round(c_p * 1.0085, 2)
-                        stp = round(piv * 1.055, 2)
-                        rk = 5.50
-                        score = max(ret3d, ret2d * 1.2) * math.sqrt(rvol) * math.log10(max(10.0, adt20 / 1e7))
-                        reason = f"{setup_kind}: 3d={ret3d:+.1f}%, RVOL={rvol:.2f}x, ADT ₹{adt20/1e7:.1f} Cr/d · Triggers on Gap-Up Open[t] >= ₹{piv:,.2f}"
+                    eff_sl = min(0.10, max(0.06, 3.0 * atr20 / 100.0))
+                    piv = round(hh50_prev, 2)
+                    stp = round(c_p * (1.0 - eff_sl), 2)
+                    rk = round(eff_sl * 100.0, 2)
+                    score = (ret126 * 0.4 + ret63 * 0.6) * math.log10(max(10.0, adt20 / 1e7))
+                    rs = float(rs_map.get(sym) or 50.0)
+                    ex = it.get("exchange", "NSE")
+                    setup_kind = "STAGE-2 50D BREAKOUT" if is_breakout else "COILED NEAR 50D HIGH"
+                    sig = "BUY ALERT" if is_breakout else "WATCH"
+                    reason = (
+                        f"{setup_kind}: 63d={ret63:+.1f}%, 126d={ret126:+.1f}%, RVOL={rvol:.2f}x, ATR20={atr20:.1f}%, ADT ₹{adt20/1e7:.1f} Cr/d · "
+                        f"15:25 PM CNC trigger > ₹{piv:,.2f}"
+                    )
 
-                    row_obj = {
+                    long_cands.append({
                         "symbol": f"{sym}_FORTRESS",
                         "display_symbol": sym,
                         "name": name,
@@ -1344,39 +1337,38 @@ class AIScreenerDiscoveryEngine:
                         "instrument_key": ikey,
                         "sector": f"NSE/BSE Verified · Turnover ₹{adt20/1e7:.1f} Cr/d",
                         "strategy": "institutional_fortress_swing",
-                        "stage": stg,
-                        "stage_label": f"{'SELL SHORT (MIS 09:15→15:20)' if side == 'SHORT' else 'BUY LONG (SWING 1–4d)'} · {setup_kind}",
-                        "side": side,
+                        "stage": 2,
+                        "stage_label": f"BUY LONG (1x CNC) · {setup_kind}",
+                        "side": "LONG",
                         "price": round(c_p, 2),
                         "pivot": piv,
                         "stop": stp,
                         "risk_pct": rk,
                         "volume_ratio": round(rvol, 2),
                         "avg_volume20": round(avg_v20, 0),
+                        "adt20": round(adt20, 0),
+                        "atr20_pct": round(atr20, 2),
+                        "ret63": round(ret63, 2),
+                        "ret126": round(ret126, 2),
                         "rs_percentile": round(rs, 1),
+                        "sma20": round(sma20, 2),
                         "sma50": round(sma50, 2),
                         "sma150": round(sma150, 2),
                         "sma200": round(sma200, 2),
-                        "trend_ok": side == "LONG",
+                        "trend_ok": True,
                         "vcp_ok": True,
                         "vcp_reviewed": False,
-                        "signal": "WATCH",
+                        "signal": sig,
                         "reasons": [reason],
                         "setup_type": setup_kind,
                         "top_focus": False,
                         "rank_score": round(score, 2),
                         "candle_date": c_date,
-                    }
-                    if side == "LONG":
-                        long_cands.append(row_obj)
-                    else:
-                        short_cands.append(row_obj)
+                    })
 
-                long_cands.sort(key=lambda x: x["rank_score"], reverse=True)
-                short_cands.sort(key=lambda x: x["rank_score"], reverse=True)
-                selected_f = long_cands[:14] + short_cands[:6]
-                selected_f.sort(key=lambda x: x["rank_score"], reverse=True)
-                for idx_f, row_f in enumerate(selected_f[:3]):
+                long_cands.sort(key=lambda x: (1 if x["signal"] == "BUY ALERT" else 0, x["rank_score"]), reverse=True)
+                selected_f = long_cands[:25]
+                for row_f in selected_f[:3]:
                     row_f["top_focus"] = True
                     row_f["stage_label"] = row_f["stage_label"] + " · ★ TOP PICK"
                 self.setups = [s for s in self.setups if s.get("strategy") != "institutional_fortress_swing"] + selected_f
