@@ -53,6 +53,7 @@ class LivePaperTradingWorker:
         self.live_quotes: Dict[str, float] = {}
         self.live_upcoming_stocks: List[Dict[str, Any]] = []
         self.live_rejected_orders: List[Dict[str, Any]] = []
+        self._qa_watchlist_cache: Optional[Dict[str, Any]] = None
         self._last_upcoming_refresh: float = 0.0
         self._restore_daily_state()
         self.thread = threading.Thread(target=self._run_loop, daemon=True)
@@ -150,10 +151,24 @@ class LivePaperTradingWorker:
 
         if hhmm < 915:
             self.market_state = "PRE_MARKET_STANDBY (Auto-Starts Today at 09:15 AM IST)"
+            if not self.live_upcoming_stocks:
+                try:
+                    nd = self._fetch_today_5m("^NSEI")
+                    if nd:
+                        self._refresh_live_upcoming_stocks(nd, today_str)
+                except Exception:
+                    pass
             return {"status": self.market_state, "last_poll": self.last_poll_ist}
 
         if hhmm > 1532:
             self.market_state = "POST_MARKET_CLOSED (Next Auto-Start: Tomorrow 09:15 AM IST)"
+            if not self.live_upcoming_stocks:
+                try:
+                    nd = self._fetch_today_5m("^NSEI")
+                    if nd:
+                        self._refresh_live_upcoming_stocks(nd, max(nd.keys()))
+                except Exception:
+                    pass
             return {"status": self.market_state, "last_poll": self.last_poll_ist}
 
         # Pull live 5m bars to verify whether NSE is actively trading today (excludes exchange holidays)
@@ -200,7 +215,19 @@ class LivePaperTradingWorker:
             self.market_state = "EOD_INTRADAY_SQUARED_OFF_AT_1515"
             return {"status": self.market_state, "last_poll": self.last_poll_ist}
 
-        # Step 3: At or after 09:30 AM (at least 3 five-minute bars completed), run Entry Scanners for all 3 engines!
+        # Step 3: Quantum-Apex 3.0 enters right at 09:15 AM Open[t] (len >= 1); Alpha-Surge & F&O wait for 09:30 ORB (len >= 3).
+        alloc_pre = self.app.switchboard.compute_effective_allocations(self.app.account["starting_capital"])
+        e1_chk = alloc_pre.get("engine_stocks_mis", {})
+        is_qa_live = str(e1_chk.get("params", {}).get("active_filter", "alpha_surge_100")).lower() == "quantum_apex_intraday"
+        if is_qa_live and len(n_bars) >= 1 and 915 <= hhmm < 1445 and e1_chk.get("enabled") and today_str not in self.traded_dates_stocks:
+            cap_chk = float(getattr(self.app, "account", {}).get("starting_capital", 300000.0))
+            realized_chk = sum(
+                t.get("net_pnl", 0.0) for t in getattr(self.app, "account", {}).get("trades", [])
+                if (t.get("date") == today_str or t.get("entry_date") == today_str) and t.get("engine") != "SEPA SWING"
+            )
+            if today_str not in self.daily_circuit_tripped and realized_chk > -0.015 * cap_chk:
+                self._scan_and_enter_live_stocks(today_str, e1_chk, 0.0, 0.0, is_hybrid_v2=False)
+
         if len(n_bars) >= 3 and hhmm < 1500:
             alloc = self.app.switchboard.compute_effective_allocations(self.app.account["starting_capital"])
             e1 = alloc["engine_stocks_mis"]
@@ -257,6 +284,22 @@ class LivePaperTradingWorker:
         if (now_ts - self._last_upcoming_refresh) < 120.0 and self.live_upcoming_stocks:
             return
         try:
+            alloc = self.app.switchboard.compute_effective_allocations(self.app.account.get("starting_capital", 300000.0))
+            e1 = alloc.get("engine_stocks_mis", {})
+            enable_stocks = bool(e1.get("enabled", True))
+            p1 = e1.get("params", {})
+            stocks_flt = str(p1.get("active_filter", "alpha_surge_100")).lower()
+            is_qa = (stocks_flt == "quantum_apex_intraday")
+
+            if is_qa:
+                watchlist = self._build_quantum_apex_watchlist(target_sess)
+                _, qa_up, qa_rej = self._evaluate_quantum_apex_open(watchlist, target_sess, enable_stocks, float(e1.get("allocated_capital_inr", 300000.0)))
+                if qa_up:
+                    self.live_upcoming_stocks = qa_up
+                    self.live_rejected_orders = qa_rej
+                    self._last_upcoming_refresh = now_ts
+                    return
+
             n_bars = nifty_days.get(target_sess, [])
             if len(n_bars) < 3:
                 return
@@ -264,13 +307,6 @@ class LivePaperTradingWorker:
             prev_n_idx = n_dates.index(target_sess) - 1 if target_sess in n_dates else -2
             prev_n_close = nifty_days[n_dates[prev_n_idx]][-1]["c"] if prev_n_idx >= 0 else n_bars[0]["o"]
             n_ret_prev = (n_bars[2]["c"] - prev_n_close) / prev_n_close * 100.0 if prev_n_close > 0 else 0.0
-
-            alloc = self.app.switchboard.compute_effective_allocations(self.app.account.get("starting_capital", 300000.0))
-            e1 = alloc.get("engine_stocks_mis", {})
-            enable_stocks = bool(e1.get("enabled", True))
-            p1 = e1.get("params", {})
-            stocks_flt = str(p1.get("active_filter", "alpha_surge_100")).lower()
-            is_qa = (stocks_flt == "quantum_apex_intraday")
             rvol_min = 1.55 if is_qa else float(p1.get("rvol_min", 2.2))
             rs_min = 0.25 if is_qa else float(p1.get("relative_strength_min_pct", 0.35))
 
@@ -396,12 +432,433 @@ class LivePaperTradingWorker:
         except Exception:
             pass
 
+
+    def _get_prev_trading_date(self, target_sess: str) -> Optional[str]:
+        try:
+            url = "https://query1.finance.yahoo.com/v8/finance/chart/%5ENSEI?range=1mo&interval=1d"
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=6) as resp:
+                res = json.loads(resp.read().decode("utf-8"))["chart"]["result"][0]
+                for t in reversed(res.get("timestamp", [])):
+                    d_str = datetime.fromtimestamp(t, IST).strftime("%Y-%m-%d")
+                    if d_str < target_sess:
+                        return d_str
+        except Exception:
+            pass
+        return None
+
+    @staticmethod
+    def _fetch_daily_bars_yahoo(symbol: str, exclude_date: str) -> List[tuple]:
+        try:
+            url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.request.quote(symbol)}?range=6mo&interval=1d"
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=6) as resp:
+                res = json.loads(resp.read().decode("utf-8"))["chart"]["result"][0]
+                ts_list = res.get("timestamp", [])
+                q = res["indicators"]["quote"][0]
+                out = []
+                seen = set()
+                for t, o, h, l, c, v in zip(ts_list, q["open"], q["high"], q["low"], q["close"], q["volume"]):
+                    if o is None or h is None or l is None or c is None or v is None:
+                        continue
+                    d_str = datetime.fromtimestamp(t, IST).strftime("%Y-%m-%d")
+                    if d_str >= exclude_date or d_str in seen:
+                        continue
+                    seen.add(d_str)
+                    out.append((d_str, float(o), float(h), float(l), float(c), float(v)))
+                return out
+        except Exception:
+            return []
+
+    def _build_quantum_apex_watchlist(self, target_sess: str) -> Dict[str, Any]:
+        """
+        Builds Quantum-Apex 3.0 t-1 EOD pre-qualified candidates strictly from completed sessions (< target_sess):
+        - Uses local 6,158-stock positions.sqlite3 when up to date with prev_session;
+          otherwise refreshes the top liquid NSE leaders + STOCKS_LIST via Yahoo daily bars so t-1 is never stale.
+        """
+        now_ts = time.time()
+        cached = getattr(self, "_qa_watchlist_cache", None)
+        if cached and cached.get("target_sess") == target_sess and (now_ts - cached.get("ts", 0)) < 1800.0:
+            return cached
+
+        import os, sys, sqlite3
+        from itertools import groupby
+        from concurrent.futures import ThreadPoolExecutor
+
+        sepa_dir = os.environ.get("SEPA_PROJECT_DIR") or os.path.join(os.path.expanduser("~"), "Documents", "Indian-SEPA-Screener")
+        sepa_db = os.path.join(sepa_dir, "positions.sqlite3")
+        vendor_dir = os.path.join(sepa_dir, "vendor")
+        if os.path.isdir(vendor_dir) and vendor_dir not in sys.path:
+            sys.path.insert(0, vendor_dir)
+
+        expected_prev = self._get_prev_trading_date(target_sess)
+        universe_rows: Dict[str, Dict[str, Any]] = {}
+        max_db_date = ""
+
+        if os.path.exists(sepa_db):
+            try:
+                import upstox_feed
+                sel, _ = upstox_feed._instruments(None)
+                by_k = {item["instrument_key"]: item for item in sel}
+                etf_tags = ("ETF", "BEES", "LIQUID", "LIQ", "GILT", "GOLD", "SILVER")
+                with sqlite3.connect(sepa_db) as db:
+                    cur = db.execute("SELECT instrument_key, payload FROM daily_candles ORDER BY instrument_key, candle_date")
+                    for ikey, grp in groupby(cur, key=lambda r: r[0]):
+                        it = by_k.get(ikey)
+                        if not it:
+                            continue
+                        sym = str(it.get("trading_symbol", "")).upper().strip()
+                        name = str(it.get("name", sym))
+                        ex = str(it.get("exchange", "NSE")).upper()
+                        if not sym or ex != "NSE" or any(t in sym or t in name.upper() for t in etf_tags):
+                            continue
+                        rows = [json.loads(r[1]) for r in grp if r and r[1]]
+                        bars = [(str(x[0])[:10], float(x[1]), float(x[2]), float(x[3]), float(x[4]), float(x[5])) for x in rows if str(x[0])[:10] < target_sess]
+                        if len(bars) < 68:
+                            continue
+                        last_d = bars[-1][0]
+                        if last_d > max_db_date:
+                            max_db_date = last_d
+                        c_p = bars[-1][4]
+                        avg_v20 = sum(b[5] for b in bars[-20:]) / 20.0
+                        adt20 = avg_v20 * c_p
+                        if c_p < 40.0 or avg_v20 < 100000 or adt20 < 200000000.0:
+                            continue
+                        universe_rows[f"{sym}.NS"] = {"sym": sym, "raw_sym": f"{sym}.NS", "adt20": adt20, "bars": bars}
+            except Exception as e:
+                logger.debug("QA DB load fallback: %s", e)
+
+        if not universe_rows or (expected_prev and max_db_date < expected_prev):
+            top_liquid = sorted(universe_rows.values(), key=lambda x: x["adt20"], reverse=True)[:95]
+            fetch_syms = list(dict.fromkeys([r["raw_sym"] for r in top_liquid] + list(STOCKS_LIST)))
+            fresh_rows: Dict[str, Dict[str, Any]] = {}
+            with ThreadPoolExecutor(max_workers=10) as pool:
+                futs = {pool.submit(self._fetch_daily_bars_yahoo, rs, target_sess): rs for rs in fetch_syms}
+                for fut, rs in futs.items():
+                    try:
+                        bars = fut.result(timeout=8)
+                        if len(bars) >= 68:
+                            c_p = bars[-1][4]
+                            avg_v20 = sum(b[5] for b in bars[-20:]) / 20.0
+                            adt20 = avg_v20 * c_p
+                            if c_p >= 40.0 and avg_v20 >= 100000 and adt20 >= 200000000.0:
+                                sym = rs.replace(".NS", "").replace(".BO", "")
+                                fresh_rows[rs] = {"sym": sym, "raw_sym": rs, "adt20": adt20, "bars": bars}
+                    except Exception:
+                        continue
+            if len(fresh_rows) >= 15:
+                universe_rows = fresh_rows
+
+        ab_br = 0
+        tot_br = 0
+        evaluated = []
+        for rs, item in universe_rows.items():
+            bars = item["bars"]
+            cl = [b[4] for b in bars]
+            vl = [b[5] for b in bars]
+            c_prev = cl[-1]
+            sma50 = sum(cl[-50:]) / 50.0
+            tot_br += 1
+            if c_prev > sma50:
+                ab_br += 1
+            sma20 = sum(cl[-20:]) / 20.0
+            sma65 = sum(cl[-65:]) / 65.0
+            avg_v20 = sum(vl[-20:]) / 20.0
+            adt20 = avg_v20 * c_prev
+            rvol_prev = vl[-1] / avg_v20 if avg_v20 > 0 else 1.0
+            ret1d = (c_prev / cl[-2] - 1.0) * 100.0
+            ret2d = (c_prev / cl[-3] - 1.0) * 100.0
+            ret3d = (c_prev / cl[-4] - 1.0) * 100.0
+            ret5d = (c_prev / cl[-6] - 1.0) * 100.0
+            ret63 = (c_prev / cl[-64] - 1.0) * 100.0 if cl[-64] > 0 else 0.0
+            evaluated.append({
+                "sym": item["sym"], "raw_sym": rs, "t_prev_date": bars[-1][0],
+                "c_prev": c_prev, "sma20": sma20, "sma50": sma50, "sma65": sma65,
+                "adt20": adt20, "rvol_prev": rvol_prev,
+                "ret1d": ret1d, "ret2d": ret2d, "ret3d": ret3d, "ret5d": ret5d, "ret63": ret63,
+            })
+
+        breadth = (ab_br / tot_br * 100.0) if tot_br > 0 else 50.0
+        cands = []
+        near_misses = []
+        for it in evaluated:
+            long_ok = (
+                breadth >= 26.0
+                and it["c_prev"] > it["sma65"]
+                and it["rvol_prev"] <= 2.5
+                and (
+                    (-12.5 <= it["ret3d"] <= -3.8)
+                    or (-10.5 <= it["ret2d"] <= -3.4)
+                    or (-14.5 <= it["ret5d"] <= -5.2)
+                    or (-9.0 <= it["ret1d"] <= -3.0 and it["c_prev"] > it["sma20"])
+                )
+            )
+            short_ok = (
+                it["c_prev"] > it["sma20"] * 1.015
+                and it["rvol_prev"] >= 1.55
+                and it["ret1d"] <= 14.0
+                and (
+                    it["ret1d"] >= 2.9
+                    or (it["ret2d"] >= 5.0 and it["ret1d"] >= 1.5)
+                    or (it["ret3d"] >= 6.8 and it["ret1d"] >= 1.5)
+                )
+            )
+            if long_ok:
+                flush_mag = max(abs(it["ret3d"]), abs(it["ret2d"]) * 1.15, abs(it["ret5d"]) * 0.8, abs(it["ret1d"]) * 1.25)
+                pre_score = 150.0 + flush_mag * math.sqrt(it["adt20"] / 1e7)
+                cands.append(dict(it, side="LONG", setup_kind="Flush Gap-Down Long", trigger_px=round(it["c_prev"] * 0.993, 2), pre_score=pre_score))
+            elif short_ok:
+                run_mag = max(it["ret1d"], it["ret2d"] * 0.7, it["ret3d"] * 0.55)
+                pre_score = 100.0 + run_mag * math.sqrt(it["rvol_prev"]) * math.sqrt(it["adt20"] / 1e7)
+                cands.append(dict(it, side="SHORT", setup_kind="Parabolic Gap-Up Short", trigger_px=round(it["c_prev"] * 1.0075, 2), pre_score=pre_score))
+            else:
+                reason = None
+                if it["c_prev"] > it["sma20"] * 1.015 and it["ret1d"] >= 2.0 and it["rvol_prev"] < 1.55:
+                    reason = f"QA Short Pre-Filter: RVOL[t-1] {it['rvol_prev']:.2f}x < 1.55x (1d {it['ret1d']:+.1f}%)"
+                elif it["c_prev"] > it["sma65"] and -3.8 < it["ret3d"] <= -2.0:
+                    reason = f"QA Long Pre-Filter: 3d Flush {it['ret3d']:+.1f}% milder than -3.8%"
+                elif breadth < 26.0 and it["c_prev"] > it["sma65"] and it["ret3d"] <= -3.8:
+                    reason = f"QA Breadth Gate: {breadth:.1f}% < 26.0% threshold"
+                if reason:
+                    near_misses.append(dict(it, side="BUY" if it["ret3d"] < 0 else "SELL", reason=reason))
+
+        cands.sort(key=lambda x: x["pre_score"], reverse=True)
+        res_cache = {
+            "target_sess": target_sess,
+            "ts": now_ts,
+            "breadth": round(breadth, 1),
+            "universe_count": len(evaluated),
+            "cands": cands[:35],
+            "near_misses": near_misses[:20],
+        }
+        self._qa_watchlist_cache = res_cache
+        return res_cache
+
+    def _evaluate_quantum_apex_open(self, watchlist: Dict[str, Any], target_sess: str, enable_stocks: bool, alloc_cap: float = 300000.0) -> tuple:
+        """Evaluates live Open[t] gap conditions for Quantum-Apex 3.0 t-1 pre-qualified setups."""
+        from concurrent.futures import ThreadPoolExecutor
+        cands = watchlist.get("cands", [])
+        triggered = []
+        upcoming_rows = []
+        rejected_rows = []
+        now_hm = datetime.now(IST).strftime("%H:%M")
+
+        quotes_5m: Dict[str, List[Dict[str, float]]] = {}
+        if cands:
+            with ThreadPoolExecutor(max_workers=8) as pool:
+                futs = {pool.submit(self._fetch_today_5m, c["raw_sym"]): c["raw_sym"] for c in cands}
+                for fut, rs in futs.items():
+                    try:
+                        s_days = fut.result(timeout=6)
+                        bars = s_days.get(target_sess, [])
+                        if bars:
+                            quotes_5m[rs] = bars
+                            ltp_v = round(float(bars[-1]["c"]), 2)
+                            self.live_quotes[rs] = ltp_v
+                            self.live_quotes[rs.replace(".NS", "").replace(".BO", "")] = ltp_v
+                    except Exception:
+                        continue
+
+        for it in cands:
+            rs = it["raw_sym"]
+            sym = it["sym"]
+            c_prev = it["c_prev"]
+            bars = quotes_5m.get(rs, [])
+            has_today_open = bool(bars and len(bars) >= 1)
+            open_t = float(bars[0]["o"]) if has_today_open else float(self.live_quotes.get(rs) or c_prev)
+            ltp = round(float(bars[-1]["c"]), 2) if has_today_open else round(float(self.live_quotes.get(rs) or c_prev), 2)
+            gap_pct = round((open_t - c_prev) / c_prev * 100.0, 2) if c_prev > 0 else 0.0
+
+            is_long = it["side"] == "LONG"
+            gap_hit = (-4.0 <= gap_pct <= -0.70) if is_long else (0.75 <= gap_pct <= 4.20)
+            cap_wt = (it["adt20"] / 1e7) ** 1.05 if alloc_cap > 10000000.0 else math.sqrt(it["adt20"] / 1e7)
+            if is_long:
+                flush_mag = max(abs(it["ret3d"]), abs(it["ret2d"]) * 1.15, abs(it["ret5d"]) * 0.8, abs(it["ret1d"]) * 1.25)
+                trend_bonus = 1.0 + max(0.0, min(0.5, it["ret63"] / 100.0))
+                score = 150.0 + (flush_mag * max(0.70, abs(gap_pct)) * 1.5 * trend_bonus) * cap_wt
+            else:
+                run_mag = max(it["ret1d"], it["ret2d"] * 0.7, it["ret3d"] * 0.55)
+                score = 100.0 + (run_mag * max(0.75, gap_pct) * math.sqrt(it["rvol_prev"])) * cap_wt
+
+            if not enable_stocks:
+                st = "ENGINE_OFF"
+                note = "Stocks MIS Engine Switched OFF"
+            elif has_today_open and gap_hit:
+                st = "ARMED"
+                note = f"QA 3.0 Open[t] Triggered (Gap {gap_pct:+.2f}% · {it['setup_kind']} · RVOL[t-1] {it['rvol_prev']:.2f}x)"
+                triggered.append((score, dict(it, open_t=open_t, ltp=ltp, gap_pct=gap_pct, note=note)))
+            else:
+                st = "WATCHING_RS"
+                band = "-0.70%..-4.0%" if is_long else "+0.75%..+4.2%"
+                note = f"{it['setup_kind']} (t-1: 3d {it['ret3d']:+.1f}%, 1d {it['ret1d']:+.1f}%) · Needs Open[t] Gap {band} (Cur {gap_pct:+.2f}%)"
+                if has_today_open:
+                    rejected_rows.append({
+                        "date": target_sess, "time": now_hm, "symbol": f"{sym} (MIS)",
+                        "engine": "QUANTUM-APEX 3.0 MIS", "strategy_origin": "quantum_apex_intraday",
+                        "side": "BUY" if is_long else "SELL", "qty": 0,
+                        "entry_price": open_t, "exit_price": ltp, "charges": 0.0, "net_pnl": 0.0,
+                        "status": "FILTERED_OUT", "reason": f"Open[t] Gap {gap_pct:+.2f}% outside {band} trigger band",
+                    })
+
+            upcoming_rows.append({
+                "symbol": f"{sym} (MIS)",
+                "engine": "QUANTUM-APEX 3.0 MIS",
+                "strategy_origin": "quantum_apex_intraday",
+                "engine_id": "engine_stocks_mis",
+                "direction": it["side"],
+                "ltp": ltp,
+                "trigger_price": it["trigger_px"],
+                "rvol": round(it["rvol_prev"], 2),
+                "rs_vs_nifty": round(it["ret3d"], 2),
+                "status": st,
+                "qualification": note,
+            })
+
+        upcoming_rows.sort(key=lambda r: (1 if r["status"] == "ARMED" else 0, r.get("rvol", 0)), reverse=True)
+        for nm in watchlist.get("near_misses", []):
+            rejected_rows.append({
+                "date": target_sess, "time": now_hm, "symbol": f"{nm['sym']} (MIS)",
+                "engine": "QUANTUM-APEX 3.0 MIS", "strategy_origin": "quantum_apex_intraday",
+                "side": nm["side"], "qty": 0, "entry_price": round(nm["c_prev"], 2), "exit_price": round(nm["c_prev"], 2),
+                "charges": 0.0, "net_pnl": 0.0, "status": "FILTERED_OUT", "reason": nm["reason"],
+            })
+        triggered.sort(key=lambda x: x[0], reverse=True)
+        return triggered, upcoming_rows[:12], rejected_rows[:25]
+
+
+    def _scan_and_enter_quantum_apex(self, today_str: str, e1: Dict[str, Any], alloc_cap: float) -> None:
+        """Executes Quantum-Apex 3.0 Intraday (151.13% 10Y CAGR · 56.28% WR): strict t-1 EOD + 09:15 AM Open[t] gap confirmation."""
+        if alloc_cap < 10000.0:
+            return
+        params1 = e1.get("params", {})
+        lev = min(4.75, float(params1.get("mis_leverage", 4.75)))
+        slot_lev = 0.75
+        sl_pct = 5.5
+        tp_pct = 9.5
+        adt_cap_frac = 0.035
+
+        watchlist = self._build_quantum_apex_watchlist(today_str)
+        triggered, upcoming_rows, rejected_rows = self._evaluate_quantum_apex_open(watchlist, today_str, True, alloc_cap)
+        if upcoming_rows:
+            self.live_upcoming_stocks = upcoming_rows
+        if rejected_rows:
+            self.live_rejected_orders = rejected_rows
+
+        open_syms = {p.get("raw_symbol", "").replace(".NS", "").replace(".BO", "").upper() for p in self.app.open_positions if p.get("status") == "OPEN"}
+        rem_bp = alloc_cap * lev
+        max_slot = alloc_cap * slot_lev
+        entered_any = False
+        slots_taken = 0
+        for score, it in triggered:
+            if slots_taken >= 5 or rem_bp < 15000.0:
+                break
+            sym = it["sym"].upper()
+            if sym in open_syms:
+                continue
+            open_t = float(it["open_t"])
+            ltp = float(it["ltp"])
+            side = it["side"]
+            if open_t <= 0 or ltp <= 0 or abs(ltp - open_t) / open_t > 0.025:
+                continue
+            adt_lim = it["adt20"] * adt_cap_frac
+            alloc = min(rem_bp, max_slot, adt_lim)
+            entry_p = ltp
+            qty = int(alloc // entry_p)
+            if qty <= 0:
+                continue
+            notional = round(entry_p * qty, 2)
+            margin_used = round(notional / max(1.0, lev), 2)
+            sl_dist = entry_p * (sl_pct / 100.0)
+            tp_dist = entry_p * (tp_pct / 100.0)
+            sl_p = round(entry_p - sl_dist if side == "LONG" else entry_p + sl_dist, 2)
+            tp_p = round(entry_p + tp_dist if side == "LONG" else entry_p - tp_dist, 2)
+
+            risk_err = self.app.broker_manager.validate_pre_trade_risk(
+                symbol=sym, price=entry_p, quantity=qty, order_val=notional,
+                margin_val=margin_used, available_cash=alloc_cap * lev,
+            )
+            if risk_err:
+                logger.warning("Quantum-Apex Order rejected by Security Guardrail: %s", risk_err)
+                continue
+
+            exec_res = self.app.broker_manager.execute_order(
+                symbol=sym, transaction_type=side, quantity=qty, price=entry_p,
+                order_type="MARKETABLE_LIMIT", product_type="MIS" if lev > 1.0 else "CNC",
+                sl_price=sl_p, target_price=tp_p,
+                slippage_buffer_pct=float(params1.get("slippage_buffer_pct", 0.20)), timeout_sec=8.0,
+            )
+            if exec_res.get("status") in ("CANCELLED_UNFILLED", "ERROR", "REJECTED") or int(exec_res.get("filled_qty", qty)) <= 0:
+                logger.warning("Skipped QA %s: %s", sym, exec_res.get("message", "Unfilled / Rejected"))
+                continue
+
+            qty = int(exec_res.get("filled_qty", qty))
+            entry_p = float(exec_res.get("avg_fill_price", entry_p))
+            notional = round(entry_p * qty, 2)
+            margin_used = round(notional / max(1.0, lev), 2)
+            sl_dist = entry_p * (sl_pct / 100.0)
+            tp_dist = entry_p * (tp_pct / 100.0)
+            sl_p = round(entry_p - sl_dist if side == "LONG" else entry_p + sl_dist, 2)
+            tp_p = round(entry_p + tp_dist if side == "LONG" else entry_p - tp_dist, 2)
+
+            pos_id = exec_res.get("broker_order_id") or exec_res.get("order_id") or f"QA3-{sym}-{int(time.time()*1000)%100000}"
+            chg_est = round(notional * 0.0016, 2) if notional * 0.0016 > 50.0 else 50.0
+            pos_dict = {
+                "pos_id": pos_id,
+                "broker_order_id": exec_res.get("broker_order_id"),
+                "execution_mode": exec_res.get("mode", "PAPER"),
+                "date": today_str,
+                "entry_time": datetime.now(IST).strftime("%H:%M:%S"),
+                "engine_id": "engine_stocks_mis",
+                "strategy_origin": "quantum_apex_intraday",
+                "engine": "QUANTUM-APEX 3.0 MIS",
+                "setup_type": it["setup_kind"],
+                "raw_symbol": it["raw_sym"],
+                "symbol": f"{sym} (MIS)",
+                "side": side,
+                "qty": qty,
+                "entry_price": round(entry_p, 2),
+                "ltp": round(entry_p, 2),
+                "sl_price": sl_p,
+                "initial_sl_dist": sl_dist,
+                "tp1_price": tp_p,
+                "tranche1_booked": True,
+                "target_price": tp_p,
+                "leverage": lev,
+                "margin_used": margin_used,
+                "notional": notional,
+                "product_type": "MIS" if lev > 1.0 else "CNC",
+                "trail_status": f"QA 3.0 ({side} GAP {it['gap_pct']:+.2f}% · SL 5.5% / TP 9.5%)",
+                "delta": f"{qty} sh",
+                "theta": "₹0/hr",
+                "gross_mtm": 0.0,
+                "est_charges": chg_est,
+                "net_mtm": -chg_est,
+                "status": "OPEN",
+            }
+            self.app.open_positions.append(pos_dict)
+            rem_bp -= notional
+            slots_taken += 1
+            open_syms.add(sym)
+            entered_any = True
+            try:
+                TELEGRAM_NOTIFIER.send_entry_alert(pos_dict, self.app.switchboard.config)
+            except Exception as e_tg:
+                logger.error("Failed to send telegram entry alert: %s", e_tg)
+
+        if entered_any:
+            logger.info("Quantum-Apex 3.0 Intraday entered %d gap positions for %s", slots_taken, today_str)
+        self.traded_dates_stocks.add(today_str)
+        self.app._save_open_positions()
+
     def _scan_and_enter_live_stocks(self, today_str: str, e1: Dict[str, Any], n_ret_prev: float, n_intraday_chg: float, is_hybrid_v2: bool = False) -> None:
         params1 = e1.get("params", {})
         stocks_flt = str(params1.get("active_filter", "alpha_surge_100")).lower()
         is_quantum_apex = (stocks_flt == "quantum_apex_intraday")
-        # Alpha-Surge 2.0 Intraday Institutional Parameters OR Quantum-Apex 3.0 Intraday (151.13% 10Y CAGR · 56.28% WR)
-        rvol_min = 1.55 if is_quantum_apex else float(params1.get("rvol_min", 2.2))
+        if is_quantum_apex:
+            self._scan_and_enter_quantum_apex(today_str, e1, float(e1.get("allocated_capital_inr", 0.0)))
+            return
+        # Alpha-Surge 2.0 Intraday Institutional Parameters (untouched)
+        rvol_min = float(params1.get("rvol_min", 2.2))
         rs_min = float(params1.get("relative_strength_min_pct", 0.35))
         sl_pct = float(params1.get("stop_loss_pct", 1.75))
         tp1_rr = float(params1.get("tranche1_rr", 1.25))
@@ -901,7 +1358,7 @@ class LivePaperTradingWorker:
                     self._close_and_record_position(p, fill, "SL_HIT", today_str)
                 elif p["target_price"] > 0 and ltp >= p["target_price"]:
                     self._close_and_record_position(p, p["target_price"], "TARGET_HIT", today_str)
-                elif pts >= ratchet_dist and p["sl_price"] < p["entry_price"]:
+                elif p.get("strategy_origin") != "quantum_apex_intraday" and pts >= ratchet_dist and p["sl_price"] < p["entry_price"]:
                     if p.get("engine_id") == "engine_stocks_mis" and not p.get("tranche1_booked") and p.get("qty", 1) >= 2:
                         half_qty = p["qty"] // 2
                         t1_pos = dict(p, qty=half_qty, pos_id=f"{p['pos_id']}-T1", est_charges=round(p.get("est_charges", 85.0) * 0.5, 2))
@@ -921,7 +1378,7 @@ class LivePaperTradingWorker:
                     self._close_and_record_position(p, fill, "SL_HIT", today_str)
                 elif p["target_price"] > 0 and ltp <= p["target_price"]:
                     self._close_and_record_position(p, p["target_price"], "TARGET_HIT", today_str)
-                elif pts >= ratchet_dist and p["sl_price"] > p["entry_price"]:
+                elif p.get("strategy_origin") != "quantum_apex_intraday" and pts >= ratchet_dist and p["sl_price"] > p["entry_price"]:
                     if p.get("engine_id") == "engine_stocks_mis" and not p.get("tranche1_booked") and p.get("qty", 1) >= 2:
                         half_qty = p["qty"] // 2
                         t1_pos = dict(p, qty=half_qty, pos_id=f"{p['pos_id']}-T1", est_charges=round(p.get("est_charges", 85.0) * 0.5, 2))
