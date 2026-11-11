@@ -3219,21 +3219,30 @@ function render(){
 
   // My account (real)
 
-  $('h-equity').textContent=inr(A.equity);
+  const liveOpenMtm = Number(t.combined_intraday_mtm || 0);
+  const openLegs = Number(t.open_legs_count || (D.open_positions||[]).filter(x=>x.status==='OPEN').length || 0);
+  const liveTodayPnl = (A.today_pnl || 0) + liveOpenMtm;
+  const liveTotalCharges = (A.charges || 0) + Number(t.today_est_charges || 0);
 
-  const rp=$('h-ret');rp.textContent=`${A.net_pnl>=0?'↑':'↓'} ${inr(A.net_pnl,true)} (${A.net_pct}%)`;rp.className='pill num '+(A.net_pnl>0?'g':A.net_pnl<0?'r':'n');
+  $('h-equity').textContent=inr((A.equity || 0) + liveOpenMtm);
+
+  const rp=$('h-ret');
+  const totNet = (A.net_pnl || 0) + liveOpenMtm;
+  const totPct = A.starting_capital ? ((totNet / A.starting_capital) * 100).toFixed(2) : (A.net_pct || 0);
+  rp.textContent=`${totNet>=0?'↑':'↓'} ${inr(totNet,true)} (${totPct}%)` + (openLegs ? ` · ${openLegs} live` : '');
+  rp.className='pill num '+(totNet>0?'g':totNet<0?'r':'n');
 
   $('h-since').textContent=A.started_at?`since ${new Date(A.started_at).toLocaleDateString('en-IN',{day:'numeric',month:'short'})} · ${inr(A.starting_capital)} invested`:`demo data · go to Settings → Reset to start with your capital`;
 
-  $('s-today').innerHTML=`<span class="${cls(A.today_pnl)}">${inr(A.today_pnl,true)}</span>`;
+  $('s-today').innerHTML=`<span class="${cls(liveTodayPnl)}">${inr(liveTodayPnl,true)}</span>` + (openLegs ? ` <span class="faint" style="font-size:11px">(live)</span>` : '');
 
   $('s-win').textContent=A.trades_count?A.win_rate_pct+'%':'—';
 
   $('s-dd').innerHTML=A.trades_count?'—':'—';
 
-  $('s-trades').textContent=A.trades_count;
+  $('s-trades').innerHTML=openLegs ? `${A.trades_count} <span class="faint" style="font-size:12px">(${openLegs} live)</span>` : String(A.trades_count);
 
-  $('s-tax').textContent=inr(A.charges);
+  $('s-tax').textContent=inr(liveTotalCharges);
 
   $('s-limit').textContent=inr(-A.starting_capital*0.015);
 
@@ -3431,21 +3440,21 @@ function renderProfileAndSidebar(a, A, t){
 
 
 
-  // Populate recent trades inside profile drawer
+  // Populate recent trades inside profile drawer (live open + closed SQLite trades)
 
   if($('pd-recent-tbody')) {
 
-    const trades = (D.account && D.account.trades) || [];
+    const trades = [...getOpenTradeRows(), ...((D.account && D.account.trades) || [])];
 
     $('pd-recent-tbody').innerHTML = trades.length ? trades.slice(0, 8).map(x => `
 
       <tr>
 
-        <td class="sym">${nice(x.symbol)}<small>${x.date} · ${strat(x.engine)}</small></td>
+        <td class="sym">${nice(x.symbol)}<small>${x._isOpen ? 'LIVE OPEN' : x.date} · ${strat(x.engine, x.strategy_origin)}</small></td>
 
         <td><span class="pill ${x.side.includes('BUY')?'g':'r'}" style="font-size:10.5px;padding:1px 5px">${x.side.includes('BUY')?'BUY':'SELL'}</span></td>
 
-        <td class="r num soft" style="font-size:12px">${x.qty ? '₹' + x.entry_price.toFixed(1) + ' → ' + x.exit_price.toFixed(1) : '—'}</td>
+        <td class="r num soft" style="font-size:12px">${x.qty ? '₹' + x.entry_price.toFixed(1) + ' → ' + x.exit_price.toFixed(1) + (x._isOpen ? ' (LTP)' : '') : '—'}</td>
 
         <td class="r num ${cls(x.net_pnl)}"><b>${inr(x.net_pnl, true)}</b></td>
 
@@ -3908,7 +3917,10 @@ function strats(a,A,t){
 
 function badge(st, time){
 
-  const m={TARGET_HIT:['g','Target hit'],VWAP_PROFIT_LOCK:['g','Profit locked'],TRAILED_COST:['n','Exited at cost'],
+  if(String(st||'').startsWith('TRANCHE1_LOCK')) return `<span class="pill g">Tranche 1 (+1.25R)</span>`;
+
+  const m={OPEN:['g','Live Open'],TARGET_HIT:['g','Target hit'],VWAP_PROFIT_LOCK:['g','Profit locked'],TRAILED_COST:['n','Exited at cost'],
+   MANUAL_EXIT:['n', time ? `Manual Exit (${time.slice(0,5)})` : 'Manual Exit'],MANUAL_FLATTEN:['n','Squared Off'],
    EOD_SQUARE_OFF:['n', (time && time < '15:00') ? `Auto-Exit (${time.slice(0,5)})` : 'Closed 3:15 PM'],
    RMS_CIRCUIT_BREAKER:['r','Daily Limit (-1.5%)'],CIRCUIT_BREAKER:['r','Daily Limit (-1.5%)'],
    SL_HIT:['r','Stop-loss'],DELTA_HEDGED_SL:['r','Stop-loss (hedged)'],FILTERED_OUT:['n','Skipped'],RMS_REGIME_BLOCK:['a','Blocked by risk'],
@@ -3917,6 +3929,28 @@ function badge(st, time){
 
   const [c,l]=m[st]||['n',st];return `<span class="pill ${c}">${l}</span>`;
 
+}
+
+function getOpenTradeRows(){
+  const openList = (D && D.open_positions || []).filter(p => p.status === 'OPEN');
+  return openList.map(p => ({
+    order_id: p.pos_id,
+    date: p.date || new Date().toISOString().slice(0,10),
+    entry_date: p.date || new Date().toISOString().slice(0,10),
+    time: p.entry_time || 'LIVE',
+    exit_time: 'LIVE',
+    engine: p.engine,
+    strategy_origin: p.strategy_origin,
+    symbol: p.symbol,
+    side: (p.side === 'SHORT' || p.side === 'SELL') ? 'SELL' : 'BUY',
+    qty: Number(p.qty || 0),
+    entry_price: Number(p.entry_price || 0),
+    exit_price: Number(p.ltp || p.entry_price || 0),
+    charges: Number(p.est_charges || 0),
+    net_pnl: Number(p.net_mtm || 0),
+    status: 'OPEN',
+    _isOpen: true,
+  }));
 }
 
 const nice=s=>s.replace(' (MIS)','');
@@ -3950,11 +3984,11 @@ function strat(e, orig){
 
 function recent(){
 
-  const o=D.account.trades.slice(0,6);
+  const o=[...getOpenTradeRows(), ...((D.account && D.account.trades) || [])].slice(0,8);
 
   $('recent').innerHTML=o.length?o.map(x=>{
 
-    const dStr=x.entry_date&&x.entry_date!==x.date?`${x.date} (held since ${x.entry_date})`:x.date;
+    const dStr=x._isOpen?`${x.date} · Entry ₹${x.entry_price.toFixed(2)} → LTP ₹${x.exit_price.toFixed(2)}`:(x.entry_date&&x.entry_date!==x.date?`${x.date} (held since ${x.entry_date})`:x.date);
 
     return `<tr><td class="sym">${nice(x.symbol)}<small>${dStr}</small></td><td class="soft">${strat(x.engine, x.strategy_origin)}</td><td>${badge(x.status, x.exit_time || x.time)}</td><td class="r num ${cls(x.net_pnl)}"><b>${inr(x.net_pnl,true)}</b></td></tr>`;
 
@@ -4039,13 +4073,21 @@ function upcoming(){
 
 function history_(){
 
-  const ex=D.account.trades,rj=[];
+  const openRows=getOpenTradeRows();
 
-  let rows=F==='all'?[...ex,...rj].sort((a,b)=>(b.date+b.time).localeCompare(a.date+a.time)):F==='win'?ex.filter(x=>x.net_pnl>0):F==='loss'?ex.filter(x=>x.net_pnl<=0):rj;
+  const closedRows=(D.account && D.account.trades)||[];
 
-  $('history').innerHTML=rows.length?rows.slice(0,200).map(x=>`<tr><td class="soft num">${x.date}</td><td class="sym">${nice(x.symbol)}<small>${x.status==='FILTERED_OUT'||x.status==='RMS_REGIME_BLOCK'?x.reason:strat(x.engine, x.strategy_origin)+(x.entry_date&&x.entry_date!==x.date?' · held since '+x.entry_date:'')}</small></td>
+  const ex=[...openRows,...closedRows];
 
-   <td class="soft">${x.side.includes('BUY')?'Buy':'Sell'}</td><td class="r num soft">${x.qty?`₹${x.entry_price.toFixed(2)} → ₹${x.exit_price.toFixed(2)}`:'—'}</td><td>${badge(x.status, x.exit_time || x.time)}</td>
+  const rj=(D.live_rejected_orders && D.live_rejected_orders.length)?D.live_rejected_orders:(!D.account.is_fresh?((D.simulation && D.simulation.rejected_orders)||[]):[]);
+
+  const closedSorted=[...closedRows].sort((a,b)=>(b.date+(b.exit_time||b.time||'')).localeCompare(a.date+(a.exit_time||a.time||'')));
+
+  let rows=F==='all'?[...openRows,...closedSorted,...rj]:F==='win'?ex.filter(x=>x.net_pnl>0):F==='loss'?ex.filter(x=>x.net_pnl<=0):rj;
+
+  $('history').innerHTML=rows.length?rows.slice(0,200).map(x=>`<tr><td class="soft num">${x.date}</td><td class="sym">${nice(x.symbol)}<small>${x.status==='FILTERED_OUT'||x.status==='RMS_REGIME_BLOCK'?x.reason:strat(x.engine, x.strategy_origin)+(x._isOpen?' · Live Active Position':(x.entry_date&&x.entry_date!==x.date?' · held since '+x.entry_date:''))}</small></td>
+
+   <td class="soft">${x.side.includes('BUY')?'Buy':'Sell'}</td><td class="r num soft">${x.qty?`₹${x.entry_price.toFixed(2)} → ₹${x.exit_price.toFixed(2)}${x._isOpen?' <span class="faint">(LTP)</span>':''}`:'—'}</td><td>${badge(x.status, x.exit_time || x.time)}</td>
 
    <td class="r num faint">${x.qty?inr(x.charges):'—'}</td><td class="r num ${cls(x.net_pnl)}"><b>${x.qty?inr(x.net_pnl,true):'—'}</b></td></tr>`).join('')
 
