@@ -52,6 +52,7 @@ class LivePaperTradingWorker:
         self.daily_circuit_tripped = set()
         self.live_quotes: Dict[str, float] = {}
         self.live_upcoming_stocks: List[Dict[str, Any]] = []
+        self.live_rejected_orders: List[Dict[str, Any]] = []
         self._last_upcoming_refresh: float = 0.0
         self._restore_daily_state()
         self.thread = threading.Thread(target=self._run_loop, daemon=True)
@@ -303,7 +304,11 @@ class LivePaperTradingWorker:
 
             scored.sort(key=lambda x: x[0], reverse=True)
             out = []
-            for score, s, ltp, orb_h, orb_l, rvol, rs in scored[:12]:
+            rej = []
+            now_hm = datetime.now(IST).strftime("%H:%M")
+            eng_lbl = "QUANTUM-APEX 3.0 MIS" if is_qa else "STOCKS MIS"
+            orig_lbl = "quantum_apex_intraday" if is_qa else "alpha_surge_100"
+            for idx_s, (score, s, ltp, orb_h, orb_l, rvol, rs) in enumerate(scored[:24]):
                 ticker = s.replace(".NS", "")
                 is_bull = rs >= 0
                 trig = round(orb_h if is_bull else orb_l, 2)
@@ -320,21 +325,39 @@ class LivePaperTradingWorker:
                     st = "WATCHING_RS"
                     note = f"Needs |RS| >= {rs_min}% (Current {rs:+.2f}%)"
 
-                out.append({
-                    "symbol": f"{ticker} (MIS)",
-                    "engine": "QUANTUM-APEX 3.0 MIS" if is_qa else "STOCKS MIS",
-                    "strategy_origin": "quantum_apex_intraday" if is_qa else "alpha_surge_100",
-                    "engine_id": "engine_stocks_mis",
-                    "direction": "LONG" if is_bull else "SHORT",
-                    "ltp": ltp,
-                    "trigger_price": trig,
-                    "rvol": rvol,
-                    "rs_vs_nifty": rs,
-                    "status": st,
-                    "qualification": note,
-                })
+                if idx_s < 12:
+                    out.append({
+                        "symbol": f"{ticker} (MIS)",
+                        "engine": eng_lbl,
+                        "strategy_origin": orig_lbl,
+                        "engine_id": "engine_stocks_mis",
+                        "direction": "LONG" if is_bull else "SHORT",
+                        "ltp": ltp,
+                        "trigger_price": trig,
+                        "rvol": rvol,
+                        "rs_vs_nifty": rs,
+                        "status": st,
+                        "qualification": note,
+                    })
+                if st in ("WAITING_RVOL", "WATCHING_RS"):
+                    rej.append({
+                        "date": target_sess,
+                        "time": now_hm,
+                        "symbol": f"{ticker} (MIS)",
+                        "engine": eng_lbl,
+                        "strategy_origin": orig_lbl,
+                        "side": "BUY" if is_bull else "SELL",
+                        "qty": 0,
+                        "entry_price": ltp,
+                        "exit_price": ltp,
+                        "charges": 0.0,
+                        "net_pnl": 0.0,
+                        "status": "FILTERED_OUT",
+                        "reason": note,
+                    })
             if out:
                 self.live_upcoming_stocks = out
+                self.live_rejected_orders = rej[:25]
                 self._last_upcoming_refresh = now_ts
         except Exception as e:
             logger.debug("Failed live upcoming refresh: %s", e)
@@ -517,6 +540,7 @@ class LivePaperTradingWorker:
                 "broker_order_id": exec_res.get("broker_order_id"),
                 "execution_mode": exec_res.get("mode", "PAPER"),
                 "date": today_str,
+                "entry_time": datetime.now(IST).strftime("%H:%M:%S"),
                 "engine_id": "engine_stocks_mis",
                 "strategy_origin": "quantum_apex_intraday" if is_quantum_apex else "alpha_surge_100",
                 "engine": "QUANTUM-APEX 3.0 MIS" if is_quantum_apex else ("NEXT-GEN HYBRID (MIS)" if (is_hybrid_v2 and not e1.get("enabled")) else "ALPHA-SURGE 100+ MIS"),
@@ -567,6 +591,7 @@ class LivePaperTradingWorker:
             pos_dict = {
                 "pos_id": f"LIVE-FO-{int(time.time()*1000) % 100000}",
                 "date": today_str,
+                "entry_time": datetime.now(IST).strftime("%H:%M:%S"),
                 "engine_id": "engine_fo_hybrid",
                 "engine": "NIFTY F&O",
                 "raw_symbol": "^NSEI",
@@ -601,6 +626,7 @@ class LivePaperTradingWorker:
             pos_dict = {
                 "pos_id": f"LIVE-STR-{int(time.time()*1000) % 100000}",
                 "date": today_str,
+                "entry_time": datetime.now(IST).strftime("%H:%M:%S"),
                 "engine_id": "engine_fo_hybrid",
                 "engine": "NIFTY F&O",
                 "raw_symbol": "^NSEI_STRADDLE",
@@ -779,6 +805,7 @@ class LivePaperTradingWorker:
             pos_dict = {
                 "pos_id": swing_pos_id,
                 "date": today_str,
+                "entry_time": datetime.now(IST).strftime("%H:%M:%S"),
                 "engine_id": "engine_sepa_swing",
                 "strategy_origin": active_flt,
                 "engine": "SEPA SWING",

@@ -1058,6 +1058,7 @@ class TradingAppState:
             "open_positions": visible_positions,
             "account": self.account_summary(),
             "broker": self.broker_manager.get_status(),
+            "live_rejected_orders": getattr(self.live_worker, "live_rejected_orders", []),
             "simulation": sim_payload,
             "strategy_backtests": getattr(self, "strategy_backtests", {}),
             "screener": screener_payload,
