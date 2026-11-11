@@ -1403,8 +1403,7 @@ class AIScreenerDiscoveryEngine:
 
             self.positions = data.get("positions", [])
 
-        if not any(s.get("strategy") == "institutional_fortress_swing" for s in self.setups):
-            self._append_fortress_setups_from_db()
+        self._append_fortress_setups_from_db()
 
         # Always read latest positions directly from Indian-SEPA-Screener's positions.sqlite3 if present
 
